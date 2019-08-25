@@ -1,0 +1,55 @@
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts,amssymb,mathrsfs}
+\usepackage[a4paper,top=3cm,bottom=3cm,inner=3cm,outer=3cm]{geometry}
+\usepackage{tikz}
+%\usepackage{braids}
+\usepackage{tikz-cd}
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\newcommand{\week}[1]{\addtocounter{section}{1}\section*{Week \thesection{} (#1)}}
+\newcommand{\find}[1]{\addtocounter{subsection}{1}\subsection*{\thesubsection) #1\\[2ex]}}
+
+\renewcommand{\hom}{{\rm hom}}
+\newcommand{\gtimes}{\otimes_{\rm G}}
+\newcommand{\op}{{\rm op}}
+\newcommand{\id}{{\rm id}}
+\newcommand{\maps}{\colon}
+\newcommand{\define}[1]{{\bf \boldmath{#1}}} 
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+
+\newcommand{\namedcat}[1]{\mathsf{#1}}
+\newcommand{\Cat}{\namedcat{Cat}}
+\newcommand{\Cob}{\namedcat{Cob}}
+\newcommand{\Reps}{\namedcat{Reps}}
+\newcommand{\Set}{\namedcat{Set}}
+\newcommand{\Vect}{\namedcat{Vect}}
+
+\newcommand{\stri}{-}
+\newcommand{\iso}{\cong}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lma}[thm]{Lemma}
+\newtheorem{rmk}[thm]{Remark}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+\newcommand{\fixit}[1]{\textcolor{blue}{#1}}
+
+\definecolor{myurlcolor}{rgb}{0.6,0,0}
+\definecolor{mycitecolor}{rgb}{0,0,0.8}
+\definecolor{myrefcolor}{rgb}{0,0,0.8}
+\usepackage[pagebackref]{hyperref}
+%\usepackage{hyperref}
+\hypersetup{colorlinks, linkcolor=myrefcolor, citecolor=mycitecolor, urlcolor=myurlcolor}
+\renewcommand*{\backref}[1]{(Referred to on page #1.)}
