@@ -3,38 +3,60 @@
 \usepackage{amsmath,amsthm}
 \usepackage{amsfonts,amssymb,mathrsfs}
 \usepackage[a4paper,top=3cm,bottom=3cm,inner=3cm,outer=3cm]{geometry}
+\usepackage{enumerate}
 \usepackage{tikz}
 %\usepackage{braids}
 \usepackage{tikz-cd}
 
 \renewcommand{\thesubsection}{\arabic{subsection}}
 
-\newcommand{\week}[1]{\addtocounter{section}{1}\section*{Week \thesection{} (#1)}}
-\newcommand{\find}[1]{\addtocounter{subsection}{1}\subsection*{\thesubsection) #1\\[2ex]}}
+% "Weeks" are special kinds of sections
+\newcommand{\week}[1]{\addtocounter{section}{1}\section*{Week \thesection{} (#1)}\setcounter{subsection}{0}\label{week\thesection}}
+% "Finds" are special kinds of subsections
+\newcommand{\find}[1]{\addtocounter{subsection}{1}\subsection*{\thesubsection) #1}\label{find\thesection.\thesubsection}}
+\newcommand{\paper}[1]{#1\\[2ex]}
+% "Addenda" are also special kinds of subsections
+\newcommand{\Addendum}{\subsection*[Addendum]{Addendum:\\[2ex]}}
 
+% Some frequently used symbols
 \renewcommand{\hom}{{\rm hom}}
-\newcommand{\gtimes}{\otimes_{\rm G}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\HOM}{{\rm HOM}}
 \newcommand{\op}{{\rm op}}
 \newcommand{\id}{{\rm id}}
 \newcommand{\maps}{\colon}
+\newcommand{\zwei}{\Downarrow}
+\newcommand{\of}{\circ}
+
+% Baez-style definitions
 \newcommand{\define}[1]{{\bf \boldmath{#1}}} 
 
+% common sets
 \newcommand{\C}{\mathbb C}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
 \newcommand{\Z}{\mathbb Z}
 
+% common categories
 \newcommand{\namedcat}[1]{\mathsf{#1}}
 \newcommand{\Cat}{\namedcat{Cat}}
 \newcommand{\Cob}{\namedcat{Cob}}
 \newcommand{\Reps}{\namedcat{Reps}}
 \newcommand{\Set}{\namedcat{Set}}
 \newcommand{\Vect}{\namedcat{Vect}}
+\newcommand{\Group}{\namedcat{Group}}
+\newcommand{\Top}{\namedcat{Top}}
+\newcommand{\Diff}{\namedcat{Diff}}
+\newcommand{\Ring}{\namedcat{Ring}}
+\newcommand{\Symp}{\namedcat{Symp}}
+\newcommand{\Poiss}{\namedcat{Poiss}}
+\newcommand{\Hilb}{\namedcat{Hilb}}
 
 \newcommand{\stri}{-}
 \newcommand{\iso}{\cong}
 
 
+% Theorem stuff
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}
 \newtheorem{prop}[thm]{Proposition}
@@ -44,8 +66,10 @@
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
 
+% Request for something to be fixed (should only be used while the section is a draft)
 \newcommand{\fixit}[1]{\textcolor{blue}{#1}}
 
+% Link colors:  internal links are blue, external links are red.
 \definecolor{myurlcolor}{rgb}{0.6,0,0}
 \definecolor{mycitecolor}{rgb}{0,0,0.8}
 \definecolor{myrefcolor}{rgb}{0,0,0.8}
