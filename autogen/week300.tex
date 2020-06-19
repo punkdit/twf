@@ -52,13 +52,13 @@ groupoidification, and more.
 
 Let me start by telling you how to count.
 
-I'll assume you already know how to count elements of a <i>set</i>,
-and move right along to counting objects in a <i>groupoid</i>.
+I'll assume you already know how to count elements of a \emph{set},
+and move right along to counting objects in a \emph{groupoid}.
 
 A groupoid is a gadget with a bunch of objects and a bunch of
 isomorphisms between them.  Unlike an element of a set, an object of a
 groupoid may have symmetries: that is, isomorphisms between it and
-<i>itself</i>.  And unlike an element of a set, an object of a
+\emph{itself}.  And unlike an element of a set, an object of a
 groupoid doesn't always count as "1 thing": when it has n symmetries,
 it counts as "1/nth of a thing".  That may seem strange, but it's
 really right.  We also need to make sure not to count isomorphic
@@ -72,9 +72,9 @@ Let's see how this works.  Let's start by counting all the n-element sets.
 
 Now, you may have thought there were infinitely many sets with n
 elements, and that's true. But remember: we're not counting the
-<i>set</i> of n-element sets - that's way too big.  So big, in fact,
+\emph{set} of n-element sets - that's way too big.  So big, in fact,
 that people call it a "class" rather than a set!  Instead, we're
-counting the <i>groupoid</i> of n-element sets: the groupoid with
+counting the \emph{groupoid} of n-element sets: the groupoid with
 n-element sets as objects, and one-to-one and onto functions between
 these as isomorphisms.
 
@@ -87,9 +87,9 @@ rules of the game.  The only requirements are that the game be
 consistent and profoundly fun - so profoundly fun, in fact, that it
 seems insulting to call it a mere "game".
 
-Now let's be more ambitious: let's count <i>all</i> the finite sets.
+Now let's be more ambitious: let's count \emph{all} the finite sets.
 In other words, let's work out the cardinality of the groupoid where
-the objects are <i>all</i> the finite sets, and the isomorphisms are
+the objects are \emph{all} the finite sets, and the isomorphisms are
 all the one-to-one and onto functions between these.
 
 There's only one 0-element set, and it has 0! symmetries, so it counts
@@ -111,7 +111,7 @@ all together to get a groupoid whose cardinality is 3.14...  But this
 is a silly solution: it doesn't shed any light on the nature of \pi .
 
 I don't want to go into it in detail now, but the previous problem
-really <i>does</i> shed light on the nature of e: it explains why this
+really \emph{does} shed light on the nature of e: it explains why this
 number is related to combinatorics, and it gives a purely
 combinatorial proof that the derivative of e^{x} is
 e^{x}, and lots more.  Try these books to see what I mean:
@@ -125,7 +125,7 @@ Tree-Like Structures, Cambridge, Cambridge U. Press, 1998.
 
 For example: if you take a huge finite set, and randomly pick a
 permutation of it, the chance every element is mapped to a
-<i>different</i> element is close to 1/e.  It approaches 1/e in the
+\emph{different} element is close to 1/e.  It approaches 1/e in the
 limit where the set gets larger and larger.  That's well-known - but
 the neat part is how it's related to the cardinality of the groupoid
 of finite sets.
@@ -200,7 +200,7 @@ But Hall proved something even cuter. This number
 
 p(0)/p^{0} + p(1)/p^{1} + p(2)/p^{2} + ...
 
-is also the cardinality of another, really <i>different</i>
+is also the cardinality of another, really \emph{different}
 groupoid.  Remember how I said you can build a groupoid as the
 "disjoint union" of a collection of groups?  To get this other
 groupoid, we take the disjoint union of all the abelian groups whose
@@ -225,12 +225,12 @@ To do this, you just need to show that there are p(n) abelian groups
 with p^{n} elements.  If I shows you how it works for n = 4,
 you can guess how the proof works in general:
 
-4 = 4   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4 = 4                
      Z/p^{4}   
-4 = 3+1  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          Z/p^{3} \times  Z/p
-4 = 2+2   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        Z/p^{2} \times  Z/p^{2} 
-4 = 2+1+1  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Z/p^{2} \times  Z/p^{2} \times  Z/p
-4 = 1+1+1+1  &nbsp;      Z/p \times  Z/p \times  Z/p \times  Z/p
+4 = 3+1                     Z/p^{3} \times  Z/p
+4 = 2+2                    Z/p^{2} \times  Z/p^{2} 
+4 = 2+1+1            Z/p^{2} \times  Z/p^{2} \times  Z/p
+4 = 1+1+1+1         Z/p \times  Z/p \times  Z/p \times  Z/p
 
 So, the hard part is showing that 
 
@@ -258,7 +258,7 @@ Let's do another example: what's the cardinality of the groupoid of
 semisimple commutative rings with n elements?
 
 What's a semisimple commutative ring?  Well, since we're only talking
-about <i>finite</i> ones, I can avoid giving the general definition
+about \emph{finite} ones, I can avoid giving the general definition
 and take advantage of a classification theorem.  Finite semisimple
 commutative rings are the same as finite products of finite fields.
 There's a finite field with p^{n} whenever p is prime and n is
@@ -334,7 +334,7 @@ Hmm, let's put that on a common denominator:
 
 So, we're getting the same answer again: 1.
 
-Is this just a weird coincidence?  No: this is what we <i>always</i> get!  For <i>any</i> positive integer n, the groupoid of n-element semsimple commutative rings has cardinality 1.  For a proof, see:
+Is this just a weird coincidence?  No: this is what we \emph{always} get!  For \emph{any} positive integer n, the groupoid of n-element semsimple commutative rings has cardinality 1.  For a proof, see:
 
 7) John Baez and James Dolan, Zeta functions, at <a
 href="http://ncatlab.org/johnbaez/show/Zeta+functions">http://ncatlab.org/johnbaez/show/Zeta+functions</a>
@@ -343,11 +343,11 @@ Now, you might think this fact is just a curiosity, but actually it's
 a step towards categorifying the Riemann zeta function.  The Riemann
 zeta function is
 
-&zeta;(s) = &sum;_{n > 0} n^{-s}
+\zeta (s) = \sum_{n > 0} n^{-s}
 
 It's an example of a "Dirichlet series", meaning a series of this form:
 
-&sum;_{n > 0} a_{n} n^{-s}
+\sum_{n > 0} a_{n} n^{-s}
 
 In fact, any reasonable way of equipping finite sets with extra stuff
 gives a Dirichlet series - and if this extra stuff is "being a
@@ -365,10 +365,10 @@ a semisimple commutative ring, and only remembers the underlying
 finite set.  In other words, it forgets the "extra stuff".
 
 In this example, the extra stuff is really just extra
-<i>structure</i>, namely the structure of being a semisimple
+\emph{structure}, namely the structure of being a semisimple
 commutative ring.  But we could also take Z to be the groupoid of
 pairs of finite sets.  A pair of finite sets is a finite set equipped
-with honest-to-goodness extra <i>stuff</i>, namely another finite set!
+with honest-to-goodness extra \emph{stuff}, namely another finite set!
 
 Structure is a special case of stuff.  If you're not clear on the
 difference, try this:
@@ -380,9 +380,9 @@ May, Springer, Berlin, 2009.  Also available as <a
 href="http://arxiv.org/abs/math/0608420">arXiv:math/0608420</a>.
 
 Then you can tell your colleagues: "I finally understand
-<i>stuff</i>."  And they'll ask: "What stuff?"  And you can answer,
-rolling your eyes condescendingly: "Not any <i>particular</i> stuff -
-just <i>stuff</i>, in general!"
+\emph{stuff}."  And they'll ask: "What stuff?"  And you can answer,
+rolling your eyes condescendingly: "Not any \emph{particular} stuff -
+just \emph{stuff}, in general!"
 
 But it's not really necessary to understand stuff in general here.
 Just think of a stuff type as a groupoid where the objects are finite
@@ -391,13 +391,13 @@ sets equipped with extra bells and whistles of some particular sort.
 Now, if we have a stuff type, say Z, we get a list of groupoids Z(n).
 How?  Simple! Objects of Z are finite sets equipped with some
 particular type of extra stuff.  So, we can take the objects of Z(n)
-to be the <i>n-element</i> sets equipped with that type of extra
+to be the \emph{n-element} sets equipped with that type of extra
 stuff.  The groupoid Z will be a disjoint union of these groupoids
 Z(n).
 
 We can encode the cardinalities of all these groupoids into a Dirichlet series:
 
-z(s) = &sum;_{n > 0} |Z(n)| n^{-s}
+z(s) = \sum_{n > 0} |Z(n)| n^{-s}
 
 where |Z(n)| is the cardinality of Z(n).  In case you're wondering
 about the minus sign: it's just a dumb convention, but I'm too
@@ -405,7 +405,7 @@ overawed by the authority of tradition to dream of questioning it,
 even though it makes everything to come vastly more ugly.
 
 Anyway: the point is that a Dirichlet series is like the "cardinality"
-of a stuff type.  To show off, we say stuff types <i>categorify</i>
+of a stuff type.  To show off, we say stuff types \emph{categorify}
 Dirichlet series: they contain more information, and they're objects
 in a category (or something even better, like a 2-category) rather
 than elements of a set.
@@ -417,20 +417,20 @@ commutative rings, then
 
 so the corresponding Dirichlet series is the Riemann zeta function:
 
-z(s) = &zeta;(s)
+z(s) = \zeta (s)
 
 So, we've categorified the Riemann zeta function!  Using this, we can
 construct an interesting groupoid whose cardinality is
 
-&zeta;(2) = &sum;_{n > 0} n^{-2} = \pi ^{2}/6
+\zeta (2) = \sum_{n > 0} n^{-2} = \pi ^{2}/6
 
 How?  Well, let's step back and consider a more general problem.  Any
 stuff type Z gives a Dirichlet series
 
-z(s) = &sum;_{n > 0} |Z(n)| n^{-s}
+z(s) = \sum_{n > 0} |Z(n)| n^{-s}
 
 How can use this to concoct a groupoid whose cardinality is z(s) for
-some particular value of s?  It's easy when s is a <i>negative</i>
+some particular value of s?  It's easy when s is a \emph{negative}
 integer (here that minus sign raises its ugly head).  Suppose S is a
 set with s elements:
 
@@ -438,30 +438,30 @@ set with s elements:
 
 Then we can define a groupoid as follows:
 
-Z(-S) = &sum;_{n > 0} Z(n) \times  n^{S}
+Z(-S) = \sum_{n > 0} Z(n) \times  n^{S}
 
 Here we are playing some notational tricks: n^{S} means "the
 set of functions from S to our favorite n-element set", the symbol
-\times  stands for the product of groupoids, and &sum; stands for what
+\times  stands for the product of groupoids, and \sum stands for what
 I've been calling the "disjoint union" of groupoids (known more
 technically as the "coproduct").  So, Z(-S) is a groupoid.  But this
 formula is supposed to remind us of a simpler one, namely
 
-z(-s) = &sum;_{n > 0} |Z(n)| n^{s}
+z(-s) = \sum_{n > 0} |Z(n)| n^{s}
 
-and indeed it's a <i>categorified version</i> of this simpler formula.  
+and indeed it's a \emph{categorified version} of this simpler formula.  
 
 In particular, if we take the cardinality of the groupoid Z(-S), we
 get the number z(-s).  To see this, you just need to check each step
 in this calculation:
 
-|Z(-S)| = |&sum; Z(n) \times  n^{S}|
+|Z(-S)| = |\sum Z(n) \times  n^{S}|
 
-= &sum; |Z(n) \times  n^{S}|
+= \sum |Z(n) \times  n^{S}|
 
-= &sum; |Z(n)| \times  |n^{S}|
+= \sum |Z(n)| \times  |n^{S}|
 
-= &sum; |Z(n)| \times  n^{s}
+= \sum |Z(n)| \times  n^{s}
 
 = z(-s)
 
@@ -490,10 +490,10 @@ S = 1
 
 Then Z(-1) is a groupoid where the objects are finite semisimple
 commutative rings with a chosen element.  The isomorphisms are ring
-isomorphisms <i>that preserve the chosen element</i>.  And the
+isomorphisms \emph{that preserve the chosen element}.  And the
 cardinality of this groupoid is
 
-|Z(-1)| = &zeta;(-1)  = 1 + 2 + 3 + ...
+|Z(-1)| = \zeta (-1)  = 1 + 2 + 3 + ...
 
 Whoops - it diverges!  Luckily, people who study the Riemann zeta
 function know that
@@ -501,7 +501,7 @@ function know that
 1 + 2 + 3 + ... = -1/12
 
 They get this crazy answer by analytically continuing the Riemann zeta
-function &zeta;(s) from values of s with a big positive real part,
+function \zeta (s) from values of s with a big positive real part,
 where it converges, over to values where it doesn't.  And it turns out
 that this trick is very important in physics.  In fact, back in
 "<a href =
@@ -509,7 +509,7 @@ that this trick is very important in physics.  In fact, back in
 href = "http://math.ucr.edu/home/baez/week126.html">week126</a>", I
 explained how this formula
 
-&zeta;(-1) = -1/12
+\zeta (-1) = -1/12
 
 is the reason bosonic string theory works best when our string has 24
 extra dimensions to wiggle around in besides the 2 dimensions of the
@@ -538,15 +538,15 @@ Indeed, as you'll see in these books (or in "<a href="http://math.ucr.edu/home/b
 1/(1-p^{-1})(1-p^{-2})(1-p^{-3}) ... =
 p(0)/p^{0} + p(1)/p^{1} + p(2)/p^{2} + ...
 
-is <i>also</i> important in string theory: it shows up as a "partition
+is \emph{also} important in string theory: it shows up as a "partition
 function", in the physical sense, where the number p(n) counts the
 number of ways a string can have energy n if it has one extra
 dimension to wiggle around in besides the 2 dimensions of its
 worldsheet.
 
-But it's the <i>24th power</i> of this function that really matters in
+But it's the \emph{24th power} of this function that really matters in
 string theory - because bosonic string theory works best when our
-string has <i>24</i> extra dimensions to wiggle around in.  For more
+string has \emph{24} extra dimensions to wiggle around in.  For more
 details, try:
 
 11) John Baez, My favorite numbers: 24.  Available at <a
@@ -555,27 +555,27 @@ href="http://math.ucr.edu/home/baez/numbers/24.pdf">http://math.ucr.edu/home/bae
 But suppose we don't want to mess with divergent sums: suppose we want
 a groupoid whose cardinality is, say,
 
-&zeta;(2) = 1^{-2} + 2^{-2} + 3^{-2} + ... =
+\zeta (2) = 1^{-2} + 2^{-2} + 3^{-2} + ... =
 \pi ^{2}/6
 
 Then we need to categorify the evalution of Dirichlet series at
-<i>positive</i> integers.  We can only do this for <i>certain</i>
+\emph{positive} integers.  We can only do this for \emph{certain}
 stuff types - for example, our favorite one.  So, let Z be the
 groupoid of finite semisimple commutative rings, and let S be a finite
 set.  How can we make sense of
 
-Z(S) = &sum;_{n > 0} Z(n) \times  n^{-S} ?
+Z(S) = \sum_{n > 0} Z(n) \times  n^{-S} ?
 
 The hard part is n^{-S}, because this has a minus sign in it.
 How can we raise an n-element set to the -Sth power?  If we could
-figure out some sort of groupoid that serves as the <i>reciprocal</i>
+figure out some sort of groupoid that serves as the \emph{reciprocal}
 of an n-element set, we'd be done, because then we could take that to
 the Sth power.  Remember, S is a finite set, so to raise something
 (even a groupoid) to the Sth power, we just multiply a bunch of copies
 of that something - one copy for each element of S.
 
 So: what's the reciprocal of an n-element set?  There's no answer in
-general - but there's a nice answer when that set is a <i>group</i>,
+general - but there's a nice answer when that set is a \emph{group},
 because then that group gives a groupoid with one object, and the
 cardinality of this groupoid is just 1/n.
 
@@ -587,7 +587,7 @@ So, we don't interpret Z(n) \times  n^{-S} as an ordinary
 product, but something a bit sneakier, a "twisted product".  An object
 in Z(n) \times  n^{-S} is just an object of Z(n), that is an
 n-element semisimple commutative ring.  But we define a symmetry of
-such an object to be a symmetry of this ring <i>together with</i> an
+such an object to be a symmetry of this ring \emph{together with} an
 S-tuple of elements of its underlying additive group.  We compose
 these symmetries with the help of addition in this group.  This
 ensures that
@@ -596,13 +596,13 @@ ensures that
 
 when |S| = s.  And this in turn means that
 
-|Z(S)| = |&sum; Z(n) \times  n^{-S}|
+|Z(S)| = |\sum Z(n) \times  n^{-S}|
 
-= &sum; |Z(n) \times  n^{-S}|
+= \sum |Z(n) \times  n^{-S}|
 
-= &sum; |Z(n)| \times  n^{-s}
+= \sum |Z(n)| \times  n^{-s}
 
-= &zeta;(-s)
+= \zeta (-s)
 
 So, in particular, if S is a 2-element set, we can write
 
@@ -610,7 +610,7 @@ S = 2
 
 for short and get
 
-|Z(2)| = &zeta;(2) = \pi ^{2}/6
+|Z(2)| = \zeta (2) = \pi ^{2}/6
 
 Can we describe the groupoid Z(2) in simple English, suitable for a
 nice bumper sticker?  It's a bit tricky.  One reason is that I haven't
@@ -623,7 +623,7 @@ if we also describe morphisms from one object to another.
 For this, it's best to define Z(n) \times  n^{-S} with the
 help of torsors.  The idea of a torsor is that you can take the
 one-object groupoid associated to any group G and find a
-<i>different</i> groupoid, which is nonetheless <i>equivalent</i>, and
+\emph{different} groupoid, which is nonetheless \emph{equivalent}, and
 which is a groupoid of appealing mathematical gadgets.  These gadgets
 are called "G-torsors".  A "G-torsor" is just a nonempty set on which
 G acts freely and transitively:
@@ -651,7 +651,7 @@ earlier one.  So, we see:
 <div align="center">
 THE GROUPOID OF FINITE SEMISIMPLE COMMUTATIVE RINGS <br/>
 EQUIPPED WITH AN n-TUPLE OF TORSORS <br/>
-HAS CARDINALITY &zeta;(n) </div>
+HAS CARDINALITY \zeta (n) </div>
 
 I did a silly change of variables here: I thought this bumper sticker
 would sell better if I said "n-tuple" instead of "S-tuple".  Here n is
@@ -668,10 +668,10 @@ HAS CARDINALITY \pi ^{2}/6
 Now, you might think this fact is just a curiosity.  But I don't think
 so: it's actually a step towards categorifying the general theory of
 zeta functions.  You see, the Riemann zeta function is just one of
-<i>many</i> zeta functions.  As Hasse and Weil discovered, every
+\emph{many} zeta functions.  As Hasse and Weil discovered, every
 sufficiently nice commutative ring R has a zeta function.  The Riemann
 zeta function is just the simplest example: the one where R is the
-ring of integers.  And the cool part is that <i>all</i> these zeta
+ring of integers.  And the cool part is that \emph{all} these zeta
 functions come from stuff types using the recipe I described!
 
 How does this work?  Well, from any commutative ring R, we can build a
@@ -680,7 +680,7 @@ finite semisimple commutative ring together with a homomorphism from R
 to that ring.  Then it turns out the Dirichlet series of this stuff
 type, say
 
-&zeta;_{R}(s) = &sum;_{n > 0} |Z_{R}(n)|
+\zeta _{R}(s) = \sum_{n > 0} |Z_{R}(n)|
 n^{-s}
 
 is the usual Hasse-Weil zeta function of the ring R!  
@@ -749,7 +749,7 @@ function.  I told you about this back in "<a href =
 recipe gets even simpler when we go up to stuff types: the generating
 function of a stuff type Z is just
 
-&sum;_{n \ge  0} |Z(n)| z^{n}
+\sum_{n \ge  0} |Z(n)| z^{n}
 
 Since we can also describe states of the quantum harmonic oscillator
 as power series, with z^{n} corresponding to the nth energy
@@ -774,7 +774,7 @@ href="http://arxiv.org/abs/0908.4305">arXiv:0908.4305</a>.
 But now I'm telling you something new!  I'm saying that any stuff type
 also gives a Dirichlet series, namely
 
-&sum;_{n > 0} |Z(n)| n^{-s}
+\sum_{n > 0} |Z(n)| n^{-s}
 
 This should make you wonder what's going on.  My paper with Jim
 explains it - at least for structure types.  The point is that the
@@ -790,15 +790,15 @@ it, because they love taking a number and decomposing it into prime
 factors.  But they both fit into a single picture!
 
 There's a lot more to say about this, because actually the category of
-structure types has <i>five</i> monoidal structures, all fitting
+structure types has \emph{five} monoidal structures, all fitting
 together in a nice way.  You can read a bit about this here:
 
 16) nLab, Schur functors, <a href="http://ncatlab.org/nlab/show/Schur+functor">http://ncatlab.org/nlab/show/Schur+functor</a>
 
 This is something Todd Trimble and I are writing, which will
 eventually evolve into an actual paper.  We consider structure types
-for which there is a <i>vector space</i> of structures for each finite
-set instead of a <i>set</i> of structures.  But much of the abstract
+for which there is a \emph{vector space} of structures for each finite
+set instead of a \emph{set} of structures.  But much of the abstract
 theory is similar.  In particular, there are still five monoidal
 structures.
 
@@ -836,7 +836,7 @@ Vect-valued species.  So, the whole story should categorify.
 
 In short: starting from very simple ideas, we can very quickly find a
 treasure trove of rich structures.  Indeed, these structures are
-<i>already staring us in the face</i> - we just need to know how to
+\emph{already staring us in the face} - we just need to know how to
 open our eyes.  They clarify and unify a lot of seemingly esoteric and
 disconnected things that mathematicians and physicists love.
 

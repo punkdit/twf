@@ -33,7 +33,7 @@ One great thing about this paper is that it discusses the history in a
 blow-by-blow way, including conferences and unpublished but
 influential writings.  It also gives a great summary of the key ideas
 in Lawvere's thesis.  I'll quote it, since everyone should know or at
-least <i>have seen</i> these ideas:
+least \emph{have seen} these ideas:
 
 \begin{quote}
    1. To use the category of categories as a framework for mathematics,
@@ -243,14 +243,14 @@ of this sort for a particular fixed p are called "p-forms".
 We also say they're "of degree p".  And the algebra of
 differential forms obeys
 
-&nu;\omega  = (-1)^{pq} \omega &nu;
+\nu \omega  = (-1)^{pq} \omega \nu 
 
-whenever &nu; is of degree p and \omega  is of degree q.  This is what we
+whenever \nu  is of degree p and \omega  is of degree q.  This is what we
 mean by saying \Omega (A) is "graded commutative".
 
 But the algebra of differential forms is better than a mere graded
 commutative algebra!  We've already introduced df when f is an element
-of our original algebra.  But we can define "d" for <i>all</i>
+of our original algebra.  But we can define "d" for \emph{all}
 differential forms simply by saying that d is linear and saying that d
 of
 
@@ -270,9 +270,9 @@ for any differential form \omega .  Why?  Well, I'll let you check it, but
 I'll give you a hint: the key step is to show that d1 = 0.  And third,
 it implies this version of the product rule:
 
-d(&nu;\omega ) = (d&nu;) \omega  + (-1)^{p} &nu;d\omega  
+d(\nu \omega ) = (d\nu ) \omega  + (-1)^{p} \nu d\omega  
 
-for any p-form &nu; and q-form \omega .  Again the proof is a little
+for any p-form \nu  and q-form \omega .  Again the proof is a little
 calculation.
 
 We can summarize these three facts, together with the linearity of d, by
@@ -308,9 +308,9 @@ spaces, to appear in Trans. Amer. Math. Soc..  Also available as
 <a href = "http://arxiv.org/abs/0807.1704">arXiv:0807.1704</a>.
 
 But here's a question that sounds harder: how can we generalize differential
-forms to an arbitrary <i>topological</i> space X?
+forms to an arbitrary \emph{topological} space X?
 
-You could take A to be the algebra of <i>continuous</i> functions on X and
+You could take A to be the algebra of \emph{continuous} functions on X and
 form \Omega (A).  There's no law against it... go ahead... but I bet
 no good will come of it.  (What goes wrong?)
 
@@ -362,12 +362,12 @@ We just take the algebra A of simplex-wise smooth functions on
 But Sullivan noted that we can go even further.  Thanks to how we've
 defined the standard n-simplex, it makes sense to talk about
 polynomial functions on this simplex.  We can even sidestep the need
-for real numbers, by looking at polynomial functions with <i>rational</i>
+for real numbers, by looking at polynomial functions with \emph{rational}
 coefficients.  And that's just right for rational homotopy theory.
 
 So, let's focus our attention on functions on |Sing(X)| that when
 restricted to any simplex give polynomials with rational coefficients.
-This is a commutative algebra over the <i>rational</i> numbers.  Call it A.
+This is a commutative algebra over the \emph{rational} numbers.  Call it A.
 We can copy our previous construction of \Omega (A) but now working with 
 rational numbers instead of reals.  Let's call guys in here "rational 
 differential forms".
@@ -383,21 +383,21 @@ category", which I defined last week.  So: they're the
 same, as far as homotopy theory is concerned.)
 
 And even better, when X is a rational space, the rational differential
-forms on |Sing(X)| will know <i>everything</i> about the homotopy type of
+forms on |Sing(X)| will know \emph{everything} about the homotopy type of
 X.  This is amazing!  It means that for rational spaces, we can reduce
 homotopy theory to a souped-up version of the theory of differential
 forms!
 
 In particular, Sullivan was able to use this trick to compute 
-the <i>homotopy groups</i> of a rational space X, starting from the
+the \emph{homotopy groups} of a rational space X, starting from the
 rational differential forms on |Sing(X)|.  
 
 Since X and |Sing(X)| have the same homotopy type, they have the same
 homotopy groups, and cohomology groups, and so on.  And it's not
-surprising that we can read off the <i>cohomology groups</i> of
+surprising that we can read off the \emph{cohomology groups} of
 |Sing(X)| starting from the rational differential forms on this space
 - this is just a slight twist on the usual idea of deRham cohomology.
-But it's surprising that we can compute the <i>homotopy groups</i>, which
+But it's surprising that we can compute the \emph{homotopy groups}, which
 are usually a lot harder.  This is the magic of rational homotopy
 theory.  
 
@@ -525,7 +525,7 @@ a digression.  I got distracted from my real goal.
 
 Before I got distracted, I was telling you how commutative algebras
 are the same as DGCA's with only C_{0} being nonzero.  And
-here's why I mentioned this.  We can take <i>any</i> DGCA and
+here's why I mentioned this.  We can take \emph{any} DGCA and
 violently kill C_{p} for all p > 0, leaving a commutative
 algebra C_{0}.  We can think of this as a forgetful functor
 
@@ -645,11 +645,11 @@ If you look back at my definition of 1-forms, it amounted to this:
 
 And the universal property of K&auml;hler differentials gives us this:
 
-Der(A) &cong; \Omega _{K}^{1}(A)*
+Der(A) \cong  \Omega _{K}^{1}(A)*
 
 Putting these facts together, we get
 
-\Omega ^{1}(A) &cong; \Omega _{K}^{1}(A)**
+\Omega ^{1}(A) \cong  \Omega _{K}^{1}(A)**
 
 So, we always have a module homomorphism 
 
@@ -660,8 +660,8 @@ double dual, \emph{and} the map we get from the universal property of
 K&auml;hler differentials.
 
 Now, here's the tricky part.  This map j is always a surjection.  And
-it will be an <i>isomorphism</i> when the K&auml;hler differentials are a
-finitely generated projective module.  But it won't <i>always</i> be
+it will be an \emph{isomorphism} when the K&auml;hler differentials are a
+finitely generated projective module.  But it won't \emph{always} be
 an isomorphism!
 
 For example, when A is the algebra of rational polynomials on a
@@ -670,11 +670,11 @@ projective module.  In fact it's the free module with one generator
 dx_{i} for each independent coordinate.  So in this case we
 actually get an isomorphism
 
-\Omega ^{1}(A) &cong; \Omega _{K}^{1}(A)
+\Omega ^{1}(A) \cong  \Omega _{K}^{1}(A)
 
 and thus 
 
-\Omega (A) &cong; \Omega _{K}(A)
+\Omega (A) \cong  \Omega _{K}(A)
 
 More generally, this is true whenever A is the algebraic functions on
 a smooth affine algebraic variety, by the same sort of argument.  So
@@ -721,9 +721,9 @@ d(e^{x}) = e^{x} dx
 we just need to check that they agree on all derivations.  The hard
 part is to prove that any derivation of A is of the form
 
-v(f) = g f &prime;
+v(f) = g f '
 
-for some g in A, where f &prime; is the usual derivative of f.  Then we have
+for some g in A, where f ' is the usual derivative of f.  Then we have
 
 d(e^{x})(v) = v(e^{x}) = g e^{x} =
 e^{x} v(x) = (e^{x} dx)(v)
@@ -738,7 +738,7 @@ So here's the hard part.  Say we have a derivation v of the algebra A
 of smooth functions on the real line.  Why is there a function g such
 that 
 
-v(f) = g f &prime; 
+v(f) = g f ' 
 
 for all functions f?  As you can guess from my parenthetical remark,
 we should try
@@ -747,27 +747,27 @@ g = v(x)
 
 So, let's prove
 
-v(f) = v(x) f &prime; 
+v(f) = v(x) f ' 
 
 We just need to check they're equal at any point x_{0}.  So, let's 
 use a kind of Taylor series trick:
 
-f(x) = f(x_{0}) + (x - x_{0}) f &prime;(x_{0})
+f(x) = f(x_{0}) + (x - x_{0}) f '(x_{0})
 + (x - x_{0})^{2} h(x)
 
 Here it's utterly crucial that h is a smooth function on the real
 line.  Check that yourself!!!  Then, apply the derivation v and use 
 the three rules that derivations obey:
 
-v(f)(x) = v(x) f &prime;(x_{0}) + 2(x - x_{0}) v(x) h(x) + (x - x_{0})^{2} v(h)  
+v(f)(x) = v(x) f '(x_{0}) + 2(x - x_{0}) v(x) h(x) + (x - x_{0})^{2} v(h)  
 
 Then evaluate both sides at x = x_{0}.  A bunch of stuff goes away:
 
-v(f)(x_{0}) = v(x) f &prime;(x_{0})
+v(f)(x_{0}) = v(x) f '(x_{0})
 
 Since this was true for any point x_{0}, we indeed have
 
-v(f) = v(x) f &prime;
+v(f) = v(x) f '
 
 as desired.  
 
@@ -843,12 +843,12 @@ Similarly, we know how to turn any simplex into a DGCA, namely the
 rational differential forms on that simplex!  So we also have a
 functor
 
-F &prime;: \Delta  \to  [DGCAs]^{op}
+F ': \Delta  \to  [DGCAs]^{op}
 
 There's an "op" here because of the usual contravariant relation
 between algebra and geometry.  But never mind: what matters is that
 DGCA^{op} has colimits.  So we can copy what we did before, and take
-the weighted colimit of f &prime; with S as our weight.  And now this creates 
+the weighted colimit of f ' with S as our weight.  And now this creates 
 a DGCA: the "rational differential forms" on our simplicial set S.
 
 The idea is that we take each simplex in our simplicial set, turn
@@ -879,7 +879,7 @@ for the category
 
 [DGCAs]^{op} ?
 
-It's <i>related</i> to the category of "simplicial affine schemes",
+It's \emph{related} to the category of "simplicial affine schemes",
 no?  But it's not quite the same.  Can we think of this category as
 consisting of simplicial affine schemes with an extra property?  You
 see, this bears heavily on the idea that rational homotopy theory is a
@@ -966,7 +966,7 @@ snow.
 
 So, let's focus our attention on functions on |Sing(X)| that when
 restricted to any simplex give polynomials with rational coefficients.
-This is a commutative algebra over the <i>rational</i> numbers.  Call
+This is a commutative algebra over the \emph{rational} numbers.  Call
 it A.
 
 \end{quote}
@@ -991,7 +991,7 @@ set S, we can define an algebra A of real-valued functions on |S| that
 are rational polynomials when restricted to each simplex.  Do the functions
 in A separate points of |S|?
 
-Over at the n-Category Caf&eacute; we showed the answer is <i>yes</i>.
+Over at the n-Category Caf&eacute; we showed the answer is \emph{yes}.
 The key lemma is this:
 
 \begin{quote}
@@ -1014,7 +1014,7 @@ this - and <a href =
 "http://golem.ph.utexas.edu/category/2009/12/this_weeks_finds_in_mathematic_48.html#c030518">David
 Speyer</a> was able to prove it's wrong!  (His proof uses the axiom of
 choice, since it involves a nonprincipal ultrafilter.  Do we
-<i>need</i> the axiom of choice here?)
+\emph{need} the axiom of choice here?)
 
 This led to a big discussion, which I've attempted to summarize in the
 above improved version of "<a href =

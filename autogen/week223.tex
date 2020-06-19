@@ -429,17 +429,17 @@ how it works.
 
 Starting with our extension
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              
  i    
-&nbsp; &nbsp; &nbsp; 
+      
  p  <br>
 1 \to  F \to  E \to  B \to  1
 we pick a "section"
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp
+              
+      &nbsp
                 s  <br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                
             E &larr; B
 
 meaning a function with 
@@ -451,13 +451,13 @@ the section usually \emph{isn't} a homomorphism.
 
 Given the section s, we get a function 
 
-&alpha;: B \to  Aut(F)
+\alpha : B \to  Aut(F)
 
 where Aut(F) is the group of automorphisms of F.  Here's how:
 
-&alpha;(b) f = s(b) f s(b)^{-1}
+\alpha (b) f = s(b) f s(b)^{-1}
 
-However, usually &alpha; \emph{isn't} a homomorphism.  
+However, usually \alpha  \emph{isn't} a homomorphism.  
 
 So far this seems a bit sad: functions between groups want
 to be homomorphisms.
@@ -471,13 +471,13 @@ g(b,b') = s(bb') s(b')^{-1} s(b)^{-1}
 Note that g = 1 iff s is a homomorphism.  
 
 We can then use this
-function g to save &alpha;.  The sad thing about &alpha; is that
+function g to save \alpha .  The sad thing about \alpha  is that
 it's not a homomorphism... but the good thing is, it's a homomorphism
 \emph{up to conjugation by g!}  In other words:
 
-&alpha;(bb') f = g(b,b') [ &alpha;(b) &alpha;(b') f ] g(b,b')^{-1}
+\alpha (bb') f = g(b,b') [ \alpha (b) \alpha (b') f ] g(b,b')^{-1}
 
-Taken together, &alpha; and g satisfy some equations ("cocycle
+Taken together, \alpha  and g satisfy some equations ("cocycle
 conditions") which say precisely that they form
 a homomorphism from B to the 2-group AUT(F).  Conversely, 
 any such homomorphism gives an extension of B by F.  
@@ -505,7 +505,7 @@ special cases.
 
 People have thought a lot about the special case where F is abelian and 
 lies in the center of E.  These are called "central extensions".  
-This is just the case where &alpha; = 1.  The set 
+This is just the case where \alpha  = 1.  The set 
 of isomorphism classes of central extensions is called H^{2}(B,F) - 
 the "second cohomology" of B with coefficients in F.
 
@@ -784,7 +784,7 @@ as much as I do.
 So, let's think of B and AUT(F) as "categories with multiplication and
 inverses".  Then a homomorphism 
 
-&alpha;: B \to  AUT(F) 
+\alpha : B \to  AUT(F) 
 
 is a functor that preserves multiplication of objects <em>up to a 
 specified isomorphism</em>, which must satisfy some laws of its own.  
@@ -792,11 +792,11 @@ specified isomorphism</em>, which must satisfy some laws of its own.
 Quite roughly, this means that given two objects b and b' of B,
 we don't have an equation
 
-&alpha;(bb') = &alpha;(b) &alpha;(b')
+\alpha (bb') = \alpha (b) \alpha (b')
 
 Instead, we have an isomorphism
 
-g(b,b'): &alpha;(bb') \to  &alpha;(b) &alpha;(b')   
+g(b,b'): \alpha (bb') \to  \alpha (b) \alpha (b')   
 
 This needs to satisfy some equations.  I can tell you these if you
 want, but for starters you can check that in our application, this 
@@ -804,9 +804,9 @@ g(b,b') thing will be the 2-cocycle familiar from group cohomology!
 
 And, the laws g must satisfy say precisely that g is a 2-cocycle.
 
-(Indeed, for a \emph{central} extension &alpha; = 1, so all we really need
+(Indeed, for a \emph{central} extension \alpha  = 1, so all we really need
 to think about is this 2-cocycle g.  Schreier theory goes on to consider 
-more general extensions, where &alpha; &ne; 1.)
+more general extensions, where \alpha  &ne; 1.)
 
 
 \begin{verbatim}
