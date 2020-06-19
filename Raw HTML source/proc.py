@@ -125,7 +125,7 @@ ENTITIES = [
     ("&radic;", r'\sqrt '),
     ("&quot;", '"'),
     ("&amp;", r'\text{\&} '),
-    ("&nbsp;", r'\ '), # space
+    ("&nbsp;", r' '), # meh
 ]
 REWRITES = [
     ("<P>", "\n"),
