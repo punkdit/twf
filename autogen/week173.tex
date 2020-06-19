@@ -134,7 +134,9 @@ intersection: the biggest subspace contained in either of them.  Their
 least upper bound is their "span": the smallest subpsace
 containing both of them.  For example:
 
+
 \begin{verbatim}
+
                              Q
                             /
                            /
@@ -165,7 +167,9 @@ what this law said, I might understand how octonionic quantum theory was
 different from the others.   Unfortunately, it's pretty complicated.
 Here's what it says: if we have 6 propositions x, y, z, x', y', z', then
 
+
 \begin{verbatim}
+
 [x and (x' or [(y or y') and (z or z')])] 
 
 implies
@@ -233,7 +237,9 @@ S.  All these equivalence relations commute, because addition of vectors
 commutes, as shown by the "parallelogram law":
 
                          
+
 \begin{verbatim}
+
                      y'------------------z
                     /                   /
                    /                   /
@@ -321,42 +327,54 @@ adjunctions in any 2-category.  If you don't understand this stuff,
 you're a goner now, but let me just remind you of the definitions. 
 Suppose a and b are objects in a 2-category.  Then we say the morphism
 
+
 $$
+
 L: a \to  b
 $$
     
 is a "left adjoint" of the morphism
 
+
 $$
+
 R: b \to  a
 $$
     
 (and R is a "right adjoint" of L) if there are 2-morphisms called
 the "unit"
 
+
 $$
+
 i: 1_{a} => LR
 $$
     
 and "counit"
 
+
 $$
+
 e: RL => 1_{b}
 $$
     
 satisfying the "triangle equations", which say that these
 vertical composites are both identity 2-morphisms:
 
-\begin{verbatim}
-          i.1<sub>L</sub>        1<sub>L</sub>.e
-L = 1<sub>a</sub> L ======> LRL ======> L 1<sub>a</sub> = L
-\end{verbatim}
+
+$$
+
+          i.1_{L}        1_{L}.e
+L = 1_{a} L ======> LRL ======> L 1_{a} = L
+$$
     
 and
-\begin{verbatim}
-          1<sub>R</sub>.i        e.1<sub>R</sub>
-R = R 1<sub>a</sub> ======> RLR ======> 1<sub>b</sub> R = R
-\end{verbatim}
+
+$$
+
+          1_{R}.i        e.1_{R}
+R = R 1_{a} ======> RLR ======> 1_{b} R = R
+$$
     
 
 where . denotes horizontal composition.  The whole setup (a,b,L,R,e,i)
@@ -434,20 +452,26 @@ a bit about the nerve of a 2-category.  This is a simplicial set where
 the 0-simplices correspond to objects:
 
 
+
 \begin{verbatim}
+
                             x
 \end{verbatim}
     
 the 1-simplices correspond to morphisms:
 
 
+
 $$
+
                     x ------F-------> y
 $$
     
 the 2-simplices correspond to 2-morphisms:
 
+
 $$
+
                             y
                            / \                F: x \to  y 
                           /   \               G: y \to  z
@@ -556,7 +580,6 @@ you'll find that they (probably really Freyd)
 have a neat proof of Desargues in the context of their "allegories"
 (2-categories with structure modeled on the bicategory of relations).
 \end{quote}
-    
 
 Linus Kramer writes:
 \begin{quote}
@@ -568,26 +591,26 @@ generators of homotopy groups, available at
 http://www.ruhr-uni-bochum.de/mathematik8/puttmann/index.html</A>
 which is mentioned in Baez' article.
 As Baez writes, the authors construct an embedding of the 11-sphere
-into the Cayley plane OP<sup>2</sup>. This embedding is closely related to
+into the Cayley plane OP^{2}. This embedding is closely related to
 a polarity (a polarity of a projective plane is an involution which
 maps points to lines and vice versa, and which preserves incidence).
 The simplest example is the elliptic polarity over the reals.
-Take the standard inner product on R<sup>3</sup> and consider the map
+Take the standard inner product on R^{3} and consider the map
 which sends a subspace to its perp. Now the points of the real
 projective plane are the 1-dimensional subspaces, and the lines are
 the 2-dimensional subspaces. It is fairly easy to see that this
 map 'take the perp' is a polarity.
 Now there is also a different polarity: take a Minkowski-like
-metric on R<sup>3</sup>, (++-). In exactly the same way as above, one
+metric on R^{3}, (++-). In exactly the same way as above, one
 obtains a polarity, the hyperbolic polarity of the real projective
 plane. This polarity has absolute elements, i.e. elements which
 are incident with their image under the polarity: this happens
 with all 1-dim. subspaces which are 'light-like', i.e. on which
-the metric vanishes. The set of all absolute points in RP<sup>2</sup> is
+the metric vanishes. The set of all absolute points in RP^{2} is
 a 1-sphere. 
 One can prove that up to automorphisms, these two are the only
-polarities for the real projective plane RP<sup>2</sup>. Notice the
-associated motion groups SO<sub>3</sub>(R) and SO<sub>2,1</sub>(R) (the motion group
+polarities for the real projective plane RP^{2}. Notice the
+associated motion groups SO_{3}(R) and SO_{2,1}(R) (the motion group
 consists of all collineations which commute with the polarity).
 Similar polarities can be defined for the complex, the quaternionic
 and the octonionic projective planes. One obtains elliptic
@@ -601,7 +624,7 @@ one obtains spheres of dimension 2,5,11, respectively for the
 absolute points. 
 These semi-classical embeddings were (re)discovered by the authors.
 The corresponding motion groups are by the way simple; they are
-SO<sub>3,1</sub>(R), SU<sub>3,1</sub>(C) and SU<sub>3,1</sub>(H)=Sp<sub>3,1</sub>.
+SO_{3,1}(R), SU_{3,1}(C) and SU_{3,1}(H)=Sp_{3,1}.
 If one looks only for isometric motions (as the authors do) (i.e.
 motions which centralize at the same time the elliptic polarity)
 one obtains the compact groups mentioned in the article.
@@ -613,13 +636,10 @@ A good source here is, as always, Salzmann et al., Compact
 Projective Planes, de Gruyter 1995, p. 127.
 Regards, Linus Kramer
 \end{quote}
-    
 
-<p> <hr>
+
+ \par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 755

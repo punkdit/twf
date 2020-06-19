@@ -505,7 +505,9 @@ Mathematically, such a circuit is a graph equipped with some extra
 data.  First, each edge has a number associated to it - the
 "resistance".  For example:
 
+
 \begin{verbatim}
+
                o----1----o----3----o
                |         |         | 
                |         |         | 
@@ -518,7 +520,9 @@ data.  First, each edge has a number associated to it - the
 Second, we have current flowing through this circuit.  To describe this,
 we first arbitrarily pick an orientation on each edge:
 
+
 $$
+
                o---->----o---->----o
                |         |         | 
                |         |         | 
@@ -532,7 +536,9 @@ $$
 Then we label each edge with a number saying how much "current"
 is flowing through that edge, in the direction of the arrow:
 
+
 $$
+
                     2        3
                o---->----o---->----o
                |         |         | 
@@ -553,7 +559,9 @@ If we know the current, we can work out a number for each vertex of
 our graph, saying how much current is flowing out of that vertex,
 minus how much is flowing in:
 
+
 $$
+
                          2     
              5 o---->----o---->----o 0 
                |         |         | 
@@ -586,7 +594,9 @@ building up there.  But for a closed circuit, we assume it's not.
 If a circuit is not closed, let's call it "open".  These are
 interesting too.  For example, we might have a circuit like this:
 
+
 $$
+
                x
                |    
                |    
@@ -628,7 +638,9 @@ our example - and let's fill it in with enough 2-dimensional
 god-given way if our graph is drawn on the plane: just fill in all the
 holes!
 
+
 \begin{verbatim}
+
                o---------o---------o
                |/////////|/////////| 
                |/////////|/////////| 
@@ -644,7 +656,9 @@ In electrical engineering these faces are often called
 
 This give us a chain complex
 
+
 $$
+
         \delta            \delta 
 C_{0} <-------- C_{1} <-------- C_{2}
 $$
@@ -652,7 +666,9 @@ $$
 
 Remember, a "chain complex" is just a bunch of vector spaces C_{i} and linear maps \delta : C_{i} \to  C_{i-1}, obeying the equation \delta ^{2} = 0.  We also get a cochain complex:
 
+
 $$
+
        d           d
 C^{0} --------> C^{1} ---------> C^{2}
 $$
@@ -799,7 +815,6 @@ Review, Thursday, July 9, 2009.  Also available at <a href
 http://www.technologyreview.com/computing/22975/?a=f</a>
 
 \end{quote}
-    
 
 
 David Corfield wonders if it's really true that there's a
@@ -818,7 +833,6 @@ Recently of course that 5 has become 3.
 Best, David
 
 \end{quote}
-    
 
 
 
@@ -832,11 +846,8 @@ a young person can't afford to try and cover this waterfront - only an old
 fogy who can afford to make a fool of himself.  If I don't, who will?</em> -
 John Wheeler
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 1021

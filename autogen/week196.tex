@@ -452,7 +452,9 @@ lightlike vector.  In 4 dimensions we do it like this: we
 take a left-handed spinor \psi , take its conjugate transpose 
 to get a right-handed spinor \psi *, and form 
 
+
 $$
+
 \psi  \otimes  \psi *
 $$
     
@@ -463,7 +465,9 @@ with the matrices of determinant zero corresponding to the
 lightlike vectors, so you're done!  Otherwise, you can work 
 out the above matrix explicitly:
 
+
 $$
+
 \psi  = (a)                                         (a column vector)
     (b)
 
@@ -477,13 +481,17 @@ $$
 This matrix is hermitian, so you can write it as a real 
 linear combination of Pauli matrices:
 
+
 $$
+
 \psi  \otimes  \psi * = t \sigma _{t} + x \sigma _{x} + y \sigma _{y} + z \sigma _{z}
 $$
     
 where
 
+
 $$
+
 \sigma _{t} = (1  0)
      (0  1)
 
@@ -500,7 +508,9 @@ $$
 You get a vector in Minkowski spacetime, (t,x,y,z).   
 If you check that this vector is lightlike:
 
+
 $$
+
 t^{2} = x^{2} + y^{2} + z^{2} 
 $$
     
@@ -528,14 +538,18 @@ known by Euclid.
 
 Explicitly, if 
 
+
 $$
+
 \psi  = (a)
     (b)
 $$
     
 then 
 
+
 $$
+
 2 \psi  \otimes  \psi * = (2a^{2}  2ab) 
            (2ab  2b^{2})                  
 
@@ -544,20 +558,26 @@ $$
     
 so we get the Pythagorean triple
 
+
 $$
+
 (t,x,z) = (a^{2} + b^{2}, 2ab, a^{2} - b^{2})
 $$
     
 For example, if we take our spinor to be
 
+
 $$
+
 \psi  = (2)
     (1)
 $$
     
 we get the famous triple 
 
+
 \begin{verbatim}
+
 (t,x,z) = (5,4,3)  
 \end{verbatim}
     
@@ -570,6 +590,94 @@ sure why.
 \textbf{Addendum:} Thanks to Andy Everett for catching a typo.
 Noam Elkies sent me the following:
 
+\begin{quote}
+
+\begin{verbatim}
+
+Dear J. Baez,
+
+In article <bbcc58$olh$1@glue.ucr.edu> you write:
+
+>[......] so (t,x,z) is a Pythagorean triple!!!   And in fact,
+>we get every Pythagorean triple this way, at least up to
+>an integer multiple.  And in fact, this trick was already
+>known by Euclid.
+
+Are you sure of this?  The formula was surely known by Euclid's time --
+I've even seen claims that it must have been known by the Babylonians
+(perhaps not a coincidence, since Pythagoras spent some time in Babylonia)
+-- but did Euclid have anything like this interpretation, or the proof
+that every "Pythagorean triple" is proportional to one of this form?
+
+[For that matter there's apparently some controversy about just who
+Pythagoras might have been and what he might have known, believed,
+and/or proved, since secrecy was one of the Pythagoreans' tenets.]
+
+>By the way, you'll notice I had to insert a fudge factor of "2"
+>in that formula up there to get things to work.  I'm not sure why.
+
+This is presumably an artifact of the ambiguity in the
+"symmetric square of Z".  In general, the symmetric square
+of a module M can be formed as either a submodule or a quotient
+module of the tensor square of M.  These two symmetric squares
+are (canonically) isomorphic if 2 is invertible, but not in general.
+
+The parametrization of Pythagorean triples is also closely related
+with the "half-angle substitution" of elementary calculus.
+For yet another interpretation, see
+
+<A HREF = "http://www.math.harvard.edu/~elkies/Misc/hilbert.dvi">http://www.math.harvard.edu/~elkies/Misc/hilbert.dvi</A>
+
+[also <A HREF = "http://www.math.harvard.edu/~elkies/Misc/hilbert.pdf">.pdf</A> instead of .dvi].
+
+The dissections that illustrate the Pythagorean theorem
+can be generalized to the law of cosines; see
+
+<A HREF = "http://www.math.harvard.edu/~elkies/Misc/cos1.ps">http://www.math.harvard.edu/~elkies/Misc/cos1.ps</A>
+<A HREF = "http://www.math.harvard.edu/~elkies/Misc/cos2.ps">http://www.math.harvard.edu/~elkies/Misc/cos2.ps</A>
+
+for the acute and obtuse cases respectively.
+
+Enjoy,
+--Noam D. Elkies
+
+\end{verbatim}
+    
+\end{quote}
+I replied saying that by Euclid knowing "this trick", I only 
+meant he knew this formula for Pythagorean triples:
+
+$$
+
+(a^{2} + b^{2}, 2ab, a^{2} - b^{2})
+$$
+    
+I don't know who proved it gives \emph{all} of them (up to multiples).  
+Rob Johnson then noted:
+\begin{quote}
+
+\begin{verbatim}
 
 
-% parser failed at source line 660
+There is not any high powered math involved in showing that these are
+all the pythagorean triples up to scalar multiples.  See
+
+    <A HREF = "http://www.whim.org/nebula/math/pythag.html">http://www.whim.org/nebula/math/pythag.html</A>
+
+Nothing more than the fundamental theorem of arithmetic is used (to
+justify the statement "Since b^2 = 4MN and gcd(M,N) = 1, both M and N
+must be perfect squares."), and Euclid knew that.
+
+So my guess is that Euclid probably knew that this formula gives all
+pythagorean triples up to scalar multiples, but it is just a guess.
+
+Rob Johnson
+rob@whim.org
+\end{verbatim}
+    
+\end{quote}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

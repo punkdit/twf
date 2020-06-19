@@ -98,12 +98,11 @@ on what this will mean for the Earth:
     1000 miles per second!!  The remnant Sun will rise as a dot of 
     intense light, no larger than Venus, more brilliant than 100 
     present Suns, and an intensely hot blue-white color hotter than 
-    any welder's torch.  Light from the fiendish blue &quot;pinprick&quot; 
+    any welder's torch.  Light from the fiendish blue "pinprick" 
     will braise the Earth and tear apart its surface molecules and 
-    atoms.  A new but very thin &quot;atmosphere&quot; of free electrons 
+    atoms.  A new but very thin "atmosphere" of free electrons 
     will form as the Earth's surface turns to dust.
 \end{quote}
-    
 
 So, don't keep procrastinating - enjoy life now!
 
@@ -635,6 +634,701 @@ In particular, he wanted to know
 the definition of "2-group" and "homomorphism between
 2-groups", and how AUT(F) is defined:
 
+\begin{quote}
+Dear Kevin -
+
+You write:
 
 
-% parser failed at source line 797
+\begin{verbatim}
+
+  I'm just checking some of the details (extensions of groups are morphisms 
+  of 2-groups) and I find that you've not given me quite enough information 
+  to do it (in the sense that I'm not knowledgeable enough about standard 
+  facts about 2-groups to fill in some of the details that you allude to).
+\end{verbatim}
+    
+ 
+Sorry.   I'm glad you care enough to want to know this stuff:
+2-groups and homomorphisms between them are defined in loving detail 
+in 
+<A HREF = "http://arxiv.org/abs/math.QA/0307200">my 
+paper with Aaron Lauda</A>, but I'll answer your questions here 
+and append this to "<A HREF = "week223.html">week223</A>" 
+to help out anyone else who cares.
+
+
+$$
+
+  Say we're in the "classical" case where F is an abelian group, B is a
+  group, and we're classifying extensions 1\to F\to E\to B\to 1 where F lies in the
+  centre of E. We know the answer here: such E's are classified by H^{2}(B,F)
+  which, for me, means 2-cocycles over 2-coboundaries. Recall that
+  a 2-cocycle is g:B^{2}\to F satisfying g(a,bc)+g(b,c)=g(a,b)+g(ab,c).
+$$
+    
+ 
+Right.
+
+
+$$
+
+  You want the answer to be homomorphisms B \to  AUT(F). You don't \emph{quite} give
+  the definitions of these things. 
+$$
+    
+
+True.  Let me start by saying what a 2-group is, and then how the group 
+B becomes a 2-group, and then how AUT(F) is defined.
+
+A group is just a category with one object and with all morphisms invertible.
+Slick!  But, we usually prefer to think of a group as a set: the morphisms 
+of our category get called "elements" 
+of this set.  This set then has a multiplication function
+
+
+m: G \times  G \to  G
+
+
+and an identity element
+
+1 &isin; G
+
+satisfying the associative and unit laws, and such that every element
+has an inverse.  
+
+All this categorifies painlessly:
+
+A 2-group is just a 2-category with one object and with all morphisms and 
+2-morphisms invertible.  Slick!  But, we sometimes prefer to think of a 
+2-group as a category: the morphisms of our 2-category get called 
+"objects" of this category, and the 2-morphisms get called 
+"morphisms".  This category
+then has a multiplication functor
+
+m: G \times  G \to  G
+
+and an identity object
+
+1 &isin; G
+
+satisfying the associative and unit laws, and such that every object
+and morphism has an inverse.  
+
+In short: a 2-group is just like a group, but with the word 
+"category"
+replacing the word "set", the word "object" 
+replacing the word "element", and so on!
+
+Now, how does a group become a 2-group?  Simple: we take the \emph{elements}
+of our group and make them the \emph{objects} of our 2-group; then we say the
+only morphisms of our 2-group are identity morphisms.  The 2-group 
+multiplication m: G \times  G \to  G
+comes from the multiplication in our group, and so on.
+
+
+$$
+
+  Let's stick to F abelian. You think of AUT(F) as being the 2-category with
+  objects Aut(F), 1-morphisms Hom(\phi ,\psi )=F if \phi =\psi  and empty otherwise
+  (because F is abelian). What are the 2-morphisms? Is Hom(\phi ,\psi ) supposed
+  to be a category with objects F?
+$$
+    
+
+Alas, you're one dimension down: thought of as a 2-category, we want our
+2-group AUT(F) to have one object, the usual group Aut(F) as morphisms, 
+and conjugations between these as 2-morphisms.  
+
+Here's how we get this.  Think of our group F as a category.  Then 
+let AUT(F) has F as its only object, invertible functors 
+
+a: F \to  F
+
+as its morphisms, and natural isomorphisms between these as its 2-morphisms.
+
+That's very slick.  But let me say this in a different way using the
+other viewpoint, where we think of a 2-group as a "category with 
+multiplication and inverses".  Given a group F, our 2-group AUT(F) 
+will be the category where the objects are automorphisms
+
+a: F \to  F
+
+and where a morphism f: a \to  a' is an element f of F that conjugates 
+a to give a':
+
+f a(g) f^{-1} = a'(g)   for all g &isin; F
+
+This viewpoint requires some extra work to check that AUT(F) is a 
+2-group.  The 2-category viewpoint is actually much more efficient.
+
+
+$$
+
+  Now what is a homomorphism B \to  AUT(F)?
+$$
+    
+
+Here's where the subtlety comes in: weakening!  So far we haven't
+weakened anything: all the equations in the definition of a group
+became equations in the definition of a 2-group.  We're really just
+dealing with "strict" 2-groups here.  
+But we need to \emph{weaken} the
+definition of homomorphism, replacing some equations by isomorphisms,
+to get things to work out well now.
+
+If we think of B and AUT(F) as 2-categories, a homomorphism B \to  AUT(F)
+is just a weak 2-functor.  Slick!  But, you may not enjoy this definition 
+as much as I do.
+
+So, let's think of B and AUT(F) as "categories with multiplication and
+inverses".  Then a homomorphism 
+
+&alpha;: B \to  AUT(F) 
+
+is a functor that preserves multiplication of objects <em>up to a 
+specified isomorphism</em>, which must satisfy some laws of its own.  
+
+Quite roughly, this means that given two objects b and b' of B,
+we don't have an equation
+
+&alpha;(bb') = &alpha;(b) &alpha;(b')
+
+Instead, we have an isomorphism
+
+g(b,b'): &alpha;(bb') \to  &alpha;(b) &alpha;(b')   
+
+This needs to satisfy some equations.  I can tell you these if you
+want, but for starters you can check that in our application, this 
+g(b,b') thing will be the 2-cocycle familiar from group cohomology!
+
+And, the laws g must satisfy say precisely that g is a 2-cocycle.
+
+(Indeed, for a \emph{central} extension &alpha; = 1, so all we really need
+to think about is this 2-cocycle g.  Schreier theory goes on to consider 
+more general extensions, where &alpha; &ne; 1.)
+
+
+\begin{verbatim}
+
+  I'm sure I could just go and read Breen's book, but these questions
+  are so trivial that I'm sure you can instantly answer them, and you
+  also get the confirmation that there are still people out there
+  reading TWF.
+\end{verbatim}
+    
+
+That's worth a lot!  If you ever want to learn more about 2-groups 
+and homomorphisms between them, I think 
+<A HREF = "http://arxiv.org/abs/math.QA/0307200">my 
+paper with Aaron Lauda</A>
+could be easier than 
+<A HREF = "http://www.numdam.org/numdam-bin/feuilleter?id=ASENS_1992_4_25_5">
+Breen's opus</A>.  Breen's opus concerns "higher
+Schreier" theory - classifying extensions of 2-groups with the help
+of 3-groups!
+
+Best,<br>
+jb
+\end{quote}
+
+It's important to note that it's \emph{isomorphism classes} of extensions 
+that correspond to \emph{isomorphism classes} of homomorphisms B \to  
+Aut(F).  
+For this, one needs to know what a "2-isomorphism" 
+between homomorphisms 
+of 2-groups is.  Again, this is explained in my paper with Lauda.  It's 
+a special case of a weak natural isomorphism between weak 2-functors 
+between 2-categories, but we say what this means in terms that working
+mathematicians can understand. 
+
+Also, Toby Bartels had some comments on the dinosaurs of Cabazon
+and size issues in category theory:
+
+\begin{quote}
+John wrote in part:
+
+\begin{verbatim}
+  Next I want to explain some stuff Danny Stevenson told me at a mall in
+  the little town of Cabazon while we were recovering from a hike in the
+  desert followed by pancakes at the Wheel Inn - a roadside restaurant
+  famous for its enormous statues of dinosaurs.
+\end{verbatim}
+    
+
+Did you see <A HREF = "http://www.latimes.com/news/local/la-me-dinosaurs27aug27,0,3988775,full.story">the creationist sign by the dinosaurs?</A>
+
+\begin{verbatim}
+                    SPACES FIBERED OVER THE SPACE B
+                           ARE "THE SAME" AS
+                 MAPS FROM B TO THE SPACE OF ALL SPACES
+
+  The fearsome "space of all spaces" is then the disjoint union of
+  the classifying spaces of all these topological groups AUT(F). It's
+  too large to be a space unless you pass to a larger universe of sets,
+  but otherwise it's perfectly fine.
+\end{verbatim}
+    
+
+So if you want your slogan to treat size issues carefully:
+
+<div align = center>
+SPACES FIBERED OVER THE SPACE B<br>
+  ARE "THE SAME" AS<br>
+MAPS FROM B TO THE SPACE OF ALL SMALL SPACES
+</div>
+
+But you were secretly doing this all along!
+After all, when you wrote:
+
+\begin{verbatim}
+                 n-GROUPOIDS FIBERED OVER AN n-GROUPOID B
+                          ARE "THE SAME" AS
+            WEAK (n+1)-FUNCTORS FROM B TO THE (n+1)-GROUPOID nGpd
+\end{verbatim}
+    
+
+you simply used "nGpd" to abbreviate "OF ALL 
+SMALL n-GROUPOIDS".
+So there are really no new size issues at the \omega  level.
+
+(Exercise for those that like this sort of thing:
+Do we need to state that B and F are small?)
+
+
+-- Toby
+\end{quote}
+
+
+Thanks for clearing this up.  I prefer not to distract people with
+size issues, so I didn't mention them until "the space of all
+spaces" walked in the door, at which point I figured alarm bells 
+would start ringing for lots of people.  But, it was already hiding
+in the "the (n+1)-groupoid of all n-groupoids".  I prefer to use a
+new Grothendieck universe for each level of the n-categorical 
+hierarchy, to justify such expressions.  I guess \omega -categories
+then require an \omega -th universe. 
+
+Yes, I saw that silly sign in front of the dinosaurs, though I didn't 
+understand its full meaning until now.  It wasn't there the last time 
+I visited.  Apparently the new owners have decided to enlist this nice 
+roadside attraction as part of the propaganda campaign for creationism. 
+They actually believe Adam and Eve walked with dinosaurs in Eden - as 
+one biologist put it, "they think The Flintstones is a documentary".
+
+It's sad how just as the magnificent history of the universe is becoming
+vividly clear, some want to truncate it to a pitifully human scale - 
+and then claim \emph{that} was God's work.
+
+Next, David Corfield had some questions about the "space of all spaces",
+which I answered in this email:
+
+\begin{quote}
+ Dear David - 
+
+ You wrote:
+
+
+\begin{verbatim}
+
+  Hi,
+  
+         SPACES FIBERED OVER THE SPACE B 
+               ARE "THE SAME" AS 
+    MAPS FROM B TO THE SPACE OF ALL SMALL SPACES 
+  
+  Is there another handle on this, other than
+  
+       OMEGA-GROUPOIDS FIBERED OVER THE OMEGA-GROUPOID B 
+                    ARE "THE SAME" AS 
+    WEAK OMEGA-FUNCTORS FROM B TO THE OMEGA-GROUPOID OF ALL
+                  SMALL OMEGA-GROUPOIDS  ?
+  
+  Presumably B must be small, and the spaces fibered over it.
+\end{verbatim}
+    
+
+ It suffices for the fibers to be small, so if you want a really
+nitpicky motto:
+
+<DIV ALIGN = CENTER>
+    SMALL \omega -GROUPOIDS FIBERED OVER THE \omega -GROUPOID B <br>
+                    ARE "THE SAME" AS <br>
+    WEAK \omega -FUNCTORS FROM B TO THE \omega -GROUPOID OF ALL <br>
+              SMALL \omega -GROUPOIDS <br> 
+</DIV>
+
+
+\begin{verbatim}
+
+  Do you and Jim have other intuitions about THE SPACE OF ALL
+  SMALL SPACES? 
+\end{verbatim}
+    
+ One can describe it in a completely precise and rigorous way.
+ It's the disjoint union over all homotopy types of small
+ spaces F of the classifying spaces B(Aut(F)).  Here Aut(F) is the 
+ topological group of homotopy self-equivalences of F.
+ 
+ Note: the "largeness" of this space is solely due to it being a 
+ disjoint union of a proper class of connected components.  When 
+ we map any small space to it, the map can only hit a set's worth
+ of components.  So, it's not really scary.
+
+ And, if we map a connected small space X to it, we get a map 
+
+ X \to  B(Aut(F)) 
+
+ for some F, which is just what you need to get an F-bundle over X.
+
+
+\begin{verbatim}
+
+  Like, is it one of your FREE SUCH-AND-SUCHES?
+\end{verbatim}
+    
+ I don't know a description like that offhand, since "free" suggests
+ a left universal property, and the space of all (small) spaces mainly 
+ has a right universal property, which describes maps \emph{into} it.
+
+ Namely: maps from X into the space of all spaces are "the same as"
+ fibrations over X.
+
+I could make this completely precise, but it's probably not worth bothering
+here; one just needs suitable equivalence relations.
+
+\end{quote}
+Next, Peter May wrote: 
+
+\begin{quote}
+ In his posting today, John Baez advertised the slogan:
+
+<DIV ALIGN = CENTER>
+              FIBRATIONS OVER THE BASE SPACE B WITH FIBER F <br>
+                           ARE "THE SAME" AS <br>
+          HOMOMORPHISMS SENDING LOOPS IN B TO AUTOMORPHISMS OF F.
+</DIV>
+
+ He hedged it with a "dose of vagueness", but in fact I proved a
+ completely precise and general version of exactly this result in:
+
+16) Peter May, Classifying spaces and fibrations, 
+Memoirs AMS 155, Jan. 1975.  
+
+ Using
+ Moore loops on B, LB, one has a topological monoid, and one also has the
+ topological monoid Aut(F) of homotopy equivalences of F.  
+ A "transport"
+ is a homomorphism of topological monoids from LB to Aut(F).  Allowing F to
+ vary by a homotopy equivalence, one can define an equivalence relation on
+ transports such that the equivalence classes are in natural bijective
+ correspondence with the equivalence classes of "fibrations over the base
+ space B with fiber F".  One can generalize the context by allowing fibers
+ in some nice category and prove the same result.  See opus cit, Theorem
+ 14.2, page 83.  That was over 30 years ago, so naturally I wasn't thinking
+ about categorification, but I would imagine that the methods categorify.
+\end{quote}
+
+Here and below I've taken the liberty of numbering the references to
+papers, so it's easier to find them in my table of contents for This
+Week's Finds.  
+
+Jim Stasheff wrote:
+
+\begin{quote}
+ Even more ancient:
+
+ 
+17) James Stasheff, 
+ Parallel transport in fibre spaces, Bol. Soc. Mat. Mexicana (1968), 68-86.
+
+ Unfortunately that's a hard paper to get a hold of.
+
+ Somewhat related is:
+
+18) James Stasheff, 
+ Associated fibre spaces, Michigan Math. Journal 15 (1968), 457-470.
+
+ and at the survey level:
+
+19) James Stasheff, 
+ H-spaces and classifying spaces, I-IV, AMS Proc. Symp. Pure Math.
+ 22 (1971), 247-272.
+
+ Of course, as you might expect, I describe things in terms of
+ A_{\infty }-morphisms from the space of loops into Aut(F) of homotopy 
+ equivalences of F.
+
+ Now that some of us are comfortable with A_{\infty }-cats,
+ categorification should proceed, perhaps with some technical details.
+
+ jim
+\end{quote}
+
+Ronnie Brown wrote:
+
+\begin{quote}
+ John Baez gave an interesting account of nonabelian cohomology and
+ extension theory.  Here are a few more references with which I have been
+ involved, all using crossed complexes and free crossed resolutions:
+
+20) 
+ Ronald Brown and P. J. Higgins, Crossed complexes and non-abelian
+ extensions, Category theory proceedings, Gummersbach,
+ 1981, (ed. K.H. Kamps et al) Lecture Notes in Math. 962 
+ Springer, Berlin, 1982, pp. 39-50.
+
+ This generalises classical Schreier theory to extensions of groupoids.
+
+21)
+Ronald Brown and O. Mucuk, 
+Covering groups of non-connected 
+ topological groups revisited, Math. Proc. Camb. Phil. 
+ Soc., 115 (1994) 97-110.  Also available as 
+ <A HREF = "http://arxiv.org/abs/math.AT/0009021">math.AT/0009021</A>.
+
+ This relates the theory of covering topological groups of non connected
+ topological groups to the classical theory of extensions and
+ obstructions to a Q-kernel with an invariant in H3.  It uses the
+ properties of the internal hom in crossed complexes CRS(F,C), and 
+ exact sequences derived from a fibration C \to  D and the induced 
+ fibration on CRS(F, -).
+
+22) 
+Ronald Brown and Timothy Porter,
+On the Schreier theory of non-abelian
+ extensions: generalisations and computations, Proceedings
+ Royal Irish Academy 96A (1996), 213-227.
+Also available at
+<A HREF = "http://www.informatics.bangor.ac.uk/public/math/research/ftp/algtop/rb/nonabex4.ps.gz">http://www.informatics.bangor.ac.uk/public/math/research/ftp/algtop/rb/nonabex4.ps.gz</A>
+ This establishes a generalisation of the Schreier theory in two ways 
+ (but only for groups). One is using coefficients in a crossed module,
+ following Dedecker's key ideas, as in the references in John's account.
+ Second it shows how to compute with such extensions
+
+ A \to  E \to  G
+
+ in terms of presentations of the group G.  This involves identities
+ among relations for the presentation, as shown originally by Turing in
+
+23) 
+ Alan Turing, The extensions of a group, Compositio Mathematica 5 (1938), 
+ 357-367.
+
+ The advantage of this method is that one can actually do sums, even when
+ the group G may be infinite.  The example given by us is G = trefoil group
+ with two generators x,y and relation x^{3}=y^{2}. 
+ This presentation has no
+ identities among relations, and so the calculation is especially simple.
+ Equivalence of extensions is described in terms of homotopies of
+ morphisms of crossed complexes, and this relates the ideas to other
+ forms of homological or homotopical algebra.
+
+ An advantage of this approach is the ability to calculate some small
+ free crossed resolutions of some groups: this is one reason for using
+ crossed complexes.  Note that a convenient monoidal closed structure on
+ the category of crossed complexes has been explicitly written down, and
+ this allows convenient calculation and representations of homotopies,
+ using the `unit interval' groupid, as a crossed complex.
+
+ One of the problems I have with the globular approach is the difficulty
+ of writing down homotopies, and higher homotopies.  For example, Ilhan
+ Icen and I found it difficult to rewrite in terms of group-groupoids the
+ well known Whitehead theory of automorphisms of crossed modules,
+ explained for the crossed modules of groupoids case in:
+
+24) 
+Ronald Brown and Ilhan Icen, 
+Homotopies and automorphisms of crossed modules
+ of groupoids, Applied Categorical Structures, 11 (2003) 185-206.
+ Also available as <A HREF = "http://arxiv.org/abs/math.CT/0008117">math.CT/0008117</A>.
+
+ It looks as if it would be better expressed in terms of automorphisms of
+ 2-groupoids: good marks to anyone who writes it down in that way!
+
+ One knows such homotopies of globular \infty  groupoids exist because
+ globular \infty -groupoids are equivalent to crossed complexes:
+
+25) 
+Ronald Brown and P. J. Higgins, 
+The equivalence of \infty -groupoids and
+ crossed complexes, Cah. Top. Geom. Diff. 22 (1981) 371-386.
+
+ (This paper contains an early definition of a (strict, globular)
+ \infty  category.)
+
+ This raises a question: what is the crossed complex associated to the
+ free globular groupoid on one generator of dimension n?  I have a
+ round-about sketch proof, using also cubical theory, and a van Kampen
+ theorem, that it \emph{is} the fundamental crossed complex of the n-globe.
+ Does anyone have a purely algebraic proof?
+ 
+ The idea of singular nonabelian cohomology of a space X with
+ coefficients in a crossed complex C is given in:
+
+26) Ronald Brown and 
+P. J. Higgins, The classifying space of a crossed complex,
+ Math. Proc. Camb. Phil. Soc. 110 (1991) 95-120.
+
+ This cohomology is given by [\Pi SX, C], homotopy classes of maps from
+ the fundamental crossed complex of the singular complex of X, to C.
+ There is also a Cech version (current work with Jim Glazebrook and Tim
+ Porter).
+
+ An interesting problem is to classify extensions of crossed complexes!
+
+ There is an interesting account of extensions of principal bundles and
+ transitive Lie groupoids by Androulidakis, developing work of Mackenzie,
+ at:
+
+ 27) Iakovos Androulidakis, Classification of extensions of principal 
+ bundles and transitive Lie groupoids with prescribed kernel and 
+ cokernel, J. Math. Phys. 45 (2004), 3095-4012.  Also available as
+ <A HREF = "http://arxiv.org/abs/math.DG/0402007"</A>math.DG/0402007</A>. 
+
+ (not using crossed complexes).
+
+ Ronnie Brown <br>
+ <A HREF = "http://www.bangor.ac.uk/r.brown">http:www.bangor.ac.uk/r.brown</A> 
+\end{quote}
+
+Finally, here's my reply to a bemused comment by Jim Stasheff:
+
+\begin{quote}
+ Jim Stasheff wrote:
+ 
+
+$$
+
+   John and anyone else who cares to weigh in, here are some comments from 
+   the purely topological or rather homotopy theory side:
+ 
+   For both bundles and fibrations (e.g. over a paracompact base), your 
+   last slogan is the oldest:
+ 
+                  FIBRATIONS WITH FIBER F OVER THE SPACE B
+                             ARE "THE SAME" AS
+                 MAPS FROM B TO THE CLASSIFYING SPACE OF AUT(F)
+ 
+   "the same as" referring to homotopy classes.
+$$
+    
+
+ It's certainly old, but I mentioned another that may be older:
+
+<DIV ALIGN = CENTER>
+                    COVERING SPACES OF B WITH FIBER F <br>
+                           ARE "THE SAME" AS <br>
+    HOMOMORPHISMS FROM THE FUNDAMENTAL GROUP OF B TO AUTOMORPHISMS OF F
+</DIV>
+
+ although one usually sees this special case (which I didn't bother
+ to mention):
+
+<DIV ALIGN = CENTER>
+                 CONNECTED COVERING SPACES OF B WITH FIBER F <br>
+                            ARE "THE SAME" AS <br>
+            TRANSITIVE ACTIONS OF THE FUNDAMENTAL GROUP OF B ON F
+</DIV>
+
+ which is usually disguised as follows:
+
+<DIV ALIGN = CENTER>
+                 CONNECTED COVERING SPACES OF B <br>
+                           ARE "THE SAME" AS <br>
+               SUBGROUPS OF THE FUNDAMENTAL GROUP OF B 
+</DIV>
+
+ Anyway, I wasn't trying to present things in historical order.  
+ I was trying present them roughly in order of increasing
+ "dimension", starting with extensions of groups, then going up to 
+ 2-groups, then expanding out to groupoids, then going up to n-groupoids,
+ and finally \omega -groupoids... which are the same as homotopy types!
+
+ And here, as usual, the n-category theorists meet up with the 
+ topologists - and find that the topologists have already done everything 
+ there is to do with \omega -groupoids ... but usually by thinking of 
+ them of them as \emph{spaces}, rather than \omega -groupoids!  
+
+ It's sort of like climbing a mountain, surmounting steep cliffs with
+ the help of ropes and other equipment, and then finding a Holiday Inn 
+ on top and realizing there was a 4-lane highway going up the other side.  
+ 
+ So, as usual, the main point of calling homotopy types 
+ "\omega -groupoids"
+ instead of "spaces" 
+ is not to reinvent topology, but to see how ideas
+ from topology generalize to n-category theory.  Think of spaces as 
+ \omega -groupoids, but use those as a springboard for \omega -categories -
+ or at least n-categories, perhaps just for low values of n if one is 
+ feeling tired.
+
+ In the case at hand, the \omega -groupoidal slogan: 
+
+<DIV ALIGN = CENTER>
+               FIBRATIONS OF \omega -GROUPOIDS WITH FIBER F AND BASE B <br>
+                               ARE "THE SAME" AS <br>
+                       WEAK \omega -FUNCTORS FROM B TO AUT(F)
+</DIV>
+ is just a reformulation of:
+
+<DIV ALIGN = CENTER>
+                  FIBRATIONS WITH FIBER F OVER THE SPACE B <br>
+                             ARE "THE SAME" AS <br>
+                 MAPS FROM B TO THE CLASSIFYING SPACE OF AUT(F)
+</DIV>
+ but it suggests a grandiose generalization:
+
+<DIV ALIGN = CENTER>
+               FIBRATIONS OF \omega -CATEGORIES WITH BASE B<br>
+                            ARE "THE SAME" AS <br>
+   WEAK \omega -FUNCTORS FROM B^{op} TO THE \omega -CATEGORY OF \omega -CATEGORIES!
+</DIV>
+
+ I guess we can thank Grothendieck for making precise and proving a
+ version of this with \omega  replaced by n = 1:
+
+<DIV ALIGN = CENTER>
+                      FIBRATIONS OF CATEGORIES WITH BASE B <br>
+                               ARE "THE SAME" AS <br>
+            WEAK 2-FUNCTORS FROM B^{op} TO THE 2-CATEGORY OF CATEGORIES.
+</DIV>
+
+ More recently people have been thinking about the n = 2 case, especially
+ Claudio Hermida:
+
+ 28) Claudio Hermida, Descent on 2-fibrations and strongly 2-regular 
+ 2-categories, Applied Categorical Structures, 12 (2004), 427-459.
+ Also available at <A HREF = "http://maggie.cs.queensu.ca/chermida/papers/2-descent.pdf">http://maggie.cs.queensu.ca/chermida/papers/2-descent.pdf</A>
+
+ He states something that hints at this:
+
+<DIV ALIGN = CENTER>
+                      FIBRATIONS OF 2-CATEGORIES WITH BASE B <br>
+                               ARE "THE SAME" AS <br>
+         WEAK 3-FUNCTORS FROM B^{op} TO THE WEAK 3-CATEGORY OF 2-CATEGORIES.
+</DIV>
+ Here I'm using B^{op} to mean B with the directions of 
+ both 1-morphisms and 2-morphisms reversed.  
+ Hermida follows tradition and calls this B^{coop} - 
+ "op" for reversing 
+ 1-morphisms and "co" for reversing 2-morphisms.  
+ But, it looks like we'll 
+ be needing to reverse all kinds of morphisms in n-category case, so we'll 
+ need a short name for that.
+
+ Best,<br>
+ jb
+\end{quote}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>"Hah, what a fantastic night," Gunn said.
+"Arcturus is absolutely steady."  He leaned back, put
+his elbows on the rail of the lift, and looked up at the sky.
+His glasses glinted faintly in the starlight.  "Astronomy
+is not terribly important," he said.  He fell silent for a 
+moment.  "Although it is one of the more important things
+we do as a species," he said.  He did not see any contradiction
+
+
+% parser failed at source line 1565

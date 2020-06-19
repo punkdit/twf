@@ -342,7 +342,9 @@ there any identities involving addition, multiplication, exponentiation
 and the number 1 that don't follow from the identities we all learned in
 high school?  In case you forgot, these are:
 
+
 \begin{verbatim}
+
 x + y = y + x        (x + y) + z = x + (y + z) 
 
 xy = yx              (xy)z = x(yz)
@@ -368,7 +370,9 @@ Matematica.   Also available at <A HREF = "http://www.maths.ox.ac.uk/~wilkie/"> 
 
 Here is Wilkie's counterexample:
 
+
 \begin{verbatim}
+
 [(x + 1)^x + (x^2 + x + 1)^x]^y  [(x^3 + 1)^y + (x^4 + x^2 + 1)^y]^x =
 [(x + 1)^y + (x^2 + x + 1)^y]^x  [(x^3 + 1)^x + (x^4 + x^2 + 1)^x]^y 
 \end{verbatim}
@@ -426,7 +430,9 @@ finite sets.  I explained this in "<A HREF =
 From this viewpoint it's very natural to include some extra axioms
 involving 0, which corresponds to the empty set: 
 
+
 \begin{verbatim}
+
 0 + x = x        
 
 0x = 0     
@@ -491,6 +497,249 @@ catching mistakes in the original error-ridden version of this issue.)
 Postscript - A friend of mine interested in nanotechnology made the following
 comments on Wil McCarthy's article:
 
+\begin{quote}
+From your comments I can't tell if you were "fooled" by his misleading
+impression in the article that (1) the specific physical atoms of our
+periodic table could be "found" analogously in quantum dots containing
+the corresponding numbers of electrons; or the weaker (but still false)
+(2) there could be a "periodic table of quantum-dot artificial atoms"
+indexed by their number of electrons. (2) is the most obviously false,
+and he even says why in the article - the shape of the dot (and for
+that matter the material it's made of) also influence its properties.
+But, basically for exactly this reason, (1) is also false - there's
+no reason to expect \emph{any} quantum dot and number of electrons in it
+to be able to imitate a specific kind of physical atom.
+
+So it's misleading to say that a material could be "switched from lead
+to gold". It could not be exactly "lead", and it could not be exactly "gold",
+and it could not even be in states which would justify making an analogy
+to those specific elements, unless you carefully selected the properties
+you wanted to compare -- e.g. color. But selecting color you might say
+"it's like gold", whereas selecting conductivity you might choose a
+different element (or something different from any element) to compare it to.
+
+However, effects almost as interesting might be true (though I don't know
+enough to judge critically whether they \emph{really} might be true), e.g.
+a material whose various physical properties could be quickly changed
+over wide ranges, "programmed" in various uncommon useful combinations,
+and reconfigured in tiny detail. It seems almost certainly true that
+an advanced nanotech would include important technological uses for these
+kinds of effects. Whether they can be useful in these "chemistry-like ways"
+before we have advanced nanotech (for building the dots precisely) is
+doubtful to me - their properties are likely to be highly dependent on
+their \emph{precise} shape and composition, which I doubt we can control well
+enough without building them atom-by-atom. (However, they'll probably be
+quite useful in other ways, not analogous to "atoms", which depend much less
+on their precise shape & composition. I think this has already happened.)
+
+It's too bad he gave the false impressions in the article, since it obscures
+the true and amazing stuff - it makes me unclear on how much of what
+he says is actually plausible.
+
+One other thing he implied, which is false, is that "regular" nanotech
+couldn't give us anything like "programmable matter". In fact, if you
+\emph{really} want a surface that switches from lead to gold at the flick
+of a switch, just make lots of little cubes or plates with gold on one side
+and lead on the other side, and have them all get turned over by little
+motors when you flick the switch.
+
+This kind of "mechanical reconfiguration" method (generalized/extended a
+lot) could be fast enough to let big buildings change shape faster than
+water can flow, and with feasible expenditure of energy and generation
+of waste heat. So the main thing added to this by the possibility of
+"artificial atoms in quantum dots" would be a wider variety of
+electronic/optical/magnetic materials properties (I doubt the mechanical
+properties will be very much affected), and the ability to switch those
+in picoseconds (that's a guess) rather than merely milliseconds, and to
+do so for much less energy.
+
+I.e. mainly important for technological uses rather than something
+that has a biq qualitative effect on "human experience", which will
+already include all effects that he listed, just from "regular" nanotech.
+
+\begin{verbatim}
+
+> ...But even so, I believe there will be some cool technological 
+> applications of quantum dots.
+\end{verbatim}
+    
+Yep!
+\end{quote}
+
+Also, here are some comments by Noam Elkies about the number 24:
+
+\begin{quote}
+
+$$
+
+John Baez wrote:
+
+[....]
+
+>Gannon's article is full of juicy mathematical tidbits and pieces
+>of wisdom.  He even gives a new explanation of why the number 24
+>is so important throughout mathematics and string theory.
+>If x^{2} = 1 mod n, then x does not divide n... and 24
+>is the largest integer for which the converse holds!
+$$
+    
+This cannot be right: for any n, the only factors x|n
+such that x^{2} is 1 mod n are x=1 and x=-1.  You must mean
+that n|24 if and only if x^{2}-1 is a multiple of n for every integer
+x that's \emph{coprime} to n.  But is this connection really new?
+I remember observing this some time back, and can't believe
+I was the first either...
+
+\begin{verbatim}
+
+>Alas, Gannon does not explain how this relates to the other
+>magic properties of this number, some of which are listed in "week124".
+>Does anyone see the connection?
+\end{verbatim}
+    
+Here's one not-immediately-obvious consequence.  Consider the group
+\Gamma _{0}(n^{2}), consisting of 2\times 2 integer 
+matrices of determinant 1
+whose bottom left entry is a multiple of n^{2}.  When is the matrix
+
+\begin{verbatim}
+
+       [ 1  1/n ]
+T(n) = [        ]
+       [ 0   1  ]
+\end{verbatim}
+    
+in the normalizer of this group?  The conjugate of [a, b; n^{2} c, d]
+by this matrix has integer diagonal entries and bottom left entry 
+n^{2} c;
+so it's in \Gamma _{0}(n^{2}) if and only if the 
+top right entry is an integer.
+Well, the top right entry is  b-c + (d-a)/n.  This is an integer
+provided d is congruent to a mod n.  But all that restricts (a,d)
+mod n is the condition that ad-n^{2}bc=1, and thus that ad=1 mod n.
+So, this should entail a=d mod n, which it does if and only if every
+integer coprime to n is its own multiplicative inverse mod n !
+So, the integers n for which this holds are precisely those for which
+the normalizer of \Gamma _{0}(n^{2}) contains T(n).  
+Another way to say this is: conjugate \Gamma _{0}(n^{2}) 
+by the matrix
+
+\begin{verbatim}
+
+  [ n   0  ]
+  [        ]
+  [ 0  1/n ]
+\end{verbatim}
+    
+This yields all integer matrices of determinant 1 whose off-diagonal
+matrices are multiples of n.  Reducing mod n, we get the group of
+scalar matrices if and only if each unit in Z/nZ is a square root of 1
+-- in which case we have a normal subgroup of 
+SL_{2}(Z) [the group of 2\times 2
+integer matrices of determinant 1], so in particular the corresponding
+conjugate
+
+\begin{verbatim}
+
+  [ 1   1 ]
+  [       ]
+  [ 0   1 ]
+\end{verbatim}
+    
+of T(n) is in the normalizer.
+
+What has all this to do with moonshine?  I'm no moonshine expert, so I
+can't say for sure; but moonshine certainly involves coefficients of
+modular forms and functions for congruence subgroups of
+SL_{2}(Z).  If T(n) is in the normalizer of
+\Gamma _{0}(n^{2}) then T(n) acts on the spaces of modular
+forms/functions by linear transformations whose n-th power is the
+identity (since T(n)^{n} is in
+\Gamma _{0}(n^{2})).  The eigenspaces of these
+transformations are the modular forms/functions whose coefficients are
+supported on arithmetic progressions mod n.  So, we get to isolate the
+different arithmetic progressions mod n precisely when n satisfies the
+n|x^{2}-1 condition.  This should explain the special role
+played by these integers n, which as we know are 24 and its factors.
+--Noam D. Elkies 
+\end{quote}
+And here is some more by Noam Elkies:
+\begin{quote}
+
+\begin{verbatim}
+
+John Baez wrote:
+ 
+>[...] He then uses this to explain why even self-dual lattices occur
+>only in dimensions that are multiples of 8, which is nice, but he
+>doesn't connect up with any appearances of the number 24.  
+>Your remarks go much further in this direction - thanks!  
+\end{verbatim}
+    
+Glad to be of help.  I mention the use of modular forms to explain this
+divisibility by 8 in my paper "A characterization of the Z^{n} lattice"
+(Math Research Letters 2 (1995), 321-6 = <A HREF = "http://xxx.lanl.gov/abs/math.NT/9906019">math.NT/9906019</A>, and again
+in the first part of my expository article "Lattices, Linear Codes,
+and Invariants" (AMS Notices 27 (2000), pages 1238-1245 =
+<A HREF = "http://www.ams.org/notices/200010/fea-elkies-1.pdf">
+http://www.ams.org/notices/200010/fea-elkies-1.pdf</A>; see the footnote
+on page 1243).
+
+\begin{verbatim}
+
+>To me, one basic reason for the appearance of the number 24
+>in the theory of modular forms is the fact that of all lattices
+>in the plane, the square one and the "equilateral triangle" one 
+>have more symmetry - 4-fold symmetry and 6-fold symmetry,
+>respectively.  It's related to the fact that the abelianization
+>of SL(2,Z) has 12 elements.  But I don't see an immediate connection
+>between these simple things and the above number-theoretic property 
+>of 24.
+\end{verbatim}
+    
+I don't see a complete explanation either.  However, there is this:
+The group of units in Z/nZ is known to be the Galois group over Q
+of the n-th cyclotomic field (the field obtained from Q by adjoining
+the n-th roots of unity).
+The condition:  (x,n)=1 iff n|x^{2}-1  is equivalent to the requirement
+that every element of this group be its own inverse, and thus that
+this group be isomorphic to (Z/2Z)^{r}.
+By Galois theory, this is equivalent to requirement that the n-th
+cyclotomic field be the compositum of r quadratic extensions.
+For instance, the 24th cyclotomic field is the compositum of
+Q(i), Q(\sqrt -3), and Q(\sqrt 2).
+Now if a lattice L in C has extra symmetries, then its ring of complex
+endomorphisms (the complex numbers z such that zL is contained in L)
+is an imaginary quadratic field generated by these symmetries.
+It is thus one of the two cyclotomic fields of degree 2 over Q.
+So this explains at least why 4 and 6 (as in fourfold and sixfold
+symmetry) are factors of the number 24.  It doesn't explain 24 entirely,
+because 12 suffices to get both 4 and 6.  But then 12 is also a good
+number for this kind of game; see Poonen and Rodriguez-Villegas's paper
+<A HREF = "www.math.berkeley.edu/~poonen/papers/lattice12.ps">
+(www.math.berkeley.edu/~poonen/papers/lattice12.ps)</A> on "Lattice polygons
+and the number 12".
+NDE
+\end{quote}
+
+Finally, Marcelo Fiore tells me that there are some extra axioms for
+0 which automatically arise when you decategorify a biCartesian closed
+category, for example:
+
+\begin{verbatim}
+
+    x &sdot; 0^x = 0          (logically: x and not x is false)
+ 
+   0^(0^(0^x)) = 0^x     (logically: not not not x iff not x)
+\end{verbatim}
+    
+and probably at least one more.  I guess I should have added these 
+as axioms in my description of the Tarski high school algebra 
+in the version where we include 0.  I'm a bit confused about this....
 
 
-% parser failed at source line 661
+ \par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

@@ -171,7 +171,9 @@ so we can integrate it along a path and compute how the
 phase of charged particle changes when we move it along that 
 path:
 
+
 $$
+
              f
   x------------>-----y    a path f from the point x to the point y:
                                  we write this as f: x \to  y
@@ -189,7 +191,9 @@ for the wine.  It's just a gadget that you can integrate over
 a surface, to compute how the phase of a charged \emph{string} moves 
 when we slide it along that surface:
 
+
 $$
+
               f
     ----------->-----
    /        ||       \
@@ -207,14 +211,18 @@ around!
 If you're wondering why I'm talking about "categorifying", 
 it's because this:
 
+
 $$
+
              f
   x------------>-----y    
 $$
     
 is also a picture of a morphism in a category, while this:
 
+
 $$
+
               f
     ----------->-----
    /        ||       \
@@ -302,7 +310,9 @@ give you some hand-wavy intuitions.
 Very roughly speaking, an connection on a bundle takes any path 
 in spacetime
 
+
 $$
+
              f
   x------------>-----y    
 $$
@@ -318,7 +328,9 @@ a connection takes any path and gives you an \emph{object} in some
 \emph{2-group}, 
 but it also takes any surface like this:
 
+
 $$
+
               f
     ----------->-----
    /        ||       \
@@ -346,7 +358,9 @@ happens when we move particles, strings and 2-branes.
 
 And so on:
 
+
 \begin{verbatim}
+
 group         point particles
 2-group       point particles and strings
 3-group       point particles, strings and 2-branes
@@ -424,7 +438,9 @@ specify the 0-chains, then the 1-chains, then the 2-chains.
 
 For the particular one Urs mentions, we have
 
+
 \begin{verbatim}
+
 {0-chains} = 11d Poincar&eacute; Lie superalgebra
 {1-chains} = {0}
 {2-chains} = R
@@ -499,6 +515,89 @@ Well, this is just the beginning, but Urs explains the rest.
 \textbf{Addenda}: I thank Noam Elkies for a correction.  Aaron
 Bergman has this to say about E_{8} and M-theory:
 
+\begin{quote}
+John Baez wrote:
 
 
-% parser failed at source line 605
+$$
+
+> I also need to understand what all this has to do with E_{8}.
+$$
+    
+
+E_{8} might not have much of anything to do with this. As mentioned in
+Diaconescu, Freed and Moore, E_{8} appears to function solely as a
+convenient stand-in for K(Z,3).
+
+On the other hand, the split form of the E-series (up to
+E_{11} if you're feeling particularly speculative) is known to
+show up in describing the fields of 11D SUGRA, but the I don't think
+anyone knows of a connection between the two E_{8}s. Just to
+add to the fun, E_{8} gauge fields also show up on the fixed
+points of M-theory on S^{1}/Z_{2} giving the
+E_{8} \times  E_{8} heterotic string. 
+
+Aaron
+\end{quote}
+
+Urs Schreiber replied:
+
+\begin{quote}
+ Aaron Bergman wrote:
+
+$$
+
+ > E_{8} gauge fields also show up on the fixed points of 
+ > M-theory on S^{1}/Z_{2} giving the E_{8} \times  E_{8} heterotic string.
+$$
+    
+
+ The topological part of the membrane action involves the integral
+ of the sugra 3-form over the worldvolume.  By DFW, part of that
+ 3-form can be thought of as an E_{8} CS 3-form.
+
+ So part of the membrane action looks similar to an E_{8} CS-theory
+ over the worldvolume.
+
+ Now let the membrane have a boundary. A bulk E_{8} CS-theory is
+ well known to induce an E_{8} WZW theory on the boundary.
+
+ Could this be the connection between the DWF E_{8} and the
+ Horava-Witten E_{8}?
+
+ I have asked this question before: <A HREF =
+ "http://golem.ph.utexas.edu/string/archives/000791.html">http://golem.ph.utexas.edu/string/archives/000791.html</A>. Jarah
+ then agreed that this must be about right. But it is not completely
+ clear to me yet.
+
+ One problem is that in CS-theory we vary the connection, while in
+ the topological membrane the E_{8} connection on the background is fixed
+ and we vary the embedding by which we pull it back to the worldvolume.
+ Under suitable assumptions that might be equivalent to varying an E_{8}
+ connection on the worldvolume itself? 
+\end{quote}
+
+Aaron Bergman replied:
+
+\begin{quote} 
+ Urs Schreiber wrote:
+
+$$
+
+ > Now let the membrane have a boundary. A bulk E_{8} CS-theory is
+ > well known to induce an E_{8} WZW theory on the boundary.
+ >
+ > Could this be the connection between the DWF E_{8} and the
+ > Horava-Witten E_{8}?
+$$
+    
+ A similar observation was made by Horava way back in <A HREF = "http://arxiv.org/abs/hep-th/9712130">arXiv:hep-th/9712130</A> (in
+ the final section).
+ Aaron 
+\end{quote}
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

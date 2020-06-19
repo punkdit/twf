@@ -273,6 +273,392 @@ all sorts of famous and fascinating creatures, such as:
  intersection cohomology, perverse sheaves and Kazhdan-Lusztig theory 
 </li>
 </ul>
+\end{quote}
+
+However, the charm of the tale is how many of these ideas are unified
+and made simpler thanks to a big, simple idea: groupoidification.
+
+So, what's groupoidification?  It's a method of exposing the combinatorial 
+underpinnings of linear algebra - the hard bones of set theory underlying
+the flexibility of the continuum.
+
+Linear algebra is all about vector spaces and linear maps.  One of the 
+lessons that gets drummed into you when you study this subject is that 
+it's good to avoid picking bases for your vector spaces until you need 
+them.  It's good to keep the freedom to do coordinate transformations... 
+and not just keep it in reserve, but keep it \emph{manifest!}
+
+As Hermann Weyl wrote, "The introduction of a coordinate system
+to geometry is an act of violence".
+ 
+This is a deep truth, which hits many physicists when they study special 
+and general relativity.  However, as Niels Bohr quipped, a deep truth is one 
+whose opposite is also a deep truth.  There are some situations where
+a vector space comes equipped with a god-given basis.  Then it's foolish
+not to pay attention to this fact!
+
+The most obvious example is when our vector space has been \emph{defined}
+to consist of formal linear combinations of the elements of some set.  
+Then this set is our basis.  
+
+This often happens when we use linear algebra to study combinatorics.
+
+But if sets give vector spaces, what gives linear operators?  Your
+first guess might be \emph{functions}.  And indeed, functions between sets
+do give linear operators between their vector spaces.  For example, 
+suppose we have a function
+
+f: {livecat, deadcat} \to  {livecat, deadcat}
+
+which "makes sure the cat is dead":
+
+f(livecat) = deadcat
+
+f(deadcat) = deadcat
+
+Then, we can extend f to a linear operator defined on formal 
+linear combinations of cats: 
+
+F(a livecat + b deadcat) = a deadcat + b deadcat
+
+Written as a matrix in the {livecat, deadcat} basis, this looks like
 
 
-% parser failed at source line 349
+\begin{verbatim}
+
+ 0  0
+
+ 1  1 
+\end{verbatim}
+    
+(The relation to quantum mechanics here is just a vague hint of
+themes to come.  I've deliberately picked an example where the linear
+operator is \emph{not} unitary.)
+
+So, we get some linear operators from functions... but not all!  
+We only get operators whose matrices have exactly a single 1 in 
+each column, the rest of the entries being 0.  That's because a
+function f: X \to  Y sends each element of X to a single element of Y.
+
+This is very limiting.  We can do better if we get operators from
+\emph{relations} between sets.  In a relation between sets X and Y,
+an element of X can be related to any number of elements of Y, and
+vice versa.  For example, let the relation
+
+R: {1,2,3,4} &mdash;/\to  {1,2,3,4}
+
+be "is a divisor of".  Then 1 is a divisor of everybody, 2 is a 
+divisor of itself and 4, 3 is only a divisor of itself, and 4 is
+only a divisor of itself.  We can encode this in a matrix:
+
+
+\begin{verbatim}
+
+ 1 0 0 0
+ 1 1 0 0
+ 1 0 1 0
+ 1 1 0 1
+\end{verbatim}
+    
+
+where 1 means "is a divisor of" and 0 means "is not a
+divisor of".
+
+We can get any matrix of 0's and 1's this way.  Relations are really
+just matrices of truth values.  We're thinking of them as matrices of 
+numbers.  Unfortunately we're still far from getting \emph{all} matrices
+of numbers!  
+
+We can do better if we get matrices from \emph{spans} of sets.  A span of
+sets, written S: X &mdash;/\to  Y, is just a set S equipped with functions to
+X and Y.  We can draw it like this:
+
+
+\begin{verbatim}
+
+                     S
+                    / \
+                   /   \
+                 F/     \G
+                 /       \
+                v         v 
+               X           Y
+\end{verbatim}
+    
+This is my wretched ASCII attempt to draw two arrows coming down from
+the set S to the sets X and Y.  It's supposed to look like a bridge - 
+hence the term "span".  
+
+Spans of sets are like relations, but where you can be related to 
+someone more than once!
+
+For example, X could be the set of Frenchman and Y could be the set of
+Englishwomen.  S could be the set of Russians.  As you know, every
+Russian has exactly one favorite Frenchman and one favorite
+Englishwoman.  So, F could be the function "your favorite
+Frenchman", and G could be "your favorite Englishwoman".
+
+Then, given a Frenchman x and an Englishwoman y, they're related by 
+the Russian s whenever s has x as their favorite Frenchman and y as 
+their favorite Englishwoman:
+
+F(s) = x  and  G(s) = y.   
+
+Some pairs (x,y) will be related by no Russians, others will be related 
+by one, and others will be related by more than one!  I bet the pair
+
+(x,y) = (G&eacute;rard Depardieu, Emma Thompson)
+
+is related by at least 57 Russians.
+
+This idea lets us turn spans of sets into matrices of natural numbers.
+Given a span of finite sets:
+
+
+\begin{verbatim}
+
+                     S
+                    / \
+                   /   \
+                 F/     \G
+                 /       \
+                v         v 
+               X           Y
+\end{verbatim}
+    
+we get an X \times  Y matrix whose (x,y) entry is the number of Russians - 
+I mean elements s of S - such that 
+
+F(s) = x  and  G(s) = y.   
+
+We can get any finite-sized matrix of natural numbers this way.  
+
+Even better, there's a way to "compose" spans that nicely matches the
+usual way of multiplying matrices.  You can figure this out yourself if
+you solve this puzzle:
+
+\begin{quote}
+ Let X be the set of people on Earth.  Let T be the X \times  X matrix
+ corresponding to the relation "is the father of".  Why does
+ the matrix T^{2} correspond to the relation "is the paternal
+grandfather of"?  Let S correspond to the relation "is a friend
+ of".  Why doesn't the matrix S^{2} correspond to the
+ relation "is a friend of a friend of"?  What span does this
+ matrix correspond to?  \end{quote}
+
+To go further, we need to consider spans, not of sets, but of groupoids!
+
+I'll say more about this later - I suspect you're getting tired.
+But for now, briefly: a groupoid is a category with inverses.  Any
+group gives an example, but groupoids are more general - they're the
+modern way of thinking about symmetry.
+
+There's a way to define the cardinality of a finite groupoid:
+
+12) John Baez and James Dolan, From finite sets to Feynman diagrams,
+in Mathematics Unlimited - 2001 and Beyond, vol. 1, eds. Bjorn Engquist 
+and Wilfried Schmid, Springer, Berlin, 2001, pp. 29-50.  Also available
+as <A HREF = "http://xxx.lanl.gov/abs/math.QA/0004133">math.QA/0004133</A>.
+
+And, this can equal any nonnegative \emph{rational} number!  This lets us
+generalize what we've done from finite sets to finite groupoids, and
+get rational numbers into the game.
+
+A span of groupoids is a diagram
+
+
+\begin{verbatim}
+
+                     S
+                    / \
+                   /   \
+                 F/     \G
+                 /       \
+                v         v 
+               X           Y
+\end{verbatim}
+    
+where X, Y, S are groupoids and F, G are functors.  If all the groupoids
+are finite, we can turn this span into a finite-sized matrix of nonnegative 
+rational numbers, by copying what we did for spans of finite sets.  
+
+There's also a way of composing spans of groupoids, which corresponds 
+to multiplying matrices.  However, there's a trick involved in getting
+this to work - I'll have to explain this later.  For details, try:
+
+13) Jeffrey Morton, Categorified algebra and quantum mechanics, 
+Theory and Application of Categories 16 (2006), 785-854.  Available
+at 
+<a href = "http://www.emis.de/journals/TAC/volumes/16/29/16-29abs.html">http://www.emis.de/journals/TAC/volumes/16/29/16-29abs.html</a>; 
+also available as <A HREF = "http://xxx.lanl.gov/abs/math.QA/0601458">math.QA/0601458</A>.
+
+14) Simon Byrne, On Groupoids and Stuff, honors thesis, Macquarie
+University, 2005, available at 
+<a href = "http://www.maths.mq.edu.au/~street/ByrneHons.pdf">
+http://www.maths.mq.edu.au/~street/ByrneHons.pdf</a> and
+<a href = "http://math.ucr.edu/home/baez/qg-spring2004/ByrneHons.pdf">http://math.ucr.edu/home/baez/qg-spring2004/ByrneHons.pdf</a>
+
+
+Anyway: the idea of "groupoidification" is that in many cases where 
+mathematicians think they're playing around with linear operators
+between vector spaces, they're \emph{actually} playing around with spans of
+groupoids!  
+
+This is especially true in math related to simple Lie groups, their
+Lie algebras, quantum groups and the like.  While people usually study
+these gadgets using linear algebra, there's a lot of combinatorics 
+involved - and where combinatorics and symmetry show up, one invariably
+finds groupoids.
+
+As the name suggests, groupoidification is akin to categorification.
+But, it's a bit different.  In categorification, we try to boost up
+mathematical ideas this way:
+
+\begin{quote}
+sets \to  categories <br>
+functions \to  functors <br>
+\end{quote}
+
+In groupoidification, we try this:
+
+\begin{quote}
+vector spaces \to  groupoids <br>
+linear operators \to  spans of groupoids<br>
+\end{quote}
+
+Actually, it's "decategorification" and
+"degroupoidification" that are systematic processes.  These
+processes lose information, so there's no systematic way to reverse
+them.  But, as I explained in "<A HREF =
+"week99.html">week99</A>", it's still fun to try!  If we succeed,
+we discover an extra layer of structure beneath the math we thought we
+understood... and this usually makes that math \emph{clearer} and 
+\emph{less technical}, because we're not seeing it through a blurry,
+information-losing lens.
+
+Okay, that's enough for now.  On a completely different note, here's
+a book on "structural realism" and quantum mechanics:
+
+15) Dean Rickles, Steven French, and Juha Saatsi, The Structural
+Foundations of Quantum Gravity, Oxford University Press, Oxford, 
+2006.  Containing:
+
+\begin{quote}
+Dean Rickles and Steven French, Quantum gravity meets structuralism: 
+interweaving relations in the foundations of physics.  Also available at 
+<a href = "http://fds.oup.com/www.oup.co.uk/pdf/0-19-926969-6.pdf">http://fds.oup.com/www.oup.co.uk/pdf/0-19-926969-6.pdf</a>
+
+Tian Yu Cao, Structural realism and quantum gravity.
+
+John Stachel, Structure, individuality, and quantum gravity.
+Also available as <A HREF = "http://xxx.lanl.gov/abs/gr-qc/0507078">gr-qc/0507078</A>.
+
+Oliver Pooley, Points, particles, and structural realism.  Also
+available at <a href = "http://philsci-archive.pitt.edu/archive/00002939/">http://philsci-archive.pitt.edu/archive/00002939/</a>
+
+Mauro Dorato and Massimo Pauri, Holism and structuralism in 
+classical and quantum general relativity.  Also available at 
+<a href = "http://philsci-archive.pitt.edu/archive/00001606/">http://philsci-archive.pitt.edu/archive/00001606/</a>
+
+Dean Rickles, Time and structure in canonical gravity.  Also
+available at <a href = "http://philsci-archive.pitt.edu/archive/00001845/">http://philsci-archive.pitt.edu/archive/00001845/</a>
+
+Lee Smolin, The case for background independence.  Also available
+as <A HREF = "http://xxx.lanl.gov/abs/hep-th/0507235">hep-th/0507235</A>.
+
+John Baez, Quantum quandaries: A category-theoretic perspective.
+Also available at <a href = "http://math.ucr.edu/home/baez/quantum/">http://math.ucr.edu/home/baez/quantum/</a> and as
+<A HREF = "http://xxx.lanl.gov/abs/quant-ph/0404040">quant-ph/0404040</A>.
+\end{quote}
+
+Very loosely speaking - I ain't no philosopher - structural realism is
+the idea that what's "real" about mathematics, or the
+abstractions in physical theories, are not individual entities but the
+structures, or patterns, they form.  So, instead of asking tired
+questions like "What is the number 2, really?" or "Do
+points of spacetime really exist?", we should ask more global
+questions about the roles that structures like "natural
+numbers" or "spacetime" play in math and physics.  It's
+a bit like how in category theory, we can only understand an object in
+the context of the category it inhabits.
+
+Finally, here's a puzzle for lattice and Lie group fans.  The dots 
+in Stembridge's pictures are the shortest nonzero vectors in the D_{5}, 
+E_{6}, E_{7}, and E_{8} lattices - or in technical terms, the "roots".  Of
+course, only for ADE Dynkin diagrams are the roots all of equal length -
+but those are the kind we have here.  Anyway: in the D_{5} case, only 32 
+of the 40 roots are visible.  The other 8 are hidden in back somewhere.  
+Where are they?
+
+I asked John Stembridge about this and he gave a useful clue.  His
+planar pictures show projections of the roots into what he calls the 
+"Coxeter plane".  
+
+Recall from "<A HREF = "week62.html">week62</A>" that the "Coxeter group" associated to a Dynkin 
+diagram acts as rotation/reflection symmetries of the roots; it's 
+generated by reflections through the roots.  There's a basis of roots 
+called "simple roots", one for each dot in our Dynkin diagram, and 
+the product of reflections through all these simple roots is called 
+the "Coxeter element" of our Coxeter group - it's well-defined up to 
+conjugation.  The "Coxeter plane" is the canonical plane on which the
+Coxeter element acts as a rotation.
+
+A rotation by how much?  The order of the Coxeter element is called
+the "Coxeter number" and denoted h, so the Coxeter element
+acts on the Coxeter plane as a rotation of 2\pi /h.  The Coxeter number
+is important for other reasons, too!  Here's how it goes:
+
+
+$$
+
+Coxeter group   Coxeter number
+   A_{n}               n+1
+   B_{n}               2n
+   C_{n}               2n
+   D_{n}               2n-2
+   E_{6}               12
+   E_{7}               18 
+   E_{8}               30
+   F_{4}               12
+   G_{2}               6
+$$
+    
+For D_{5} the Coxeter number is 8, which accounts for the
+8-fold symmetry of Stembridge's picture in that case.  The
+E_{8} picture has 30-fold symmetry!  My D_{4} picture
+has 8-fold symmetry, so I must not have been projecting down to the
+Coxeter plane.
+
+Anyway, this stuff should help answer my puzzle.  I don't know the answer,
+though.
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\textbf{Addenda:} I thank David Corfield and James Dolan for catching
+mistakes.  Tony Smith found a nice picture created by G&uuml;nter
+Ziegler of the D_{4} root system (that is, the 24-cell) 
+viewed from the Coxeter plane.  The D_{4} root system is
+4-dimensional, but it's been drawn with a bit of 3d perspective.  
+The 6-fold symmetry is evident:
+
+<div align = "center">
+<img width = "500" src = "24-cell.jpg">
+</div>
+
+16) G&uuml;nter M. Ziegler, picture of 24-cell,
+<a href = "http://www.math.tu-berlin.de/~ziegler/24-cell.jpeg">
+http://www.math.tu-berlin.de/~ziegler/24-cell.jpeg</a>
+
+For more discussion, go to the <a href = "http://golem.ph.utexas.edu/category/2007/03/this_weeks_finds_in_mathematic_8.html">\emph{n}-Category 
+Caf&eacute;</a>.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>The true spirit of delight, the exaltation, the sense of being more 
+than Man, which is the touchstone of the highest excellence, is to 
+be found in mathematics as surely as poetry.</em> - Bertrand Russell
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

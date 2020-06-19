@@ -357,7 +357,9 @@ a category whose morphisms are equivalence classes of proofs.  In
 Gentzen's "natural deduction" approach to logic, there are various 
 deduction rules.  Here's one: 
 
+
 $$
+
 P |- Q    P |- Q'
 ------------------
   P |- Q \text{\&}  Q'
@@ -369,7 +371,9 @@ implies Q \text{\&}  Q'.
 
 Here's another:
 
+
 $$
+
 P |- Q => R
 ------------
 P and Q |- R
@@ -377,7 +381,9 @@ $$
     
 And here's a very important one, called the "cut rule":
 
+
 \begin{verbatim}
+
 P |- Q    Q |- R
 -----------------
      P |- R
@@ -388,13 +394,17 @@ If P implies Q and Q implies R, then P implies R!
 There are a bunch more... and to get the game rolling we need
 to start with this:
 
+
 \begin{verbatim}
+
 P |- P
 \end{verbatim}
     
 In this setup, a proof f: P \to  Q looks vaguely like this:
 
+
 \begin{verbatim}
+
     f-crud
     f-crud
     f-crud
@@ -419,7 +429,9 @@ fg: P \to  R
 This proof consists of setting the proofs f and g side by side and then
 using the cut rule to finish the job.  So, fg looks like this:
 
+
 \begin{verbatim}
+
      f-crud     g-crud
      f-crud     g-crud
      f-crud     g-crud
@@ -446,7 +458,9 @@ f(gh): P \to  S
 Are they equal?  No!  The first one looks like this:
 
 
+
 \begin{verbatim}
+
 
      f-crud     g-crud
      f-crud     g-crud
@@ -464,7 +478,9 @@ Are they equal?  No!  The first one looks like this:
 while the second one looks like this:
 
 
+
 \begin{verbatim}
+
 
                 g-crud       h-crud
                 g-crud       h-crud
@@ -483,7 +499,9 @@ So, they're not quite equal!  This is one reason we need an
 equivalence relation on proofs to get a category.  Both proofs 
 resemble trees, but the first looks more like this:
 
+
 \begin{verbatim}
+
 \  /  /
  \/  /
   \ /
@@ -492,7 +510,9 @@ resemble trees, but the first looks more like this:
     
 while the second looks more like this:
 
+
 \begin{verbatim}
+
 \  \  /
  \  \/
   \ /
@@ -509,7 +529,9 @@ people have learned that it's often better NOT to impose an equivalence
 relation on paths!  Instead, it's better to form a \emph{weak 2-category} 
 of paths, where there's a 2-morphism going from this sort of composite:
 
+
 \begin{verbatim}
+
 \  /  /
  \/  /
   \ /
@@ -518,7 +540,9 @@ of paths, where there's a 2-morphism going from this sort of composite:
     
 to this one:
 
+
 \begin{verbatim}
+
 \  \  /
  \  \/
   \ /
@@ -624,20 +648,16 @@ about the "homotopy \lambda  calculus":
  In certain set-ups (such as Martin-L&ouml;f type theory) every statement
  carries a proof of itself.  Of course, a statement may have many proofs.
  If we imagine that all the statements are of the form "A = B", then what
- we're saying is that every equals sign carries with it a <em>reason</em> for
+ we're saying is that every equals sign carries with it a \emph{reason} for
  equality, or proof of equality.  If I remember rightly, Kontsevich's
  idea was to do a topological analogue, so that every term (like A and B)
  is assigned a point in some fixed space, and equalities of terms induce
  paths between points.  There was more, pushing the idea further, but I
  forget what.  
 \end{quote}
-    
 
 
 \par\noindent\rule{\textwidth}{0.4pt}
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 774

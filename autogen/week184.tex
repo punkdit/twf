@@ -28,7 +28,9 @@ important in string theory, knot theory, and loop quantum gravity.
 In this case it's best if q is a unit complex number, especially an
 nth root of unity:
 
+
 $$
+
 q = exp(2\pi i/n)
 $$
     
@@ -88,10 +90,12 @@ structures on projective spaces over F_{q}.  Remember, a "projective
 space" is just the space of all line through the origin in a vector
 space.  The basic idea is this mystical analogy:
 
-\begin{verbatim}
+
+$$
+
 q = 1                            FINITE SETS 
-q = a power of a prime number    PROJECTIVE SPACES OVER F<sub>q</sub>
-\end{verbatim}
+q = a power of a prime number    PROJECTIVE SPACES OVER F_{q}
+$$
     
 This analogy is so powerful that it really pays to think of finite
 sets as projective spaces over F_{1}, 
@@ -101,7 +105,9 @@ even though there is no such field!
 Let's start with some examples.  How many points does an n-element set
 have?  Answer: the integer
 
+
 \begin{verbatim}
+
 n
 \end{verbatim}
     
@@ -109,7 +115,9 @@ Next: how many lines through the origin does an n-dimensional vector
 space over F_{q} have?  Of course, these lines are points in the
 corresponding projective space.  Answer: the q-integer
 
+
 $$
+
           q^{n} - 1
 [n]  =   --------   
            q - 1
@@ -126,7 +134,9 @@ of these.  However, two vectors determine the same line if one is a
 nonzero multiple of the other, and there are q - 1 nonzero elements 
 of F_{q}.  So, the actual number of lines through the origin is
 
+
 $$
+
  q^{n} - 1
 -------- = [n]
  q - 1
@@ -135,14 +145,18 @@ $$
 Here's another example.  How many ways are there to order a set with n
 elements?  Answer:
 
+
 \begin{verbatim}
+
 n! =    1  2  ...  n
 \end{verbatim}
     
 Next: how many maximal flags are there in an n-dimensional vector space
 over F_{q}?  Answer: the q-factorial 
 
+
 \begin{verbatim}
+
 [n]! = [1] [2] ... [n]
 \end{verbatim}
     
@@ -157,7 +171,9 @@ And so on, giving us [n]! maximal flags.
 Here's yet another example.  How many m-element subsets does an
 n-element set have?  Answer: the binomial coefficient 
 
+
 \begin{verbatim}
+
    n! 
 ---------
 m! (n-m)!
@@ -166,7 +182,9 @@ m! (n-m)!
 Next: how many m-dimensional subspaces are there of an n-dimensional
 space over F_{q}?  Answer: the q-binomial coefficient
 
+
 \begin{verbatim}
+
     [n]! 
 -----------
 [m]! [n-m]!
@@ -186,7 +204,9 @@ that's where everything starts.  I said that the number of lines
 through the origin in an n-dimensional vector space over the field
 with q elements is
 
+
 $$
+
            q^{n} - 1
   [n]  =   --------   
             q - 1
@@ -223,7 +243,9 @@ The cool part is, this proof works for \emph{all} fields, not just finite
 ones.  For example, over the real numbers we can use it to take the
 projective space RP^{n-1} and chop it into pieces like this:
 
+
 $$
+
     RP^{n-1} = R^{0} + R^{1} + ... + R^{n-1} 
 $$
     
@@ -234,7 +256,9 @@ calculate its Euler characteristic.  Even-dimensional cells contribute 1
 to the Euler characteristic, while odd-dimensional cells contribute -1,
 so we get
 
+
 $$
+
    |RP^{n-1}| = (-1)^{0} + (-1)^{1} + ... + (-1)^{n-1} 
 
             (-1)^{n} - 1
@@ -254,7 +278,9 @@ use Schanuel's improved version of the Euler characteristic, which lets
 us chop up a space X and calculate |X| by summing the Euler
 characteristics of the pieces, we have |R| = -1, so
 
+
 $$
+
        |RP^{n-1}| = |R^{0} + R^{1} + ... + R^{n-1}|
 
               = |R|^{0} + |R|^{1} + ... + |R|^{n-1}
@@ -268,13 +294,17 @@ your friends, you can tell them that the real numbers are the field with
 
 What about the complex numbers?  Well, as spaces we have 
 
+
 $$
+
 C = R^{2}
 $$
     
 so we get
 
+
 $$
+
 |C| = |R|^{2} = 1.
 $$
     
@@ -295,7 +325,9 @@ cell decomposition of the \emph{manifold} of maximal flags in
 R^{n} or C^{n} - the "flag manifold", for
 short.  So we can just calculate some q-factorials:
 
+
 $$
+
 [1]! = 1 
 [2]! = 1 + q
 [3]! = 1 + 2q + 2q^{2} +  q^{3}
@@ -305,14 +337,18 @@ $$
 and read off all sorts of fun stuff.  For example, the flag manifold
 of R^{4} has a cell decomposition like
 
+
 $$
+
      R^{0} + 3R + 5R^{2} + 6R^{3} + 5R^{4} + 3R^{5} + R^{6}
 $$
     
 meaning that there's 1 zero-cell, 3 one-cells, 5 two-cells and so on.
 Similarly, the flag manifold of C^{4} has a cell decomposition like
 
+
 $$
+
      C^{0} + 3C + 5C^{2} + 6C^{3} + 5C^{4} + 3C^{5} + C^{6}
 $$
     
@@ -336,7 +372,9 @@ So for example, if some nasty guy demands that you calculate the 10th
 homology of the complex flag manifold in 4 dimensions, you just tell
 him "I know it's a free abelian group..." and calculate 
 
+
 $$
+
 [4]! = 1 (1 + q) (1 + q + q^{2}) (1 + q + q^{2} + q^{3}) 
      = 1 + 3q + 5q^{2} + 6q^{3} + 5q^{4} + 3q^{5} + q^{6}
 $$
@@ -352,7 +390,9 @@ vector space.  This makes sense over any field.  I already said that over
 the finite field F_{q}, the cardinality of this Grassmannian is the q-binomial
 coefficient
 
+
 \begin{verbatim}
+
                  [n]!
 |Gr(n,k)| =  -----------
              [k]! [n-k]!
@@ -371,7 +411,9 @@ we can read off their homology groups just like we did for complex flag
 manifolds.  Let's work out the homology of Gr(4,2), for example.  We
 start by working out the q-binomial coefficient:
 
+
 $$
+
     [4]!       1 (1 + q) (1 + q + q^{2}) (1 + q + q^{2} + q^{3})
  ---------- =  -------------------------------------------
  [2]! [2]!             1 (1 + q)      1 (1 + q)
@@ -384,7 +426,9 @@ $$
 It's mildly surprising that this ratio works out to be a polynomial,
 but of course we know it must!  Reading off the coefficients, we get:
 
+
 $$
+
 the 0th homology group is Z
 the 2nd homology group is Z
 the 4th homology group is Z^{2}
@@ -399,7 +443,9 @@ Poincare duality.
 
 On a lighter note: the best way to simplify this sort of expression
 
+
 $$
+
   1 (1 + q) (1 + q + q^{2}) (1 + q + q^{2} + q^{3})
  -------------------------------------------   
           1 (1 + q)      1 (1 + q)
@@ -407,7 +453,9 @@ $$
     
 is to use base q.  Then it's just 
 
+
 \begin{verbatim}
+
   1 x 11 x 111 x 1111      111 x 1111     123321
  --------------------- =  ------------ =  ------ = 11211
     1 x 11 x 1 x 11            11           11 
@@ -415,7 +463,9 @@ is to use base q.  Then it's just
     
 where I did the last step using long division.  And of course the
 last quantity is 
+
 $$
+
 1 + q + 2q^{2} + q^{3} + q^{4}.
 $$
     
@@ -437,7 +487,9 @@ I just told you!  I'll explain this stuff in future Weeks.
 \textbf{Addendum:} Here's my reply to a request for clarification
 from my friend Squark:
 
+
 $$
+
 Squark wrote:
 
 >John Baez wrote:
@@ -547,11 +599,8 @@ betokens the reality of its conceptions and the truth of its assertions.
 For if this passion were extinct, we would cease to understand mathematics; 
 its conceptions would dissolve and its proofs carry no conviction.</em> - 
 Michael Polyani
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 609

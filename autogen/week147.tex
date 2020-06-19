@@ -47,7 +47,9 @@ As usual, the underlying theme of this paper is categorification.
 I've talked about this a lot already - e.g. in "<A HREF = "week121.html">week121</A>" - so I'll
 assume you remember that when we categorify, we use this analogy:
 
+
 \begin{verbatim}
+
 SET THEORY                          CATEGORY THEORY
 
 elements                            objects                       
@@ -74,7 +76,9 @@ of one dot, and 2 to denote a set of two dots.  Then the natural
 isomorphism between 1+2 and 2+1 can be visualized as the process 
 of passing one dot past two, like this:
 
+
 \begin{verbatim}
+
                  .       .   .
                   \     /   /
                    \   /   /
@@ -185,7 +189,9 @@ equal to |S|/|G|.   However, it is crucial that the action be free.
 For example, why is 6/2 = 3?  We can take a set S consisting of six
 dots in a row:
 
+
 \begin{verbatim}
+
                    o    o    o    o    o   o
 \end{verbatim}
     
@@ -195,7 +201,9 @@ folding the set S in half, so it is not surprising that |S/G| = |S|/|G|
 in this case.  Unfortunately, if we try a similar trick starting with a 
 5-element set:
 
+
 \begin{verbatim}
+
                      o    o    o    o   o
 \end{verbatim}
     
@@ -454,6 +462,268 @@ Toby Bartels had some interesting things to say about this issue
 of This Week's Finds.  Here is my reply, which quotes some of his
 remarks.... 
 
+\begin{quote}
+
+\begin{verbatim}
+
+Toby Bartels (toby@ugcs.caltech.edu) wrote:
+
+>>3) The American Physical Society: A Century of Physics, available
+>>at <a href = "http://timeline.aps.org/APS/home_HighRes.html">http://timeline.aps.org/APS/home_HighRes.html</a>
+
+>I like how they make the famous picture of Buzz Aldrin,
+>the one that everyone thinks is a picture of Neil Armstrong,
+>into a picture of Neil Armstrong after all:
+>"Here he is reflected in Buzz Aldrin's visor.".
+\end{verbatim}
+    
+
+Heh.  Sounds like something a doting grandmother would say!
 
 
-% parser failed at source line 572
+\begin{verbatim}
+
+>> 5) John Conway and Peter Doyle, Division by three.  
+>> <a href = "http://math.dartmouth.edu/~doyle/docs/three/three/three.html">http://math.dartmouth.edu/~doyle/docs/three/three/three.html</a>
+
+>>The latter article studies this question: if I give you an isomorphism 
+>>between 3x and 3y, can you construct a isomorphism between x and y?  
+
+>The answer must be something that won't work
+>if 3 is replaced by an infinite cardinal.
+>That said, I can't even figure out how to divide by 2!
+>If I take the 3 copies of X or Y and put them on top of each other,
+>I get a finite, 2coloured, 3valent, nonsimple, undirected graph.
+>I remember from combinatorics that the 2 colours of
+>a finite, 2coloured, simple, undirected graph of fixed valency
+>are equipollent, but I can't remember the bijective proof.
+>(Presumably it can be adopted to nonsimple graphs.)
+\end{verbatim}
+    
+
+It's a tricky business.  Let me quote from the above article:
+
+\begin{quote}
+<h3> History </h3>
+A proof that it is possible to divide by two was presented by Bernstein in
+his Inaugural Dissertation of 1901, which appeared in Mathematische Annallen
+in 1905; Bernstein also indicated how to extend his results to division
+by any finite n, but we are not aware of anyone other than Bernstein himself
+who ever claimed to understand this argument. In 1922 Sierpinski 
+published a simpler proof of division by two, and he worked hard to extend
+his method to division by three, but never succeeded.
+
+In 1927 Lindenbaum and Tarski announced, in an infamous paper that
+contained statements (without proof) of 144 theorems of set theory, that
+Lindenbaum had found a proof of division by three. Their failure to give any
+hint of a proof must have frustrated Sierpinski, for it appears that twenty
+years later he still did not know how to divide by three.  Finally,
+in 1949, in a paper `dedicated to Professor Waclaw Sierpinski in celebration
+of his forty years as teacher and scholar', Tarski published a proof.
+In this paper, Tarski explained that unfortunately he couldn't remember how
+Lindenbaum's proof had gone, except that it involved an argument like the
+one Sierpinski had used in dividing by two, and another lemma, due to
+Tarski, which we will describe below. Instead of Lindenbaum's proof, he gave
+another.
+
+Now when we began the investigations reported on here, we were aware that
+there was a proof in Tarski's paper, and Conway had even pored over it at
+one time or another without achieving enlightenment. The problem was closely
+related to the kind of question John had looked at in his thesis, and it was
+also related to work that Doyle had done in the field of bijective
+combinatorics. So we decided that we were going to figure out what the heck
+was going on. Without too much trouble we figured out how to divide by two.
+Our solution turned out to be substantially equivalent to that of
+Sierpinski, though the terms in which we will describe it below will not
+much resemble Sierpinski's. We tried and tried and tried to adapt the method
+to the case of dividing by three, but we kept getting stuck at the same
+point in the argument. So finally we decided to look at Tarski's paper, and
+we saw that the lemma Tarski said Lindenbaum had used was precisely what we
+needed to get past the point we were stuck on! So now we had a proof of
+division by three that combined an argument like that Sierpinski used in
+dividing by two with an appeal to Tarski's lemma, and we figured we must
+have hit upon an argument very much like that of Lindenbaum's. This is the
+solution we will describe here: Lindenbaum's argument, after 62 years.
+\end{quote}
+
+
+$$
+
+>>So: let's define the "homotopy cardinality" of a topological space X to
+>>be the alternating product |X| = \prod_{i>0} |\pi _i(X)|^{(-1)^i}
+>>when X is connected and the product converges;
+
+>What about divergence to 0?
+>If \pi _i(X) is infinite for some odd i but no even i,
+>can we say |X| is 0?
+$$
+    
+
+Well, we can, but we might regret it later.  In a sense 0 is no
+better than \infty  when one is doing products, so if you allow 
+0 as a legitimate value for a homotopy cardinality, you should 
+allow \infty , but if you allow both, you get in trouble when 
+you try to multiply them.  This dilemma is familiar from the case 
+of infinite sums (where +\infty  and -\infty  are the culprits), 
+and the resolution seems to be either:
+
+<UL>
+<LI> disallow both 0 and \infty  as legitimate answers for the above
+product,
+</UL>
+
+or
+
+<UL>
+<LI>allow both but then be extra careful when stating your theorems
+so that you don't run into problems.  
+</UL>
+
+
+$$
+
+>>As a fun application of this fact, recall that any topological group G
+>>has a "classifying space" BG, meaning a space with a principal G-bundle 
+>>over it G \to  EG \to  BG
+>>whose total space EG is contractible.   I described how to construct
+>>the classifying space in "week117", at least in the case of a discrete
+>>group G, but I didn't say much about why it's so great.  The main 
+>>reason it's great is that \emph{any} G-bundle over \emph{any} space is a pullback 
+>>of the bundle EG over BG.  But right now, what I want to note is that 
+>>since EG is contractible it is tame, and |EG| = 1.  Thus G is tame if 
+>>and only if BG is, and |BG| = 1 / |G|,
+>>so we can think of BG as the `reciprocal' of G!
+
+>OTOH, G is already a kind of reciprocal of itself.
+>If G is a discrete group, it's a topological space
+>with |G|_{homotopy} = |G|_{set}.
+>But G is also a groupoid with 1 object,
+>and |G|_{groupoid} = 1 / |G|_{set}.
+>So, |G|_{homotopy} |G|_{groupoid} = 1.
+$$
+    
+
+Believe it or not, you are reinventing BG!   A groupoid can be
+reinterpreted as a space with vanishing homotopy groups above the
+first, and if you do this to the groupoid G, you get BG.  
+
+More generally:
+
+Recall that we can take a pointed space X and form a pointed space
+LX of loops in X that start and end at the basepoint.  This clearly 
+has
+
+\pi _{n+1}(X) = \pi _{n}(LX)
+
+so if X is connected and tame we'll have
+
+|LX| = 1/|X|
+
+Now with a little work you can make LX (or a space homotopy-equivalent
+to it!) into a topological group with composition of loops as the product.
+And then it turns out that BLX is homotopy equivalent to X when X is
+connected.  Conversely, given a topological group G, LBG is homotopy 
+equivalent to G.  
+So what we're seeing is that topological groups and connected pointed 
+spaces are secretly the same thing, at least from the viewpoint of 
+homotopy theory.  In topology, few things are as important as this fact.
+But what's really going on here?   Well, to go from a topological group G 
+to a connected pointed space, you have to form BG, which has all the same 
+homotopy groups but just pushed up one notch:
+\pi _{n+1}(BG) = \pi _{n}(G)               
+And to go from a connected point space X to a topological group, you have 
+to form LX, which has all the same homotopy groups but just pushed down one
+notch:
+\pi _{n-1}(LX) = \pi _{n}(X)              
+This is actually the trick you are playing, in slight disguise.
+
+And the real point is that a 1-object \omega -groupoid can be 
+reinterpreted as an \omega -groupoid by forgetting about the 
+object and renaming all the j-morphisms "(j-1)-morphisms".  
+
+See?  When you finally get to the bottom of it, this "BG" business
+is just a silly reindexing game!!!   Of course no textbook can admit 
+this openly - partially because they don't talk about \omega -groupoids.
+
+
+\begin{verbatim}
+
+>>So Euler characteristic is a lot like homotopy cardinality.  But
+>>not many spaces have <em>both</em> well-defined homotopy cardinality <em>and</em> 
+>>well-defined Euler characteristic.  So they're like Jekyll and Hyde - 
+>>you hardly ever see them in the same place at the same time, so you 
+>>can't tell if they're really the same guy.
+
+>So, are they ever both defined but different?
+\end{verbatim}
+    
+
+I don't recall any examples where they're both finite, but different.  
+I know very few cases where they're both finite!   How about the point?
+How about the circle?  How about the 2-sphere?  I leave you to ponder 
+these cases.
+
+
+$$
+
+>>However, there are still challenging tests to the theory that homotopy
+>>cardinality and Euler characteristic are secretly the same.  Here's a
+>>puzzle due to James Dolan.  Consider a Riemann surface of genus g > 1.
+>>Such a surface has Euler characteristic 2 - 2g, but such a surface also
+>>has vanishing homotopy groups above the first, which implies that it's
+>>BG for G equal to its fundamental group.  If homotopy cardinality and
+>>Euler characteristic were the same, this would imply
+>>
+>>                 |G| = 1/|BG| = 1/&chi;(S) = 1/(2 - 2g).
+>>
+>>But the fundamental group G is infinite!  What's going on?  
+
+>This doesn't seem too surprising.  1/(2 - 2g) is also infinite.
+>Just use the geometric series in reverse:
+>
+>                  1/(2 - 2g) = (1/2) &sum;_{i} g^{i}, 
+>
+>which diverges since g > 1.
+$$
+    
+
+Well, what I really want is a way of counting elements of the fundamental
+group of the surface S which gives me a divergent sum that I can cleverly
+sum up to get 1/(2 - 2g).  
+
+\end{quote}
+
+Later, my wish above was granted by Laurent Bartholdi and Danny Ruberman!
+People have already figured out how to count the number of elements
+in the fundamental group of a Riemann surface, resum, and get 1/(2 - 2g) 
+in a nice way.  Here are two references:
+
+14) William J. Floyd and Steven P. Plotnick, Growth functions on 
+Fuchsian groups and the Euler characteristic, Invent. Math. 88
+(1987), 1-29.
+
+15) R. I. Grigorchuk, Growth functions, rewriting systems and Euler 
+characteristic, Mat. Zametki 58 (1995), 653-668, 798.
+
+You can read more about Euler characteristic and homotopy cardinality
+here:
+16) John Baez, Euler characteristic versus homotopy cardinality, 
+lecture at the Fields Institute Program on Applied Homotopy Theory, 
+September 20, 2003.  Available in PDF form at <A HREF = "http://www.math.ucr.edu/home/baez/cardinality/">http://www.math.ucr.edu/home/baez/cardinality/</A>
+
+
+
+
+
+
+ \par\noindent\rule{\textwidth}{0.4pt}
+
+<em>The imaginary expression \sqrt -a and the negative expression
+-b resemble each other in that each one, when they seem the solution
+of a problem, they indicate that there is some inconsistency or
+nonsense.</em> - Augustus De Morgan, 1831.
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

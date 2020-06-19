@@ -38,7 +38,9 @@ as far as it will go.  They're similar because you can add, subtract and
 multiply them, and these operations satisfy the usual rules we all 
 learned in high school:
 
+
 \begin{verbatim}
+
 x + y = y + x     (x + y) + z = x + (y + z)   x + 0 = x   x + (-x) = 0
 
 xy = yx           (xy)z = x(yz)               x1 = x
@@ -71,7 +73,9 @@ and turn them into functions on X.  Since this goes backwards, it's
 called "pulling back along T".  Here's how it goes: if f is a function 
 on Y, we get a function T*(f) on X given by:
 
+
 \begin{verbatim}
+
 T*(f)(x) = f(T(x))
 \end{verbatim}
     
@@ -80,7 +84,9 @@ Moreover, functions on a space form a commutative ring, since you can
 add and multiply them pointwise, and pulling back is a "homomorphism", 
 meaning that it preserves all the structure of a commutative ring:
 
+
 \begin{verbatim}
+
 T*(f + g) = T*(f) + T*(g)                T*(0) = 0
 T*(fg) = T*(f) T*(g)                     T*(1) = 1
 \end{verbatim}
@@ -97,7 +103,9 @@ we can translate back and forth between the study of commutative rings
 commutative rings as consisting of functions on spaces.  We get a little 
 dictionary for translating between geometry and algebra, like this:
 
+
 \begin{verbatim}
+
                   GEOMETRY           ALGEBRA
                   spaces             commutative rings
                   maps               homomorphisms
@@ -108,7 +116,9 @@ backwards: it's "contravariant".  This is really important in two
 ways. 
 First, suppose we have a point x in a space X.  This gives a map
 
+
 $$
+
 i: {x} \to  X
 $$
     
@@ -119,7 +129,9 @@ onto: that's the backwards analogue of the fact that i is one-to-one!
 
 Second, suppose we have a map from a space E onto the space X: 
 
+
 $$
+
 p: E \to  X.
 $$
     
@@ -158,20 +170,26 @@ space is a field.
 This means that the algebraic analogue of a map from a one-point
 space into some other space:
 
+
 $$
+
 i: {x} \to  X
 $$
     
 should be a homomorphism from a commutative ring R to a field k:
 
+
 $$
+
 f: R \to  k
 $$
     
 
 Our translation dictionary now looks like this:
 
+
 \begin{verbatim}
+
          GEOMETRY                     ALGEBRA
          spaces                       commutative rings
          maps                         homomorphisms
@@ -216,7 +234,9 @@ process, or a sequence of such processes.  You just see if they have
 the same kernel!  The "kernel" of f: R \to  k is the subset of R 
 consisting of elements r with 
 
+
 \begin{verbatim}
+
 f(r) = 0
 \end{verbatim}
     
@@ -235,7 +255,9 @@ lies in the ideal.
 
 So, we have something like this:
 
+
 \begin{verbatim}
+
         GEOMETRY                     ALGEBRA
         spaces                       commutative rings
         maps                         homomorphisms
@@ -255,7 +277,9 @@ If you don't know what a branched covering space is, don't worry:
 we'll start with the very simplest example.  We'll look at this map from 
 the complex plane to itself:
 
+
 $$
+
 p: C \to  C
 
 p(z) = z^{2}
@@ -310,7 +334,9 @@ and throw in some solutions of polynomial equations.  Algebraic extensions
 can be complicated, but this one is really simple: we just start with 
 C[w] and throw in the solution of \emph{one} polynomial equation, namely
 
+
 $$
+
 z^{2} = w
 $$
     
@@ -320,7 +346,9 @@ rings act a lot like branched covering spaces.  I probably don't have
 the technical details perfectly straight, but let's add this to our
 translation dictionary, because it's an important idea:
 
+
 \begin{verbatim}
+
   GEOMETRY                     ALGEBRA
   spaces                       commutative rings
   maps                         homomorphisms
@@ -350,7 +378,9 @@ the number f(x).  The kernel of this is the prime ideal consisting of
 all polynomials that vanish at x.  These are just the polynomials 
 containing a factor of z - x, so we call this ideal 
 
+
 $$
+
 <z - x> 
 $$
     
@@ -360,20 +390,26 @@ fact there's a theorem that \emph{every}
 prime ideal in C[z] is of this form!  
 So, we get a one-to-one correspondence
 
+
 \begin{verbatim}
+
 Spec(C[z]) = C
 \end{verbatim}
     
 Similarly, 
 
+
 \begin{verbatim}
+
 Spec(C[w]) = C
 \end{verbatim}
     
 
 Now let's think about our branched cover 
 
+
 $$
+
 p: C \to  C
 $$
     
@@ -410,7 +446,9 @@ viewpoint sheds an interesting new light on this.
 
 What we'll do is take a prime ideal in C[w] and push it forwards via
 
+
 $$
+
 p*: C[w] \to  C[z]
 $$
     
@@ -425,21 +463,27 @@ ideals.
 Let's try it.  First pick a number x that's not zero.  It gives a prime 
 ideal in C[w], namely 
 
+
 $$
+
 <w - x>
 $$
     
 Next push this ideal forwards via p* and let it generate an
 ideal in C[z], namely
 
+
 $$
+
 <z^{2} - x>
 $$
     
 This is not prime, but we can factor it, which in this case simply 
 amounts to factoring the polynomial that generates it:
 
+
 $$
+
 <z^{2} - x> = <(z - sqrt(x)) (z + sqrt(x))> 
 
          =  <z - sqrt(x)> <z + sqrt(x)>
@@ -459,7 +503,9 @@ the number x has two different square roots.
 But suppose x = 0.  This doesn't have two square roots!  Everything
 works the same except we get
 
+
 $$
+
 <z^{2}> = <z> <z>
 $$
     
@@ -482,7 +528,9 @@ integers, namely numbers of the form a+bi where a and b are integers.
 Z[i] is an algebraic extension of Z, since we can get it by throwing in 
 a solution z of the polynomial equation
 
+
 $$
+
 z^{2} = -1
 $$
     
@@ -493,7 +541,9 @@ root of some function on the complex plane.  But if we take the analogy
 between geometry and algebra seriously, this extension should still give
 some sort of "branched double cover"
 
+
 $$
+
 p: Spec(Z[i]) \to  Spec(Z)
 $$
     
@@ -522,13 +572,17 @@ above them.
 For example, the prime 5 "splits".  It has two prime factors in the
 Gaussian integers:
 
+
 \begin{verbatim}
+
 5 = (2 + i)(2 - i)
 \end{verbatim}
     
 so in Z[i] the ideal it generates is a product of two prime ideals:
 
+
 $$
+
 <5> = <2 + i> <2 - i>
 $$
     
@@ -541,13 +595,17 @@ something like a double cover!
 On the other hand, the prime 2 "ramifies".  It has two prime 
 factors in the Gaussian integers:
 
+
 \begin{verbatim}
+
 2 = (1 + i)(1 - i)
 \end{verbatim}
     
 but these two Gaussian primes generate the same prime ideal:
 
+
 $$
+
 <1 + i> = <1 - i>
 $$
     
@@ -555,7 +613,9 @@ $$
 since if we multiply 1+i by the unit -i we get 1-i.  So, in the 
 Gaussian integers we have
 
+
 $$
+
 <2> = <1 + i> <1 + i>
 $$
     
@@ -574,7 +634,9 @@ Here's how it works.  Consider the prime 3.  This is still prime in the
 Gaussian integers!  It doesn't split, and it doesn't ramify.  If we
 factorize the ideal generated by 3 in Z[i] we just get
 
+
 $$
+
 <3> = <3>
 $$
     
@@ -623,7 +685,9 @@ For each commutative ring k we get a set consisting of
 all "k-points"
 of R, namely homomorphisms 
 
+
 $$
+
 f: R \to  k
 $$
     
@@ -703,7 +767,9 @@ This asks whether every identity involving 1, +, x, and exponentials
 that holds in the positive natural numbers follows from the eleven
 we learned in high school:
 
+
 $$
+
 x + y = y + x        (x + y) + z = x + (y + z) 
 
 xy = yx              (xy)z = x(yz)
@@ -726,7 +792,9 @@ explained in "<A HREF = "week200.html">week200</A>".
 It turns out the answer is \emph{no!}  In fact there are infinitely many 
 more independent identities!  Here is the first one, due to Wilkies:
 
+
 $$
+
 [(x + 1)^{x} + (x^{2} + x + 1)^{x}]^{y}  [(x^{3} + 1)^{y} + (x^{4} + x^{2} + 1)^{y}]^{x}  =
 [(x + 1)^{y} + (x^{2} + x + 1)^{y}]^{x}  [(x^{3}  + 1)^{x} + (x^{4} + x^{2} + 1)^{x}]^{y} 
 $$
@@ -767,11 +835,10 @@ of my reply.
 \begin{quote}
 By the way, I very much liked your explanation of points and prime
 ideals.  Up until now I haven't seen a satisfactory explanation of why
-points correspond to <em>prime</em> rather than <em>maximal</em> ideals, and
+points correspond to \emph{prime} rather than \emph{maximal} ideals, and
 although I haven't completely digested what you wrote, it looks
 like it might do the job...
 \end{quote}
-    
 
 Both here and in my discussion of spectra in "week199", I've been
 avoiding saying the things people usually say.   People usually note
@@ -812,7 +879,6 @@ be able to point me to the appropriate TWF (or other reference)?
 
 My apologies for asking about a nine year old remark.
 \end{quote}
-    
 
 I replied:
 
@@ -822,8 +888,75 @@ discussing number theory with James Dolan, and he understood this
 stuff much better than me.  But I think I can remember a bit if I
 try...
 
-<blockquote> [...] you discuss the puzzle of inert primes and indicate
+\begin{quote} [...] you discuss the puzzle of inert primes and indicate
 that this puzzle has a nice resolution in terms of decategorification.
+\end{quote}
+ 
+I remember that the resolution of the puzzle is to <i>refrain</i> from
+decategorifying.
 
+In Grothendieck's approach, the "k-points" of a ring R of algebraic
+numbers, for various choices of field k, are homomorphisms
 
-% parser failed at source line 901
+$$
+R \to  k
+$$
+    
+
+These are the objects of a category, in the manner I described, with
+"flavor-changing operations" coming from homomorphisms k \to  k' as the
+morphisms.
+
+If we restrict our attention to the case I was talking about, where 
+R = Z[i] is the Gaussian integers and k is a finite field, the "inert"
+primes correspond to situations where a k-point down in Z lifts to two
+different but isomorphic k-points in Z[i].  When we decategorify, as
+we do in the usual approach, it looks like there's just one point in
+Z[i] sitting over this point in Z.
+
+Let me warm up by considering the prime 5, which is not inert.  The
+ideal in Z generated by 5 splits into two ideals in Z[i], <2 - i> and
+<2 + i>.  Correspondingly, there are two k-points
+
+$$
+Z[i] \to  F_{5}
+$$
+    
+
+one having <2 - i> as its kernel (it sends i to 2), and having <2 + i>
+as its kernel (it sends i to -2).  These k-points are not isomorphic.
+
+On the other hand, 3 is inert.  The ideal in Z generated by 3 does not
+split in Z[i].  Now we can find a field k = F_{9} such that
+Z[i] has two different k-points with the ideal <3> as kernel.  One
+k-point
+
+$$
+Z[i] \to  F_{9}
+$$
+    
+
+sends i to one of the square roots of -1 in F_{9}, the other
+sends it to the other.  (We have to go up to F_{9} since
+there's no square root of -1 in F_{3}.)  However, these two
+k-points are isomorphic, since there's an automorphism of F_{9}
+interchanging its two square roots of -1.
+
+Moral: When we work with prime ideals as points instead of
+homomorphisms whose kernels are these prime ideals, it looks like
+there's just one point in Spec(Z[i]) sitting over the prime ideal <3>.
+But when we define points to be homomorphisms, we see Z[i] has two
+isomorphic points Z[i] \to  F_{9} sitting over the unique
+point Z \to  F_{9} whose kernel is that prime ideal.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>One discovery opens another, and then another.  Everything in this
+country is nested like Russian dolls.  Even a solid artifact in front
+of me drew back into other levels.  Schemes within schemes.</em> - Craig
+Childs, Soul of Nowhere
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

@@ -27,13 +27,17 @@ Every permutation of {i,j,k} defines a linear transformation
 of three-dimensional Euclidean space in an obvious way.  For 
 example the permutation p with
 
+
 \begin{verbatim}
+
 p(i) = j,  p(j) = k,  p(k) = i
 \end{verbatim}
     
 determines a linear transformation, which we'll also call p, with
 
+
 \begin{verbatim}
+
 p(ai+ bj + ck) = aj + bk + ci.
 \end{verbatim}
     
@@ -41,13 +45,17 @@ In general, the linear transformations we get this way
 either preserve the cross product, or switch its sign.
 If p is an even permutation we'll get
 
+
 \begin{verbatim}
+
 p(v) x p(w) = p(v x w)
 \end{verbatim}
     
 while if p is odd we'll get 
 
+
 \begin{verbatim}
+
 p(v) x p(w) = -p(v x w) = p(w x v).
 \end{verbatim}
     
@@ -56,14 +64,18 @@ has to do with \emph{four}-dimensional space.
 We can describe four-dimensional
 space using the quaternions.  A typical quaternion is something like
 
+
 \begin{verbatim}
+
 a + bi + cj + dk
 \end{verbatim}
     
 where a,b,c,d are real numbers, and you multiply quaternions
 by using the usual rules together with the rules
 
+
 $$
+
 i^{2} = j^{2} = k^{2} = -1, 
 ij =  k, jk =  i, ki =  j,
 ji = -k, kj = -i, ik = -j
@@ -73,7 +85,9 @@ Now, any permutation p of {i,j,k} also determines a linear
 transformation of the quaternions, which we'll also call p.  
 For example, the permutation p I gave above has
 
+
 \begin{verbatim}
+
 p(a + bi + cj + dk) = a + bj + ck + di.
 \end{verbatim}
     
@@ -81,13 +95,17 @@ The quaternion product is related to the vector cross product,
 and so one can check that for any quaternions q and q' we
 get 
 
+
 \begin{verbatim}
+
 p(qq') = p(q)p(q')
 \end{verbatim}
     
 if p is even, and
 
+
 \begin{verbatim}
+
 p(q'q) = p(q')p(q)
 \end{verbatim}
     
@@ -171,6 +189,89 @@ described how you could get the Lie groups G2, F4 and E8 from triality.
 I didn't know how E6 and E7 fit into the picture.  He emailed me,
 saying:
 
+\begin{quote}
+
+"Here is a nice way:
+
+Start with D4 = Spin(8):
 
 
-% parser failed at source line 208
+\begin{verbatim}
+
+ 28 =  28  +   0  +   0  +   0  +   0  +   0  +   0
+\end{verbatim}
+    
+Add spinors and vector to get F4:
+
+
+\begin{verbatim}
+
+ 52 =  28  +   8  +   8  +   8  +   0  +   0  +   0
+\end{verbatim}
+    
+Now, "complexify" the 8+8+8 part of F4 to get E6:
+
+
+\begin{verbatim}
+
+ 78 =  28  +  16  +  16  +  16  +   1  +   0  +   1
+\end{verbatim}
+    
+Then, "quaternionify" the 8+8+8 part of F4 to get E7:
+
+
+\begin{verbatim}
+
+133 =  28  +  32  +  32  +  32  +   3  +   3  +   3
+\end{verbatim}
+    
+Finally, "octonionify" the 8+8+8 part of F4 to get E8:
+
+
+\begin{verbatim}
+
+248 =  28  +  64  +  64  +  64  +   7  +  14  +   7
+\end{verbatim}
+    
+This way shows you that the "second" Spin(8) in E8
+breaks down as  28 = 7 + 14 + 7
+which is globally like two 7-spheres and a G2,
+one S7 for left-action, one for right-action,
+and a G2 automorphism group of octonions
+that is needed to for "compatibility" of the two S7s.
+The  3+3+3 of E7, the 1+0+1 of E6, and the 0+0+0 of F4 and D4
+are the quaternionic, complex, and real analogues of the 7+14+7."
+
+\end{quote}
+When I asked him where he got this, he said he cooked it up
+himself using the construction of E8 that I learned from Kostant
+together with the Freudenthal-Tits magic square.  He gave
+some references for the latter:
+
+4) Hans Freudenthal, Adv. Math. 1 (1964) 143.
+
+5) Jacques Tits, Indag. Math. 28 (1966) 223-237.
+
+6) Kevin McCrimmon, Jordan Algebras and their applications,
+Bull. AMS 84 (1978) 612-627, at pp. 620-621.
+Available at <a href = "http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.bams/1183540925">http://projecteuclid.org</a>
+
+I would describe it here, but I'm running out of steam,
+and it's easy to learn about it from his web page:
+
+7) Tony Smith, Freudenthal-Tits magic square, 
+<A HREF = "http://valdostamuseum.org/hamsmith/FTsquare.html">http://valdostamuseum.org/hamsmith/FTsquare.html</A>
+
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>"I regret that it has been necessary for me in this
+lecture to administer such a large dose of four-dimensional geometry.
+I do not apologise, because I am not really responsible for the fact that
+nature in its most fundamental aspect is four-dimensional"</em> -
+Albert North Whitehead.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

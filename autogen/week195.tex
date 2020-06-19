@@ -42,7 +42,9 @@ that it's "finite": that is, one can compute how strings scatter off
 each other as an infinite (but possibly divergent) sum of well-defined
 terms, one for each different number of holes in the string worldsheet:
 
+
 \begin{verbatim}
+
      o  o        o  o  
      \\//        \\//
       ||          ||  
@@ -94,7 +96,6 @@ In the first of these papers, they wrote:
  required a local gauge slice, and the prescriptions ended up 
  depending on the choice of such slices, violating gauge invariance.
 \end{quote}
-    
 I hope the techniques they devised for the 2-loop case speed up 
 progress on higher-loop amplitudes!  It would be nice to know if 
 superstring theory really lives up to its promise of finiteness.
@@ -346,7 +347,9 @@ the Clifford algebra, because spinors are defined to be irreducible
 representations of this algebra.  Here's what the even part of the 
 Clifford algebra looks like in various dimensions:
 
+
 $$
+
 dimension 1:  R^{ }
 dimension 2:  C^{ }
 dimension 3:  H^{ }
@@ -367,7 +370,9 @@ see that in dimensions 4 and 8 we get two kinds of spinor - called
 left- and right-handed spinors - while in the other dimensions there's 
 just one kind.  The way these spinors work is sort of obvious:
 
+
 $$
+
 dimension 1:  R^{ }
 dimension 2:  C^{ }
 dimension 3:  H^{ }
@@ -408,7 +413,9 @@ the right-handed spinor rep S-
 You can build a vector from a left-handed spinor and a
 right-handed spinor, so we have an intertwining operator: 
 
+
 $$
+
 S+ tensor S- \to  V
 $$
     
@@ -422,14 +429,18 @@ with m as the octonion product and 1+ (or 1- if you prefer) as its unit.
 
 In fact, there's nothing special about writing our operator as
 
+
 $$
+
 S+ tensor S- \to  V
 $$
     
 since all three of these reps are their own dual.  This lets us
 permute these guys and work with
 
+
 $$
+
 V tensor S+ \to  S-
 $$
     
@@ -619,7 +630,9 @@ The first of these facts implies that so(6) must sit inside
 the traceless skew-adjoint matrices in C(4).  In other words, 
 so(6) sits inside su(4).  But 
 
+
 \begin{verbatim}
+
 dim(so(6)) = dim(su(4)) = 15
 \end{verbatim}
     
@@ -632,7 +645,9 @@ The second of these facts implies that so(5) must sit inside
 the traceless skew-adjoint matrices in H(2).  In other words,
 so(5) sits inside sp(2).  But
 
+
 \begin{verbatim}
+
 dim(so(5)) = dim(sp(2)) = 10
 \end{verbatim}
     
@@ -649,7 +664,9 @@ with the octonion multiplication triangle I keep drawing -
 I explained it in "<A HREF = "week104.html">week104</A>": 
 
 
+
 \begin{verbatim}
+
                             e6
 
  
@@ -664,7 +681,9 @@ field with two elements.  The 3d vector space over this field
 looks like a cube, and the Fano plane is just a flattened-out
 picture of this cube:
   
+
 \begin{verbatim}
+
                            e6
                           /  \
                         e4    e1
@@ -679,7 +698,9 @@ The hidden corner of this cube corresponds to the octonion "1".
 If rotate the cube so that corner is on top, and blow it up a bit,
 it looks like this:
 
+
 \begin{verbatim}
+
                             1
                            /|\
                           / | \
@@ -721,7 +742,9 @@ of the obvious Z_{3} symmetry of the octonion cube.  Here's how
 the octonions decompose as a representation of SO(3):
 
 
+
 \begin{verbatim}
+
  1d real rep                   1
  of SO(3)                     /|\
                              / | \
@@ -746,7 +769,9 @@ And here's how they decompose as a rep of SU(3):
 
 
 
+
 \begin{verbatim}
+
  1d real rep                   1
  of SU(3)                     /|\
                              / | \
@@ -776,6 +801,224 @@ it turns out that it is.  Here is some of our discussion of this issue.
 
 John Baez wrote:
 
+\begin{quote}
+
+$$
+
+Squark wrote:
+
+>John Baez wrote:
+
+>> [Moderator's note: a Kaehler manifold has to be complex, not
+>> just "almost complex". - jb]  
+
+>That's precisely my problem. You said that putting a Hermitian
+>structure of the tangent space of a real manifold at each point
+>(putting it on the tangent bundle, more accurately) makes it into
+>a Kaehler manifold.
+
+No, I did not say this!  I'll remind you of what I actually said.
+
+>However, there's the additional condition of the almost complex
+>structure resulting on the manifold being an actual complex
+>structure. This cannot be ensured on the "point level", i.e. it is
+>not enough to speak of the kind of structure you put on the tangent
+>space at each point, but it's important how those structures "glue
+>together" (except the obvious smoothness part).
+
+Right - in math jargon, we need some "integrability conditions"
+to ensure that the complex structures on each tangent space fit
+together to make each little patch of the manifold look like C^n.
+Only then do we get a complex manifold.  Otherwise we just have
+an "almost complex manifold".  
+
+I didn't ignore this issue, but now you've got me worried
+that I may not have handled it correctly.  Here's what I wrote:
+
+  The key principle to keep in mind is that any type of structure you
+  can put on a real inner product space yields a type of Riemannian 
+  manifold.  Each tangent space of a Riemannian manifold is a real
+  inner product space, and there's a god-given way to parallel
+  transport tangent vectors on a Riemannian manifold.  So, if X is
+  some type of structure you can put on a real inner product space,
+  you can define an "X-manifold" to be a Riemannian manifold where each
+  tangent space has an X-structure...  in a way that's preserved by
+  parallel transport!
+
+  For example, X could be a "Hermitian structure" - a way of making a
+  real inner product space into a \emph{complex} inner product space.  Then 
+  an X-manifold is called a "Kaehler manifold".
+
+See?   
+
+I didn't say an X-manifold was a Riemannian manifold where
+each tangent space is given a structure of type X.
+
+I said it was a Riemannian manifold on which each tangent space is
+given a structure of type X... IN A WAY THAT'S PRESERVED BY PARALLEL
+TRANSPORT!
+
+If I had left out that last clause, I'd obviously be in trouble.
+This last clause is the only condition that relates what's going
+on at different tangent spaces.
+
+In particular, if X = "a Hermitian structure", an X-manifold is a
+Riemannian manifold where each tangent space is equipped with a
+complex structure J and a complex inner product h whose real part 
+is the original Riemannian inner product... such that h and J are
+preserved by parallel transport.
+
+I was hoping this definition is equivalent to the usual ones.  
+Now you've got me nervous... after all, before I can flame you 
+for misunderstanding me, I should be sure what I actually said 
+is right!  :-)
+
+My definition is conceptually simple, but it contains
+some redundancy... let's squeeze that out and see what's left.
+
+We start with an X-manifold where X = "a hermitian structure".
+Each tangent space has a complex inner product h,
+whose real part g is the original Riemannian metric, 
+and whose imaginary part we call w:
+
+h = g + iw
+
+Each tangent space also has a complex structure J on it.
+
+We want all this stuff to be preserved by parallel transport.
+So, at first it seems like we have 3 integrability conditions:
+
+  g, w, and J are preserved by parallel transport
+
+But g is automatically preserved by parallel transport - that's
+how the Levi-Civita connection is defined!  
+
+So, there are really just 2 integrability conditions:
+
+  w and J are preserved by parallel transport.
+
+But we can always recover the imaginary part of the inner
+product from its real part together with the complex structure:
+
+w(u,v) = -g(u,Jv)
+
+So, there is really just one integrability condition:
+
+  J is preserved by parallel transport.
+
+Now, how does this compare to other definitions of Kaehler
+manifold?  Marc Nardmann wrote:
+
+> I assume that you know
+>
+> (#) that every hermitian metric h on a complex manifold X has a
+>     decomposition h = g+iw, where g is a Riemannian metric on X_R
+>     (and X_R is the smooth manifold X without its complex structure),
+>     and w is a 2-form on X_R;
+>
+>(#) and that each of h,g,w determines the other two via the R-vector
+>     bundle morphism J: T(X_R) \to  T(X_R) given by Jv = iv (where the
+>     holomorphic tangent bundle TX is canonically identified as a real
+>     vector bundle with T(X_R)). E.g. g(u,v) = w(u,Jv) up to a sign that
+>     depends on our definition of hermiticity.
+>
+> The hermitian metric h = g+iw is K"ahler
+>     if and only if w is closed,
+>     if and only if J, viewed as a real (1,1)-tensor field on X, is
+>     parallel with respect to the Levi-Civita connection of g.
+
+It sounds like he's saying that a Kaehler manifold is a \emph{complex}
+manifold for which J is preserved by parallel transport.  My proposed
+definition is close, but it doesn't contain the crucial word \emph{complex}.
+
+Can we safely leave it out?  I.e., is any almost complex Riemannian
+manifold for which J is preserved by parallel transport automatically
+complex???
+
+I don't know.  So, now I'm nervous.
+
+I could try to show by a calculation that if J has vanishing
+covariant derivative, it satisfies the integrability condition
+that forces it to be a complex structure:
+
+[Ju,Jv] - [u,v] - J[u,Jv] - J[Ju,v] = 0
+
+However, I'm too lazy!  I'm hoping Marc Nardmann or someone 
+will step in with either the necessary theorem, or a counterexample.
+
+Btw, there is such a thing as an "almost Kaehler manifold",
+which is an almost complex manifold where each tangent space
+is equipped with a complex inner product h = g+iw such that the
+imaginary part w is a closed 2-form.  But, I don't see why
+the existence of these things serves as a counterexample to
+my hope.
+$$
+    
+\end{quote}
+
+Then Marc Nardmann confirmed my hope: any almost complex Riemannian
+manifold for which J is preserved by parallel transport is
+automatically complex, and thus a Kaehler manifold.  He wrote
+(in part):
+
+\begin{quote}
+
+$$
+
+John Baez wrote:
+
+ > It sounds like he's saying that a Kaehler manifold is a \emph{complex}
+ > manifold for which J is preserved by parallel transport.
+
+Yes. I forgot to discuss this issue in the post you're citing here. In
+the stringy context, there's initially just the Riemannian metric, so it
+is important to know how e.g. a holonomy condition implies the existence
+of a complex structure, as opposed to a mere almost complex structure.
+Let's see:
+
+ > My proposed definition
+ > is close, but it doesn't contain the crucial word \emph{complex}.
+ >
+ > Can we safely leave it out?  I.e., is any almost complex Riemannian
+ > manifold for which J is preserved by parallel transport automatically
+ > complex???
+ >
+ > I don't know.  So, now I'm nervous.
+ >
+ > I could try to show by a calculation that if J has vanishing
+ > covariant derivative, it satisfies the integrability condition
+ > that forces it to be a complex structure:
+ >
+ > [Ju,Jv] - [u,v] - J[u,Jv] - J[Ju,v] = 0
+ >
+ > However, I'm too lazy!
+
+It's very easy, so even laziness is no excuse :-). The hard part is
+contained in the theorem you're citing here: that an almost complex
+structure comes from a complex structure (which is then uniquely
+determined) if (and only if) [Ju,Jv] - [u,v] - J[u,Jv] - J[Ju,v] = 0
+for all vector fields u,v (in fact, the LHS of the equation is
+tensorial, hence well-defined for \emph{vectors}).
+
+We need only the fact that the Levi-Civita connection is torsion-free:
+
+  [Ju,Jv]       -    [u,v]     -    J[u,Jv]       -       J[Ju,v]       = 
+
+&nabla;_{Ju}Jv - &nabla;_{Jv}Ju   -   &nabla;_{u}v + &nabla;_{v}u   -   J(&nabla;_{u}Jv - &nabla;_{Jv}u)   -   J(&nabla;_{Ju}v -&nabla;_{v}Ju)  =
+
+J(&nabla;_{Ju}v) - J(&nabla;_{Jv}u) - &nabla;_{u}v + &nabla;_{v}u    +   &nabla;_{u}v + J(&nabla;_{Jv}u)   -   J(&nabla;_{Ju}v) - &nabla;_{v}u  =  0
+$$
+    
+\end{quote}
 
 
-% parser failed at source line 895
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>"The series is divergent; therefore we may be able to
+do something with it"</em> - Oliver Heaviside.  
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

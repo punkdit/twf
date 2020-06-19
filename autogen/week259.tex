@@ -43,11 +43,10 @@ on what will happen here when our Sun becomes a planetary nebula
      a dot of intense light, no larger than Venus, more brilliant 
      than 100 present Suns, and an intensely hot blue-white color 
      hotter than any welder's torch.  Light from the fiendish blue 
-     &quot;pinprick&quot; will braise the Earth and tear apart its surface 
-     molecules and atoms. A new but very thin &quot;atmosphere&quot; of free 
+     "pinprick" will braise the Earth and tear apart its surface 
+     molecules and atoms. A new but very thin "atmosphere" of free 
      electrons will form as the Earth's surface turns to dust.
 \end{quote}
-    
 Eerie!  
 
 Here's a "protoplanetary nebula" - that is, a planetary nebula that's
@@ -106,7 +105,9 @@ A <a href = "http://en.wikipedia.org/wiki/Field_%28mathematics%29">field</a>
 is a mathematical structure where you can add, multiply,
 subtract and divide in ways that satisfy these familiar rules:
 
+
 \begin{verbatim}
+
  x + y = y + x        (x + y) + z = x + (y + z)   x + 0 = x
 
  xy = yx              (xy)z = x(yz)               1x = x
@@ -246,7 +247,9 @@ So, every vector space is 0-dimensional!
 To prevent such problems, people add one extra clause to the definition
 of a field:
 
+
 \begin{verbatim}
+
  1 is not equal to 0
 \end{verbatim}
     
@@ -295,7 +298,9 @@ be more precise after looking at some examples.
 Here's the simplest example.  Say we count lines through the origin 
 in an n-dimensional vector space over F_{q}.   We get the "q-integer"
 
+
 $$
+
  q^{n} - 1
 ------- = 1 + q + q^{2} + ... + q^{n-1}
  q - 1
@@ -319,7 +324,9 @@ real analogy may be between "points in a projective space" and
 Here's a more impressive example.   Pick any uncombed Young diagram D 
 with n boxes.  Here's one with 8 boxes:
 
+
 \begin{verbatim}
+
 X                     1 box in the first row
 X X                   3 boxes in the first two rows
 X X X                 6 boxes in the first three rows
@@ -330,18 +337,22 @@ X X                   8 boxes in the first four rows
 Then, count the "D-flags on an n-dimensional vector space over
 F_{q}".  In our example, such a D-flag is:
 
-\begin{verbatim}
+
+$$
+
     a 1-dimensional subspace
  of a 3-dimensional subspace
  of a 6-dimensional subspace
- of a 8-dimensional vector space over F<sub>q</sub>
-\end{verbatim}
+ of a 8-dimensional vector space over F_{q}
+$$
     
 If you actually count these D-flags you'll get some formula, which is 
 a polynomial in q.  And when you set q = 1, you'll get the number of 
 "D-flags on an n-element set".  In our example, such a D-flag is:
 
+
 \begin{verbatim}
+
    a 1-element subset 
 of a 3-element subset
 of a 6-element subset
@@ -369,14 +380,16 @@ If you don't understand the previous paragraph, don't worry - it's
 over now.  It's great stuff, but my main point is that there seems to 
 be an analogy like this:
 
-\begin{verbatim}
+
+$$
+
  q = 1                      q = a power of a prime number    
 
- n-element set              (n-1)-dimensional projective space over F<sub>q</sub>
+ n-element set              (n-1)-dimensional projective space over F_{q}
  integer n                  q-integer [n]
- permutation groups S<sub>n</sub>      projective special linear group PSL(n,F<sub>q</sub>)
+ permutation groups S_{n}      projective special linear group PSL(n,F_{q})
  factorial n!               q-factorial [n]!
-\end{verbatim}
+$$
     
 
 This opens up lots of questions.  For example, if projective spaces over
@@ -435,7 +448,9 @@ commutative rings.  A "<a href =
 ring</a>" is a gadget where you can add and multiply, and these
 rules hold:
 
+
 \begin{verbatim}
+
  x + y = y + x        (x + y) + z = x + (y + z)   x + 0 = x
 
  xy = yx              (xy)z = x(yz)               1x = x
@@ -451,7 +466,9 @@ commutative monoids.  A commutative "<a href =
 "http://en.wikipedia.org/wiki/Commutative_ring">monoid</a>" is a gadget where you can multiply, and these rules
 hold:
 
+
 \begin{verbatim}
+
  xy = yx              (xy)z = x(yz)               1x = x
 \end{verbatim}
     
@@ -679,7 +696,9 @@ We also get a very similar example from any commutative "<a href =
 which is a gizmo satisfying rules like those of a commutative ring,
 but without negatives:
 
+
 \begin{verbatim}
+
  x + y = y + x        (x + y) + z = x + (y + z)   x + 0 = x
 
  xy = yx              (xy)z = x(yz)               1x = x
@@ -740,6 +759,103 @@ http://www.math.neu.edu/~levine/publ/SummerSchoolAG.pdf</a>
 
 Kevin Buzzard has a word of advice about the "generic point":
 
+\begin{quote}
+
+\begin{verbatim}
+  We can think of elements of a commutative ring R as functions on
+  certain space called the "spectrum" of R, Spec(R).
+\end{verbatim}
+    
+
+So this is the set of all \emph{prime} ideals of R, right? Not just
+the maximal ones? So...
+
+\begin{verbatim}
+  So, the Riemann sphere is a scheme!
+\end{verbatim}
+    
+
+Well, you have to throw in a mystical extra "generic point" if you really
+want to make it a scheme :-) Corresponding to the zero ideal. My
+impression is that most non-algebraic geometers think that the generic
+point is either confusing or just plain daft. But believe me, it's a
+\emph{really} good idea! For decades in the literature in algebraic geometry
+people were using the word "generic" to mean "something that was true most
+of the time" - in fact a "generic point" is probably another really good
+example of a phantom! For example a meromorphic function on the Riemann
+sphere that wasn't zero would be "generically non-zero" to people like
+Borel and Weil, and if you asked them for a definition they would say
+that it just meant something like "the zero locus in the space had a
+smaller dimension than the whole space" or "the zero locus was
+nowhere dense in any component of the space" or something, and of course
+people could even make rigorous definitions that worked in particular
+cases and so on, but then Grothendieck came along with his "generic
+point", corresponding to the zero ideal [note to sub: check to see whether the
+idea was in the literature pre-Grothendieck!] and suddenly a function that
+was "generically non-zero" was just a function which was non-zero on the
+generic point! Such a cool way of doing it :-)
+
+Kevin
+\end{quote}
+
+If you get stuck on my puzzle "what does it mean for
+an n-ary operation to commute with an m-ary operation?", let me just
+show you what it means for a binary operation f to commute with a 
+ternary operation g.  It means:
+
+g(f(x_{1},x_{2}), 
+f(x_{3},x_{4}),
+f(x_{5},x_{6})) = 
+f(g(x_{1},x_{2},x_{3}),
+g(x_{4},x_{5},x_{6}))
+
+I hope this example gives away the general pattern.
+
+If this is confusing, look
+at the case where we start with a ring R and take as our
+n-ary operations the "n-ary R-linear combinations"
+
+(x_{1}, ..., x_{n}) |\to  r_{1} x_{1} +
+... + r_{n} x_{n}
+
+with r_{i} in R.  Here an example of a binary operation is addition:
+
+(x_{1}, x_{2}) |\to  x_{1} + x_{2}
+
+while every unary operation is multiplication by some element of R:
+
+x_{1} |\to  r x_{1}
+
+To say "addition commutes with multiplication by an element of R"
+means that
+
+r(x_{1} + x_{2}) = rx_{1} + rx_{2}
+
+This is just the distributive law so it holds for any ring R.
+
+But, for the unary operations to commute with each other, we need R
+to be commutative, since this says:
+
+r(s x_{1}) = s (r x_{1})
+
+(In the calculations I just did, we can either think of the x_{i}
+as elements of a specific R-module, or more abstractly as "dummy variables"
+used to describe the ring R as a generalized ring in Durov's sense -
+what Lawvere calls an algebraic theory.)
+
+For more discussion, go to the
+<a href = "http://golem.ph.utexas.edu/category/2007/12/this_weeks_finds_in_mathematic_19.html">\emph{n}-Category Caf&eacute;</a>.
 
 
-% parser failed at source line 889
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>The analogy between number fields and function fields finds a 
+basic limitation with the lack of a ground field.  One says that Spec(Z)
+(with a point at infinity added, as is familiar in Arakelov geometry) is 
+like a (complete) curve, but over which field?</em> - Christophe Soul&eacute;
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

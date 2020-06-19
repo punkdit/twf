@@ -149,7 +149,9 @@ good - separated by a no-man's land of states where it's not
 doing anything good.  For a simple 2-bit computer, you can imagine
 4 blobs like this:
 
+
 \begin{verbatim}
+
               --------------------------
              |??????????????????????????|
              |??? ----- ?????? ----- ???|
@@ -534,6 +536,262 @@ catching some more errors, and Ben Rubiak-Gould, Nathan Urban and
 K. Eric Drexler for some interesting comments.
 Here's my reply to Ben Rudiak-Gould:
 
+\begin{quote}
+John Baez wrote:
 
 
-% parser failed at source line 664
+\begin{verbatim}
+
+  In fact, Rolf Landauer showed back in 1961 that getting rid of 
+  one bit of information requires putting out this much energy 
+  in the form of heat:
+  
+  kT ln(2)
+\end{verbatim}
+    
+
+Ben Rubiak-Gould replied:
+
+
+\begin{verbatim}
+
+ It's easy to understand where this formula comes from.  
+ Getting rid of a bit means emitting one bit of entropy, 
+ which is k ln 2 in conventional units.  The associated 
+ quantity of heat is ST = kT ln 2.
+\end{verbatim}
+    
+
+Thanks; I should have said that.  
+
+ Landauer's analysis showing that "forgetting information" costs
+ energy is still interesting, and it was surprising at the time.  
+ There had been a number of other analyses of why Maxwell's demon
+ can't get you something for nothing, by Szilard and others, but
+ none (I think) had focussed on the key importance of resetting
+ the demon's memory to its initial state.
+
+
+\begin{verbatim}
+
+ But it seems to me that you're conflating two different 
+ issues here.  One is the cost of forgetting a bit, which 
+ only affects irreversible computation, and the other is 
+ the cost of keeping the computation on track, which affects 
+ reversible computation also.  Landauer's formula tells you 
+ the former, but I don't think there's any lower bound on 
+ the latter.
+\end{verbatim}
+    
+ Not in principle: with a perfectly tuned dynamics, an analogue 
+ system can act perfectly digital, since each macrostate gets mapped
+ perfectly into another one with each click of the clock.  But with
+ imperfect dynamics, dissipation is needed to squeeze each macrostate
+ down enough so it can get mapped into the next - and the dissipation 
+ makes the dynamics irreversible, so we have to pay a thermodynamic cost.  
+ 
+ If I were smarter I could prove an inequality relating the "imperfection 
+ of the dynamics" (how to quantify that?) to the thermodynamic cost
+ of computation, piggybacking off Landauer's formula.  
+\end{quote}
+
+Here's what Nathan Urban wrote:
+
+\begin{quote}
+John Baez wrote:
+
+
+$$
+
+ [quantum computation]
+ So, maybe it can work.  I need to catch up on what people 
+ have written about this, even though most of it speaks the 
+ language of "error correction" rather than thermodynamics.
+$$
+    
+
+A nice recent overview of some of this work can be found in the 
+latest \emph{Physics Today}:
+
+23) Sarma, Freedman, and Nayak, Topological quantum
+computation, Physics Today (July 2006).
+
+In this approach, error-free computation is accomplished using
+topological quantum field theories, as topological theories are robust
+against local perturbations.
+
+The article has some nice discussion of anyons, braidings, non-Abelian
+topological phases of condensed matter systems, etc.  It speculates
+that the &nu; = 12/5 state of the fractional quantum Hall effect might
+support universal topological quantum computation (meaning that its
+braiding operators could realize any desired unitary transformation).
+\end{quote}
+
+Here's my reply:
+
+\begin{quote}
+Long time no see, Nathan!
+
+Nathan Urban wrote:
+
+
+$$
+
+ John Baez wrote:
+
+  >[quantum computation]
+  >So, maybe it can work.  I need to catch up on what people 
+  >have written about this, even though most of it speaks the 
+  >language of "error correction" rather than thermodynamics.
+
+ A nice recent overview of some of this work can be found in the 
+ latest \emph{Physics Today} (July 2006), in the article "Topological 
+ quantum computation" by Sarma, Freedman, and Nayak.  (Nayak is 
+ at UCLA if you ever get out that way.)
+$$
+    
+
+Thanks, I'll check that out.
+
+I'm usually too lazy to drive into LA, but now that I'm in Shanghai,
+I thought I'd take the chance to visit Zhenghan Wang in the nearby 
+city of Hangzhou and talk to him about topological quantum computation.
+
+Wang and Freedman both work for "Project Q", aptly named after the 
+Star Trek villain - it's Microsoft's project to develop quantum 
+computers using nonabelian anyons:
+
+24) Topological quantum computing at Indiana University, 
+<A HREF = "http://www.tqc.iu.edu/">http://www.tqc.iu.edu/</A>
+
+
+\begin{verbatim}
+
+ The article has some nice discussion of anyons, braidings, 
+ non-Abelian topological phases of condensed matter systems, 
+ etc.  It speculates that the &nu;=12/5 state of the fractional 
+ quantum Hall effect might support universal topological 
+ quantum computation (meaning that its braiding operators 
+ could realize any desired unitary transformation).
+\end{verbatim}
+    
+
+Freedman, Larsen and Wang have already proved that certain versions of 
+Chern-Simons theory support universal quantum computation:
+
+25)  Michael Freedman, Michael Larsen, and Zhenghan Wang, A 
+modular functor which is universal for quantum computation, 
+available as <A HREF = "http://arxiv.org/abs/quant-ph/0001108">quant-ph/0001108</A>.
+
+The fractional quantum Hall effect is supposedly described by 
+Chern-Simons theory, so this is relevant.   I don't know anything 
+about the "&nu; = 12/5 state" of the fractional quantum Hall effect, 
+but the folks at Project Q \emph{do} want to use the fractional quantum 
+Hall effect for quantum computation, and some people are looking 
+for nonabelian anyons in the &nu; = 5/2 state:
+
+26) Parsa Bonderson, Alexei Kitaev and Kirill Shtengel, Detecting
+non-abelian statistics in the &nu; = 5/2 fractional quantum Hall
+state, Phys. Rev. Lett. 96 (2006) 016803.  Also available as <A HREF =
+"http://arxiv.org/abs/cond-mat/0508616">cond-mat/0508616</A>.
+
+Apparently there's just one lab in the world that has the capability
+of producing these fractional quantum Hall states!
+\end{quote}
+
+The article in the latest Physics Today isn't free for nonsubscribers,
+but this is, and it seems to cover similar ground:
+
+27) Charles Day, Devices based on the fractional quantum Hall effect may
+fulfill the promise of quantum computing, Physics Today (October 2005),
+also available at <A HREF = "http://www.physicstoday.org/vol-58/iss-10/p21.html">http://www.physicstoday.org/vol-58/iss-10/p21.html</A>
+
+It discusses both the &nu; = 12/5 and &nu; = 5/2 states.
+
+Alas, I never managed to visit Zhenghan Wang in Hangzhou.
+
+K. Eric Drexler writes:
+
+\begin{quote}
+Dear John,
+
+To continue a thread in Week 235:
+
+John Baez wrote:
+
+
+\begin{verbatim}
+
+ > [...] with a perfectly tuned dynamics, an analogue system 
+ > can act perfectly digital, since each macrostate gets 
+ > mapped perfectly into another one with each click of 
+ > the clock.  But with imperfect dynamics, dissipation 
+ > is needed to squeeze each macrostate down enough so it 
+ > can get mapped into the next - and the dissipation 
+ > makes the dynamics irreversible, so we have to pay a 
+ > thermodynamic cost.  
+\end{verbatim}
+    
+
+Logically reversible computation can, in fact, be kept on track  
+without expending energy and without accurately tuned dynamics. A  
+logically reversible computation can be embodied in a constraint  
+system resembling a puzzle with sliding, interlocking pieces, in  
+which all configurations accessible from a given input state  
+correspond to admissible states of the computation along an oriented  
+path to the output configuration. The computation is kept on track by  
+the contact forces that constrain the motion of the sliding pieces.  
+The computational state is then like a ball rolling along a deep  
+trough; an error would correspond to the ball jumping out of the  
+trough, but the energy barrier can be made high enough to make the  
+error rate negligible. Bounded sideways motion (that is, motion in  
+computationally irrelevant degrees of freedom) is acceptable and  
+inevitable.
+
+Keeping a computation of this sort on track clearly requires no  
+energy expenditure, but moving the computational state in a preferred  
+direction (forward!) is another matter. This requires a driving  
+force, and in physically realistic systems, this force will be  
+resisted by a "friction" caused by imperfections in dynamics that  
+couple motion along the progress coordinate to motion in other,  
+computationally irrelevant degrees of freedom. In a broad class of  
+physically realistic systems, this friction scales like viscous drag:  
+the magnitude of the mean force is proportional to speed, hence  
+energy dissipation per distance travelled (equivalently, dissipation  
+per logic operation) approaches zero as the speed approaches zero.
+
+Thus, the thermodynamic cost of keeping a classical computation free  
+of errors can be zero, and the thermodynamic cost per operation of a  
+logically reversible computation can approach zero. Only Landauer's 
+ln(2)kT cost of bit erasure is unavoidable, and the number of bits  
+erased is a measure of how far a computation deviates from logical  
+reversibility. These results are well-known from the literature, and  
+are important in understanding what can be done with atomically-precise 
+systems.
+
+With best wishes, <br>
+Eric
+\end{quote}
+
+For an introduction to Drexler's plans for atomically-precise
+reversible computers, see:
+
+28) K. Eric Drexler, Nanosystems: Molecular Machinery, Manufacturing, 
+and Computation, John Wiley and Sons, New York, 1992.
+
+The issue of heat dissipation in such devices is also studied here:
+
+29) Ralph C. Merkle, Two types of mechanical reversible logic,
+Nanotechnology 4 (1993), 114-131.  Also available at 
+<A HREF = "http://www.zyvex.com/nanotech/mechano.html">
+http://www.zyvex.com/nanotech/mechano.html</A>
+
+I need to think about this stuff more!
+
+
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

@@ -160,7 +160,9 @@ we let F_{k} be the \emph{set} of ways we can put this structure on a k-element
 set, and let |F_{k}| be the \emph{number} of ways we can do it.  We define the 
 "generating function" |F| to be the formal power series
 
+
 $$
+
                |F_{k}|  
 |F|(x) = sum  -----  x^{k}
                 k!
@@ -173,7 +175,9 @@ For example: given structure types G and H, we define the structure
 type G+H by saying an G+H-structure on the set S consists of either a
 G-structure on S or an H-structure on S.  This definition gives:
 
+
 \begin{verbatim}
+
 |G+H| = |G| + |H| 
 \end{verbatim}
     
@@ -182,7 +186,9 @@ consists of a way of chopping S into two disjoint subsets and putting
 a G-structure on the first subset and an H-structure on the second.  
 If we make this definition, we get:
 
+
 \begin{verbatim}
+
 |GH| = |G| |H|
 \end{verbatim}
     
@@ -191,7 +197,9 @@ consists of a way of partitioning S into disjoint parts, putting
 a G-structure on the set of parts, and putting an H-structure on 
 each part.  Then we get:
 
+
 \begin{verbatim}
+
 |GoH| = |G| o |H|
 \end{verbatim}
     
@@ -210,13 +218,17 @@ ways to put this structure on a k-element set if
 k is different from n, and there are n! ways to put it on an n-element 
 set.  So the generating function of this structure type is just
 
+
 $$
+
 x^{n}
 $$
     
 If we call this structure type X^{n}, we get this cute equation:
 
+
 $$
+
 |X^{n}| = x^{n}
 $$
     
@@ -225,13 +237,17 @@ is the same as being a totally ordered 0-element set or being a totally
 ordered 1-element set or being a totally ordered 2-element set or... 
 you get the idea.  So, we have
 
+
 $$
+
      G = 1 + X + X^{2} + ...
 $$
     
 and thus
 
+
 $$
+
 |G|(x) = 1 + x + x^{2} + ...
  
            1
@@ -242,13 +258,17 @@ $$
 Next, suppose H is the structure "being a totally ordered set with 1 
 or 2 elements".  This has the generating function
 
+
 $$
+
 |H|(x) = x + x^{2}
 $$
     
 Now let's consider the structure type
 
+
 \begin{verbatim}
+
 F = GoH
 \end{verbatim}
     
@@ -258,13 +278,14 @@ with 1 or 2 elements.  This sounds a bit weird!  But if you think about
 it, it means:
 
 \begin{quote}
-      &quot;To put an F-structure on a set, order it and then partition
-       it into parts of size 1 or 2.&quot;
+      "To put an F-structure on a set, order it and then partition
+       it into parts of size 1 or 2."
 \end{quote}
-    
 And we can count the ways of doing this by using this generating function:
 
+
 $$
+
 |F|(x)  = |G| o |H| (x)
 
               1
@@ -282,7 +303,9 @@ this generating function is just the kth Fibonacci number!
 Now, remember that generating functions have a factorial built into
 them:
 
+
 $$
+
              |F_{k}|  
 |F|(x) =  &sum; -----  x^{k}
               k!
@@ -298,7 +321,9 @@ Well, after the checking the first couple of coefficients, we just need
 to make sure that each coefficient in our generating function is the sum
 of the previous two.  And that follows straight from this equation:
 
+
 $$
+
           1              x               x^{2}
      ----------  =  -----------  +  -----------  + 1
      1 - x - x^{2}      1 - x - x^{2}      1 - x - x^{2}
@@ -307,7 +332,9 @@ $$
 Even better, the above equation comes from an isomorphism between
 structure types:
 
+
 $$
+
           F      =       X F      +     X^{2} F     + 1
 $$
     
@@ -315,13 +342,12 @@ Since X^{n} is the structure "being a totally ordered n-element set",
 this isomorphism says:
 
 \begin{quote}
-      &quot;To put an F-structure on a set S, either remove one element 
+      "To put an F-structure on a set S, either remove one element 
       from S and put an F-structure on the rest of S, or remove two 
       elements, order them, and put an F-structure on the rest of S,
       or check to see if S is the empty set - in which case it has
-      exactly one F-structure, by definition.&quot;
+      exactly one F-structure, by definition."
 \end{quote}
-    
 This recursive definition of F is a categorified version of the 
 recursive definition of the Fibonacci numbers.  It gives perhaps the
 most direct way to see that the number of ways of chopping an n-element 
@@ -332,7 +358,9 @@ structure types.
 
 We also get other spinoffs.  For example, the pole of this function
 
+
 $$
+
      1
  ---------- 
  1 - x - x^{2}
@@ -340,14 +368,18 @@ $$
     
 that's closest to zero occurs at the reciprocal of the golden ratio:
 
+
 \begin{verbatim}
+
 1/G = 0.6180339...
 \end{verbatim}
     
 So, by a theorem of Hadamard, the nth coefficient of the corresponding
 series
 
+
 $$
+
 1 + x + 2x^{2} + 3x^{3} + 5x^{4} + 8x^{5} + ...
 $$
     
@@ -363,7 +395,9 @@ For example, suppose you wanted to know approximately how many ways
 there are to take a million dollars and break it down into 1, 5, and
 10 dollar bills.  The generating function that solves this problem is
 
+
 $$
+
            1       1         1
          ------  ------   -------
          1 - x   1 - x^{5}   1 - x^{10}
@@ -377,7 +411,9 @@ type T where a T-structure on a set is a way of making it into the
 leaves of a binary tree.  For example, here's a T-structure on the set
 {a,b,c,d}:
 
+
 \begin{verbatim}
+
               b   d    c   a
                \   \  /   /
                 \   \/   /
@@ -394,19 +430,25 @@ To put a T-structure on a set, we either check to see that it has one
 element, in which case there's a single T-structure, or chop it into
 two parts and put a T-structure on each part.  This means that
 
+
 $$
+
 T = X + T^{2}
 $$
     
 and thus
 
+
 $$
+
 |T| = x + |T|^{2}
 $$
     
 so 
 
+
 $$
+
 |T|(x) = (1 - sqrt(1 - 4x))/2 
 
        =  x + x^{2} + 2x^{3} + 5x^{4} + 14x^{5} + 42x^{6} + ....
@@ -420,7 +462,9 @@ If you think this stuff is fun, ponder T(1).  This
 corresponds naturally to the set of all trees. 
 What's the cardinality of this set?  Well, the sensible answer
 is to sum the series:
+
 \begin{verbatim}
+
 |T|(1) = 1 + 1 + 2 + 5 + 14 + 42 + ....
 \end{verbatim}
     
@@ -428,7 +472,9 @@ In other words, infinity!  But if we were feeling
 quite relaxed about everything, we might use the other formula
 for |T|(x) and guess
 
+
 $$
+
 |T|(1) = (1 - sqrt(-3))/2
 
        = exp(-i \pi /6)
@@ -441,7 +487,9 @@ it to guess things that would be hard to guess otherwise!
 For example, this number is a sixth root of unity, so if we
 raise it to the seventh power, we get the same
 number back again:
+
 $$
+
 |T|(1)^{7} = |T|(1)
 $$
     
@@ -449,7 +497,9 @@ $$
 Categorifying this fact, Lawvere guessed there was indeed a nice
 isomorphism 
 
+
 $$
+
 T(1)^{7} = T(1)
 $$
     
@@ -502,12 +552,13 @@ Belot, Gordon (2002) Symmetry and Gauge Freedom.
 Regards,
 Gordon McCabe
 \end{quote}
-    
 
 
 
 Also, someone noticed something funny about the following: 
+
 \begin{verbatim}
+
 >      "To put an F-structure on a set, order it and then partition
 >       it into parts of size 1 or 2."
 >
@@ -646,6 +697,3 @@ James Dolan, so any errors in the above are his fault, not mine.
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 748

@@ -107,7 +107,9 @@ which gets us from some starting-point A to some result B, and the other
 of which gets us from A' to B'.  We can represent each task by an arrow,
 as follows:
 
+
 \begin{verbatim}
+
 A ----> B
 
 
@@ -124,7 +126,9 @@ of steps, starting with A and winding up with B.
 If we now consider doing both these tasks concurrently, we can represent the
 situation by a square:
 
+
 \begin{verbatim}
+
 AA' -----> BA'
  |          |
  |          |
@@ -309,9 +313,37 @@ we can cook up a topological space called its "classifying space" KM,
 as follows. We can think of KM as a simplicial complex.  We start by
 sticking in one 0-simplex, which we can visualize as a dot like this:
 
+\begin{verbatim}
 
-<PRE>
 O
+\end{verbatim}
+    
+Then we stick in one 1-simplex for each element of the monoid, which we
+can visualize as an arrow going from the dot to itself.  Unrolled a bit,
+it looks like this: 
 
+\begin{verbatim}
 
-% parser failed at source line 376
+O---a---O
+\end{verbatim}
+    
+Really we should draw an arrow going from left to right, but soon
+things will get too messy if I do that, so I won't.  Then, whenever we
+have ab = c in the monoid, we stick in a 2-simplex, which we can
+visualize as a triangle like this:
+
+\begin{verbatim}
+
+      O
+     / \
+    a   b
+   /     \
+  O---c---O
+\end{verbatim}
+    
+Then, whenever we have abc = d in the monoid, we stick in a 3-simplex,
+which we can visualize as a tetrahedron like this
+
+% </A>
+% </A>
+% </A>

@@ -60,7 +60,9 @@ underlies all the fancy stuff.  Hmm, I think I'll start with Galois theory.
 As you may have heard, Galois invented group theory in the process of
 showing you can't solve the quintic equation
 
+
 $$
+
 ax^{5} + bx^{4} + cx^{3} + dx^{2} + ex + f = 0
 $$
     
@@ -140,7 +142,9 @@ until you've got a field.
 For example, we could take the rationals, throw in the square root of 2, 
 and get a field consisting of all numbers of the form
 
+
 \begin{verbatim}
+
 a + b sqrt(2)
 \end{verbatim}
     
@@ -154,7 +158,9 @@ More generally, we could throw in the square root of any integer n,
 and get an algebraic number field called Q(sqrt(n)), consisting of all
 numbers
 
+
 \begin{verbatim}
+
 a + b sqrt(n)
 \end{verbatim}
     
@@ -207,7 +213,9 @@ contains some smaller field k.  Then we define the "Galois group of K
 over k" to be the group of all automorphisms of K that act as the 
 identity on k.  We call this group
 
+
 \begin{verbatim}
+
 Gal(K/k)
 \end{verbatim}
     
@@ -219,14 +227,18 @@ elements: the identity transformation, which leaves everything alone, and
 complex conjugation, which switches i and -i.  Since the only group with 2
 elements is Z/2, we have
 
+
 \begin{verbatim}
+
 Gal(C/R) = Z/2
 \end{verbatim}
     
 Where does complex conjugation come from?  It comes from the fact that
 we get C from R by throwing in a solution of the quadratic equation 
 
+
 $$
+
 x^{2} = -1
 $$
     
@@ -241,7 +253,9 @@ precisely in ordinary language, which is part of why Galois had to invent
 group theory.  But it's fun to try to explain it in plain English... 
 so let me try.  The complex numbers have two solutions to
 
+
 $$
+
 x^{2} = -1
 $$
     
@@ -295,7 +309,9 @@ Here's another example of a Galois group that physicists should like.
 Let C(z) be the field of rational functions in one complex variable z -
 in other words, functions like
 
+
 \begin{verbatim}
+
 f(z) = P(z)/Q(z)
 \end{verbatim}
     
@@ -314,7 +330,9 @@ together with one extra point, the "point at infinity".  The only
 conformal transformations of the Riemann sphere are "fractional linear
 transformations":
 
+
 \begin{verbatim}
+
        az + b
 T(z) = ------
        cz + d
@@ -324,7 +342,9 @@ So, the only symmetries of the field of rational functions that
 act as the identity on constant functions are those coming from 
 fractional transformations, like this:
 
+
 $$
+
 f |-> fT                        where fT(z) = f(T(z)) 
 $$
     
@@ -351,9 +371,11 @@ transformation.
 Summarizing, the Galois group of C(z) over C is the Lorentz group, or
 more precisely, its connected component, SO_{0}(3,1):
 
-\begin{verbatim}
-Gal(C(z)/C) = SO<sub>0</sub>(3,1).
-\end{verbatim}
+
+$$
+
+Gal(C(z)/C) = SO_{0}(3,1).
+$$
     
 We've talked about the Galois group of C(z) over C and the Galois group
 of C over R.  What about the Galois group of C(z) over R?   Unsurprisingly,
@@ -370,14 +392,18 @@ you're probably wondering where the number theory went!  Well, it's
 all part of the same big story.  In number theory we're especially
 interested in Galois groups like
 
+
 \begin{verbatim}
+
 Gal(K/k)
 \end{verbatim}
     
 where K is some algebraic number field and k is some subfield of K.
 For starters, consider this example:
 
+
 \begin{verbatim}
+
 Gal(Q(sqrt(n))/Q)
 \end{verbatim}
     
@@ -386,13 +412,17 @@ Q(sqrt(n)) has sqrt(n) in it, so it also has -sqrt(n) in it, and there's
 an automorphism that switches these two while leaving all the rational 
 numbers alone, namely
 
+
 $$
+
 a + b sqrt(n) |-> a - b sqrt(n)                  (a,b in Q)
 $$
     
 So, we have:
 
+
 \begin{verbatim}
+
 Gal(Q(sqrt(n)))/Q) = Z/2
 \end{verbatim}
     
@@ -410,14 +440,18 @@ k < n.  If you take all the powers of any primitive nth root of unity,
 you get \emph{all} the nth roots of unity.  So, if we take some primitive nth 
 root of unity, call it
 
+
 $$
+
 1^{1/n}
 $$
     
 for lack of a better name, and extend the rationals by this number, 
 we get a field
 
+
 $$
+
 Q(1^{1/n})
 $$
     
@@ -429,7 +463,9 @@ n-gons one can construct with a ruler and compass!
 
 But what's the Galois group
 
+
 $$
+
 Gal(Q(1^{1/n})/Q)
 $$
     
@@ -441,7 +477,9 @@ to some \emph{primitive}
 root of unity, so m has to be relatively prime to n.  Apart from that, 
 though, anything goes - so the size of 
 
+
 $$
+
 Gal(Q(1^{1/n})/Q)
 $$
     
@@ -450,7 +488,9 @@ if you think about it, these numbers relatively prime to n are just the
 same as elements of Z/n that have multiplicative inverses!  So if you think
 some more, you'll see that
 
+
 $$
+
 Gal(Q(1^{1/n})/Q) = (Z/n)*
 $$
     
@@ -474,9 +514,11 @@ solutions comes from a unique symmetry of the field K.  In other words:
 barring some coincidence, all roots are created equal!  So in general we 
 have
 
-\begin{verbatim}
-Gal(K/Q) = S<sub>n</sub>
-\end{verbatim}
+
+$$
+
+Gal(K/Q) = S_{n}
+$$
     
 where S_{n} is the group of all permutations of n things.
 
@@ -488,9 +530,11 @@ But, we can already start to see how to prove the unsolvability of the
 general quintic!  Pick some random 5th-degree polynomial, let K be its
 splitting field, and note
 
-\begin{verbatim}
-Gal(K/Q) = S<sub>5</sub>
-\end{verbatim}
+
+$$
+
+Gal(K/Q) = S_{5}
+$$
     
 Then, show that if we build up an algebraic number field by starting
 with Q and repeatedly throwing in nth roots of numbers we've already got, 
@@ -551,14 +595,13 @@ a 1-1 correspondence between subgroups of Gal(K/k) and extensions of k
 contained in K if:
 
 \begin{quote}
-i) K is a &quot;finite&quot; extension of k.  In other words, K is a finite-dimensional
+i) K is a "finite" extension of k.  In other words, K is a finite-dimensional
 vector space over k.
 
-ii) K is a &quot;normal&quot; extension of k.  In other words, if a 
+ii) K is a "normal" extension of k.  In other words, if a 
 polynomial with coefficients in k can't be factored at all in k, 
 but has one root in K, then all its roots are in K.
 \end{quote}
-    
 
 For general fields we also need another condition, namely that K be a 
 "separable" extension of k.  But this is automatic for algebraic number
@@ -580,7 +623,9 @@ keep throwing in square roots of stuff you've got.  Doubling the cube
 requires getting your hands on the cube root of 2.  But the Galois group 
 of the splitting field of 
 
+
 $$
+
 x^{3} = 2
 $$
     
@@ -605,7 +650,9 @@ corresponds to some closed subgroup of Gal(Q^{-}/Q).
 
 So, for people studying algebraic number fields,
 
+
 $$
+
                            Gal(Q^{-}/Q)
 $$
     
@@ -631,7 +678,9 @@ contained in a cyclotomic field.  So, they all sit inside a field called
 Q^{cyc}, which is gotten by taking the rationals and throwing in \emph{all} nth 
 roots of unity for \emph{all} n.  Since
 
+
 $$
+
 Gal(Q(1^{1/n})/Q) = (Z/n)*
 $$
     
@@ -658,13 +707,17 @@ about \emph{abelian} Galois groups, so it's manageable.
 People now use Q^{cyc} as a kind of base camp for further expeditions into
 the depths of Q^{-}.  In particular, since 
 
+
 $$
+
 Q is contained in Q^{cyc} and Q^{cyc} is contained in Q^{-}
 $$
     
 we get an exact sequence of Galois groups:
 
+
 $$
+
 1 \to  Gal(Q^{-}/Q^{cyc}) \to  Gal(Q^{-}/Q) \to  Gal(Q^{cyc}/Q) \to  1
 $$
     
@@ -673,7 +726,9 @@ Gal(Q^{-}/Q^{cyc}) and how they fit together!  The last two steps are not
 so easy.  Shafarevich has conjectured that Gal(Q^{-}/Q^{cyc}) is the 
 profinite completion of a free group, say F^{^}.  This would give
 
+
 $$
+
 1 \to  F^{^} \to  Gal(Q^{-}/Q) \to  Z^{^}* \to  1
 $$
     
@@ -772,7 +827,7 @@ Another point: there is no need for Galois theory to prove that
 duplication of the cube and trisection of an angle cannot be done by
 ruler and compass. Since ruler and compass constructions are equivalent
 to solving a series of quadratics, they can lead only to fields F of
-dimension 2<sup>n</sup>, for some n, over the rationals. But 
+dimension 2^{n}, for some n, over the rationals. But 
 the two problems that
 I mentioned lead to extensions of dimension 3. All this is very
 elementary. Similar considerations lead to necessary conditions for the
@@ -780,11 +835,10 @@ constructibility of regular polygons, but proving these conditions
 sufficient does require more theory (unless, I guess, you provide
 directly the relevant system of quadratics; I think that is what Gauss
 did - his proof also preceded Galois). Squaring the circle is, of course,
-a different matter. Here we need the transcendence of &pi;.
+a different matter. Here we need the transcendence of \pi .
 Best wishes from wet Jerusalem,
 Avinoam Mann
 \end{quote}
-    
 
 It's true that Abel and Ruffini beat Galois when it came to the quintic; 
 the details of this history are covered pretty well by Ian Stewart's book, 
@@ -812,11 +866,8 @@ The pistol was the chosen weapon of the adversaries, but because of
 their old friendship they could not bear to look at one another and 
 left their decision to blind fate.</em> - Le Precursor, June 4, 1832
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 934

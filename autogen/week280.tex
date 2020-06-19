@@ -175,7 +175,7 @@ of the rotation group), it used unitary representations of SL(2,C)
 about <i>spacetime</i>, while loop quantum gravity focuses on
 <i>space</i>.  And instead of using spin networks with vertices
 labelled by arbitrary intertwiners, it only used a special intertwiner
-called the &quot;Barrett-Crane intertwiner&quot;.
+called the "Barrett-Crane intertwiner".
 
 B) While loop quantum gravity in its modern formulation includes the
 Immirzi parameter - a dimensionless constant that sets the scale of
@@ -193,10 +193,10 @@ Barrett-Crane model was nicely related to the action for general
 relativity.  But this turned out to be false: in the Barrett-Crane
 model, the amplitude for a large 4-simplex is dominated by certain
 degenerate geometries where the 4-simplex is squashed down to 3
-dimensions.  See &quot;<a href = "week128.html">week128</A>&quot;,
-&quot;<a href = "week168.html">week168</A>&quot;, &quot;<a href =
-"week170.html">week170</A>&quot; and &quot;<a href =
-"week198.html">week198</A>&quot; for the story here.  Carlo Rovelli
+dimensions.  See "<a href = "week128.html">week128</A>",
+"<a href = "week168.html">week168</A>", "<a href =
+"week170.html">week170</A>" and "<a href =
+"week198.html">week198</A>" for the story here.  Carlo Rovelli
 raised our hopes again in a more sophisticated way: he tried to
 compute the propagator for gravitons starting from the Barrett-Crane
 model.  For a beautiful and physically very sensible reason, the
@@ -205,7 +205,6 @@ some promising results for certain components of the graviton
 propagator, and left a student to work out the rest of the
 components... but it didn't work!
 \end{quote}
-    
 
 It seems all these problems have been solved now.  There's a new model
 sometimes called the EPRL model, after Engle, Pereira, Rovelli, and
@@ -505,7 +504,7 @@ class, the Euler class and the Nieh-Yan class, see:
 4d Lorentzian Holst action with topological terms, 
 available as <a href = "http://arxiv.org/abs/0902.3416">arXiv:0902.3416</a>.
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 \textbf{Addenda:} I thank Dan Christensen for catching an error
 in my quick history of the graviton propagator calculations, and
@@ -523,10 +522,103 @@ equation whose solutions diverge at the origin. Replace it with a
 difference equation on a subset of points that does not include the
 origin. This will have solutions not showing the singularity.
 \end{quote}
-    
 
 I replied:
 
+\begin{quote}
 
+This may have been true for some early models - there have been a lot
+of models between 2001 and now.  It's definitely not true for the
+currently popular models that Ashtekar was explaining.
 
-% parser failed at source line 658
+It's true that a differential equation is getting replaced by a
+difference equation.  But the singularity is not being avoided simply
+by "stepping over it".  That would be a cheap trick.  In the models
+under study now, there really is an effective "force" that prevents
+the singularity.  And it arises from the mechanism I sketched:
+
+\begin{quote}
+Instead of talking about the curvature of spacetime at infinitesimally
+small scales, we can only measure curvature by carrying a particle
+around a finite-sized loop. This has little effect when spacetime is
+only slightly curved, but when the curvature is big it makes a big
+difference. This causes an effect very much like a force that prevents
+the Universe from crushing down to nothing as we follow it backwards
+in time.
+\end{quote}
+
+A bit more precisely - but still quite roughly: if the curvature is c,
+in loop quantum gravity we don't have a quantum operator corresponding
+to c.  Instead we have something more like exp(ic).  So we use
+something like sin(c)=(exp(ic)-exp(-ic))/2i as a substitute for c in
+certain equations.  When the curvature is small these are almost the
+same.  When it gets big, they're different.  This gives an effective
+force that prevents the singularity.  This force starts getting big
+when the density is about 1/100 of the Planck density.  When the
+density hits .41 times the Planck density, it's enough to create a
+"bounce".
+
+(The math is actually a bit more complicated than what I said, but
+it's similar in spirit.)
+
+In fact, a bunch of calculations have shown that the quantum dynamics
+are quite nicely approximated by an "effective Friedmann equation" - a
+differential equation like the usual classical one that describes the
+Big Bang, but with an extra term.
+
+And, the solutions of the difference equation are very close to the
+solutions of this differential equation.
+
+\end{quote}
+
+Then Urs asked for more detail, and I admitted that the references
+given above might not satisfy him:
+
+\begin{quote}
+... you might prefer <a href =
+"http://arxiv.org/abs/0706.1057">Effective equations for
+isotropic quantum cosmology including matter</a> by Bojowald,
+Hernandez and Skirzewski.
+
+In Section 2, they start with the Friedmann equation for a homogeneous
+isotropic cosmology with k=0 and a massless scalar field \phi .  In
+Section 2.1 they "deparametrize" this equation, eliminating the time
+variable by using \phi  as a clock field, or "internal time" - a standard
+way of dealing with the problem of time in quantum cosmology.  In
+Section 2.2 they review the standard Wheeler-DeWitt quantization of
+the resulting theory.
+
+Then, in Section 2.3, they switch to loop quantization.  They don't
+give a vast amount of detail on why one should do this, but they do
+say what is being done.  Briefly, instead of the variable c = da/d\tau 
+(the rate of expansion of the universe, closely related to spacetime
+curvature in this model) we switch to using exp(ic) and exp(-ic).  In
+a deeper treatment this comes from using holonomies instead of the
+curvature at a point.  This is what produces the effective force that
+prevents the singularity.
+
+They don't derive difference equations in this paper; instead, they
+just derive effective corrections to the usual Wheeler-DeWitt
+equation.  Calculations have shown that solutions of the resulting
+differential equations closely match those of the difference equations
+that a more thorough approach yields.  So, as far as physical
+intuition goes, perhaps the most important thing is to see where these
+effective corrections to the Wheeler-DeWitt equation come from, and
+why they prevent the singularity.
+\end{quote}
+
+For more discussion visit the <a href =
+"http://golem.ph.utexas.edu/category/2009/09/this_weeks_finds_in_mathematic_41.html">\emph{n}-Category
+Caf&eacute;</a>.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+<i>Many fine physicists have burned away their lives grappling with
+the problem of quantum gravity.</i> - <a href =
+"http://arxiv.org/abs/0907.4238">R. P. Woodard</a>
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

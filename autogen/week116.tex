@@ -158,14 +158,18 @@ with all its arrows turned around.  (See
 
 Or I could have said this: form the composite
 
+
 $$
+
                                 i x 1               hom
                  \Delta ^{op} x Top ------> Top^{op} x Top -----> Set
 
 $$
     
 and dualize this to obtain
+
 $$
+
                  Sing: Top \to  SimpSet.
 $$
     
@@ -193,24 +197,30 @@ you probably aren't reading this anymore - so I'll just plunge in.
 
  A "chain complex" C is a sequence of abelian groups and
 "boundary" homomorphisms like this:
+
 $$
+
 
                  d_{1}      d_{2}      d_{3}
             C_{0} <--- C_{1} <--- C_{2} <--- C_{3} <--- ...
 $$
     
 satisfying the magic equation
-\begin{verbatim}
-                        d<sub>i</sub> d<sub>i+1</sub> x = 0
-\end{verbatim}
+
+$$
+
+                        d_{i} d_{i+1} x = 0
+$$
     
 This equation says that the image of d_{i+1} is contained
 in the kernel of d_{i}, so we may define the "homology groups" to be the
 quotients
 
-\begin{verbatim}
-                 H<sub>i</sub>(C) = ker(d<sub>i</sub>) / im(d<sub>i+1</sub>)   
-\end{verbatim}
+
+$$
+
+                 H_{i}(C) = ker(d_{i}) / im(d_{i+1})   
+$$
     
 The study of this stuff is called "homological algebra".  You can read 
 about it in such magisterial tomes as:
@@ -249,13 +259,17 @@ Before I keep rambling on I should describe the category of chain
 complexes, which I'll call Chain.  The objects are just chain complexes,
 and given two of them, say C and C', a morphism f: C \to  C' is a sequence
 of group homomorphisms 
+
 $$
+
              f_{i}: C_{i} \to  C_{i}'
 $$
     
 making the following big diagram commute:
 
+
 $$
+
            d_{1}      d_{2}      d_{3}
       C_{0} <--- C_{1} <--- C_{2} <--- C_{3} <--- ...
        |       |       |       |
@@ -272,7 +286,9 @@ complexes by copying the definition of homotopies between continuous
 maps.  First, there is a chain complex called I that's analogous to the
 unit interval.  It looks like this:
 
+
 $$
+
              d_{1}      d_{2}       d_{3}      d_{4}
        Z+Z <---- Z <---- 0 <----- 0 <----- ...
 
@@ -280,9 +296,11 @@ $$
     
 The only nonzero boundary homomorphism is d_{1}, which is given by 
 
-\begin{verbatim}
-                   d<sub>1</sub>(x) = (x,-x)
-\end{verbatim}
+
+$$
+
+                   d_{1}(x) = (x,-x)
+$$
     
 (Why?  We take I_{1} = Z and I_{0} = Z+Z because the interval is built out
 of one 1-dimensional thing, namely itself, and two 0-dimensional things,
@@ -297,13 +315,17 @@ There is a way to define a "tensor product" C x C' of chain complexes C
 and C', which is analogous to the product of topological spaces.  And
 there are morphisms
 
+
 $$
+
                     i,j: C \to  I x C
 $$
     
 analogous to the two maps from a space into its product with the unit
 interval:
+
 $$
+
                  i, j: X \to  [0,1] x X         
               
 
@@ -315,14 +337,18 @@ complex morphisms f,g: C \to  C' in a way that's completely analogous to a
 homotopy between maps.  Namely, it's a morphism F: I x C \to  C' for which
 the composite
 
+
 $$
+
                     i           F
                 C ----> I x C ----> C'
 $$
     
 equals f, and the composite
 
+
 $$
+
                     j           F
                 C ----> I x C ----> C'
 $$
@@ -334,12 +360,16 @@ and then generalize the bejeezus out of it!
 The nice thing about all this is that a morphism of chain complexes
 f: C \to  C' gives rise to homomorphisms of homology groups, 
  
+
 $$
+
                 H_{n}(f): H_{n}(C) \to  H_{n}(C').
 $$
     
 In fact, we've got a functor
+
 $$
+
                 H_{n}: Chain \to  Ab.
 $$
     
@@ -355,7 +385,9 @@ simplicial abelian group is a contravariant functor C: \Delta  \to
 Ab.  In particular, it gives us an abelian group C_{n} for
 each object n of \Delta , and also "face" homomorphisms
 
+
 $$
+
          partial_{0}, ...., partial_{n-1}: C_{n} \to  C_{n-1}
 $$
     
@@ -363,14 +395,18 @@ coming from all the ways the simplex with (n-1) vertices can be a face
 of the simplex with n vertices.  We can thus can make C into a chain
 complex by defining d_{n}: C_{n} \to  C_{n-1} as follows:
                         
+
 $$
+
                 d_{n} = sum (-1)^{i} partial_{i} 
 $$
     
 The thing to check is that 
-\begin{verbatim}
-                     d<sub>n</sub> d<sub>n+1</sub> x = 0 
-\end{verbatim}
+
+$$
+
+                     d_{n} d_{n+1} x = 0 
+$$
     
 The alternating signs make everything cancel out!  In the immortal words
 of the physicist John Wheeler, "the boundary of a boundary is zero".  
@@ -438,7 +474,8 @@ composite of functors that are interesting in their own right.  I'll
 explore their uses a bit more deeply next time.
 
 
-<p> <hr>
+
+ \par\noindent\rule{\textwidth}{0.4pt}
 <em>At a very early age, I made an assumption that a successful
 physicist only needs to know elementary mathematics.  At a later time,
 to my great regret, I realized that this assumption of mine was
@@ -448,11 +485,9 @@ completely wrong.</em> - Albert Einstein
 
 
 
-<p> <hr>
+
+ \par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 547

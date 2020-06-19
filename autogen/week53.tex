@@ -38,21 +38,27 @@ on operations that are easily modelled by the juxtaposition
 of symbols in a line.  The primordial example is addition:
 we have a bunch of sticks in a row:
 
+
 \begin{verbatim}
+
                         |||||
 \end{verbatim}
     
 
 and we say there are "5" sticks and write
 
+
 \begin{verbatim}
+
                      1+1+1+1+1 = 5.
 \end{verbatim}
     
 
 Fine.  But when we have a 2-dimensional array of sticks:
 
+
 \begin{verbatim}
+
                         ||||
                         ||||
 \end{verbatim}
@@ -181,7 +187,9 @@ scientist; I might say, every category has a set ob of objects
 and a set mor of morphisms; every morphism has an object called
 its source (or domain), so there is a function
 
+
 $$
+
                   source: mor \to  ob
 $$
     
@@ -189,7 +197,9 @@ $$
 and similarly every morphism has an object called its target
 (or codomain) so there is a function
 
+
 $$
+
                   target: mor \to  ob
 $$
     
@@ -197,7 +207,9 @@ $$
 Now, we can compose a morphism f and a morphism g to get fg
 if target(f) = source(g), so we have a composition function
 
+
 $$
+
               composition: C \to  mor
 $$
     
@@ -205,7 +217,9 @@ $$
 defined only on the subset C of mor x mor that is the biggest
 subset making the following diagram commute:
 
+
 $$
+
                    C  ------p1----> mor
                    |                 |             p1(f,g) = f
                   p2               target          p2(f,g) = g
@@ -220,7 +234,9 @@ functions defined only a subset satisfying equational conditions;
 instead of talking about the "biggest subset" C they would say
 that C is the "limit" of the diagram 
 
+
 $$
+
                                  mor
                                   |
                                target
@@ -339,11 +355,8 @@ I've focussed on here, but also other sorts) typically forms an
 Right now we are stuck at n = 3, but there are good 
 reasons to expect that pretty soon we'll go beyond that.  In fact, 
 Power and Street showed me a sketch of their ideas on tetracategories....
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 422

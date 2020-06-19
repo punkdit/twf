@@ -132,7 +132,9 @@ Similarly, we can compose a 2-morphism F: f => g with a 2-morphism G: g
 => h to get a 2-morphism FG: f => h.  This is called "vertical
 composition" of 2-morphisms.   We can visualize FG like this:
 
+
 \begin{verbatim}
+
                           f    
                       ---->----
                      /  F      \
@@ -152,7 +154,9 @@ Also, if we have morphisms f,f': x \to  y and g,g': y \to  z, and 2-morphisms
 F: f => f' and G: g => g', we can "horizontally compose" F and G to get
 F.G: fg => f'g'.  It looks like this:
 
+
 \begin{verbatim}
+
                       f           g
                   ---->---    ---->---
                  /         \ /         \
@@ -183,7 +187,9 @@ M: s x s \to  s
 where we take two elements a and b from some set s, and "multiply" them
 to get a new one M(a,b).  But we can visualize this as follows:
 
+
 \begin{verbatim}
+
                               /\
                              /  \
                             /    \
@@ -205,7 +211,9 @@ from the geometry here that M is something 2-dimensional - hence, a
 2-morphism - and that s is 1-dimensional - hence, a morphism.
 Let's label the corners too:
 
+
 \begin{verbatim}
+
                                x
                               / \
                              /   \
@@ -232,38 +240,46 @@ a 2-morphism M: ss => s.  Often we are interested in situations like
 this where the "multiplication" M is associative, meaning that the
 composite
 
-\begin{verbatim}
-                  M.1<sub>s</sub>          M
+
+$$
+
+                  M.1_{s}          M
             sss =======> ss =======> s
 
-\end{verbatim}
+$$
     
 equals
 
-\begin{verbatim}
-                  1<sub>s</sub>.M         M
+
+$$
+
+                  1_{s}.M         M
             sss =======> ss =======> s
 
-\end{verbatim}
+$$
     
 (Here 1_{s}: s => s is the identity 2-morphism from s to itself... the axioms
 for a 2-category say that this exists.)  Also, we're often interested in
 situations where there is a "multiplicative unit", that is, a 2-morphism
 I: 1_{x} \to  s for which
 
-\begin{verbatim}
-                         I.1<sub>s</sub>         M
-             s = 1<sub>x</sub> s  =======> ss =======> s
 
-\end{verbatim}
+$$
+
+                         I.1_{s}         M
+             s = 1_{x} s  =======> ss =======> s
+
+$$
     
 equals 1_{s}, and so does
 
-\begin{verbatim}
-                         1<sub>s</sub>.I         M
-             s = s 1<sub>x</sub>  =======> ss =======> s
 
-\end{verbatim}
+$$
+
+                         1_{s}.I         M
+             s = s 1_{x}  =======> ss =======> s
+
+$$
     
 If we have a 2-category with stuff in it satisfying these rules, 
 we say we have a "monad" in that 2-category.
@@ -295,7 +311,9 @@ for example, that trick we played of turning the category Set into a
 general, a 2-category with just one object is called a "monoidal
 category", because you can do this relabelling trick:
 
+
 \begin{verbatim}
+
              2-morphisms    -------->   morphisms
              morphisms      -------->   objects
              object x       -------->   
@@ -368,7 +386,9 @@ Week.
 
 Let me just wrap up by saying that we can take this picture 
 
+
 \begin{verbatim}
+
                                x
                               / \
                              /   \
@@ -386,7 +406,9 @@ Let me just wrap up by saying that we can take this picture
     
 and draw a "dual" picture like this:
 
+
 \begin{verbatim}
+
                      \               /
                       \             /
                       s\     x    s/
@@ -424,11 +446,8 @@ though.
 <A HREF = "week92.html#tale">To continue reading the 'Tale of
 n-Categories', click here.</A>
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 519

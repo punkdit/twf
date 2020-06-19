@@ -93,16 +93,15 @@ one of the two founders of the subject.  He later wrote:
 
 \begin{quote}
      In my own education I was fortunate to have two teachers who used 
-     the term &quot;foundations&quot; in a common-sense way (rather than in the 
+     the term "foundations" in a common-sense way (rather than in the 
      speculative way of the Bolzano-Frege-Peano-Russell tradition).  
      This way is exemplified by their work in Foundations of Algebraic 
      Topology, published in 1952 by Eilenberg (with Steenrod), and 
      The Mechanical Foundations of Elasticity and Fluid Mechanics, 
      published in the same year by Truesdell. The orientation of these 
-     works seemed to be &quot;concentrate the essence of practice and in turn
-     use the result to guide practice&quot;. 
+     works seemed to be "concentrate the essence of practice and in turn
+     use the result to guide practice". 
 \end{quote}
-    
 
 It may seem like a big jump from the down-to-earth world of continuum 
 mechanics to category theory, but to Lawvere the connection made perfect 
@@ -157,21 +156,27 @@ you do all sorts of marvelous things.  Near the bottom of this
 hierarchy there's the "propositional calculus" where we only
 get to say things like
 
+
 \begin{verbatim}
+
 ((P implies Q) and (not Q)) implies (not P)
 \end{verbatim}
     
 Further up there's the "first-order predicate calculus",
 where we get to say things like
 
+
 \begin{verbatim}
+
 for all x (for all y ((x = y and P(x)) implies P(y)))
 \end{verbatim}
     
 Even further up, there's the "second-order predicate calculus" where 
 we get to quantify over predicates and say things like
 
+
 \begin{verbatim}
+
 for all x (for all y (for all P (P(x) iff P(y)) implies x = y))
 \end{verbatim}
     
@@ -223,7 +228,9 @@ is a set equipped with a binary operation called
 "inverse", and a nullary operation (that is, a constant)
 called the "unit", satisfying these equational laws:
 
+
 $$
+
   (gh)k = g(hk)                ASSOCIATIVITY
 
      1g = g                    LEFT UNIT LAW
@@ -245,7 +252,9 @@ products".  The point is that to talk about an n-ary operation,
 we just need to be able to take the product of an object G with itself
 n times and consider a morphism
 
+
 $$
+
 f: G x  ...  x G \to  G
    |- n times -|
 $$
@@ -261,7 +270,9 @@ But Lawvere's really big idea was that there's a certain category
 with finite products whose only goal in life is to contain a group
 object.  To build this category, first we put in an object 
 
+
 \begin{verbatim}
+
 G
 \end{verbatim}
     
@@ -269,19 +280,25 @@ Since our category has finite products this automatically means
 it gets objects 1, G, G x G, G x G x G, and so on.  Next, we put in 
 a binary operation called "multiplication", namely a morphism
 
+
 $$
+
 m: G x G \to  G
 $$
     
 We also put in a unary operation called "inverse":
 
+
 $$
+
 inv: G \to  G
 $$
     
 and a nullary operation called the "unit":
 
+
 $$
+
 i: 1 \to  G
 $$
     
@@ -298,19 +315,25 @@ that like a theory of the traditional sort, it can have models - and
 indeed it can!  A "model" of theory of groups in some
 category X with finite products is just a product-preserving functor
 
+
 $$
+
 F: Th(Grp) \to  X
 $$
     
 By the way things are set up, this gives us an object
 
+
 \begin{verbatim}
+
 F(G)
 \end{verbatim}
     
 in C, together with morphisms
 
+
 $$
+
 F(m): F(G) x F(G) \to  F(G)
 
 F(inv): F(G) \to  F(G)
@@ -344,7 +367,9 @@ transformations between these as morphisms.  For example, taking
 C to be the theory of groups and X to be the category of sets, we get 
 the usual category of groups:
 
+
 \begin{verbatim}
+
 Mod(Th(Grp),Set) = Grp
 \end{verbatim}
     
@@ -378,7 +403,9 @@ this need not be one.
 
 In short, we have this kind of setup:
 
+
 \begin{verbatim}
+
             ABSTRACT GENERAL              CONCRETE GENERAL
             theory                        models
             syntax                        semantics
@@ -430,7 +457,9 @@ main idea is that our topos needs to contain an object T called the
 "infinitesimal arrow".  This is a rigorous version of those little 
 arrows physicists like to draw when talking about vectors:  
 
+
 $$
+
                              ----->
 $$
     
@@ -456,7 +485,9 @@ maps".  How does geometry work in here?
 It's very nice.  The first nice thing is that given any smooth space X, 
 a "tangent vector in X" is just a smooth map 
 
+
 $$
+
 f: T \to  X
 $$
     
@@ -475,13 +506,17 @@ tangent vectors".  This trick gives a smooth map between tangent
 bundles, the "differential of g", which it makes sense to
 call
 
+
 $$
+
 g^{T}: X^{T} \to  Y^{T}
 $$
     
 Moreover, it's pathetically easy to check the chain rule:
 
+
 $$
+
 (gh)^{T} = g^{T} h^{T}
 $$
     
@@ -493,7 +528,9 @@ We can also define higher derivatives using T.  For second derivatives
 we start with T x T, which looks like an "infinitesimal square".  Then
 we mod out by the map
 
+
 $$
+
 S_{T,T}: T x T \to  T x T
 $$
     
@@ -502,14 +539,18 @@ that switches the two factors.  You should visualize this map as
 "reflection across the diagonal".  When we mod out by it, we get 
 a quotient space that deserves the name
 
+
 $$
+
 T^{2}/2!
 $$
     
 
 and if we now use some axioms about T, it turns out that a smooth map
 
+
 $$
+
 f: T^{2}/2! \to  X
 $$
     
@@ -530,13 +571,17 @@ Just as the space of all tangent vectors in X is the tangent bundle
 X^{T}, the space of all 2nd-order jets in X is the
 "2nd-order jet bundle"
 
+
 $$
+
 X^{T<sup>2}/2!</sup>
 $$
     
 There's a map called the "diagonal": 
 
+
 $$
+
 diag: T \to  T^{2}/2! 
 $$
     
@@ -544,6 +589,7 @@ $$
 and composing this with any 2nd-order jet 
 turns it into a tangent vector.  This defines
 a smooth map
+
 
 
 

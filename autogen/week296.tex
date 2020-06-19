@@ -37,7 +37,9 @@ like this.  But luckily, there's a big mathematically precise analogy
 relating a bunch of them:
 
 
+
 \begin{verbatim}
+
                 displacement    flow          momentum      effort
                      q           q'              p            p'
 
@@ -124,7 +126,9 @@ it does, viewed externally.
 
 For example, we could have a fancy circuit like this:
 
+
 \begin{verbatim}
+
     x
     |
     o
@@ -143,7 +147,9 @@ Each edge has some resistance, as explained in "<a href =
 "week294.html">week294</A>", and the x's mark the input and
 output.  Here's another, simpler, circuit of the same sort:
 
+
 \begin{verbatim}
+
     x
     |
     |
@@ -208,7 +214,9 @@ which - by convention - has potential zero.
 For example, suppose we have this circuit, with one input connected 
 to a ground, and no outputs:
 
+
 \begin{verbatim}
+
     x
     |
     |
@@ -225,7 +233,9 @@ Q(v) = v^{2} / R
 What if we want Q = 0?  Well, then we should use a circuit like this,
 instead:
 
+
 \begin{verbatim}
+
     x
     |
     |
@@ -274,7 +284,9 @@ identity morphisms!  This is easy to check mathematically.  Physically,
 the reason is clear.  The identity morphism 1: R \to  R should correspond
 to a perfectly conductive wire, like this:
 
+
 \begin{verbatim}
+
   x  
   |  
   |  
@@ -323,7 +335,9 @@ roughly a category with tensor products:
 
 The tensor product corresponds to setting two circuits side by side:
 
+
 \begin{verbatim}
+
         |               |  |  |
     --------         ------------   
    |        |       |            |
@@ -342,7 +356,9 @@ sum V+W, while the tensor product of morphisms Q:V \to  W and Q':V'
 Our category also has "duals for morphisms".  Intuitively, this means
 that we can take any circuit Q: V \to  W built from resistors:
 
+
 \begin{verbatim}
+
         |             
     --------        
    |    Q   |       
@@ -353,7 +369,9 @@ that we can take any circuit Q: V \to  W built from resistors:
 and reflect it across a horizontal line, switching inputs and outputs
 like this:
 
+
 $$
+
       |  |          
     --------        
    |   Q^{&dagger;}   |       
@@ -377,7 +395,9 @@ However, our category has some defects.  First of all, there's no
 morphism corresponding to two perfectly conductive wires that cross
 like this:
 
+
 \begin{verbatim}
+
   \   /
    \ /
     /
@@ -393,7 +413,9 @@ If we had that, we'd get a "symmetric monoidal category":
 Our category so far also lacks a morphism corresponding to a perfectly
 conductive bent wire like this:
 
+
 \begin{verbatim}
+
   |   |
   |   |
    \_/
@@ -402,7 +424,9 @@ conductive bent wire like this:
 
 or like this:
 
+
 \begin{verbatim}
+
     _
    / \
   |   |
@@ -412,7 +436,9 @@ or like this:
 
 If we had these morphisms, obeying the obvious "zig-zag identities":
 
+
 \begin{verbatim}
+
   |     _       |       _     |
   |    / \      |      / \    |
   |   /   |  =  |  =  |   \   |
@@ -484,14 +510,18 @@ and we should take full advantage of it!
 Let's try.  Let's take the category described so far and supplement it
 with a "cup":
 
+
 \begin{verbatim}
+
   |   |
   |   |
    \_/
 \end{verbatim}
     
 a "cap":
+
 \begin{verbatim}
+
     _
    / \
   |   |
@@ -500,7 +530,9 @@ a "cap":
     
 and a "symmetry":
 
+
 \begin{verbatim}
+
   \   /
    \ /
     /
@@ -607,10 +639,9 @@ Weinstein writes:
    metaplectic representation.  On the other hand, the quantization of
    certain compositions of canonical relations leads to ill-defined
    operations at the quantum level, such as the evaluation of a delta
-   &quot;function&quot; at its singular point, or the multiplication of delta
+   "function" at its singular point, or the multiplication of delta
    functions.
 \end{quote}
-    
 
 Here's the reference to Guillemin and Sternberg:
 
@@ -632,14 +663,14 @@ But for now, the classical theory is interesting enough.  I guess I
 need to start by checking my claim:
 
 \begin{quote}
-  <b>Claim:</b> there is a dagger-compact category where:
+  \textbf{Claim:} there is a dagger-compact category where:
 
 <UL>
 <LI>
   An object is a finite-dimensional real vector space.  
 </LI>
 <LI>
-  A morphism S: V &rarr; W is a Lagrangian subspace of T*V &times; T*W.
+  A morphism S: V \to  W is a Lagrangian subspace of T*V \times  T*W.
 </LI>
 <LI>
   We compose morphisms using composition of relations.
@@ -651,12 +682,11 @@ need to start by checking my claim:
   The symmetry is the obvious thing.
 </LI>
 <LI>
-  The dagger of a subspace of T*V &times; T*W is the corresponding 
-  subspace of T*W &times; T*V.  
+  The dagger of a subspace of T*V \times  T*W is the corresponding 
+  subspace of T*W \times  T*V.  
 </LI>
 </UL>
 \end{quote}
-    
 
 This category is mathematically elegant, but "too big",
 because its morphisms include a lot more than Lagrangian subspaces
@@ -673,14 +703,18 @@ check.
 If we do get a subcategory, will it still be a dagger-compact category?
 Yes, I think so, because it contains the cup
 
+
 \begin{verbatim}
+
   |   |
   |   |
    \_/
 \end{verbatim}
     
 and cap:
+
 \begin{verbatim}
+
     _
    / \
   |   |
@@ -689,7 +723,9 @@ and cap:
     
 and symmetry:
 
+
 \begin{verbatim}
+
   \   /
    \ /
     /
@@ -704,7 +740,7 @@ Alan Weinstein and Simon Willerton for
 helping me figure out these ideas.
 
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 
 \textbf{Addendum}: I thank Mikael Vejdemo-Johansson for catching a typo.
@@ -712,7 +748,7 @@ helping me figure out these ideas.
 For more discussion visit the
 <a href = "http://golem.ph.utexas.edu/category/2010/04/this_weeks_finds_in_mathematic_57.html"><i>n</i>-Category Caf&eacute;</a>.
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 
 <i>Reality has been around since long before you showed up.  Don't go
@@ -722,11 +758,8 @@ amplitudes through configuration space for ten billion years before
 life ever emerged on Earth.  Quantum physics is not "weird".
 You are weird.</i> - <a href = "http://lesswrong.com/lw/hs/think_like_reality/">Eliezer Yudkowsky</a>
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 858

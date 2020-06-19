@@ -102,7 +102,6 @@ called a "skeet shoot" to tackle this problem:
      times when our targets of interest passed into our camera's 
      field of view.
 \end{quote}
-    
 
 It worked amazingly well.  They got some photos that could see 
 features as small as 10 meters!  It's great fun to read blogs of
@@ -625,6 +624,47 @@ help.  Ted Nitz and Greg Egan stepped into save me.
 Ted Nitz calculated the odds that a pair of elements in 
 A_{4} generates the group and got 2/3:
 
+\begin{quote}
+$$
+I decided to take your challenge. For A_{4} the odds 
+are 96/144 = 2/3 that a pair generates. For reference, 
+the sage code that gave the probability is:
 
+A4 = AlternatingGroup(4)
+order = A4.order()
+i = 0
+j = 0
+for g in A4:
+    for h in A4:
+        i += 1
+        if A4.subgroup([g,h]).order() == order:
+            j += 1
+print (j,i)
+j/i
 
-% parser failed at source line 769
+It was blindingly fast for A_{4}, and if it ever 
+finishes for A_{9}, I'll let you know the probability 
+there.
+
+-Ted
+$$
+    
+\end{quote}
+
+He later realized that the A_{9} calculation would take at least
+a century.  Greg Egan wrote a Mathematica program based on a more
+efficient algorithm and got the answer in less than a day.
+
+For more discussion, including the idea behind Egan's algorithm,
+visit the <a href = "http://golem.ph.utexas.edu/category/2008/11/this_weeks_finds_in_mathematic_33.html">n-Category Caf&eacute;</a>.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<i>
+The splitting into something discrete and something continuous
+seems to me to be a basic issue in all morphology.</i> - Hermann Weyl
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

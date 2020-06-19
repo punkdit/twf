@@ -151,7 +151,9 @@ transformation of x really acts as the identity!
 Stealing a trick from "<A HREF = "week79.html">week79</A>", we can draw this as follows.  Draw the
 counit e: yx \to  1 as follows:
 
+
 \begin{verbatim}
+
                  y      x
                   \    /
                    \  / 
@@ -161,7 +163,9 @@ counit e: yx \to  1 as follows:
     
 and draw the unit i: 1 \to  xy as follows:
 
+
 \begin{verbatim}
+
                    /\
                   /  \
                  /    \
@@ -171,7 +175,9 @@ and draw the unit i: 1 \to  xy as follows:
     
 Then the above equation says that
                    
+
 \begin{verbatim}
+
                    x       x
           /\       |       |
          /  \      |       |
@@ -196,7 +202,9 @@ to map back to y.  This composite should be the identity on y.  What
 this says is that the identity linear transformation of x also acts
 dually as the identity on y!   We can draw this as follows:
 
+
 \begin{verbatim}
+
        y                   y
        |       /\          |
        |      /  \         |
@@ -224,7 +232,9 @@ the so-called "strict" monoidal categories as follows: they are simply
 but if there is only one object, we can do the following relabelling
 trick: 
 
+
 \begin{verbatim}
+
              2-morphisms    -------->   morphisms
              morphisms      -------->   objects
              object         -------->   
@@ -265,7 +275,9 @@ i: 1_{a} => LR
 
 satisfying two magic equations.  If we draw e and i as we did above, 
 
+
 \begin{verbatim}
+
                  R      L
                   \    /
         e          \  / 
@@ -282,7 +294,9 @@ satisfying two magic equations.  If we draw e and i as we did above,
 then the two magic equations are
 
                   
+
 \begin{verbatim}
+
                    L       L
           /\       |       |
          /  \      |       |
@@ -297,7 +311,9 @@ then the two magic equations are
     
 and
 
+
 \begin{verbatim}
+
        R                   R
        |       /\          |
        |      /  \         |
@@ -314,18 +330,22 @@ Alternatively, we can state these equations using the 2-categorical
 notation described in "<A HREF = "week80.html">week80</A>", by saying that the following vertical
 composites of 2-morphisms are identity morphisms:
 
-\begin{verbatim}
-           i.1<sub>L</sub>       1<sub>L</sub>.e
-L = 1<sub>a</sub> L ======> LRL ======> L 1<sub>a</sub> = L
 
-\end{verbatim}
+$$
+
+           i.1_{L}       1_{L}.e
+L = 1_{a} L ======> LRL ======> L 1_{a} = L
+
+$$
     
 and
-\begin{verbatim}
-           1<sub>R</sub>.i       e.1<sub>R</sub>
-R = R 1<sub>a</sub> ======> RLR ======> 1<sub>b</sub> R = R
 
-\end{verbatim}
+$$
+
+           1_{R}.i       e.1_{R}
+R = R 1_{a} ======> RLR ======> 1_{b} R = R
+
+$$
     
 where . denotes the horizontal composite.  If you look at these, and
 compare them to the graphical notation above, you'll see they are really
@@ -364,6 +384,3 @@ n-Categories', click here.</A>
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 445

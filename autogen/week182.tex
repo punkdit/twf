@@ -27,7 +27,9 @@ fractions, and couldn't think of anything better.
 
 Of course they \emph{could} have written m/n as 
 
+
 \begin{verbatim}
+
 1/n + ........... + 1/n
 |--------m terms------|
 \end{verbatim}
@@ -83,7 +85,9 @@ have solutions if 1/n + 1/m > 1/2.  And interestingly, all the
 solutions of this inequality do indeed correspond to Platonic solids... 
 at least if n,m > 2.  Here they are:
 
+
 \begin{verbatim}
+
 (n,m) = (3,3)        tetrahedron
 (n,m) = (3,4)        octahedron
 (n,m) = (4,3)        cube
@@ -126,7 +130,9 @@ which formally correspond to Platonic solids where the number
 E of edges is infinite.  In fact, these correspond to tilings 
 of the plane by regular polygons:
 
+
 \begin{verbatim}
+
 (n,m) = (3,6)     tiling by triangles
 (n,m) = (6,3)     tiling by hexagons
 (n,m) = (4,4)     tiling by squares
@@ -152,7 +158,9 @@ Let me try to arrange all this information in a table, using lines
 to separate the spherical, planar and hyperbolic regions:
 
 
+
 \begin{verbatim}
+
      n=1   n=2      n=3         n=4     n=5           n=6         n=7
 
      
@@ -192,7 +200,9 @@ another.
 So, for example, this diagram tells us to find a basis for R^{3}
 consisting of unit vectors all at 120 degree angles from each other:
 
+
 \begin{verbatim}
+
                            o
                           / \
                          /   \
@@ -204,7 +214,9 @@ at 120 degrees from each must lie in a plane - so they can't be
 linearly independent.  On the other hand, this diagram gives a
 solvable problem:
 
+
 \begin{verbatim}
+
                       o-----o-----o
 \end{verbatim}
     
@@ -227,7 +239,9 @@ the case of connected diagrams.
 Second, a connected diagram can only give a solvable problem if it's
 Y-shaped, like this:
 
+
 \begin{verbatim}
+
              o
              |
              o
@@ -242,7 +256,9 @@ Third, a diagram like this gives a solvable problem only if
 where (k,n,m) are the numbers labelling the tips of the Y when we
 number it like this:
 
+
 \begin{verbatim}
+
              3
              |
              2
@@ -258,7 +274,9 @@ of the numbers is 1 or 2.  If one of the numbers is 1, our "Y-shaped"
 diagram is actually just a straight line of dots!  We can also
 describe this straight line by taking one of the numbers to be 2, like
 this:
+
 \begin{verbatim}
+
     2--1--2--3--4--5--6
 \end{verbatim}
     
@@ -295,7 +313,9 @@ diagrams.  Unfortunately, I'll have to make it very small to fit
 everything in.  So, for example, I'll draw the so-called E8 Dynkin
 diagram:
 
+
 \begin{verbatim}
+
             o
             |
       o--o--o--o--o--o--o
@@ -303,14 +323,18 @@ diagram:
     
 as this puny miserable thing:
 
+
 \begin{verbatim}
+
             o
           oooooo
 \end{verbatim}
     
 This is what we get:
 
+
 \begin{verbatim}
+
     n=1      n=2        n=3         n=4          n=5           n=6
 
      o        o          o           o            o             o   
@@ -463,7 +487,9 @@ electrostatics, or the flow of fluids with no viscosity or vorticity -
 an idealization that von Neumann mockingly called "dry water".  On 
 the complex plane we can talk about "holomorphic" functions, which 
 satisfy the Cauchy-Riemann equation:
+
 \begin{verbatim}
+
     _                                             _ 
 df/dz = 0                              (note: df/dz = df/dx + i df/dy)
 \end{verbatim}
@@ -471,7 +497,9 @@ df/dz = 0                              (note: df/dz = df/dx + i df/dy)
 and also the complex conjugates of these, called "antiholomorphic"
 functions, which satisfy
 
+
 \begin{verbatim}
+
 df/dz = 0                              (note: df/dz = df/dx - i df/dy)
 \end{verbatim}
     
@@ -487,12 +515,16 @@ linear combination of dx and dy, where x and y are the usual coordinates
 on the plane.  But things get nicer if we work with \emph{complex-valued}
 differential forms.  Then we can form linear combinations like
 
+
 \begin{verbatim}
+
 dz = dx + idy
 \end{verbatim}
     
 and 
+
 \begin{verbatim}
+
  _
 dz = dx - idy
 \end{verbatim}
@@ -503,7 +535,9 @@ We call these the (1,0) and (0,1) parts of our 1-form.
 
 This means that if we have a function f, we can take its exterior
 derivative of f and chop it into its (1,0) part and (0,1) part: 
+
 \begin{verbatim}
+
           _ 
 df = Df + Df
 \end{verbatim}
@@ -513,7 +547,9 @@ write them using nice curly lower-case d's like you see in a partial
 derivative, but I can't do that here: I'm a prisoner of low technology!
 
 Anyway, it turns out that 
+
 \begin{verbatim}
+
 _
 Df = 0 
 \end{verbatim}
@@ -521,7 +557,9 @@ Df = 0
 is just a slick way of writing Cauchy-Riemann equation, which says that
 f is holomorphic.  You should check this for yourself!  Similarly,
 
+
 \begin{verbatim}
+
 Df = 0 
 \end{verbatim}
     
@@ -531,13 +569,17 @@ Now let me say how all this stuff generalizes to arbitrary Kaehler
 manifolds.  We can decompose any p-form on a Kaehler manifold into
 its (i,j) parts where i+j = p.  For example, a (1,2)-form
 in 4 dimensions might look something like this in complex coordinates:
+
 $$
+
     ^{ }    _ ^{ }   _     ^{  }        _ ^{ }   _
 f dz_{1} ^ dz_{3} ^ dz_{2}  +  g dz_{2} ^ dz_{3} ^ dz_{4}.
 $$
     
 We have
+
 \begin{verbatim}
+
         _
 d = D + D
 \end{verbatim}
@@ -559,13 +601,17 @@ means H^{i,j}(M) is isomorphic to the space of harmonic
 (i,j)-forms.  Alternatively, you can describe H^{i,j}(M) just
 in terms of D: you just take the (i,j)-forms in here: 
 
+
 \begin{verbatim}
+
     _
 {w: Dw = 0}
 \end{verbatim}
     
 modulo those in here:
+
 \begin{verbatim}
+
         _
 {w: w = Du for some u}
 \end{verbatim}
@@ -700,11 +746,8 @@ ground field by an E_{&#8734;} ring spectrum?  Then this is for you.
   as a servant goes before his master 
   to clear the path and light him 
   on his way.</em> - James Sylvester 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 837

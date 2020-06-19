@@ -35,13 +35,17 @@ q = exp(ih).
 In particular, these modified versions of calculus reduce to
 Sir Isaac Newton's good old "classical calculus" in the limit where
 
+
 $$
+
 h \to  0
 $$
     
 or alternatively,
 
+
 $$
+
 q \to  1.
 $$
     
@@ -56,7 +60,9 @@ So what's the idea?   Like many great ideas, it's pathetically simple.
 To get the h-calculus, you just leave out the limit in the definition of
 the derivative, using this instead:
 
+
 \begin{verbatim}
+
               f(x+h) - f(x)
               -------------
                     h
@@ -69,7 +75,9 @@ There is a lot to say about this, but deeper and more mysterious
 mathematics arises from the q-calculus, where we use the
 "q-derivative":
 
+
 \begin{verbatim}
+
               f(qx) - f(x)
               ------------
                  qx - x
@@ -109,7 +117,9 @@ started is to look at the q-analogue of Taylor's formula.  In ordinary
 calculus this formula says how to reconstruct any sufficiently nice
 function from its derivatives at zero:
 
+
 $$
+
 f(x) = f(0) + f'(0) x + f''(0) x^{2}/2! + ... 
 $$
     
@@ -119,7 +129,9 @@ defined in the obvious way, by taking the q-derivative over and over.
 Let's do this to the function x^{n}.  
 If we take its q-derivative \emph{once} we get:
 
+
 $$
+
      (qx)^{n} - x^{n}         q^{n} - 1
      -----------   =   ------- x^{n-1} 
        qx - x           q - 1
@@ -128,7 +140,9 @@ $$
 We can make this look almost like the usual derivative of x^{n} if
 we define the "q-integer" [n] by
 
+
 $$
+
             q^{n} - 1
   [n]  =   -------   
             q - 1
@@ -138,13 +152,17 @@ $$
     
 Then the q-derivative of x^{n} is just 
 
+
 $$
+
 [n] x^{n-1}
 $$
     
 This implies that the nth q-derivative of x^{n} is the "q-factorial"
  
+
 \begin{verbatim}
+
 [n]! = [1] [2] ... [n] 
 \end{verbatim}
     
@@ -153,7 +171,9 @@ replace derivatives by q-derivatives and factorials by q-factorials.
 
 Now, starting with q-factorials we can define q-binomial coefficients:
 
+
 \begin{verbatim}
+
             [n]! 
         -----------
         [m]! [n-m]!
@@ -164,7 +184,9 @@ so on.  It's not just a matter of recapitulating ordinary calculus,
 either: eventually we run into lots of cool identities that have no 
 classical analogues, like the "Jacobi triple product formula":
 
+
 $$
+
                  sum_{n}  q^{n(n+1)/2} x^{n}  =  
 
         product_{i}  (1 + xq^{i}) (1 + x^{-1}q^{i-1}) (1 - q^{i}) 
@@ -191,19 +213,25 @@ a particle on a line is described by a "wavefunction", which is a
 complex function on the line, say \psi .  The position operator Q 
 multiplies a wavefunction by x:
 
+
 $$
+
 (Q \psi )(x) = x \psi (x)
 $$
     
 while the momentum operator P basically takes their derivative:
 
+
 $$
+
 (P \psi )(x) = -i \psi '(x)
 $$
     
 The canonical commutation relations say that
 
+
 \begin{verbatim}
+
 PQ - QP = -i
 \end{verbatim}
     
@@ -212,7 +240,9 @@ q-derivative instead?  I could do this calculation for you, but you'll
 be a much better person if you do it yourself - it's incredibly easy, 
 so \emph{please} do it.  The answer is
 
+
 \begin{verbatim}
+
 PQ - qQP = -i
 \end{verbatim}
     
@@ -237,19 +267,25 @@ This is blatantly obvious if we put Planck's constant where it belongs
 in the above formulas, instead of hiding it by setting it equal to 1. 
 The momentum operator is really
 
+
 $$
+
 (P \psi )(x) = -i \hbar  \psi '(x)
 $$
     
 so the canonical commutation relations are 
 
+
 $$
+
 PQ - QP = -i \hbar 
 $$
     
 and when we use a q-derivative in the momentum operator they become
 
+
 $$
+
 PQ - qQP = -i \hbar .
 $$
     
@@ -271,7 +307,9 @@ In this book he says q is related to Newton's gravitational constant.
 This would be cool, because then you could take your theory of quantum 
 gravity, full of formulas like
 
+
 $$
+
 PQ - qQP = -i \hbar ,
 $$
     
@@ -320,7 +358,9 @@ to be an important clue!  I'll talk about this more next week.
 \textbf{Addendum:} Toby Bartels brought up an important point in a reply
 on the newsgroup sci.physics.research:
 
+
 $$
+
 John Baez wrote in small part:
 
 >In fact, I've been complaining about this for years: it's only in
@@ -356,7 +396,9 @@ $$
     
 
 I replied:
+
 $$
+
 
 
 Toby Bartels wrote:
@@ -420,11 +462,8 @@ $$
 <em> When we try to pick out anything by itself, we find it hitched 
 to everything else in the Universe.</em> - John Muir
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 479

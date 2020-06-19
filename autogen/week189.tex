@@ -223,7 +223,9 @@ Phys. 43 (1975), 199-220.
 Using this one can assign a temperature to a black hole, and then use
 thermodynamic relations to calculate an entropy for it.  This entropy is
 
+
 \begin{verbatim}
+
 S = A/4
 \end{verbatim}
     
@@ -235,7 +237,9 @@ However, one would really like to compute the entropy of a black hole
 using statistical mechanics!  Ever since Boltzmann, we have known that
 the entropy of a system is given by
 
+
 \begin{verbatim}
+
 S = ln N
 \end{verbatim}
     
@@ -285,14 +289,18 @@ In loop quantum gravity, there is a basis of states given by "spin
 networks".  Roughly speaking, these are graphs with edges labelled by
 spins
 
+
 \begin{verbatim}
+
 j = 0, 1/2, 1, ...
 \end{verbatim}
     
 Any surface in space gets its area from the spin network edges that
 puncture it, and a spin-j edge contributes an area of
 
+
 $$
+
 8 \pi  \gamma  sqrt(j(j+1))
 $$
     
@@ -303,7 +311,9 @@ light on this puzzling parameter.
 
 If we have a black hole of area close to A, we have
 
+
 $$
+
 A ~ SUM 8 \pi  \gamma  sqrt(j(j+1))
 $$
     
@@ -313,13 +323,17 @@ of the event horizon is described not only by the spins j labelling each
 edge, but also by some numbers m for each edge, which must lie in the
 range
 
+
 \begin{verbatim}
+
 m = -j, -j+1, ..., j-1, j
 \end{verbatim}
     
 Since there are 2j+1 choices of m for a given j, there are 
 
+
 \begin{verbatim}
+
 PRODUCT (2j+1)
 \end{verbatim}
     
@@ -328,7 +342,9 @@ product is taken over all punctures.  To get the \emph{total} number of
 microstates, we must then sum this quantity over all choices of 
 the spins j satisfying 
 
+
 $$
+
 A ~ SUM 8 \pi  \gamma  sqrt(j(j+1)).
 $$
     
@@ -341,7 +357,9 @@ state like this, m can take just two values at each puncture.
 In a state where all the spins are 1/2, the number of spin network edges
 puncturing the horizon, say n, must satisfy
 
+
 $$
+
 A ~ 8 \pi  \gamma  sqrt(3/4) n 
 
   = 4 \pi  \gamma  sqrt(3) n
@@ -349,20 +367,26 @@ $$
     
 so the number of punctures must be
 
+
 $$
+
 n ~ A / 4 \pi  \gamma  sqrt(3)
 $$
     
 Since m can take two values at each puncture, the number of microstates
 we get this way is
 
+
 $$
+
 N = 2^{n}
 $$
     
 and the entropy is
 
+
 $$
+
 S = ln N
 
   = (ln 2) n
@@ -380,7 +404,9 @@ another story.  Right now, the more important thing is that nasty
 Barbero-Immirzi parameter.  To get the above formula to match Hawking's
 formula S = A/4 we need
 
+
 $$
+
            ln 2
 \gamma  = ----------
         \pi  sqrt(3)
@@ -411,25 +437,33 @@ calculation using SO(3).  Not much changes, but we get a different value
 of the Barbero-Immirzi parameter.  When all the spin network edges
 puncturing the event horizon have j = 1, we get
 
+
 $$
+
 A ~ 8 \pi  \gamma  sqrt(2) n 
 $$
     
 and thus
 
+
 $$
+
 n ~ A / 8 \pi  \gamma  sqrt(2)
 $$
     
 There are now three allowed m values for each puncture, so
 
+
 $$
+
 N = 3^{n}
 $$
     
 and the entropy is
 
+
 $$
+
 S = ln N
 
   = (ln 3) n
@@ -442,7 +476,9 @@ $$
     
 This matches Hawking's S = A/4 if we take
 
+
 $$
+
             ln 3
 \gamma  = -----------
         2 \pi  sqrt(2)
@@ -479,25 +515,33 @@ According to Bohr, if classically a system can undergo periodic motion
 at some frequency \omega , then in the quantum theory it can emit or
 absorb quanta of radiation with energy 
 
+
 $$
+
 \Delta  E = \omega  
 $$
     
 But the energy of a nonrotating black hole is just its mass:
 
+
 \begin{verbatim}
+
 E = M
 \end{verbatim}
     
 and this is related to the area of its event horizon by
 
+
 $$
+
 A = 16 \pi  M^{2}
 $$
     
 so we have
 
+
 $$
+
 \Delta  A = 32 \pi  M \Delta  M
 
         = 32 \pi  M \omega 
@@ -508,13 +552,17 @@ SO(3) theory, it's natural to guess that this change in area
 comes from the appearance or disappearance of a single spin-1
 edge puncturing the horizon, so that
 
+
 $$
+
 \Delta  A = 8 \pi  \gamma  sqrt(2)
 $$
     
 Putting these equations together, we get
 
+
 $$
+
          4 M \omega          
 \gamma  = -----------
           sqrt(2)
@@ -528,13 +576,17 @@ that in the limit of large damping, the frequency of these modes
 approaches a specific number depending only on the mass of the black
 hole:
 
+
 $$
+
 \omega  = 0.04371235 / M
 $$
     
 In 1998, Shahar Hod noticed that the number here may equal
 
+
 $$
+
 ln(3) / 8 \pi  = 0.043712394070757472250... 
 $$
     
@@ -542,7 +594,9 @@ They agree to 6 significant figures!
 
 Assuming Hod is right, Dreyer concludes that
    
+
 $$
+
             ln 3
 \gamma  = -----------
         2 \pi  sqrt(2)
@@ -601,7 +655,9 @@ He goes so far as to argue that the "quantum of area" is 4 ln 3.
 This matches the area due to a spin-1 puncture if the Barbero-Immirzi
 parameter has the value obtained by Dreyer:
 
+
 $$
+
             ln 3
 \gamma  = -----------
         2 \pi  sqrt(2)
@@ -628,7 +684,9 @@ argued that this is implausible.  In loop quantum gravity, the area
 eigenvalues get very densely packed for a large black hole, since one is
 adding up lots of different numbers of the form
 
+
 $$
+
 8 \pi  \gamma  sqrt(j(j+1)), 
 $$
     
@@ -649,7 +707,9 @@ sci.physics.research:
 In article <2202379a.0212050928.77c435d0@posting.google.com>,
 Ken S. Tucker wrote:
 
+
 \begin{verbatim}
+
 >Do you or anyone think we could directly verify g-waves with a
 >properly constructed g-wave transmitter near the LIGO?
 \end{verbatim}
@@ -695,7 +755,9 @@ post which has not appeared yet, even a tumbleweed flying past
 LIGO creates enough of a time-dependent gravitational potential 
 for the device to detect.
 
+
 $$
+
 >It would indeed be excellent to obtain a g-wave burst and a 
 >\gamma  wave burst simultaneously. (even better is if the propagation
 >rate were different then we'd have a \emph{cool} yardstick).
@@ -713,7 +775,9 @@ in the supernova collapse/explosion create gravitational radiation.
 More precisely, one needs a time-dependent \emph{quadrupole} moment
 to get gravitational radiation.
 
+
 \begin{verbatim}
+
 >I'm wondering if it may be practically possible to generate g-waves
 >to verify that this radiation in fact exists. In the threads I've studied
 >(for example the thread "Gravitational Radiation Detection", around 
@@ -722,7 +786,9 @@ to get gravitational radiation.
     
 Yes, and I hope the figures above begin to explain why!
 
+
 \begin{verbatim}
+
 >I believe Hertz was able to transmit and receive EMR in his lab, to 
 >produce an unequivocal repeatable result. Such an experiment for
 >g-waves would be a near <em>holy grail</em>.
@@ -731,7 +797,9 @@ Yes, and I hope the figures above begin to explain why!
 
 Yes.
 
+
 $$
+
 >In Dr. Baez's post (2000/01/03) appears an equation for the
 >g-wave Power output = 2/45 G M^{2} L^{4} w^{6} / c^{5}, but I haven't 
 >been able to find a specific reference for the sensitivity of LIGO in

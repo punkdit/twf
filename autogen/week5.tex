@@ -25,7 +25,9 @@ should learn.  Recall what a Lie algebra is... a vector space
 with a "bracket" operation such that the bracket [x,y] of any two vectors
 x and y is again a vector, and such that the following hold:
 
+
 \begin{verbatim}
+
 a) skew-symmetry:  [x,y] = -[y,x].
 b) bilinearity:    [x,ay] = a[x,y],  
                    [x,y+z] = [x,y] + [x,z].  (a is any number) 
@@ -38,7 +40,9 @@ are not used to them, but the examples make it all clear.  The easiest
 example of a Lie algebra is gl(n,C), which just means all n\times n complex
 matrices with the bracket defined as the "commutator":
 
+
 \begin{verbatim}
+
  [x,y] = xy - yx.  
 \end{verbatim}
     
@@ -60,7 +64,9 @@ The simplest of the sl(n,C)'s is the Lie algebra sl(2,C), affectionately
 known simply as sl(2), which is a 3-dimensional Lie algebra with a
 basis given by matrices people call E, F, and H for mysterious reasons:
 
+
 \begin{verbatim}
+
 E = 0 1        F = 0 0        H = 1  0 
     0 0            1 0            0 -1
 \end{verbatim}
@@ -68,7 +74,9 @@ E = 0 1        F = 0 0        H = 1  0
 
 You will never be an expert on Lie algebras until you know by heart that
 
+
 \begin{verbatim}
+
 [H,E] = 2E,    [H,F] = -2F,     [E,F]  = H.
 \end{verbatim}
     
@@ -82,7 +90,9 @@ algebras unfolds.
 Physicists are probably more familiar with a different basis of sl(2),
 the Pauli matrices:
 
+
 $$
+
 \sigma _{1} = 0 1       \sigma _{2} = 0 -i       \sigma _{3} = 1  0 
 _{&nbsp;}    1 0    _{&nbsp;}       i  0  _{&nbsp;}         0 -1
 $$
@@ -92,7 +102,9 @@ For purposes of Lie algebra theory it's actually better to divide each of
 these matrices by i and call the resulting matrices I, J, and K,
 respectively.  We then have
 
+
 $$
+
 IJ = -JI = K,	JK = -KJ = I,    KI = -IK = J,   I^{2} = J^{2} = K^{2} = -1
 $$
     
@@ -100,7 +112,9 @@ $$
 which is just the multiplication table of the quaternions!  From the
 point of view of Lie algebras, though, all that matters is
 
+
 \begin{verbatim}
+
 [I,J] = 2K,    [J,K] = 2I,    [K,I] = 2J.
 \end{verbatim}
     
@@ -133,7 +147,9 @@ this Lie algebra has a "representation" as 2\times 2 matrices.  And it
 would turn out to have other representations too.  For example,
 there's a representation as 3\times 3 matrices given by sending E to
 
+
 \begin{verbatim}
+
 0 1 0
 0 0 2
 0 0 0, 
@@ -142,7 +158,9 @@ there's a representation as 3\times 3 matrices given by sending E to
 
 F to 
 
+
 \begin{verbatim}
+
 0 0 0 
 2 0 0 
 0 1 0, 
@@ -151,7 +169,9 @@ F to
 
 and H to 
 
+
 \begin{verbatim}
+
 2 0  0 
 0 0  0 
 0 0 -2
@@ -165,7 +185,9 @@ More generally, and more precisely, we say an n-dimensional
 representation of a Lie algebra L (over the complex numbers) is a linear
 function R from L to n\times n matrices such that
 
+
 \begin{verbatim}
+
 R([x,y]) = [R(x),R(y)]
 \end{verbatim}
     
@@ -366,7 +388,7 @@ really measures, but some kind of generalization thereof.  What it
 \emph{should} be is a state (or continuous linear functional) on
 some kind of holonomy algebra.  
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
  <!-- BEGIN FOOTER --> &#169;
 1993 John Baez<br> baez@math.removethis.ucr.andthis.edu <br>
 <TABLE WIDTH = 100%> <TR>
@@ -388,6 +410,3 @@ some kind of holonomy algebra.
 % </A>
 </TABLE><!-- END FOOTER -->
 
-
-
-% parser failed at source line 454

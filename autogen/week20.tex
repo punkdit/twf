@@ -32,7 +32,9 @@ ones lawn, which is a quaint custom now that cannons have been replaced
 by far more horrible weapons.  A nice way to do it is to lay out a
 triangle of cannonballs thus:
  
+
 \begin{verbatim}
+
                    x   x   x   x
 
                      x   x   x
@@ -48,7 +50,9 @@ and then set down another triangle of cannonballs on top of the first
 layer, one in every other hole, thus:
 
  
+
 \begin{verbatim}
+
                    x   x   x   x
                      o   o   o
                      x   x   x
@@ -63,7 +67,9 @@ layer, one in every other hole, thus:
 and another:
 
 
+
 \begin{verbatim}
+
                    x   x   x   x
                      o   o   o
                      x * x * x
@@ -103,7 +109,9 @@ and 3 in the layer below.  If we only pay attention to a given sphere
 and those touching it we see something like:
 
 
+
 \begin{verbatim}
+
                          x       x   
 
                          *   o   * 
@@ -122,7 +130,9 @@ centers of the remaining are the vertices of a shape called the
 cuboctahedron:
 
 
+
 \begin{verbatim}
+
                          x       x   
 
                          *   o   * 
@@ -158,7 +168,9 @@ But I hope you have an icosahedron available, or at least a good mental
 image of one.  It's easy to describe the vertices of the icosahedron
 mathematically in terms of the golden ratio, 
 
+
 $$
+
  (\sqrt 5 + 1)/2 = 1.61803398874989484820458683437....
 $$
     
@@ -168,7 +180,9 @@ brevity I'll use "G" for this number.  The magic properties of G are too
 numerous to list here, but what counts is that one gets the 12 vertices
 of a (regular) icosahedron by taking the points
 
+
 \begin{verbatim}
+
                 (+-G, +-1, 0),
                 (+-1, 0, +-G),
                 (0, +-G, +-1).
@@ -186,7 +200,9 @@ let's check that there really \emph{is} a little space between those outer
 spheres.  First, compute the distance between neighboring vertices of
 the icosahedron by taking two and working it out:
 
+
 \begin{verbatim}
+
                ||(G,1,0) - (G,-1,0)|| = 2
 \end{verbatim}
     
@@ -194,7 +210,9 @@ the icosahedron by taking two and working it out:
 Then, compute the distance from any of the vertices to the origin, which
 is the center of the central sphere:
 
+
 $$
+
                ||(G,1,0)|| = sqrt(G^{2} + 1)
 $$
     
@@ -202,7 +220,9 @@ $$
 Using the charming fact that G^{2} = G + 1 this simplifies to
 sqrt(G + 2), but then I guess we just need to grind it out:
 
+
 \begin{verbatim}
+
  sqrt(G + 2) =  1.902....
 \end{verbatim}
     
@@ -221,7 +241,9 @@ but are there more interesting permutations one can get?
 Recall that the group of permutations of 12 things is called S_{12}, and
 it has 
 
+
 \begin{verbatim}
+
  12! = 479001600
 \end{verbatim}
     
@@ -242,7 +264,9 @@ spheres around.
 In fact, one can achieve all EVEN permutations of the 12 spheres this
 way!  In other words, we get the group A_{12}, with
 
+
 \begin{verbatim}
+
  12!/2 = 239500800
 \end{verbatim}
     
@@ -252,7 +276,9 @@ can't really do so well on this medium.  The best way is to draw a top
 view: 
 
  
+
 \begin{verbatim}
+
                            *
  
                       *         *
@@ -264,7 +290,9 @@ view:
 
 and a bottom view:
 
+
 \begin{verbatim}
+
                         *     *
 
                            *
@@ -279,7 +307,9 @@ touching, and the bottom 6 spheres and bunch them up so \emph{they} all
 touch, we can, in fact, twist the top 6 counterclockwise around 1/5 of a
 turn.  That is, we can map
 
+
 \begin{verbatim}
+
                            2
  
                       6         3
@@ -292,7 +322,9 @@ turn.  That is, we can map
 to 
 
 
+
 \begin{verbatim}
+
                            3
  
                       2         4
@@ -328,7 +360,9 @@ Anyway, what this indicates is that there is an interesting relation
 between the icosahedron and a certain finite group, the Mathieu group
 M_{12}.  This group has
 
+
 \begin{verbatim}
+
  12!/7! = 95040 
 \end{verbatim}
     
@@ -346,7 +380,9 @@ permutations) there are a finite number of "sporadic" simple groups such
 as the Mathieu groups, the Fischer groups, the Suzuki groups, and,
 biggest of all, the Monster group, which has
 
+
 $$
+
  2^{46} 3^{20} 5^{9} 7^{6} 11^{2} 13^{3} 17 19 23 29 31 41 47 59 71 = 
  808017424794512875886459904961710757005754368000000000
 $$
@@ -415,13 +451,17 @@ of SU(2); this has twice as many elements as A_{5}, for a total of 120.
 Now the group SU(2) has a nice description as the group of <em>unit
 quaternions</em>, that is, things of the form
  
+
 \begin{verbatim}
+
           a + bI + cJ + dK
 \end{verbatim}
     
 where a,b,c,d are real numbers with a^{2} + b^{2} + c^{2} + d^{2} = 1, and
 I,J, and K satisfy 
+
 $$
+
 IJ = -JI = K,	JK = -KJ = I,    KI = -IK = J,   I^{2} = J^{2} = K^{2} = -1
 $$
     
@@ -435,12 +475,16 @@ nice description.  Let's write (a,b,c,d) for a + bI + cJ + dK, write G
 for the golden ratio as before, and g for the inverse of the golden
 ratio:
 
+
 $$
+
  g = G^{-1} = G - 1 = 0.61803398874989484820458683437....
 $$
     
 Then the elements of the double cover of A_{5} are of the form
+
 \begin{verbatim}
+
 (+-1,       0,     0,     0),
 (+-1/2, +-1/2, +-1/2, +-1/2),
 (    0, +-1/2, +-g/2, +-G/2)
@@ -456,7 +500,9 @@ that if we take all finite sums of elements of the double cover of
 A_{5} we get a subring of the quaternions that Conway and Sloane 
 calls the "icosians."  Any icosian is of the form
 
+
 \begin{verbatim}
+
            a + bI + cJ + dK
 \end{verbatim}
     
@@ -464,7 +510,9 @@ calls the "icosians."  Any icosian is of the form
 where a,b,c, and d live in the "golden field" Q(G) - this is the field
 of numbers of the form
 
+
 $$
+
             x + \sqrt 5 y
 $$
     
@@ -476,7 +524,9 @@ only those lying in a given lattice.
 In fact, we can put a norm on the icosians as follows.  First of all, 
 there is usual quaternionic norm
 
+
 $$
+
           ||a + bI + cJ + dK||^{2} = a^{2} + b^{2} + c^{2} + d^{2} 
 $$
     
@@ -485,7 +535,9 @@ But for an icosian this is always of the form x + \sqrt 5 y for some
 rational x and y.  It turns out we can define a new norm on the icosians
 by setting
 
+
 $$
+
           |a + bI + cJ + dK|^{2} = x + y.
 $$
     
@@ -525,7 +577,6 @@ but are there more interesting permutations one can get?
 In fact, one can achieve all EVEN permutations of the 12 spheres this
 way! 
 \end{quote}
-    
 
 I got some email from Conway saying that in fact one get ALL permutations of 
 the 12 spheres.  The point is this.  One can start with the 12 spheres
@@ -533,7 +584,9 @@ touching the central one arranged so their centers are at the vertics
 of an icosahedron.  Then one can roll them around so their centers lie
 at the vertices of a cuboctahedron:
 
+
 \begin{verbatim}
+
 
                          x       x   
 
@@ -637,6 +690,3 @@ They computed r but did not publish the polynomial.
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 747
