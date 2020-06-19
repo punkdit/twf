@@ -134,6 +134,7 @@ def do_line(line, is_math=False):
 
     # send <em>foo</em> to \emph{foo}, etc.
     line = do_tag(line, "em", lambda s:r"\emph{%s}"%s)
+    line = do_tag(line, "i", lambda s:r"\emph{%s}"%s)
     line = do_tag(line, "b", lambda s:r"\textbf{%s}"%s)
     line = do_tag(line, "sub", lambda s:r"_{%s}"%s)
     line = do_tag(line, "sup", lambda s:r"^{%s}"%s)
