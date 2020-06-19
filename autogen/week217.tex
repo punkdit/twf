@@ -1,0 +1,546 @@
+
+% </A>
+% </A>
+% </A>
+\week{May 30, 2005 }
+
+
+Last week I described lots of different zeta functions, but didn't say much 
+about what they're good for.   This week I'd like to get started on fixing 
+that problem.  
+
+People have made lots of big conjectures related to zeta functions.  
+So far they've just proved just a few... but it's still a big deal.
+
+For example, Andrew Wiles' proof of Fermat's Last Theorem was just 
+a tiny spin-off of his work on something much bigger called the 
+Taniyama-Shimura conjecture.  Now, personally, I think Fermat's Last 
+Theorem is a ridiculous thing.  The last thing I'd ever want to know is 
+whether this equation:
+
+x^{n} + y^{n} = z^{n}
+
+has nontrivial integer solutions for n > 2.  But the Taniyama-Shimura
+Conjecture is really interesting!   It's all about the connection between 
+geometry, complex analysis and arithmetic, and it ties together some big 
+ideas in an unexpected way.  This is how it usually works in number theory: 
+cute but goofy puzzles get solved as a side-effect of deep and interesting 
+results related to zeta functions and L-functions - sort of like how the 
+powdered drink "Tang" was invented as a spinoff of going to the moon.
+
+For a good popular book on Fermat's Last Theorem and the Taniyama-Shimura
+Conjecture, try:
+
+1) Simon Singh, Fermat's Enigma: The Epic Quest to Solve the World's 
+Greatest Mathematical Problem, Walker, New York, 1997.
+
+Despite the "world's greatest mathematical problem" baloney, this 
+book does 
+a great job of telling the story without drowning the reader in math.
+
+But you read This Week's Finds because you \emph{want} to be drowned in math, 
+and I wouldn't want to disappoint you.  So, let me list a few of the big 
+conjectures and theorems related to zeta functions.
+
+Here goes:
+
+
+<b>A) The Riemann Hypothesis - the zeros of the Riemann zeta function in 
+the critical strip
+0 \le  Re(s) \le  1
+actually lie on the line Re(s) = 1/2.  </b>
+
+First stated in 1859 by Bernhard Riemann; still open.
+
+This implies a good estimate on the number of primes less than a given 
+number, as described in "<A HREF = "week216.html">week216</A>".
+
+<b>B) The Generalized Riemann Hypothesis - the zeros of any Dirichlet 
+L-function 
+that lie in the critical strip actually lie on the line Re(s) = 1/2.
+</B>
+Still open, since the Riemann Hypothesis is a special case.
+
+A "Dirichlet L-function" is a function like this:
+
+L(&chi;,s) = &sum;_{n > 0} &chi;(n)/n^{s}
+
+where &chi; 
+is any "Dirichlet character", meaning a periodic complex function 
+on the positive integers such that
+
+&chi;(nm) = &chi;(n) &chi;(m)
+
+If we take &chi; = 1 we get back the Riemann zeta function.
+
+Dirichlet used these L-functions to prove that there are infinitely many 
+primes equal to k mod n as long as k is relatively prime to n.  The 
+Generalized Riemann Hypothesis would give a good estimate on the number 
+of such primes less than a given number, just as the Riemann Hypothesis 
+does for plain old primes.
+
+Erich Hecke established the basic properties of Dirichlet L-functions 
+in 1936, including a special symmetry called the "functional equation" 
+which Riemann had already shown for his zeta function.   So I bet Hecke 
+must have dreamt of the Generalized Riemann Hypothesis, even if he didn't 
+dare state it.
+
+<b>C) The Extended Riemann Hypothesis - for any number field, the zeros of its 
+zeta function in the critical strip actually lie on the line Re(s) = 1/2.</b>  
+
+Still open, since the Riemann Hypothesis is a special case.
+
+I described the zeta functions of number fields in "<A HREF = "week216.html">week216</A>".
+These are usually called "Dedekind zeta functions".  Hecke also
+proved a functional equation for these back in 1936.
+
+<b>D) The Grand Riemann Hypothesis - for any automorphic L-function,
+the zeros in the critical strip actually lie on the line Re(s) = 1/2.</b>
+
+This is still open too, since it includes A)-C) as special cases!
+
+I don't want to tell you what "automorphic L-functions" are yet.  
+For now, you can just think of them as grand generalizations of both
+Dirichlet L-functions and zeta functions of number fields.
+
+<b>E) The Weil Conjectures - The zeros and poles of the zeta function of any 
+smooth algebraic variety over a finite field lie on the lines Re(s) = 1/2,
+1, 3/2, ... d/2 where d is the dimension of the variety.</b>  The zeros lie
+on the lines 1/2, 3/2, ... while the poles lie on the lines 1, 2, .... 
+Also: such zeta functions are quotients of polynomials, they satisfy a 
+functional equation, and a lot of information about their zeroes and poles 
+can be recovered from the topology of the corresponding \emph{complex} 
+algebraic varieties.  
+
+First stated in 1949 by Andre Weil; proof completed by Pierre Deligne 
+in 1974 based on much work by Michael Artin, J.-L. Verdier, and especially 
+Alexander Grothendieck.  Grothendieck invented topos theory as part of 
+the attack on this problem!
+
+<b>F) The Taniyama-Shimura Conjecture - every elliptic curve over the rational 
+numbers is a modular curve.</b>  Or, equivalently: every L-function of an 
+elliptic curve is the L-function of a modular curve.  
+
+This was first conjectured in 1955 by Yukata Taniyama, who worked on it 
+with Goro Shimura until committing suicide in 1958.  Around 1982 Gerhard 
+Frey suggested that this conjecture would imply Fermat's Last Theorem; this 
+was proved in 1986 by Ken Ribet.  In 1995 Andrew Wiles and Richard Taylor 
+proved a big enough special case of the Taniyama-Shimura Conjecture to get 
+Fermat's Last Theorem.  The full conjecture was shown in 1999 by Breuil, 
+Conrad, Diamond, and Taylor.
+
+I don't want to say what L-functions of curves are yet... but they
+are a lot like Dirichlet L-functions.
+
+<b>G) The Langlands Conjectures - any automorphic representation \pi  of a 
+connected reductive group G, together with a finite-dimensional representation 
+of its L-group, gives an automorphic L-function L(s,\pi ).</b>  Also:
+these L-functions 
+all satisfy functional equations.  Furthermore, they depend functorially on
+the group G, its L-group, and their representations. 
+
+Zounds!  Don't worry if this sounds like complete gobbledygook!  I only 
+mention it to show how scary math can get.  As Stephen Gelbart once wrote:
+
+\begin{quote}
+     The conjectures of Langlands just alluded to amount (roughly)
+     to the assertion that the other zeta-functions arising in 
+     number theory are but special realizations of these L(s,&pi;).
+
+     Herein lies the agony as well as the ecstacy of Langlands'
+     program.  To merely state the conjectures correctly requires
+     much of the machinery of class field theory, the structure
+     theory of algebraic groups, the representation theory of real
+     and p-adic groups, and (at least) the language of algebraic
+     geometry.  In other words, though the promised rewards are 
+     great, the initiation process is forbidding.
+\end{quote}
+    
+I hope someday I'll understand this stuff well enough to say something more 
+helpful!  Lately I've been catching little glimpses of what it's about....
+
+But, right now I think it's best if I talk about the "functional equation" 
+satisfied by the Riemann zeta function, since this gives the quickest way 
+to see some of the strange things that are going on.
+
+The Riemann zeta function starts out life as a sum:
+
+&zeta;(s) = 1^{-s} + 2^{-s} + 3^{-s} + 4^{-s} + ....
+
+This only converges for Re(s) > 1.  It blows up as we approach s = 1, 
+since then we get the series
+
+1/1 + 1/2 + 1/3 + 1/4 + ....
+
+which diverges.  However, in 1859 Riemann showed that we can analytically 
+continue the zeta function to the whole complex plane except for this pole 
+at s = 1.  
+
+He also showed that the zeta function has an unexpected symmetry: 
+its value at any complex number s is closely related to its value at 1-s.  
+It's not true that &zeta;(s) = &zeta;(1-s), but something similar is true, 
+where we multiply the zeta function by an extra fudge factor.  
+
+To be precise: if we form the function
+
+\pi ^{-s/2} \Gamma (s/2) &zeta;(s)
+
+then this function is unchanged by the transformation
+
+s |\to  1 - s
+
+This symmetry maps the line 
+
+Re(s) = 1/2
+
+to itself, and the Riemann Hypothesis says all the &zeta; zeros in 
+the critical strip actually lie on this magic line.  
+
+This symmetry is called the "functional equation".  It's the tiny tip of a 
+peninsula of a vast and mysterious continent which mathematicians are still 
+struggling to explore.  Riemann gave two proofs of this equation.  You can 
+find a precise statement and a version of Riemann's second proof here:
+
+2) Daniel Bump, Zeta Function, lecture notes on "the functional
+equation" available at <A HREF = "http://math.stanford.edu/~bump/zeta.html">http://math.stanford.edu/~bump/zeta.html</A>
+and <A HREF = "http://www.maths.ex.ac.uk/~mwatkins/zeta/fnleqn.htm">http://www.maths.ex.ac.uk/~mwatkins/zeta/fnleqn.htm</A>
+
+This proof is a beautiful application of Fourier analysis.  Everyone
+should learn it, but let me try to sketch the essential idea here.
+
+I will deliberately be VERY rough, and use some simplified nonstandard
+definitions, since the precise details have a way of distracting your 
+eye just as the magician pulls the rabbit out of the hat.
+
+We start with the function &zeta;(2s):
+
+1^{-s} + 4^{-s} + 9^{-s} + 25^{-s} + ....
+
+Then we apply a curious thing called the "inverse
+Mellin transform", which turns 
+this function into 
+
+z^{1}  + z^{4}  + z^{9}  + z^{25} + ....
+
+Weird, huh?  This is almost the "theta function"
+
+\theta (t) = &sum;_{n} e^{\pi  i n<sup>2} t</sup>
+
+where we sum over all integers n.  Indeed, it's easy to see that
+
+(\theta (t) - 1)/2 = z^{1} + z^{4} + z^{9} + 
+z^{25} + .... 
+
+when 
+
+z = e^{\pi  i t}
+
+The theta function transforms in a very simple way when we replace
+t by -1/t, as one can show using Fourier analysis.
+
+Unravelling the consequences, this implies that the zeta function 
+transforms in a simple way when we replace s by 1-s.  You have to
+go through the calculation to see precisely how this works... but 
+the basic idea is: a symmetry in the theta function yields a symmetry
+in the zeta function.
+
+Hmm, I'm not sure that explained anything!  But I hope at least the 
+mystery is more evident now.  A bunch of weird tricks, and then 
+\emph{presto} - 
+the functional equation!  To make progress on understanding the Riemann 
+Hypothesis and its descendants, we need to get what's going on here.  
+
+I feel I \emph{do} get the inverse
+Mellin transform; I'll say more about that later.  
+But for now, note that the theta function transforms in a simple way, not 
+just when we do this:
+ 
+t |\to  -1/t
+
+but also when we do this:
+
+t |\to  t + 2
+
+Indeed, it doesn't change at all when we add 2 to t, since e^{2\pi  i} = 1.   
+
+Now, the maps
+
+t |\to  -1/t
+
+and 
+
+t |\to  t + 1
+
+generate the group of all maps
+
+$$
+       at + b
+t |\to   --------
+       ct + d
+$$
+    
+where a,b,c,d form a 2\times 2 matrix of integers with determinant 1.  
+These maps form a group called PSL(2,Z), or the "modular group".  
+
+A function that transforms simply under this group and doesn't blow up 
+in nasty ways is called a "modular form".  In "<A HREF = "week197.html">week197</A>" I gave the precise 
+definition of what counts as transforming simply and not blowing up in 
+nasty ways.  I also explained how modular forms are related to elliptic 
+curves and string theory.  So, please either reread "<A HREF = "week197.html">week197</A>" or take my 
+word for it: modular forms are cool!  
+
+The theta function is almost a modular form, but not quite.  It doesn't 
+blow up in nasty ways.  However, it only transforms simply under a subgroup 
+of PSL(2,Z), namely that generated by 
+
+t |\to  -1/t
+
+and
+
+t |\to  t + 2
+
+So, the theta function isn't a full-fledged modular form.  
+But since it comes close, we call it an "automorphic form".
+
+Indeed, for any discrete subgroup G of PSL(2,Z), functions that transform 
+nicely under G and don't blow up in nasty ways are called "automorphic forms" 
+for G.  They act a lot like modular forms, and people know vast amounts 
+about them.  It's the power of automorphic forms that makes number theory 
+what it is today!
+
+We can summarize everything so far in this slogan:
+
+<DIV ALIGN = CENTER>
+    THE FUNCTIONAL EQUATION FOR THE RIEMANN ZETA FUNCTION SAYS: <br> 
+           "THE THETA FUNCTION IS AN AUTOMORPHIC FORM"
+
+</DIV>
+
+But before you start printing out bumper stickers, I should explain....
+
+
+The point of this slogan is this.  We \emph{thought} we were interested in 
+the Riemann zeta function for its own sake, or what it could tell us 
+about prime numbers.  But with the wisdom of hindsight, the first thing we 
+should do is hit this function with the inverse 
+Mellin transform and repackage all 
+its information into an automorphic form - the theta function.  
+
+&zeta; is dead, long live \theta !
+
+The Riemann zeta function is just like all the fancier zeta functions and 
+L-functions in this respect.  The fact that they satisfy a "functional 
+equation" is just another way of saying their inverse
+Mellin transforms are 
+automorphic forms... and it's these automorphic forms that exhibit the 
+deeper aspects of what's going on.
+
+Now let me say a little bit about the inverse Mellin transform.
+
+Ignoring various fudge factors, the inverse 
+Mellin transform is basically just 
+the linear map that sends any function of s like this:
+
+n^{-s}
+
+to this function of z:
+
+z^{n}
+
+In other words, it basically just turns things upside down, replacing the 
+base by the exponent and vice versa.  The minus sign is just a matter of 
+convention; don't worry about that too much.
+
+So, the inverse
+Mellin transform basically sends any function like this, called a 
+"Dirichlet series":
+
+a_{1} 1^{-s} + a_{2} 2^{-s} + a_{3} 3^{-s} + a_{4} 4^{-s} + ....
+
+to this function, called a "Taylor series":
+
+a_{1} z^{1} + a_{2} z^{2} + a_{3} z^{3} + a_{4} z^{4} + ....
+
+Now, why would we want to do this? 
+
+The reason is that multiplying Taylor series is closely related 
+to \emph{addition} 
+of natural numbers:
+
+z^{n} z^{m} = z^{n+m}
+
+while multiplying Dirichlet series is closely related to 
+\emph{multiplication}
+of natural numbers:
+
+n^{-s} m^{-s} = (nm)^{-s}
+
+The Mellin transform (and its inverse) are how we switch between these two 
+pleasant setups!
+
+Indeed, it's all about algebra - at least at first.  We can add natural 
+numbers and multiply them, so N becomes a monoid in two ways.  A "monoid", 
+recall, is a set with a binary associative product and unit.  So, we have 
+two closely related monoids:
+
+(N,+,0)
+
+and 
+
+(N,\times ,1)
+
+Given a monoid, we can form something called its "monoid algebra" by taking 
+formal complex linear combinations of monoid elements.  We multiply these 
+in the obvious way, using the product in our monoid.
+
+If we take the monoid algebra of (N,+,0), we get the algebra of Taylor 
+series!  If we take the monoid algebra of (N,\times ,1), we get the algebra of 
+Dirichlet series!  
+
+(Actually, this is only true if we allow ourselves to use \emph{infinite} 
+linear 
+combinations of monoid elements in our monoid algebra.  So, let's do that.  
+If we used finite linear combinations, as people often do, (N,+,0) would give 
+us the algebra of polynomials, while (N,\times ,0) would give us the algebra of 
+"Dirichlet polynomials".)
+
+Of course, algebraically we can combine these structures.  (N,+,\times ,0,1) is 
+a rig, and by taking formal complex linear combinations of natural numbers 
+we get a "rig algebra" with two products: the usual product of Taylor series, 
+and the usual product of Dirichlet series.  They're compatible, too, since 
+one distributes over the other.  They both distribute over addition.
+
+However, if we're trying to get an algebra of functions on the complex plane, 
+with pointwise multiplication as the product, we need to make up our mind: 
+either Taylor series or Dirichlet series!  We then need the Mellin transform 
+to translate between the two.
+
+So, what seems to be going on is that people take a puzzle, like 
+
+\begin{quote}
+&quot;what is the sum of the squares of the divisors of n?&quot;
+\end{quote}
+    
+
+or 
+\begin{quote}
+&quot;how many ideals of order n are there in this number field?&quot;
+\end{quote}
+    
+
+and they call the answer a_{n}.  
+
+Then they encode this sequence as either a Dirichlet series:
+
+a_{1} 1^{-s} + a_{2} 2^{-s} + a_{3} 3^{-s} + a_{4} 4^{-s} + ....
+
+or a Taylor series:
+
+a_{1} z^{1} + a_{2} z^{2} + a_{3} z^{3} + a_{4} z^{4} + ....
+
+The first format is nice because it gets along well with multiplication of 
+natural numbers.  For example, in the puzzle about ideals,
+every ideal is a product of prime ideals, and its norm is 
+the product of the norms of those prime ideals... so our Dirichlet series 
+will have an Euler product formula.
+
+The second format is nice \emph{if} our Taylor series is an automorphic form.
+This will happen precisely when our Dirichlet series satisfies a functional 
+equation.
+
+(For experts: I'm ignoring some fudge factors involving the gamma function.)
+
+I still need to say more about \emph{which} puzzles give automorphic forms,
+what it really means when they \emph{do}.  But, not this week!  I'm tired, 
+and I bet you are too.
+
+For now, let me just give some references.  There's a vast amount of material 
+on all these subjects, and I've already referred to lots of it.  But right now 
+I want to focus on stuff that's free online, especially stuff that's readable 
+by anyone with a solid math background - not journal articles for experts, but 
+not fluff, either.
+
+Here's some information on the Riemann Hypothesis provided by the Clay 
+Mathematics Institute, which is offering a million dollars for its solution:
+
+3) Clay Mathematics Institute, Problems of the Millennium: 
+the Riemann Hypothesis, <A HREF = "http://www.claymath.org/millennium/">http://www.claymath.org/millennium/</A>
+
+The official problem description by Enrico Bombieri talks about evidence 
+for the Riemann Hypothesis, including the Weil Conjectures.  The article by 
+Peter Sarnak describes generalizations leading up to the Grand Riemann 
+Hypothesis.  In particular, he gives a super-rapid introduction to 
+automorphic L-functions.
+
+Here's a nice webpage that sketches Wiles and Taylor's proof of Fermat's last 
+theorem:
+
+4) Charles Daney, The Mathematics of Fermat's Last Theorem,
+<A HREF = "http://www.mbay.net/~cgd/flt/fltmain.htm">http://www.mbay.net/~cgd/flt/fltmain.htm</A>
+
+I like the quick introductions to "Elliptic curves and elliptic functions", 
+"Elliptic curves and modular functions", "Zeta and L-functions", and "Galois 
+Representations" - they're neither too detailed nor too vague, at least for 
+me.  
+
+Here's a nice little intro to the Weil Conjectures:
+
+5) Runar Ile, Introduction to the Weil Conjectures,
+<A HREF = "http://folk.uio.no/~ile/WeilA4.pdf">http://folk.uio.no/~ile/WeilA4.pdf</A>
+
+James Milne goes a lot deeper - his course notes on etale cohomology include 
+a proof of the Weil Conjectures:
+
+6) James Milne, Lectures on Etale Cohomology,
+<A HREF = "http://www.jmilne.org/math/CourseNotes/math732.html">http://www.jmilne.org/math/CourseNotes/math732.html</A>
+
+while his course notes on elliptic curves sketch the proof of Fermat's Last 
+Theorem:
+
+7) James Milne, Elliptic Curves, 
+<A HREF = "http://www.jmilne.org/math/CourseNotes/math679.html">http://www.jmilne.org/math/CourseNotes/math679.html</A>
+
+Here's a nice history of what I've been calling the Taniyama-Shimura
+Conjecture, which explains why some people call it the Taniyama-Shimura-Weil 
+conjecture, or other things:
+
+8) Serge Lang, Some history of the Shimura-Taniyama Conjecture,
+AMS Notices 42 (November 1995), 1301-1307.  Available at
+<A HREF = "http://www.ams.org/notices/199511/forum.pdf">http://www.ams.org/notices/199511/forum.pdf</A>
+
+Here's a quick introduction to the proof of this conjecture, whatever 
+it's called:
+
+9) Henri Darmon, A proof of the full Shimura-Taniyama-Weil Conjecture
+is announced, AMS Notices 46 (December 1999), 1397-1401.  Available
+at <A HREF = "http://www.ams.org/notices/199911/comm-darmon.pdf">http://www.ams.org/notices/199911/comm-darmon.pdf</A>
+
+I won't give any references to the Langlands Conjectures, since
+I hope to talk a lot more about those some other time.
+
+And, I hope to keep on understanding this stuff better and better!  
+
+I thank James Borger and Kevin Buzzard for help with this issue of
+This Week's Finds.
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\textbf{Addendum:} Here's part of an email exchange I had with Kevin Buzzard
+of Imperial College after he read this Week's Finds:
+
+I wrote:
+
+\begin{verbatim}
+ > What I *REALLY* want to know is: what combinatorial properties of
+ > an integer sequence a<sub>n</sub> are we being told when we're told that
+ > the Dirichlet series
+ >
+ > sum_n a^n n^{-s}
+ >
+ > comes from an automorphic form?
+\end{verbatim}
+    
+He replied:
+
+
+
+% parser failed at source line 726

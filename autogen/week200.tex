@@ -1,0 +1,550 @@
+
+% </A>
+% </A>
+% </A>
+\week{December 31, 2003 }
+
+
+Happy New Year!
+
+I'm making some changes in my life.  For many years I've dreamt 
+of writing a book on higher-dimensional algebra that will explain
+n-categories and their applications to homotopy theory, representation 
+theory, quantum physics, combinatorics, logic - you name it!  It's an 
+intimidating goal, because every time I learn something new about these 
+subjects I want to put it in this imaginary book, so it keeps getting 
+longer and longer in my mind!  Actually writing it will require heroic 
+acts of pruning.  But, I want to get started.  
+
+It'll be freely available online, and it'll show up here as it
+materializes - but so far I've just got a tentative outline:
+
+1) John Baez, Higher-Dimensional Algebra, 
+<A HREF = "http://math.ucr.edu/home/baez/hda/">http://math.ucr.edu/home/baez/hda/</A>
+
+Unfortunately, I'm very busy these days.  As you get older, duties 
+accumulate like barnacles on a whale if you're not careful!  When I 
+started writing This Week's Finds a bit more than ten years ago, I 
+was lonely and bored with plenty of time to spare.  My life is very 
+different now: I've got someone to live with, a house and a garden 
+that seem to need constant attention, a gaggle of grad students, and 
+too many invitations to give talks all over the place.
+
+In short, the good news is I'm never bored and there's always something 
+fun to do.  The bad news is there's always TOO MUCH to do!  So, a while 
+ago I decided to shed some duties and make more time for things I consider 
+really important: thinking, playing the piano, writing this book... 
+and yes, writing This Week's Finds. 
+ 
+First I quit working for all the journals I helped edit.  Then I started 
+refusing most requests to referee articles.  Both these are the sort of 
+job it's really fun to quit.  But doing so didn't free up nearly enough 
+time.  
+
+So now I've also decided to stop moderating the newsgroup 
+sci.physics.research - and stop posting so many articles there.
+This is painful, because I've learned so much from this newsgroup over 
+the last 10 years, met so many interesting people, and had such fun. 
+I thank everyone on the group.  I'll miss you!  I'll probably be back
+whenever I get lonely or bored.
+
+Ahem.  Before I get weepy and nostalgic, I should talk about some math.  
+
+This November in Florence there was a conference in honor of the 40th 
+anniversary of <A HREF = "http://andrej.com/mathematicians/L/Lawvere_William.html">Bill Lawvere</A>'s Ph.D. thesis - a famous thesis called
+"Functorial Semantics of Algebraic Theories", which explored the 
+applications of category theory to algebra, logic and physics.  
+There are videos of all the talks on the conference website:
+ 
+2) Ramifications of Category Theory, <A HREF = "http://ramcat.scform.unifi.it/">http://ramcat.scform.unifi.it/</A>
+
+
+The conference was organized and funded by <A HREF = "http://andrej.com/mathematicians/W/Wright_Michael.html">Michael Wright</A>, a businessman 
+with a great love of mathematics and philosophy, so it was appropriate 
+that it was held in the old city of Cosimo de Medici, Renaissance banker 
+and patron of scholars.  And since there were talks both by mathematicians
+and philosophers - especially <A HREF = "http://andrej.com/mathematicians/P/Peruzzi_Alberto.html">Alberto Peruzzi</A>, a philosopher at the
+University of Florence who helped run the show - I couldn't help but 
+remember Cosimo's "Platonic Academy", which spearheaded the rebirth of 
+classical learning in Renaissance Italy.  When not attending talks, I 
+spent a lot of time roaming around twisty old streets, talking category 
+theory at wonderful restaurants, reading The Rise and Fall of the House 
+of Medici, and desperately trying to soak up the overabundance of incredible
+art and architecture: the Ponte Vecchio, the Piazza del Duomo, the Santa
+Croce where everyone from Galileo to Dante to Machiavelli is buried....
+
+Ahem.  Math!
+
+What was Lawvere's thesis about?  It's never been published, so I've 
+never read it - though I hear it's going to be.   So, my impression of 
+its contents comes from gossip, rumors and later research that refers to 
+his work.
+
+Lawvere started out as a student of Clifford Truesdell, working 
+on "continuum mechanics", which is the very practical branch of field 
+theory that deals with fluids, elastic bodies and the like.  In the
+process, Lawvere got very interested in the foundations of physics, 
+particularly the notions of "continuum" and "physical theory".  
+Somehow he decided that only category theory could give him the tools
+to really make progress in understanding these notions.  After all, this
+was the 1960s, and revolution was in the air.  So, he somehow got himself 
+sent to Columbia University to learn category theory from Sam Eilenberg, 
+one of the two founders of the subject.  He later wrote:
+
+\begin{quote}
+     In my own education I was fortunate to have two teachers who used 
+     the term &quot;foundations&quot; in a common-sense way (rather than in the 
+     speculative way of the Bolzano-Frege-Peano-Russell tradition).  
+     This way is exemplified by their work in Foundations of Algebraic 
+     Topology, published in 1952 by Eilenberg (with Steenrod), and 
+     The Mechanical Foundations of Elasticity and Fluid Mechanics, 
+     published in the same year by Truesdell. The orientation of these 
+     works seemed to be &quot;concentrate the essence of practice and in turn
+     use the result to guide practice&quot;. 
+\end{quote}
+    
+
+It may seem like a big jump from the down-to-earth world of continuum 
+mechanics to category theory, but to Lawvere the connection made perfect 
+sense - and while I've always found his writings inpenetrable, after 
+hearing him give four long lectures in Florence I think it makes sense 
+to me too!  Let's see if I can explain it. 
+
+Lawvere first observes that in the traditional approach to physical
+theories, there are two key players.  First, there are "concrete
+particulars" - like specific ways for a violin string to
+oscillate, or specific ways for the planets to move around the sun.
+Second, there are "abstract generals": the physical laws
+that govern the motion of the violin string or the planets.
+
+In traditional logic, an abstract general is called a
+"theory", while a concrete particular is called a
+"model" of this theory.  A theory is usually presented by
+giving some mathematical language, some rules of deduction, and then
+some axioms.  A model is typically some sort of map that sends
+everything in the theory to something in the world of sets and truth
+values, in such a way that all the axioms get mapped to
+"true".
+
+Since theories involve playing around with symbols according to fixed
+rules, the study of theories is often called "syntax".
+Since the meaning of a theory is revealed when you look at its models,
+the study of models is called "semantics".  The details vary
+a lot depending on what you want to do, and physicists rarely bother
+to formulate their theories axiomatically, but this general setup has
+been regarded as the ideal of rigor ever since the work of Bolzano,
+Frege, Peano and Russell around the turn of the 20th century.
+
+And this is what Lawvere wanted to overthrow!  
+
+Actually, I'm sort of kidding.  He didn't really want to
+"overthrow" this setup: he wanted to radically build on it.
+First, he wanted to free the notion of "model" from the
+chains of set theory.  In other words, he wanted to consider models
+not just in the category of sets, but in other categories as well.
+And to do this, he wanted a new way of describing theories, which is
+less tied up in the nitty-gritty details of syntax.
+
+To see what Lawvere did, we need to look at an example.  But there
+are so many examples that first I should give you a vague sense of the
+\emph{range} of examples.  
+
+You see, in logic there are many levels of what you might call
+"strength" or "expressive power", ranging from
+wimpy languages that don't let you say very much and deduction rules
+that don't let you prove very much, to ultra-powerful ones that let
+you do all sorts of marvelous things.  Near the bottom of this
+hierarchy there's the "propositional calculus" where we only
+get to say things like
+
+\begin{verbatim}
+((P implies Q) and (not Q)) implies (not P)
+\end{verbatim}
+    
+Further up there's the "first-order predicate calculus",
+where we get to say things like
+
+\begin{verbatim}
+for all x (for all y ((x = y and P(x)) implies P(y)))
+\end{verbatim}
+    
+Even further up, there's the "second-order predicate calculus" where 
+we get to quantify over predicates and say things like
+
+\begin{verbatim}
+for all x (for all y (for all P (P(x) iff P(y)) implies x = y))
+\end{verbatim}
+    
+Etcetera...  
+
+And, while you might think it's always best to use the most powerful 
+form of logic you can afford, this turns out not to be true!
+
+One reason is that the more powerful your logic is, the fewer categories
+can contain models of theories expressed in this logic.  This point may
+sound esoteric, but the underlying principle should be familiar.  Which
+is better: a hand-operated drill, an electric drill, or a drill press?  
+A drill press is the most powerful.  But I forgot to mention: you're 
+using it to board up broken windows after a storm.  You can't carry a
+drill press around, so now the electric drill sounds best.  But another
+thing: this is in rural Ghana!  With no electricity, now the hand-operated 
+drill is your tool of choice.
+
+In short, there's a tradeoff between power and flexibility.  Specialized
+tools can be powerful, but they only operate in a limited context.  
+These days we're all painfully aware of this from using computers: fancy 
+software only works in a fancy environment!  
+
+Lawvere has even come up with a general theory of how this tradeoff
+works in mathematical logic... he called this the theory of
+"doctrines".  But I'm getting way ahead of myself!  He came
+up with "doctrines" in 1969, and I'm still trying to explain
+his 1963 thesis.
+
+
+Just like traditional logic, Lawvere's new approach to logic has been
+studied at many different levels in the hierarchy of strength.  He
+began fairly near the bottom, in a realm traditionally occupied by
+something called "universal algebra", developed by Garrett
+Birkhoff in 1935.  The idea here was that a bunch of basic
+mathematical gadgets can be defined using very simple axioms that only
+involve n-ary operations on some set and equations between different
+ways of composing these operations.  A theory like this is called an
+"algebraic theory".  The axioms for an algebraic theory
+aren't even allowed to use words like "and", "or",
+"not" or "implies".  Just equations.
+
+Okay, now for an example.
+
+
+A good example is the algebraic theory of "groups".  A group
+is a set equipped with a binary operation called
+"multiplication", a unary operation called
+"inverse", and a nullary operation (that is, a constant)
+called the "unit", satisfying these equational laws:
+
+$$
+  (gh)k = g(hk)                ASSOCIATIVITY
+
+     1g = g                    LEFT UNIT LAW
+                               
+     g1 = g                    RIGHT UNIT LAW
+
+   g^{-1 }g = 1                    LEFT INVERSE LAW
+                               
+   gg^{-1 } = 1                    RIGHT INVERSE LAW
+$$
+    
+
+Such a primitive gadget is robust enough to survive in very rugged 
+environments... it's more like a stone tool than a drill press!
+
+Lawvere noticed that we can talk about models of these axioms not just
+in the category of sets, but in any "category with finite
+products".  The point is that to talk about an n-ary operation,
+we just need to be able to take the product of an object G with itself
+n times and consider a morphism
+
+$$
+f: G x  ...  x G \to  G
+   |- n times -|
+$$
+    
+
+For example, the category of smooth manifolds has finite products, so
+we can talk about a "group object" in this category, which
+is just a \emph{Lie group}.  The category of topological spaces has
+finite products, so we can talk about a group object in this category
+too: it's a \emph{topological group}.  And so on.
+
+But Lawvere's really big idea was that there's a certain category
+with finite products whose only goal in life is to contain a group
+object.  To build this category, first we put in an object 
+
+\begin{verbatim}
+G
+\end{verbatim}
+    
+Since our category has finite products this automatically means
+it gets objects 1, G, G x G, G x G x G, and so on.  Next, we put in 
+a binary operation called "multiplication", namely a morphism
+
+$$
+m: G x G \to  G
+$$
+    
+We also put in a unary operation called "inverse":
+
+$$
+inv: G \to  G
+$$
+    
+and a nullary operation called the "unit":
+
+$$
+i: 1 \to  G
+$$
+    
+And then we say a bunch of diagrams commute, which express all
+the axioms for a group listed above.
+
+Lawvere calls this category the "theory of groups", Th(Grp).
+The object G is just like a group - but not any \emph{particular} group,
+since its operations only satisfy those equations that hold in \emph{every}
+group!
+
+By calling this category a "theory", Lawvere is suggesting
+that like a theory of the traditional sort, it can have models - and
+indeed it can!  A "model" of theory of groups in some
+category X with finite products is just a product-preserving functor
+
+$$
+F: Th(Grp) \to  X
+$$
+    
+By the way things are set up, this gives us an object
+
+\begin{verbatim}
+F(G)
+\end{verbatim}
+    
+in C, together with morphisms
+
+$$
+F(m): F(G) x F(G) \to  F(G)
+
+F(inv): F(G) \to  F(G)
+
+F(i): F(1) \to  F(G)
+$$
+    
+that serve as the multiplication, inverse and identity element
+for F(G)... all making a bunch of diagrams commute, that express
+the axioms for a group!
+
+So, a model of the theory of groups in X is just a group object in X.
+
+Whew.  So far I've just explained the \emph{title} of Lawvere's PhD
+thesis: "Functorial Semantics of Algebraic Theories".  In
+Lawvere's approach, an "algebraic theory" is given not by
+writing down a list of axioms, but by specifying a category C with
+finite products.  And the semantics of such theories is all about
+product-preserving functors F: C \to  X.  Hence the term
+"functorial semantics".
+
+Lawvere did a lot starting with these ideas.  Let me just briefly 
+summarize, and then move on to his work on topos theory and mathematical 
+physics.  
+
+Wise mathematicians are interested not just in models, but also the 
+homomorphisms between these.  So, given an algebraic theory C,
+Lawvere defined its category of models in X, say Mod(C,X), to have 
+product-preserving functors F: C \to  X as objects and natural 
+transformations between these as morphisms.  For example, taking 
+C to be the theory of groups and X to be the category of sets, we get 
+the usual category of groups:
+
+\begin{verbatim}
+Mod(Th(Grp),Set) = Grp
+\end{verbatim}
+    
+That's reassuring, and that's how it always works.  What's less obvious, 
+though, is that one can always recover C from Mod(C,Set) together with 
+its forgetful functor to the category of sets.  
+
+In other words: not only can we get the models from the theory, but we 
+can also get back the theory from its category of models!
+
+I explained how this works in "<A HREF =
+"week136.html">week136</A>" so I won't do so again here.  This
+result actually generalizes an old theorem of Birkhoff on universal
+algebra.  But fans of the Tannaka-Krein reconstruction theorem for
+quantum groups will recognize this duality between "theories and
+their category of models" as just another face of the duality
+between "algebras and their category of representations" -
+the classic example being the Fourier transform and inverse Fourier
+transform!
+
+And this gives me an excuse to explain another bit of Lawvere's
+jargon: while a theory is an "abstract general", and
+particular model of it is a "concrete particular", he calls
+the category of \emph{all} its models in some category a
+"concrete general".  For example, Th(Grp) is an abstract
+general, and any particular group is a concrete particular, but Grp is
+a concrete general.  I mention this mainly because Lawvere flings
+around this trio of terms quite a bit, and some people find them
+off-putting.  There are lots of reasons to find his work daunting, but
+this need not be one.
+
+In short, we have this kind of setup:
+
+\begin{verbatim}
+            ABSTRACT GENERAL              CONCRETE GENERAL
+            theory                        models
+            syntax                        semantics
+\end{verbatim}
+    
+and a precise duality between the two columns!
+
+I would love to dig deeper in this direction - I've really just
+scratched the surface so far, and I'm afraid the experts will be
+disappointed... but I'm even more afraid that if I went further,
+the rest of you readers would drop like flies.  So instead, let me 
+say a bit about Lawvere's work on topos theory and physics.  
+
+Most practical physics makes use of logic that's considerably stronger
+than that of "algebraic theories", but still considerably
+weaker than what most of us have been brainwashed into accepting as
+our default setting, namely Zermelo-Fraenkel set theory with the axiom
+of choice.  So if we want, we can do physics in a context less general
+than an arbitrary category with finite products, while still not
+restricting ourselves to the category of sets.  This is where
+"topoi" come in - they're a lot like the category of sets,
+but vastly more general.
+
+Topos theory was born when Grothendieck decided to completely rewrite
+algebraic geometry as part of a massive plan to prove the Weil
+conjectures.  Grothendieck was another revolutionary of the early
+1960s, and he arrived at his concept of "topos" sometime
+around 1962.  In 1969-70, Lawvere and Myles Tierney took this concept -
+now called a "Grothendieck topos" - and made it both simpler
+and more general, arriving at the present definition.  Briefly put, a
+topos is a category with finite limits, exponentials, and a subobject
+classifier.  But instead of saying what these words mean, I'll just
+say that this lets you do most of what you normally want to do in
+mathematics, but without the law of excluded middle or the axiom of
+choice.
+
+One of the many reasons this middle ground is so attractive is that it
+lets you do calculus with infinitesimals the way physicists enjoy
+doing it!  Lawvere started doing this in 1967 - he called it
+"synthetic differential geometry".  Basically, he cooked up
+some axioms on a topos that let you do calculus and differential
+geometry with infinitesimals.  The most famous topos like this is the
+topos of "schemes" - algebraic geometers use this one a lot.
+The usual category of smooth manifolds is not even a topos, but there
+are topoi that can serve as a substitute, which have infinitesimals.
+
+I won't list the axioms of synthetic differential geometry, but the
+main idea is that our topos needs to contain an object T called the 
+"infinitesimal arrow".  This is a rigorous version of those little 
+arrows physicists like to draw when talking about vectors:  
+
+$$
+                             ----->
+$$
+    
+The usual problem with these "little arrows" is that they need to be
+really tiny, but still point somewhere.  In other words, the head
+can't be at a finite distance from the tail - but they can't be at the 
+same place, either!  This seems like a paradox, but one can neatly 
+sidestep it by dropping the law of excluded middle - or in technical
+jargon, working with a "non-Boolean topos". 
+
+That sounds like a drastic solution - a cure worse than the disease, 
+perhaps! - but it's really not so bad.  Indeed, algebraic geometers 
+are perfectly comfortable with the topos of schemes, and they don't 
+even raise an eyebrow over the fact that this topos is non-Boolean - 
+mainly because you're allowed to use ordinary logic to reason \emph{about}
+a topos, even if its internal logic is funny.
+
+But enough logic!  Let's do some geometry!  Let's say we're in some
+topos with an infinitesimal arrow object, T.  I'll call the objects of
+this topos "smooth spaces" and the morphisms "smooth
+maps".  How does geometry work in here?
+
+It's very nice.  The first nice thing is that given any smooth space X, 
+a "tangent vector in X" is just a smooth map 
+
+$$
+f: T \to  X
+$$
+    
+that is, a way of drawing an infinitesimal arrow in X.  In general, the
+maps from any object A of a topos to any other object B form an object
+called B^{A} - this is part of what we mean when we say a topos has 
+exponentials.  So, the space of all tangent vectors in X is X^{T}.  
+
+And this is what people usually call the "tangent bundle" of X!   
+
+So, the tangent bundle is pathetically simple in this setup: it's just
+a space of maps.  This means we can compose a tangent vector f: T
+-> X with any smooth map g: X \to  Y to get a tangent vector gf: T
+-> Y.  This is what people usually call "pushing forward
+tangent vectors".  This trick gives a smooth map between tangent
+bundles, the "differential of g", which it makes sense to
+call
+
+$$
+g^{T}: X^{T} \to  Y^{T}
+$$
+    
+Moreover, it's pathetically easy to check the chain rule:
+
+$$
+(gh)^{T} = g^{T} h^{T}
+$$
+    
+
+And so far we haven't used \emph{any} axioms about the object T - just basic 
+stuff about how maps work!
+
+We can also define higher derivatives using T.  For second derivatives
+we start with T x T, which looks like an "infinitesimal square".  Then
+we mod out by the map
+
+$$
+S_{T,T}: T x T \to  T x T
+$$
+    
+
+that switches the two factors.  You should visualize this map as 
+"reflection across the diagonal".  When we mod out by it, we get 
+a quotient space that deserves the name
+
+$$
+T^{2}/2!
+$$
+    
+
+and if we now use some axioms about T, it turns out that a smooth map
+
+$$
+f: T^{2}/2! \to  X
+$$
+    
+
+picks out what's called a "second-order jet" in X.  This is a concept
+familiar from traditional geometry, but not as familiar as it should be.
+The information in a second-order jet consists of a point in X, the 
+first derivative of a curve through X, and also the \emph{second} derivative 
+of a curve through X.   Or in physics lingo: position, velocity and 
+acceleration!  
+
+We can go ahead and define nth-order jets using T^{n}/n! in a perfectly
+analogous way, and the visual resemblance to Taylor's theorem is by no
+means an accident... but let me stick to second derivatives, since I'm
+trying to get to Newton's good old F = ma.
+
+Just as the space of all tangent vectors in X is the tangent bundle
+X^{T}, the space of all 2nd-order jets in X is the
+"2nd-order jet bundle"
+
+$$
+X^{T<sup>2}/2!</sup>
+$$
+    
+There's a map called the "diagonal": 
+
+$$
+diag: T \to  T^{2}/2! 
+$$
+    
+
+and composing this with any 2nd-order jet 
+turns it into a tangent vector.  This defines
+a smooth map
+
+
+
+% parser failed at source line 601

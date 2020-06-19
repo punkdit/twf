@@ -1,0 +1,184 @@
+
+% </A>
+% </A>
+% </A>
+\week{July 12, 1995 }
+
+A few weeks ago I went to the IVth Porto Meeting on Knot Theory and
+Physics, to which I had been kindly invited by Jose Mourao.  Quite 
+a few of the (rather few) believers in the relevance of n-categories to physics
+were there.  I spoke on higher-dimensional algebra and topological quantum
+field theory, and also a bit on spin networks.  Louis Crane spoke on his ideas, 
+especially the idea of getting 4-dimensional TQFTs out of state-sum
+models.  And John Barrett spoke on 
+
+1)  John Barrett, Quantum gravity as topological quantum field theory, to 
+appear in the November 1995 special issue of Jour. Math. Physics, also 
+available as <A HREF = "http://xxx.lanl.gov/abs/gr-qc/9506070">gr-qc/9506070</A>.
+
+This is a nice introduction to the concepts of topological quantum field
+theory (TQFT) that doesn't get bogged down in the (still substantial) 
+technicalities.  In particular, it pays more emphasis than usual to the physical
+interpretation of TQFTs, and how this meshes with more traditional issues
+in the interpretation of quantum mechanics.  One of the main things
+I got out of the conference, in fact, was a sense that there is a budding field
+along these lines, just crying out to be developed.  As Barrett notes, Atiyah's
+axioms for a TQFT can really be seen as coming from combining 
+
+a) The rules of quantum mechanics for composing amplitudes
+
+and 
+
+b) Functoriality, or the correct behavior under diffeomorphisms of manifolds.
+
+Indeed, he convincingly recovers the TQFT axioms from these two principles.
+And of course these two principles could be roughly called "basic quantum
+mechanics" and "general covariance"... lending credence to the idea that 
+whatever the theory of quantum gravity turns out to be, it should be 
+something closely related to a TQFT.  (I should emphasize, though, 
+that this question is one of the big puzzles in the subject.) 
+
+The richness inherent in b) makes the business of erecting a formalism
+to interpret topological quantum field theory much more interesting than the
+(by now) rather stale discussions that only treat a), or "basic quantum 
+mechanics".  In particular, in a TQFT, every way of combining 
+manifolds - spaces or spacetimes - yields a corresponding rule for 
+composing amplitudes.  For example, if we have two spacetimes that look 
+like
+
+\begin{verbatim}
+ O
+| |
+| |
+| |
+| |
+ O
+\end{verbatim}
+    
+
+(that's supposed to look like a pipe!) and 
+
+\begin{verbatim}
+ O       O
+ \ \   / /
+  \ \ / /
+   \   /
+    | |
+     O
+\end{verbatim}
+    
+
+- that is, a cylinder and a "trinion" (or upside-down pair of pants) - 
+we can combine them either "horizontally" like this:
+
+\begin{verbatim}
+ O       O      O
+ \ \   / /     | |
+  \ \ / /      | |
+   \   /       | |
+    | |        | | 
+     O          O
+\end{verbatim}
+    
+
+or "vertically" like this:
+
+\begin{verbatim}
+ O       O
+ \ \   / /
+  \ \ / /
+   \   /
+    | |
+    | |
+    | |
+    | |
+    | |
+     O
+\end{verbatim}
+    
+
+Corresponding to each spacetime we have a "time evolution operator" -
+a linear operator that describes how states going in one end pop out the
+other, "evolved in time".  And corresponding to horizontal and vertical 
+composition of spacetimes we have two ways to compose operators: 
+horizontal composition usually being called "tensor product", and 
+vertical composition being called simply "composition".  These two ways 
+satisfy some compatibility conditions, as well.
+
+Now if one has read a bit about n-categories and/or "extended" topological
+quantum field theories, one already knows that this is just the 
+tip of the iceberg.  If we allow ourselves to cut spacetimes into 
+smaller bits - e.g., pieces with "corners", such as tetrahedra or their 
+higher-dimensional kin - one gets more
+possible ways of composing operators, and more compatibility conditions.  These
+become algebraically rather sophisticated, but luckily, there is a huge 
+amount of evidence that existing TQFTs extend to more 
+sophisticated structures of this sort, through a miraculous 
+harmony between algebra and topology.  
+
+This leads to some interesting new concepts when it comes to the physical
+interpretation of extended TQFTs.   As Crane described in his talk
+(see also his papers listed in "<A HREF = "week2.html">week2</A>", "<A HREF = "week23.html">week23</A>" and "<A HREF = "week56.html">week56</A>"), in a 
+4-dimensional extended TQFT one expects the following sort of thing.  
+If we think of an "observer" as a 3-manifold with boundary - 
+imagine a person being the 3-manifold and his skin being the 
+boundary, if one likes - the extended TQFT should assign to his boundary a 
+"Hilbert category" or "2-Hilbert space".   This is the categorical analog of a
+Hilbert space.  In other words, just as a Hilbert space is a \emph{set} 
+in which 
+you can \emph{sum} things and \emph{multiply} them 
+by \emph{complex numbers}, and 
+get \emph{complex numbers} by taking \emph{inner products} of things, a 
+2-Hilbert space is an analogous structure in which every term 
+surrounded by asterisks is replaced by its analog
+one step up the categorical ladder.  This means:
+
+$$
+set             \to  category
+sum             \to  direct sum
+multiply        \to  tensor
+complex numbers \to  vector spaces
+inner products  \to  homs
+$$
+    
+
+There's a good chance that you know the analogy between numbers and vector
+spaces: just as you can add numbers and multiply them, you can take direct sums
+and tensor products of vector spaces, and many of the same rules still 
+apply (in a somewhat more sophisticated form, because laws that were 
+equations are now isomorphisms).  A little less familiar is the 
+analogy between inner products and "homs".  Given two vectors v and w in a 
+Hilbert space you can take the inner product <v,w> and get a number; 
+similarly, given two (finite-dimensional) Hilbert 
+spaces V and W you can form hom(V,W) - that is, the set of all linear 
+maps from V to W - and get a Hilbert space.  The same thing works in any 
+"2-Hilbert space".  
+
+The most basic example of a 2-Hilbert space would be Hilb, the category of 
+finite-dimensional Hilbert spaces, but also Reps(G), the category of finite-
+dimensional unitary representations of a finite group.  (Similar remarks hold 
+for quantum groups at root of unity.)  Just as the inner product is linear 
+in one argument and conjugate-linear in the other, "hom" behaves nicely 
+under direct sums in each argument, but each argument behaves a bit 
+differently under tensor product, so one can say it's "linear" in 
+one and "conjugate-linear" in the other.  
+      
+So anyway, just as in a 4d TQFT a 3-manifold M determines a Hilbert space Z(M),
+and a 4-manifold N with boundary equal to M determines a vector Z(N) in 
+Z(M), something similar happens in an extended TQFT.  (For experts, here
+I'm really talking about "unitary" TQFTs and extended TQFTs - these are
+the physically sensible ones.)   Namely, a "skin of observation" or 2-manifold
+S determines a 2-Hilbert space Z(S), and an "observer" or 3-manifold M with
+boundary equal to S determines an object in Z(S).  Now, given two observers
+M and M' with the same "skin" - for example, the observer "you" and the 
+observer "everything in the world except you" - one gets two 
+objects Z(M) and Z(M') in Z(S), so one can form the "inner product" 
+hom(Z(M),Z(M')), which is a Hilbert space.  This is \emph{your} Hilbert 
+space for describing states of \emph{everything in the world except you}.
+Note that we are using the term "observer" here in a 
+somewhat whimsical sense; in particular, every region of space counts as an 
+observer in this game, so we can flip things around and form the inner product 
+hom(Z(M'),Z(M)), which is the Hilbert space that <em>everything in the 
+
+
+% parser failed at source line 219

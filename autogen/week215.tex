@@ -1,0 +1,319 @@
+
+% </A>
+% </A>
+% </A>
+\week{May 9, 2005 }
+
+This week I'd like to report on some cool things people have been
+explaining to me.  The science fiction writer Greg Egan has been 
+helping me understand Klein's quartic curve, and the mathematician
+Darin Brown has been explaining the analogy between geodesics and 
+prime numbers.  The two subjects even overlap slightly!
+
+Last week I talked about Klein's quartic curve.  This led
+Gerard Westendorp and Mike Stay to draw some pictures of it, 
+and their ideas helped Greg Egan create this really nice picture:
+
+1) Greg Egan, Klein's quartic curve,
+<A HREF = "http://math.ucr.edu/home/baez/mathematical/KleinDual.png">
+http://math.ucr.edu/home/baez/mathematical/KleinDual.png</A>
+
+<DIV ALIGN = CENTER>
+<IMG SRC = "http://math.ucr.edu/home/baez/mathematical/KleinDual.png">
+</DIV>
+
+
+It looks sort of tetrahedral at first glance, but if you look 
+carefully you'll see that topologically speaking, it's a 3-holed
+torus.  It's tiled by triangles, with 7 meeting at each vertex.  
+So, it's the Klein quartic curve!
+
+Perhaps I should explain.  Last week I talked about a tiling of the 
+hyperbolic plane by regular heptagons with 3 heptagons meeting at 
+each vertex.  Dual to this is a tiling of the hyperbolic plane by 
+equilateral triangles with 7 triangles meeting at each vertex.  
+We can take a quotient space of this by a certain symmetry group 
+and get a 3-holed torus tiled by 56 triangles with 7 meeting at each
+vertex.  This is what Egan drew!
+
+With this picture you can almost \emph{see} the 168 symmetries of Klein's 
+quartic curve.
+
+First, you can take any vertex and twist it, causing the 7 triangles
+that meet at this vertex to cycle around.  It's not obvious that this
+is a symmetry of the whole tiled surface, but it is.  This gives a 
+7-element symmetry group.  
+
+Second, the whole thing looks like a tetrahedron, so it inherits the
+rotational symmetries of a tetrahedron.  This gives a more obvious
+12-element symmetry group.  
+
+7 \times  12 = 84, so how do we get a total of 168 symmetries?
+
+Well, there's also a 2-fold symmetry that corresponds to turning 
+the tetrahedron inside out!  And Egan made a wonderful \emph{movie} of 
+this.  If a picture is worth a thousand words, this is worth about 
+a million:
+
+2) Greg Egan, Turning Klein's quartic curve inside out,
+<A HREF = "http://math.ucr.edu/home/baez/mathematical/KleinDualInsideOut.gif">
+http://math.ucr.edu/home/baez/mathematical/KleinDualInsideOut.gif</A>
+
+
+<DIV ALIGN = CENTER>
+<IMG SRC = "http://math.ucr.edu/home/baez/mathematical/KleinDualInsideOut.gif">
+</DIV>
+So, we get a total of 7 \times  24 = 168 symmetries. 
+
+Even better, if you watch carefully, you'll see that the tetrahedron 
+in Egan's movie gets \emph{reflected} as it turns inside out.  More 
+precisely, if you follow the four corners of the tetrahedron, 
+you'll see that two come back to where they were, while the other 
+two get switched.  So, this symmetry acts as a reflection, or odd 
+permutation, of the 4 corners.  The rotations act as even permutations 
+of the corners.
+
+This means that the Klein quartic has 24 symmetries forming a group
+isomorphic to the rotation/reflection symmetry group of a tetrahedron.
+Algebraically speaking, this group is S_{4}: 
+the permutations of 4 things.
+
+This group is also the rotational symmetry group of a cube.  In fact, 
+Egan was able to spot a hidden cube lurking in his picture!  Can you?
+
+<DIV ALIGN = CENTER>
+<IMG HEIGHT = 300 WIDTH = 300 
+SRC = "http://math.ucr.edu/home/baez/mathematical/KleinDual.png">
+</DIV>
+
+If you look carefully, you'll see each corner of his tetrahedral
+gadget is made of a little triangular prism with one triangle facing 
+out and one facing in: for example, the pink triangle
+staring you right in the face, or the light blue one on top.
+Since 4 \times  2 = 8, there are 8 of these triangles.  
+Abstractly, we can think of these as the 8 corners of a cube!  They 
+aren't really, but we can pretend.  The way these 8 triangles come 
+in pairs corresponds to how the vertices of a cube come in diagonally 
+opposite pairs.  
+
+Using this, you can see that the group S_{4} acts on these 8 triangles 
+in precisely the same way it acts via rotations on the vertices of a 
+cube.
+
+In fact, you can even draw a \emph{picture} of a cube on the Klein quartic by 
+drawing suitable curves that connect the centers of these 8 triangles!
+It's horribly distorted, but topologically correct.  Part of the 
+distortion is caused by embedding the Klein quartic in ordinary
+3d Euclidean space.  If we gave the Klein quartic the metric it 
+inherits from the hyperbolic plane, the edges of the cube would be 
+geodesics.
+
+This remark also helps us see something else.  The Klein quartic is
+tiled by 56 triangles.  8 of them give the cube we've just been 
+discussing.  In Egan's picture these triangles look special, since 
+they lie at the corners of his tetrahedral gadget.  But this is
+just an illusion caused by embedding the Klein quartic in 3d space.  
+In reality, the Klein quartic is perfectly symmetrical: every 
+triangle is just like every other.  So in fact there are lots of 
+these cubes, and every triangle lies in some cube.
+
+But this is where it gets really cool.  In fact, each triangle lies
+in just \emph{one} cube.  So, there's precisely one way to take the 56 
+triangles and divide them into 7 bunches of 8 so that each bunch forms 
+a cube.   
+
+So: the symmetry group of the Klein quartic acts on the set of cubes,
+which has 7 elements.
+
+But as I explained last week, this symmetry group also acts on the 
+Fano plane, which has 7 points.
+
+This suggests that cubes in the Klein quartic naturally correspond 
+to points of the Fano plane.  And Egan showed this is true!
+
+He showed this by showing more.  The Fano plane also has 7 lines.
+What 7 things in the Klein quartic do these lines correspond to?
+
+\emph{Anticubes!}
+
+You see, the cubes in the Klein quartic have an inherent handedness
+to them.  You can go between the 8 triangles of a given cube by 
+following certain driving directions, but these driving directions 
+involve some left and right turns.  If you follow the mirror-image
+driving directions with "left" and "right" switched, 
+you'll get an \emph{anticube}.
+ 
+Apart from having the opposite handedness, anticubes are just like
+cubes.  In particular, there's precisely one way to take the 56 
+triangles and divide them into 7 bunches of 8 so that each bunch forms 
+an anticube.
+
+Here's a picture:
+
+3) Greg Egan, Cubes and anticubes in the Klein quartic curve,
+<A HREF = "http://math.ucr.edu/home/baez/KleinFigures.gif">
+http://math.ucr.edu/home/baez/KleinFigures.gif</A>
+
+<BR>
+<DIV ALIGN = CENTER>
+<IMG SRC ="http://math.ucr.edu/home/baez/KleinFigures.gif">
+</DIV>
+<BR>
+
+Each triangle has a colored circle and a colored square on it.
+There are 7 colors.  The colored circle says which of the 7 \emph{cubes}
+the triangle belongs to.  The colored square says which of the 7
+\emph{anticubes} it belongs to.  
+
+If you stare at this picture for a few hours, you'll see that each 
+cube is completely disjoint from precisely 3 anticubes.  Similarly, 
+each anticube is completely disjoint from precisely 3 cubes.  
+
+This is just like the Fano plane, where each point lies on 3 lines, 
+and each line contains 3 points!
+
+So, we get a vivid way of seeing how every figure in the Fano 
+plane corresponds to some figure in the Klein quartic curve. 
+This is why they have the same symmetry group.  
+
+This is an excellent example of Klein's Erlangen program for reducing 
+geometry to group theory, which I discussed in "<A HREF = "week213.html">week213</A>".  Here we are 
+beginning to see how two superficially different geometries are secretly 
+the same:
+
+\begin{verbatim}
+    FANO PLANE                      KLEIN'S QUARTIC CURVE
+ 
+    7 points                        7 cubes
+    7 lines                         7 anticubes
+    incidence of points and lines   disjointness of cubes and anticubes
+\end{verbatim}
+    
+However, we're only half done!  We've seen how to translate simple 
+figures and indicence relations in the Fano plane to complicated ones
+in Klein's quartic curve.  But, we haven't figured out translate back!
+ 
+\begin{verbatim}
+    KLEIN'S QUARTIC CURVE            FANO PLANE
+       
+    24 vertices                      ??? 
+    84 edges                         ???
+    56 triangular faces              ???
+    incidence of vertices and edges  ???
+    incidence of edges and faces     ???
+\end{verbatim}
+    
+Here I'm talking about the tiling of Klein's quartic curve by 56
+equilateral triangles.  We could equally well talk about its tiling
+by 24 regular heptagons, which is the Poincare dual.  Either way, the
+puzzle is to fill in the question marks.  I don't know the answer!
+
+To conclude - at least for now - I want to give the driving directions 
+that define a "cube" or an "anticube" in Klein's quartic curve.  Say 
+you're on some triangle and you want to get to a nearby triangle that 
+belongs to the same cube.  Here's what you do:
+
+\begin{quote}
+hop across any edge, <br>
+turn right, <br>
+hop across the edge in front of you, <br>
+turn left, <br>
+then hop across the edge in front of you.  
+
+\end{quote}
+    
+Or, suppose you're on some triangle and you want to get to another
+that's in the same anticube.  Here's what you do:
+
+\begin{quote}
+hop across any edge, <br>
+turn left, <br>
+hop across the edge in front of you, <br>
+turn right, <br>
+then hop across the edge in front of you.  
+ 
+\end{quote}
+    
+(If you don't understand this stuff, look at the picture above and 
+see how to get from any circle or square to any other circle or 
+square of the same color.) 
+
+You'll notice that these instructions are mirror-image versions of 
+each other.  They're also both 1/4 of the "driving directions from 
+hell" that I described last time.  In other words, if you go 
+LRLRLRLR or RLRLRLRL, you wind up at the same triangle you started
+from.  You'll have circled around one face of a cube or anticube!
+
+In fact, your path will be a closed geodesic on the Klein quartic 
+curve... like the long dashed line in Klein and Fricke's original 
+picture:
+
+4) Klein and Fricke, Klein's quartic curve with geodesic,
+<A HREF = "http://math.ucr.edu/home/baez/Klein168.gif">http://math.ucr.edu/home/baez/Klein168.gif</A>
+
+<DIV ALIGN = CENTER>
+<IMG SRC = "http://math.ucr.edu/home/baez/Klein168.gif">
+</DIV>
+Next, a little about geodesics and prime numbers.   I've just been
+talking a little about geodesics in the Klein quartic, which is the
+quotient 
+
+H/G
+
+of the hyperbolic plane H by a certain group G which I explained  
+last week.  This group, usually called \Gamma (7), is a nice example 
+of a "Fuchsian group" - that is, a discrete subgroup of the isometries
+of the hyperbolic plane.  
+
+Darin Brown and his thesis advisor Jeff Stopple at U. C. Santa
+Barbara have been thinking about geodesics in H/G for other Fuchsian
+groups G, and their relation to number theory:
+
+5) Jeff Stopple, A reciprocity law for prime geodesics, J. Number 
+Theory 29 (1988), 224-230.
+
+6) Darin Brown, Lifting properties of prime geodesics on hyperbolic
+surfaces, Ph.D. thesis, U. C. Santa Barbara, 2004.
+
+I'd really like to learn about this, because it connects all sorts
+of stuff I dream of understanding someday, especially quantum chaos 
+("<A HREF = "week190.html">week190</A>"), zeta functions in physics and number theory ("<A HREF = "week199.html">week199</A>"), 
+and Galois theory as a theory of covering spaces ("<A HREF = "week205.html">week205</A>").  Also, 
+it involves a big mysterious analogy, and I always like those!
+
+I don't understand this stuff well enough to try a full-fledged
+explanation yet, so I'll just give a vague sketch.  A "prime geodesic"
+in a Riemannian manifold X is a closed geodesic 
+
+f: S^{1} \to  X
+
+that cycles around just once.  In other words, f should be one-to-one.
+
+We say a closed geodesic is the "nth power" of a prime one if it's
+just like the prime one but it cycles around n times.  Every closed
+geodesic is the nth power of a prime one in a unique way.
+
+If we have a Fuchsian group G, H/G is a surface with a Riemannian
+metric.  It looks locally like the hyperbolic plane, so it's called
+a "hyperbolic surface".  And, we can look at prime geodesics in it.  
+
+If G' is a subgroup of G, we get a covering map
+
+H/G' \to  H/G
+
+so we can ask about lifting prime geodesics in H/G to closed geodesics
+in H/G'.   There can be a bunch of ways to do this, so we say a
+prime geodesic in H/G "splits" into powers of prime geodesics up in
+H/G'.  
+
+If you know any number theory - reading "<A HREF = "week205.html">week205</A>" should be enough -
+this should remind you of how a prime ideal in some algebraic number 
+field can "split" into prime ideals in an extension of this field, 
+and/or "ramify" into powers of prime ideals.
+
+And indeed, Darin Brown has found a big mysterious analogy that goes 
+like this:
+
+
+
+% parser failed at source line 397
