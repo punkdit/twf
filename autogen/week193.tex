@@ -156,7 +156,9 @@ an E_{8} lattice, each sphere touches 240 others.  The reason is that the
 shortest nonzero vectors in this lattice, the so-called "roots", have
 length-squared equal to 2, and there are 240 of them:
 
+
 \begin{verbatim}
+
 (1,1,0,0,0,0,0,0) and all permutations thereof:
 there are 8 choose 2 = 28 of these
 
@@ -184,7 +186,9 @@ there is 1 of these
     
 for a total of 
 
+
 \begin{verbatim}
+
 
 28 x 6 + 70 + 2 = 168 + 72 = 240
 \end{verbatim}
@@ -271,17 +275,21 @@ other words, a rescaled version of the E_{8} lattice.
 
 First, we include &#177;e_{i} for i=0,...,7.  Second, we include 
 
-\begin{verbatim}
-(&#177; 1 &#177; e<sub>i</sub> &#177; e<sub>j</sub> &#177; e<sub>k</sub>)/2
-\end{verbatim}
+
+$$
+
+(&#177; 1 &#177; e_{i} &#177; e_{j} &#177; e_{k})/2
+$$
     
 whenever e_{i}, e_{j} and e_{k}
 are imaginary octonions that all lie on the
 same line in the above chart.  Third, we include
 
-\begin{verbatim}
-(&#177; e<sub>i</sub> &#177; e<sub>j</sub> &#177; e<sub>k</sub> &#177; e<sub>l</sub>)/2
-\end{verbatim}
+
+$$
+
+(&#177; e_{i} &#177; e_{j} &#177; e_{k} &#177; e_{l})/2
+$$
     
 whenever
 e_{i}, e_{j}, e_{k} and e_{l}
@@ -299,7 +307,9 @@ multiplication.  You can save some work by noticing that each line in
 the Fano plane gives a copy of the quaternions sitting inside the
 octonions.  Moreover, the 24 quaternions of the form
 
+
 \begin{verbatim}
+
 &#177;1, &#177;i, &#177;j, &#177;k,   (&#177; 1 &#177; i &#177; j &#177; k)/2
 \end{verbatim}
     
@@ -342,19 +352,25 @@ as "Lie superalgebras"; I'm talking about taking a plain old
 Lie algebra L and writing it as a direct sum of subspaces L(i), one for
 each integer i, such that
 
+
 \begin{verbatim}
+
 [L(i), L(j)] is contained in L(i+j).
 \end{verbatim}
     
 If only the middle 3 of these subspace are nonzero, like so:
 
+
 $$
+
 L = L(-1) \oplus  L(0) \oplus  L(1)
 $$
     
 we say L is "3-graded". If only the middle 5 are nonzero, like so:
 
+
 $$
+
 L = L(-2) \oplus  L(-1) \oplus  L(0) \oplus  L(1) \oplus  L(2)
 $$
     
@@ -367,14 +383,18 @@ it acts on each other space L(i) by means of the bracket.  Third of all,
 if L is 3-graded, we can give L(1) a product by picking any element k of
 L(-1) and defining
 
+
 \begin{verbatim}
+
 x o y = [[x,k],y]
 \end{verbatim}
     
 This product automatically satisfies two of identities defining
 a Jordan algebra: 
 
+
 \begin{verbatim}
+
 x o y = y o x
 
 x o ((x o x) o y) = (x o x) o (x o y)
@@ -405,7 +425,9 @@ roots where the first coordinate takes on some fixed value.  The first
 coordinate can be 1, 1/2, 0, -1/2, or -1, so we get a 5-grading.  Let's
 work out how many roots there are of each kind:
 
+
 $$
+
 The number of roots with a "1" as the first component is
 7 + 7 = 14.
 
@@ -436,7 +458,9 @@ L(0).  Thus in this example the dimension of L(0) is not just 84 but 84
 + 8 = 92.  Some basic stuff about simple Lie algebra guarantees that
 this trick always works: we get
 
+
 \begin{verbatim}
+
 [L(i), L(j)] is contained in L(i+j)
 \end{verbatim}
     
@@ -444,7 +468,9 @@ as desired.
 
 So, in this example we get a 5-grading where
 
+
 $$
+
 E_{8} =  L(-2) \oplus  L(-1) \oplus  L(0) \oplus  L(1) \oplus  L(2)
 248 =  114  +  64   +  92   +  64  +  14
 $$
@@ -464,7 +490,9 @@ In this example this smaller Lie algebra is so(14), which has dimension
 the 14-dimensional vector rep... and similarly for L(-1) and L(-2).  
 So we get a very "14-dimensional" picture of E_{8}:
 
+
 $$
+
 E_{8} =  [vectors] \oplus  [spinors] \oplus  [so(14) \oplus  u(1)] \oplus  [spinors] \oplus  [vectors]
 $$
     
@@ -474,15 +502,19 @@ picture of E_{8} as the Cayley integral octonions!  Let's do this, and let
 each slice go through those roots where the "real part"
 x_{0} of our octonion
 
-\begin{verbatim}
-x<sub>0</sub> + x<sub>1</sub> e<sub>1</sub> + ... + x<sub>7</sub> e<sub>7</sub>
-\end{verbatim}
+
+$$
+
+x_{0} + x_{1} e_{1} + ... + x_{7} e_{7}
+$$
     
 takes on some fixed value.  This value can be 1, 1/2, 0, -1/2,
 or -1, so we again get a 5-grading.  Let's count the number of roots in
 each slice:
 
+
 \begin{verbatim}
+
 The number of roots with real part 1 is 1.
 
 The number of roots with real part 1/2 is 56.
@@ -497,16 +529,20 @@ The number of roots with real part -1 is 1.
 Here I got 56 roots with real part 1/2 by multiplying the number of lines
 in the Fano plane by the number of sign choices in
 
-\begin{verbatim}
-(1 &#177; e<sub>i</sub> &#177; e<sub>j</sub> &#177; e<sub>k</sub>)/2
-\end{verbatim}
+
+$$
+
+(1 &#177; e_{i} &#177; e_{j} &#177; e_{k})/2
+$$
     
 Similarly for the roots with real part -1/2.  I got 126 roots with real
 part 0 by subtracting all the other numbers on my list from 240.
 
 So, we get a 5-grading of E_{8} like this:
 
+
 $$
+
 E_{8} =  L(-2) \oplus  L(-1) \oplus  L(0) \oplus  L(1) \oplus  L(2)
 248 =   1   +  56   +  134  +  56  +  1
 $$
@@ -532,7 +568,9 @@ but the reason it's \emph{true} is that if you take the roots of E_{8} that are
 orthogonal to any one root, you get the roots of E_{7}.  So, we get a very
 E_{7}-ish description of E_{8}:
 
+
 $$
+
 E_{8} =  [trivial] \oplus  [Freudenthal] \oplus  [E_{7} \oplus  u(1)] \oplus  [Freudenthal] \oplus  [trivial]
 $$
     
@@ -553,7 +591,9 @@ trick on a smaller scale to get gradings of the Lie algebra
 E_{7}.  If we do this in a nice way, we get a 3-grading of
 E_{7}:
 
+
 $$
+
 E_{7}  =  L(-1) \oplus  L(0) \oplus  L(1)
 133 =    27  +  79  +  27
 $$
@@ -569,7 +609,9 @@ determinant, and in fact h_{3}(O) is an irrep of
 E_{6}.  L(-1) is just the dual of this rep.  So, we get a very
 octonionic description of E_{7}:
 
+
 $$
+
 E_{7} = h_{3}(O)* \oplus  [E_{6} \oplus  u(1)] \oplus  h_{3}(O)
 $$
     
@@ -578,7 +620,9 @@ Now, since E_{6} sits in E_{7} which sits in
 E_{8}, just like nested Russian dolls, we can take our
 previous description of E_{8}:
 
+
 $$
+
 E_{8}  =  [trivial] \oplus  [Freudenthal] \oplus  [E_{7} + u(1)] &oplus [Freudenthal] \oplus  [trivial]
 $$
     
@@ -588,14 +632,18 @@ do this, the only new exciting thing that happens is that the
 Freudenthal algebra decomposes into a copy of the exceptional Jordan
 algebra, a copy of its dual, and two copies of the trivial rep:
 
+
 $$
+
 [Freudenthal] = [trivial] \oplus  h_{3}(O)* \oplus  h_{3}(O) \oplus  [trivial] 
 $$
     
 At least I \emph{think} this is right: people sometimes write elements
 of the Freudenthal algebra as 2\times 2 matrices
 
+
 \begin{verbatim}
+
 a x 
 y b
 \end{verbatim}
@@ -617,7 +665,9 @@ exponentiate these infinitesimal symmetries, we don't usually get
 automorphisms of L(1), since there's no reason for the element
 "k" to preserved - remember that
 
+
 \begin{verbatim}
+
 x o y = [[x,k],y]
 \end{verbatim}
     
@@ -663,7 +713,9 @@ Thomas Larsson has made a nice table of all the formally real
 simple Jordan algebras you get from 3-graded simple Lie algebras, 
 and here it is, slightly modified:
 
+
 $$
+
 Lie algebra L   L'(0)           dim(L(1))      Jordan algebra L(1)
 
 sl(n+1)         sl(n)           n               R^{n-1} \oplus  R
@@ -679,7 +731,9 @@ $$
 Since L(0) always contains a u(1) summand in these cases, we
 write 
 
+
 \begin{verbatim}
+
 L(0) = L'(0) + u(1)
 \end{verbatim}
     
@@ -792,11 +846,8 @@ perception that is at the same time the \textbf{desire} to understand
 this substance, to penetrate it.</em> - Alexandre Grothendieck, 
 \emph{R&eacute;coltes et Semailles}, p. 556.
  
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 906

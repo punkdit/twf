@@ -233,7 +233,9 @@ the complex numbers plus a point at infinity.  This has \emph{infinitely}
 many symmetries.  They're called conformal transformations, and they
 all look like this:
 
+
 $$
+
            az + b
 z |--->   --------
            cz + d
@@ -263,7 +265,9 @@ quartic curve as a Riemann surface.  Sitting inside PSL(2,C) is
 PSL(2,Z), where we only use integers a,b,c,d in our fractional linear 
 transformation
 
+
 $$
+
            az + b
 z |--->   --------
            cz + d 
@@ -275,7 +279,9 @@ way of thinking about the hyperbolic plane.
 Sitting inside PSL(2,Z) is a group \Gamma (7) consisting of guys where 
 the matrix 
 
+
 \begin{verbatim}
+
 a  b
 
 c  d 
@@ -283,7 +289,9 @@ c  d
     
 is congruent to the identity:
 
+
 \begin{verbatim}
+
 1  0
 
 0  1
@@ -416,7 +424,9 @@ Astrologers liked to list the planets in order of decreasing orbital
 period, counting the sun as having a period of one year, and the moon 
 as period of one month:
 
+
 \begin{verbatim}
+
 Saturn    (29 years)  
 Jupiter   (12 years) 
 Mars      (687 days)  
@@ -435,7 +445,9 @@ Each day was then named after the first hour in that day.  Since
 24 mod 7 equals 3, this amounts to taking the above list and cycling
 around it, reading off every third planet:
  
+
 \begin{verbatim}
+
 Saturn  (Saturday)  
 Sun     (Sunday)   
 Moon    (Monday)  
@@ -466,6 +478,294 @@ to get the Klein quartic curve:
 Gerard Westendorp had some interesting comments on what
 I wrote:
 
+\begin{quote}
+If you take Euler's formula
+
+$$
+
+     V+F-E = 2-2\times holes
+$$
+    
+then you can figure out that for a (7,3) tiling with N heptagons,
+you have
+
+\begin{verbatim}
+
+     V = 7N/3
+     F = N
+     E = 7N/2
+\end{verbatim}
+    
+so that
+
+$$
+
+     N = 12\times (holes-1)
+$$
+    
+Here's the table of solutions:
+
+\begin{verbatim}
+
+   holes    N
+    0      -12
+    1       0
+    2       12
+    3       24
+    4       36
+    .       . 
+    .       . 
+\end{verbatim}
+    
+So indeed, there are no solutions for 0 holes (sphere)
+or 1 hole (torus).  But a 2-holed torus should be possible,
+as well as the 24-faced 3-holed one.
+
+Anyway, see if I can visualise the 3-holed one.
+
+If you start with a sphere, i.e. genus 0, and drill
+a tunnel through it, you will get a genus 1 object. On
+the outer surface, you see 2 holes, one for each side
+of the "tunnel". (I use the word "tunnel"
+for something into a 3D object, and "hole" for something
+in a 2D surface.)
+
+Next, you can drill a second tunnel, and get a genus 2 object,
+and you would see 4 holes on the outer surface.
+But a nice trick is to drill not to the outer surface,
+but to a secret "cave" in the middle where you meet the
+first tunnel. Here you stop drilling. To complete
+the genus-3 object, you drill the third tunnel again not
+to the outer surface, but to the central cave. Thus, you
+get and object with genus 3, which has 4 holes on its
+outer surface, each leading to a central cave.
+
+Confusingly, 4 tunnels to a central cave is topologically
+the same as 3 separate tunnels!  The trick is that tunnels
+do not have to end on the outer surface, the inner surface
+is topologically the same.
+
+OK, so we have an object with 4 holes on its outer surface.
+4 holes \to  tetrahedron...
+
+I built a cardboard model of a tetrahedron with a central
+cave.  Truncated tetrahedrons together with tetrahedrons
+can fill space.  So you can stack 4 truncated tetrahedra
+on top of each other, leaving a hole in the shape of
+an imaginary 5th one. Then use tetrahedra to fill up
+some gaps. This was basically the shape I built outof
+cardboard. Then, I spent rather a long time trying to
+tile this with heptagons. A clue to a solution was
+that a triangulation of the surface I made had 120
+triangle, and 120 = 24\times 5. What is so good about 5?
+Well, 5 triangles stuck together have 7 outer sides,
+sop they are a kind of pseudo heptagons. Anyway, I
+got a bit frustrated, and did not find a nice tiling.
+
+As I was trying to figure it out, I found this site:
+<A HREF = "http://www.math.uni-siegen.de/wills/klein/">http://www.math.uni-siegen.de/wills/klein/</A>
+It has some nice pictures.
 
 
-% parser failed at source line 586
+\begin{verbatim}
+
+  > These are like the driving directions the devil gives people who ask
+  > the way out of hell.  LRLRLRLR and you're right back where you started.
+\end{verbatim}
+    
+Btw, this works the same on other polyhedra, e.g. the cube.
+
+
+\begin{verbatim}
+
+  > Saturn  (Saturday)
+  > Sun     (Sunday)
+  > Moon    (Monday)
+  > Mars    (Tuesday)
+  > Mercury (Wednesday)
+  > Jupiter (Thursday)
+  > Venus   (Friday)
+\end{verbatim}
+    
+
+My French is not so good, but in French some names look more
+convincing:
+
+
+\begin{verbatim}
+
+    tuesday = mardi (Mars?)
+    wednesday = mercredi (Mercury?)
+    thursday = jeudi (Jove?)
+    friday = vendredi (Venus?)
+\end{verbatim}
+    
+
+Gerard
+\end{quote}
+
+I replied:
+
+\begin{quote}
+Gerard Westendorp wrote:
+
+
+\begin{verbatim}
+
+ > John Baez wrote:
+
+ >  > It's called "{7,3}", since it's made of 7-sided figures with 3
+ >  > meeting at each corner.
+
+ >  > Can we cut out a portion of this tiling and curl it up to get
+ >  > a torus?  No!  But, we can curl up a portion to get a 3-holed
+ >  > torus - like the surface of a doughnut with three holes.  But,
+ >  > we can only do this if we use precisely 24 heptagons!
+
+ >If you take Euler's formula [....]
+
+ >So indeed, there are no solutions for 0 holes (sphere),
+ >1 hole( torus). But a 2-holed torus should be possible,
+ >as well as the 24-faced 3-holed one.
+\end{verbatim}
+    
+
+I was going to talk about this, but I figured my article
+was getting too long.  
+
+Indeed, Euler's formula also allows the possibility of a 
+\emph{2-holed} torus tiled with 12 heptagons meeting 3 at each corner.  
+
+But this does not prove such a tiling is possible.  I don't know 
+if it is!  Someone should try it.
+
+However: even if such a tiling exists, it's not possible for each 
+rotational symmetry of each heptagon to extend to a symmetry 
+of the whole tiled surface.   What's marvelous about the 3-holed
+case is that they all do - at least if you do things correctly.
+This is what makes the Klein quartic a full-fledged "Platonic 
+surface".
+
+If you look here:
+
+<UL>
+<LI>
+Hermann Karcher and Mattias Weber, The Geometry of Klein's Riemann Surface,
+in The Eightfold Way: the Beauty of Klein's Quartic Curve, 
+ed. Silvio Levy, MSRI Research Publications 35, Cambridge U. Press, 
+Cambridge 1999. Also available as
+<A HREF = "http://www.msri.org/publications/books/Book35/files/karcher.pdf">
+PDF</A> and
+<A HREF = 
+"http://www.msri.org/publications/books/Book35/files/karcher.ps.gz">gzipped
+Postscript</A>.
+</UL>
+
+you'll see that Karcher and Weber study Platonic surfaces using Euler's 
+formula.
+
+On pages 13-19 they consider Platonic surfaces with 2 holes.
+On page 19 they give a clever proof that no tiling of the 2-holed torus 
+by heptagons meeting 3 at each corner can be a Platonic surface. 
+The proof is so clever that I don't understand it.
+
+(Warning: their article starts on page 9.)  
+
+
+\begin{verbatim}
+
+ >Anyway, see if I can visualise the 3-holed one.
+\end{verbatim}
+    
+
+I wish I could visualize it myself.
+
+
+\begin{verbatim}
+
+ >As I was trying to figure it out, I found this site:
+ ><A HREF = "http://www.math.uni-siegen.de/wills/klein/">http://www.math.uni-siegen.de/wills/klein/</A>
+ >It has some nice pictures.
+\end{verbatim}
+    
+
+These pictures are interesting, but what I'd really like
+is a nice picture of a 3-holed torus, not weird or crumpled up, 
+which is tiled by 24 heptagons just like the Klein quartic.
+ 
+The heptagons can't all be regular if the torus is embedded in
+R^{3}, since there's no way to embed a compact surface of constant
+negative curvature in R^{3}.  
+But, you \emph{can} get the \emph{topology}
+correct and still have the torus embedded in R^{3}.
+
+If anyone draws such a picture, and I think it looks nice, I'd love
+to put it on This Week's Finds!
+
+If anyone wants instructions on how such a surface should be made, 
+look above, where Mike Stay has kindly drawn numbers from 1-24 on a 
+portion of the hyperbolic plane tiled with heptagons.  These numbers 
+indicate how to identify heptagons to get the Klein quartic.  For example, 
+all the heptagons labelled "21" are really the same 
+heptagon in the Klein quartic.
+
+
+\begin{verbatim}
+
+ >  > Saturn  (Saturday)
+ >  > Sun     (Sunday)
+ >  > Moon    (Monday)
+ >  > Mars    (Tuesday)
+ >  > Mercury (Wednesday)
+ >  > Jupiter (Thursday)
+ >  > Venus   (Friday)
+
+ >My French is not so good, but in French some names look more
+ >convincing:
+ >
+ >    tuesday = mardi (Mars?)
+ >    wednesday = mercredi (Mercury?)
+ >    thursday = jeudi (Jove?)
+ >    friday = vendredi (Venus?)
+\end{verbatim}
+    
+
+Yes, this because most of the English names for planets come from 
+Latin, and French is more like Latin.  
+
+English is more complicated, but I'm so used to it that I forgot 
+people might find the connection to Latin mysterious:
+
+<UL>
+<LI>
+"Tuesday" comes from 
+"Tiu" or "Tyr", an ancient Germanic god of war whom 
+the Romans identified with Mars.  We see traces of this in the German 
+"Dienstag" as well.
+
+<LI>
+"Wednesday" comes from "Woden" or 
+"Odin", a Germanic god whom the Romans
+identified with Mercury.  Modern German uses "Mittwoch" 
+instead, which means "mid-week".
+ 
+<LI>
+"Thursday" comes from "Thor", 
+a Germanic thunder god whom the Romans 
+identified with Jupiter.  Modern German uses "Donnerstag" instead,
+with "Donner" meaning "thunder".
+
+<LI>
+"Friday" comes from "Freya" or 
+"Frigga", a Germanic goddess of married love whom
+the Romans identified with Venus.  The German "Freitag" 
+is very similar.
+</UL>
+
+\end{quote}
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

@@ -37,7 +37,9 @@ Using the magic of calculus, we can think of tangent vectors at the
 identity element of SO(n) as "infinitesimal rotations".  So for
 example, taking n = 3, let's start with the rotation by the angle t
 about the z axis, given by the matrix:
+
 \begin{verbatim}
+
 cost  -sint  0
 sint   cost  0
 0      0     1
@@ -45,7 +47,9 @@ sint   cost  0
     
 Then we can differentiate this and set t = 0 to get an "infinitesimal
 rotation about the z axis":
+
 \begin{verbatim}
+
 0    -1     0
 1     0     0
 0     0     0
@@ -294,14 +298,18 @@ rather than S+.)  And let's call the vector representation V.   And let's
 be sloppy, the way people usually are, and also use these letters to stand 
 for the 8-dimensional vector spaces on which so(8) acts as transformations.
 Now let's form the direct sum of vector spaces
+
 \begin{verbatim}
+
                   so(8)  +  S+  +  S-  +  V
 \end{verbatim}
     
 A vector in this vector space is just a list consisting of a 
 guy in so(8), a guy in S+, a guy in S-, and a guy in V.  The
 dimension of this vector space is therefore
+
 \begin{verbatim}
+
                     28   +  8   +  8   +  8  =  52
 \end{verbatim}
     
@@ -332,7 +340,9 @@ right - I've been pretty vague, so I leave it to you to fill
 in the details - you can get this bracket to satisfy the Lie 
 algebra axioms, and you get F4!
 Emboldened with our success, we now look at the vector space
+
 \begin{verbatim}
+
            so(8) + so(8) + end(S+) + end(S-) + end(V)
 \end{verbatim}
     
@@ -340,7 +350,9 @@ Here end(S+) is the space of all linear transformations of
 the vector space S+, so if you like, it's just the space
 of 8x8 matrices.  Similarly for end(S-) and end(V).  Now the
 dimension of this space is
+
 \begin{verbatim}
+
             28   +  28    +   64   +   64    +   64   =  248
 \end{verbatim}
     
@@ -407,7 +419,9 @@ The Dynkin diagram approach also makes it clear \emph{why} triality
 exists: symmetries of Dynkin diagrams always give outer automorphisms
 of the corresponding Lie algebras, and as you examine the Dynkin
 diagrams of D_n, you get
+
 \begin{verbatim}
+
  
               o  
                 
@@ -449,13 +463,17 @@ D_2 is two copies of A_1, and D_3 is the same as A_3.  However,
 there is no shame in doing so, and indeed a lot of insight to 
 be gained: the fact that D_2 consists of two copies of A_1 
 corresponds to the isomorphism
+
 \begin{verbatim}
+
                    so(4) = su(2) + su(2),
 \end{verbatim}
     
 while the fact that D_3 is the same as A_3 corresponds to the 
 isomorphism
+
 \begin{verbatim}
+
                    so(6) = su(4).
 \end{verbatim}
     
@@ -464,7 +482,9 @@ long and interesting discussion.  However, I will refrain.  Here
 let me simply note that you can always "fold" a Dynkin diagram using
 one of its symmetries, and if you do this to D_4 using triality
 you go from 
+
 \begin{verbatim}
+
               o  
              /   
         o---o        D_4
@@ -474,7 +494,9 @@ you go from
 \end{verbatim}
     
 down to
+
 \begin{verbatim}
+
            6
          o->-o        G_2
 \end{verbatim}
@@ -484,7 +506,9 @@ down to
 to indicate this.  The arrow points from the long root to the shorter
 root.)  This corresponds to how G_2 is the subgroup of Spin(8) consisting 
 of elements that are invariant under triality.  You can also go from
+
 \begin{verbatim}
+
                o  
                |          
        o---o---o---o---o    E_6
@@ -492,7 +516,9 @@ of elements that are invariant under triality.  You can also go from
 \end{verbatim}
     
 down to
+
 \begin{verbatim}
+
 
              4
        o---o->-o---o    F_4
@@ -523,11 +549,8 @@ into a description of 2-Hilbert spaces.
 In writing this Week's Finds, I benefitted greatly from email
 correspondence with Robt Bryant, Christopher Henrich, 
 Geoffrey Mess, Friedrich Knop, and others.
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 629

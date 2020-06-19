@@ -214,7 +214,9 @@ For this you need to realize that for any n, there's a group B_{n}
 whose elements are n-strand braids.  For example, here's an element
 of B_{3}:
 
+
 \begin{verbatim}
+
 |   |  |  
  \ /   | 
   /    |       
@@ -247,7 +249,9 @@ as nailed to the ceiling and floor.
 How do braids become a group?  Easy: we multiply them by putting 
 one on top of the other.  For example, this braid:
 
+
 \begin{verbatim}
+
      |   |   |
       \ /    |
 A  =   /     |
@@ -257,7 +261,9 @@ A  =   /     |
     
 times this one:
 
+
 \begin{verbatim}
+
      |   |   |   
      |    \ /    
 B =  |     /    
@@ -267,7 +273,9 @@ B =  |     /
     
 equals this:
 
+
 \begin{verbatim}
+
      |   |   |
       \ /    |
        /     |
@@ -331,6 +339,71 @@ Wong and Wu:
 
 \textbf{Theorem:} For n > 3, \pi _{n}(S^{2}) is
 BB_{n}</sub>(S^{2}) modulo the image of f.
+\end{quote}
+
+In something more like plain English: when n is big enough, the 
+nth homotopy group of the 2-sphere consists of spherical Brunnian
+braids modulo ordinary Brunnian braids!
+
+Zounds!  What do the homotopy groups of S^{2} have to do with
+braids?  It's not supposed to be obvious!  The proof of this result is
+long and deep, making use of flows on metric spaces, and also the fact
+that all the Brunnian braid groups BB_{n} fit together into a
+"simplicial group" whose nth homology is the nth homotopy
+group of S^{2}.  I'd love to understand all this stuff, but I
+don't yet.
+
+This result doesn't instantly help us "compute" the homotopy
+groups of S^{2} - at least not in the sense of writing them
+down as a product of groups like Z/p^{n}.  But, it gives a new view of
+these homotopy groups, and there's no telling where this might lead.
+
+When I was first getting ready to write this article, I was also 
+going to tell you about some amazing descriptions of the homotopy 
+groups of the <i>3-sphere</i>, due to Wu.  
+
+However, I later realized - first to my shock, and then my
+embarrassment for not having known it already - that the nth homotopy
+group of S^{3} is <i>the same</i> as the nth homotopy group of
+S^{2}, at least for n > 2.  Do you see why?
+
+Given this, it turns out that Wu's results are predecessors of the
+theorem just stated, a bit more combinatorial and less "geometric".
+Wu's results appeared here:
+
+12) Jie Wu, On combinatorial descriptions of the homotopy groups of 
+certain spaces, Math. Proc. Camb. Phil. Soc. 130 (2001), 489-513.
+Also available at <a href = "http://www.math.nus.edu.sg/~matwujie/newnewpis_3.pdf">http://www.math.nus.edu.sg/~matwujie/newnewpis_3.pdf</a>
+
+Jie Wu, A braided simplicial group, Proc. London Math. Soc. 84 
+(2002), 645-662.  Also available at
+<a href = "http://www.math.nus.edu.sg/~matwujie/wgroup05-19-01.pdf">
+http://www.math.nus.edu.sg/~matwujie/wgroup05-19-01.pdf</a>
+
+and there's a nice summary of these results on his webpage:
+
+13) Jie Wu, 2.1 Homotopy groups and braids, halfway down the page at
+<a href = "http://www.math.nus.edu.sg/~matwujie/Research2.html">http://www.math.nus.edu.sg/~matwujie/Research2.html</a>
+
+See also this expository paper:
+
+14) Fred R. Cohen and Jie Wu, On braid groups and homotopy groups, 
+Geometry \text{\&}  Topology Monographs 13 (2008), 169-193.  Also available
+at
+<a href = "http://www.math.nus.edu.sg/~matwujie/cohen.wu.GT.revised.29.august.2007.pdf">http://www.math.nus.edu.sg/~matwujie/cohen.wu.GT.revised.29.august.2007.pdf</a>
+
+Next I want to talk about puzzle mentioned at the start of this Week's
+Finds... but first I should answer the puzzle I just raised.  Why do
+the homotopy groups of S^{2} match those of S^{3}
+after a while?  Because of the Hopf fibration!  This is a fiber bundle
+with S^{3} as total space, S^{2} as base space and
+S^{1} as fiber:
+
+S^{1} \to  S^{3} \to  S^{2}
+
+Like any fiber bundle, it gives a long exact sequence of homotopy
+groups as explained in "<a href = "week151.html">week151</A>":
 
 
-% parser failed at source line 412
+
+% parser failed at source line 493

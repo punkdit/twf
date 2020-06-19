@@ -19,7 +19,9 @@ to stuff you already knew when q = 1.
 
 First we talked about the q-derivative:
 
+
 \begin{verbatim}
+
               f(qx) - f(x)
               ------------
                  qx - x
@@ -38,13 +40,17 @@ Publ. du Centre de Recherches Math., Universite de Montreal, Montreal,
 Next we took an idiosyncratic detour into "q-arithmetic".  We
 started with the q-integers:
 
+
 $$
+
 [n] = 1 + q + ... + q^{n-1}
 $$
     
 which show up first from the fact that the q-derivative of x^{n} is 
 
+
 $$
+
                (qx)^{n} - x^{n}
               ------------ = [n] x^{n-1}
                  qx - x
@@ -87,19 +93,25 @@ annihilation and creation operators a and a* which push us up and down
 this ladder of states.  We can describe these very efficiently if
 we think of states as being polynomials, with
 
+
 $$
+
 |n> = x^{n} / n!
 $$
     
 In these terms, the creation operator a* is just multiplication by x,
 while the annihilation operator a is differentiation.  These satisfy
+
 $$
+
  a|n>  =        |n-1>
 a*|n>  =  (n+1) |n+1>
 $$
     
 so we get the commutation relations
+
 \begin{verbatim}
+
 a a* - a* a = 1 
 \end{verbatim}
     
@@ -110,14 +122,18 @@ good reason for this, which will become clear in due course.
 We can define other operators starting from the annihilation and
 creation operators.  First, there's the harmonic oscillator Hamiltonian:
 
+
 \begin{verbatim}
+
 H = a* a
 \end{verbatim}
     
 As you can easily check for yourself, it has our nice basis of states 
 as eigenvectors:
 
+
 $$
+
 H|n> = n |n>
 $$
     
@@ -126,7 +142,9 @@ nth state is just n.
 
 Next, we can define position and momentum operators Q and P by:
       
+
 \begin{verbatim}
+
         (a + a*) 
 Q =    ----------
          sqrt(2)
@@ -139,7 +157,9 @@ P =    ----------
     
 It's easy to check that they satisfy the same commutation relations
 
+
 \begin{verbatim}
+
 PQ - QP = -i
 \end{verbatim}
     
@@ -153,31 +173,41 @@ let's q-deform the Fock representation.  It's pretty simple: we leave
 the creation operator alone, but use the q-derivative as our annihilation
 operator!  This gives the q-deformed commutation relations:
 
+
 \begin{verbatim}
+
 a a* - q a* a = 1
 \end{verbatim}
     
 If we now define a basis of states by 
 
+
 $$
+
 |n> = x^{n} / [n]!
 $$
     
 we get 
+
 $$
+
  a|n>  =        |n-1>
 a*|n>  =  [n+1] |n+1>
 $$
     
 We can also define a q-deformed Hamiltonian by
 
+
 \begin{verbatim}
+
 H = a* a
 \end{verbatim}
     
 and we get
 
+
 $$
+
 H|n> = [n] |n>
 $$
     
@@ -202,7 +232,9 @@ be the \emph{number}
 of all ways we can put this structure on a k-element set.  Then we can
 define a function |F| by
 
+
 $$
+
                |F_{k}| 
 |F|(x) =   &sum;  -----  x^{k}
                 k!
@@ -218,7 +250,9 @@ There are 2^{k} ways to do this to a k-element set, so
 |F_{k}| = 2^{k}
 
 and thus
+
 $$
+
               2^{k} 
 |F|(x) =  &sum;  ----  x^{k}
               k!
@@ -228,7 +262,9 @@ $$
     
 More generally, if F is "n-colorings", its generating function is
 
+
 \begin{verbatim}
+
 |F|(x) = exp(nx)
 \end{verbatim}
     
@@ -237,7 +273,9 @@ n-element set".  This is such a boring structure that you might never
 have thought about it.  There's exactly one way to put this structure on
 an k-element set if k = n, and none if k is different from n, so
 
+
 $$
+
 |G|(x) =  x^{n} / n!
 $$
     
@@ -252,7 +290,9 @@ identical bosons may not be so weird after all.
 
 The generating function
 
+
 \begin{verbatim}
+
 |F|(x) = exp(nx)
 \end{verbatim}
     
@@ -280,7 +320,9 @@ define a type of structure F+G by saying an F+G-structure on the set S
 consists of either an F-structure on S or a G-structure on S.  This
 gives us
 
+
 \begin{verbatim}
+
 |F+G| = |F| + |G| 
 \end{verbatim}
     
@@ -311,7 +353,9 @@ consists of a way of chopping S into two disjoint subsets and putting an
 F-structure on the first subset and a G-structure on the second.  If we
 make this definition, we get
 
+
 \begin{verbatim}
+
 |FG| = |F| |G|
 \end{verbatim}
     
@@ -321,7 +365,9 @@ Now let's invent a creation operation A* on structure types that reduces
 to the usual creation operator a* when we take their generating
 functions.  In other words, we want an operation A* with 
 
+
 \begin{verbatim}
+
 |A*F| = a*|F|
 \end{verbatim}
     
@@ -329,7 +375,9 @@ The operator a* is multiplication by x, and we've seen that x is the
 generating function of the structure type "being a 1-element set".   
 So if we call that structure type X, the operation
 
+
 \begin{verbatim}
+
 A*F = XF
 \end{verbatim}
     
@@ -355,7 +403,9 @@ So the creation operator really does push the particle number up by one.
 In  particular, if we stretch our notation and let |n> stand for the
 structure type "being an n-element set", we get
 
+
 $$
+
 A*|n> = (n+1) |n+1>
 $$
     
@@ -366,13 +416,17 @@ A.  To put an AF-structure on the set S, we pick an extra point, say *,
 and put an F-structure on the disjoint union S U {*}.  I'll let you
 check that with this definition,
 
+
 \begin{verbatim}
+
 |AF| = a|F|
 \end{verbatim}
     
 and
 
+
 $$
+
 A|n> = |n-1>
 $$
     
@@ -380,7 +434,9 @@ as desired.
 
 The creation and annihilation operators are linear:
 
+
 \begin{verbatim}
+
  A(F+G) =  AF + AG
 A*(F+G) = A*F + A*G
 \end{verbatim}
@@ -388,13 +444,17 @@ A*(F+G) = A*F + A*G
 where the equals sign is secretly an isomorphism... you see, we're
 categorifying!  We also have an isomorphism
 
+
 \begin{verbatim}
+
 A A* = A* A + 1
 \end{verbatim}
     
 which is just a categorified version of 
 
+
 \begin{verbatim}
+
 a a* = a* a + 1,
 \end{verbatim}
     
@@ -457,7 +517,9 @@ projective space consisting of all lines through the origin in V, we
 should think of P(V) as a q-deformed version of an n-element set.  For
 example, the number of points in P(V) is the q-integer
 
+
 $$
+
 [n] = 1 + q + ... + q^{n-1}
 $$
     
@@ -469,7 +531,9 @@ on P(V) when V is our favorite k-dimensional vector space.  Let |F_{k}| be
 the \emph{number} of all ways we can do this.  Then we can define the
 generating function |F| by
 
+
 $$
+
               |F_{k}| 
 |F|(x) =  &sum;  -----  x^{k}
               [k]!
@@ -480,7 +544,9 @@ Now there's a q-factorial in the denominator!
 
 We can add structure types just as before, and get
 
+
 \begin{verbatim}
+
 |F+G| = |F| + |G|
 \end{verbatim}
     
@@ -488,7 +554,9 @@ However, we have to multiply them differently.  To put an FG-structure
 on P(V), we pick a subspace U of V and put an F-structure on P(U) and
 a G-structure on P(V/U).  With this sneaky definition we get
 
+
 \begin{verbatim}
+
 |FG| = |F| |G| 
 \end{verbatim}
     
@@ -502,7 +570,9 @@ we take a 1-dimensional vector space L and put an F-structure on
 P(V+L).  Note that these definitions are almost like the old ones!
 But now we get the q-deformed commutation relation:
 
+
 \begin{verbatim}
+
 A A* = q A* A + 1
 \end{verbatim}
     
@@ -511,20 +581,26 @@ The equation here is really an isomorphism.
 If we let |n> be the structure of "being the projectivization of an
 n-dimensional vector space", we have
 
+
 $$
+
  A|n>  =        |n-1>
 A*|n>  =  [n+1] |n+1>
 $$
     
 We can also define a Hamiltonian by
 
+
 \begin{verbatim}
+
 H = A* A
 \end{verbatim}
     
 and we get
 
+
 $$
+
 H|n> = [n] |n>
 $$
     
@@ -539,7 +615,9 @@ level a notch now.
 First, here's how Joyal's theory works.   A "structure type" is 
 really a functor
 
+
 $$
+
 F: FinSet_{0} \to  Set
 $$
     
@@ -570,7 +648,9 @@ But I want to explain exactly what this means!
 In Platonic heaven, there's an enormous chart showing how you can
 categorify all sorts of concepts.  It starts out something like this:
 
+
 \begin{verbatim}
+
 
    MATHEMATICS BASED ON SETS          MATHEMATICS BASED ON CATEGORIES
 
@@ -640,16 +720,18 @@ bottom of things!
 
 I hope the general picture is clear:
 
-\begin{verbatim}
+
+$$
+
 
   q = 1                         q = a power of a prime number    
 
-  finite sets                   projective spaces over F<sub>q</sub>
-  permutation groups S<sub>n</sub>         projective special linear groups PSL(n,F<sub>q</sub>)
+  finite sets                   projective spaces over F_{q}
+  permutation groups S_{n}         projective special linear groups PSL(n,F_{q})
   structure types               q-deformed structure types
   Fock representation           q-deformed Fock representation
 
-\end{verbatim}
+$$
     
 We're thinking of the groupoid formed by the projective spaces and their
 symmetry groups PSL(n,F_{q}) as a q-deformed version of the groupoid
@@ -662,7 +744,9 @@ groups S_{n} and the groups PSL(n).   The groups PSL(n) have Dynkin
 diagrams like this: 
 
                
+
 \begin{verbatim}
+
 
                     o----o----o----o----o----o
 
@@ -679,6 +763,3 @@ I'll talk a bit about this next week.
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 752

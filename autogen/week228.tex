@@ -177,7 +177,7 @@ self-organized criticality.  In the words of Jos Thijssen:
      grains is simply performed by selecting a column at random and 
      increasing its height by one.  If the column then exceeds its 
      neighbours in height more than some threshold, it 
-     will &quot;collapse&quot;: 
+     will "collapse": 
      it will lose some grains which are distributed evenly over its 
      nearest neighbours.  As this collapse alters the height differences 
      involving those neighbours, there is the possibility that they 
@@ -196,9 +196,8 @@ self-organized criticality.  In the words of Jos Thijssen:
      intrinsic scale (e.g. exponential).  Power laws and absence of scale 
      are the signature of a system being critical.  Because the sand pile 
      tends to adjust the slope of its sides until the power law scaling 
-     sets in, the criticality is called &quot;self-organised&quot;.
+     sets in, the criticality is called "self-organised".
 \end{quote}
-    
 
 If your computer runs Java applets, you can play with Thijssen's
 simulation sand pile and see the avalanches yourself:
@@ -330,7 +329,9 @@ tangles".  Here's how it works.  It involves two players and a referee.
 The players, call them A and B, start by facing each other and holding 
 ropes in each hand connecting them together like this:
   
+
 \begin{verbatim}
+
   A   A
   |   |
   |   |
@@ -345,7 +346,9 @@ If the referee yells \emph{add one!}, player
 B has to switch which hand he's using to hold which rope, making sure to
 pass the right one over the left, like this:
 
+
 \begin{verbatim}
+
   A   A
    \ /
     /
@@ -360,7 +363,9 @@ then did \emph{add one!}  But if the referee says <em>take the inverse
 reciprocal!</em>, both players must cooperate to move all four ends of
 the ropes a quarter-turn clockwise, like this:
 
+
 \begin{verbatim}
+
   A   A
    \_/
     _
@@ -427,7 +432,9 @@ After all, the basic operations on rational tangles are "adding
 one" and "negative reciprocal", and these generate all the 
 fractional linear transformations
 
+
 \begin{verbatim}
+
          az + b
 z |->   --------
          cz + d
@@ -457,6 +464,84 @@ everywhere, also has a check digit.  So do credit cards.
 \textbf{Addendum:}  
 Aaron Lauda and James Given had comments.  Lauda wrote:
 
+\begin{quote}
+Usually people describe the scheme in a different way, which is
+actually equivalent to what you said.  Denote the 10 digit ISBN number 
+as N_{i}, for 1\le i\le 10. Compute
 
 
-% parser failed at source line 564
+$$
+
+       10
+ Mod(  &sum;  (11-i)N_{i} , 11)              (*)
+      i=1
+$$
+    
+which should give you zero.  That is take the first digit, multiply it by 
+10, the second by 9, etc.  Add them up and compute the sum mod 11.  You 
+will always get zero.
+
+Some fun things you might like to add:
+
+<OL>
+<LI>
+If you make a mistake writing down a single digit in the ISBN then the 
+equation (*) will not equal zero.  
+
+<LI>
+ The equation (*) may fail to give you zero mod 11 if you make a mistake 
+  with two of the digits, but it will never fail if you interchange two 
+  adjacent digits.
+</OL>
+
+Regards,<br>
+Aaron<br>
+\end{quote}
+
+Given wrote:
+
+\begin{quote}
+  Self-organized criticality (SOC) does in fact involve special settings of
+  the parameters in a model.
+  SOC occurs in sandpile models because one adds the sand extremely slowly,
+  i.e., one grain at a time. Otherwise a critical state is not obtained.
+  This makes SOC be a special example of dynamical critical phenomena in
+  the case that the flux variable (here the rate of sand addition) is set
+  to \epsilon +, i.e., an infinitesimal value greater than zero.  This
+  formulation allows SOC to be studied using quantum field theory.
+
+  Of course the model is built around an underlying instability, namely
+  the fact that sand piles which are too steep will fall down.  Also, one
+  must remove by idealization most sorts of friction between sand grains
+  which will otherwise blur out the transition.  So SOC is no magic
+  prescription for generating scale invariant phenomena.  SOC systems are
+  "special" in the way that equilibrium critical points are 
+  "special".
+  As you note, theories of this kind are easily oversold among those
+  eager to believe in magic formulas.
+
+  Also, you may have been confusing SOC with a favorite concept of the
+  chaos/dynamical systems people, namely the "edge of chaos".  
+   It went
+  through several incarnations.  Each one tried to formally specify the
+  domain, intermediate between order and chaos, in which complex systems
+  were most "interesting".
+
+  Wikipedia summarizes this pretty well.  I append the listing for
+  convenience.
+
+  All My Best,<br>
+  Jim Given
+\end{quote}
+
+The Wikipedia article is:
+
+19) Edge of chaos, Wikipedia, 
+<A HREF = "http://en.wikipedia.org/wiki/Edge_of_chaos">
+http://en.wikipedia.org/wiki/Edge_of_chaos</A>
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

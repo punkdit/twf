@@ -41,11 +41,12 @@ On the invention of zero:
      with their appearance altered somwhat by time, use and travel.
 
 \end{quote}
-    
 Among other things, this book has wonderful charts showing the
 development of each numeral.  You can see, for example, how the
 primitive numeral
+
 \begin{verbatim}
+
                           ____
                           ____
                           ____
@@ -203,7 +204,9 @@ all the magic happen:
 i) An element of h_{3}(O) is a 3x3 hermitian matrix with octonionic
 entries, and thus consists of 3 octonions and 3 real numbers:
 
+
 \begin{verbatim}
+
                    ( a    z*   y* )
                    ( z    b    x  )          a,b,c in R,  x,y,z in O
                    ( y    x*   c  )            
@@ -224,7 +227,9 @@ First, if we take the 3 octonions in our element of h_{3}(O) and
 identify them with elements of the three 8-dimensional irreps of
 Spin(8), we get
 
+
 $$
+
 h_{3}(O) = R^{3}  +  V_{8}  +  S_{8}^{+}  +  S_{8}^{-} 
 $$
     
@@ -234,7 +239,9 @@ the Jordan product in h_{3}(O) is built using the structure of O
 as a normed division algebra, it can actually be defined using just the
 natural map
 
+
 $$
+
 t: V_{8}  x  S_{8}^{+}  x  S_{8}^{-} \to  R
 $$
     
@@ -249,7 +256,9 @@ has a lot to do with geometry in 9 dimensions!  When we restrict the
 spinor and vector representations of Spin(9) to the subgroup Spin(8),
 they split as follows:
 
+
 $$
+
 S_{9} = S_{8}^{+}  +  S_{8}^{-}
 
 V_{9} = R  +  V_{8}
@@ -257,7 +266,9 @@ $$
     
 This gives an isomorphism
 
+
 $$
+
 h_{3}(O) = R^{2}  +  V_{9}  +  S_{9}
 $$
     
@@ -282,7 +293,9 @@ transitively on the unit sphere in the vector representation V_{9}.
 This means we can use an automorphism in our Spin(9) subgroup to bring 
 any element of h_{3}(O) to the form
 
+
 \begin{verbatim}
+
                      ( a    z*   y* )
                      ( z    b    x  )         
                      ( y    x*   c  )           
@@ -307,35 +320,39 @@ diagonalize matrices in h_{3}(O) via automorphisms comes in
 handy.  Up to automorphism, every projection in h_{3}(O) looks
 like one of these four guys:
 
-\begin{verbatim}
+
+$$
+
        ( 0    0    0 )        
-       ( 0    0    0 ) = p<sub>0</sub> 
+       ( 0    0    0 ) = p_{0} 
        ( 0    0    0 )
 
 
        ( 1    0    0 )        
-       ( 0    0    0 ) = p<sub>1</sub> 
+       ( 0    0    0 ) = p_{1} 
        ( 0    0    0 ) 
 
 
        ( 1    0    0 )        
-       ( 0    1    0 ) = p<sub>2</sub> 
+       ( 0    1    0 ) = p_{2} 
        ( 0    0    0 )
 
 
        ( 1    0    0 )       
-       ( 0    1    0 ) = p<sub>3</sub> 
+       ( 0    1    0 ) = p_{3} 
        ( 0    0    1 )
-\end{verbatim}
+$$
     
 
 Now, the trace of a matrix in h_{3}(O) is invariant under
 automorphisms, because we can define it using only the Jordan algebra
 structure:
 
-\begin{verbatim}
-tr(a) = (1/3) tr(L<sub>a</sub>)    
-\end{verbatim}
+
+$$
+
+tr(a) = (1/3) tr(L_{a})    
+$$
     
 where L_{a} is left multiplication by a.  It follows that the trace
 of any projection in h_{3}(O) is 0, 1, 2, or 3.  
@@ -344,7 +361,9 @@ Remember from "<A HREF = "week162.html">week162</A>" that the
 "dimension" of a projection p in a formally real Jordan
 algebra is the largest number d such that there's a chain of projections
 
+
 $$
+
          p_{0} < p_{1} < ... < p_{d} = p  
 $$
     
@@ -372,7 +391,9 @@ trace 2.  A brutal calculation in Reese Harvey's book:
 
 reveals that any projection with trace 1 has the form
 
+
 $$
+
 p = |\psi > <\psi | = ( xx*   xy*    xz* )
                   ( yx*   yy*    yz* )
                   ( zx*   zy*    zz* )
@@ -380,7 +401,9 @@ $$
     
 where 
 
+
 $$
+
 |\psi > = (x,y,z) 
 $$
     
@@ -410,7 +433,9 @@ works is a simple calculation.  The only interesting part is to make
 sure that whenever the associative law might appear necessary, we can
 either use the weaker equations
 
+
 \begin{verbatim}
+
 (xx)y = x(xy) 
 (xy)x = x(yx)
 (yx)x = y(xx)
@@ -447,11 +472,9 @@ afraid that so far, I'm just struggling to understand the basic geometry.
 Happy New Year!
 
 
-<p> <hr>
+
+ \par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 528

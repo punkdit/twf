@@ -299,7 +299,9 @@ points, any functor F from a category C to itself has a \emph{category} of
 lax fixed points.  An object in this category is just an object x of C
 equipped with a morphism f: F(x) \to  x, and a morphism from this object
 to some other object g: F(y) \to  y is just a commutative square:
+
 \begin{verbatim}
+
                               f
                        F(x) -----> x
                         |          |
@@ -328,6 +330,71 @@ folks talk about.
 <strong>Addendum:</strong>
 Here's an interesting email that Doug Merritt sent me after
 reading the above stuff:
+\begin{quote}
+A little web searching and discussion with Andras Kornai yields the
+following info.
+The original work on representing grammars as power series is
+4) N. Chomsky and M. P. Schutzenberger, The algebraic theory of 
+context-free languages, in Computer Programming and Formal Systems,
+North-Holland Publishing Company, 1963.
+...where Schutzenberger supplied the formal power series aspect, basically
+just as the usual generating function trick.
+The algebraic connection was developed through the 60's and 70's,
+culminating in the work of Samuel Eilenberg, founder of category
+theory, such as in
+5) Samuel Eilenberg, Automata, Languages and Machines, Academic Press, 
+NY, 1974.
+A lot of the work in the area comes under the heading "syntactic semigroups",
+which is fairly self-explanatory (and yields a lot of hits when web surfing).
+The question of expanding a grammar via synthetic division as usual
+comes down to the question of whether it is represented as a complete
+division algebra or not. Grammars are typically nonabelian, however
+in order to use more powerful mathematical machinery, frequently commutativity
+is often nonetheless assumed, and the grammar forced into that Procrustean bed.
+I happened across an interesting recent paper (actually a '94 PhD thesis)
+that brings all the modern machinery to bear on this sort of thing (e.g.
+explaining how to represent grammars by power series via the Langrange
+Inversion Formula, and multi-non-terminal (multivariable) grammars via
+the Generalized LIF), and that is even quite readable:
+6) Ole Vilhelm Larsen, Computing order-independent statistical
+characteristics of stochastic context-free languages, available 
+as   <A HREF =
+"http://cwis.auc.dk/phd/fulltext/larsen/html/index.html">http://cwis.auc.dk/phd/fulltext/larsen/html/index.html</A>
+or acrobat format in:  <A HREF = "http://cwis.auc.dk/phd/fulltext/larsen/pdf/larsen.pdf">http://cwis.auc.dk/phd/fulltext/larsen/pdf/larsen.pdf</A>
+The html and acrobat thesis is in English, but the web pages are in Danish,
+which is why I explicitly give both URLs. The abstract is too long to quote
+here.
+You probably know all this better than I, but: As for fixed points, the
+original theorem by Banach applies only to contractive mappings, but
+beginning in '68 a flood of new theorems applying to various different
+non-contractive situations began to appear, and research continues hot
+and heavy. One danger of simply assuming fixed points is that there may
+be orbits rather than attractive basins, which I alluded to briefly in
+my sci.math FAQ entry (which has become somewhat mangled over the
+years) concerning the numeric solution of f(x) = x^x via direct fixed
+point recurrence (F(F(F(F(F...(guess)..)))). The orbits cause oscillatory
+instability in some regions such that it becomes appropriate to switch to
+a different technique.
+Anyway that's merely to say that there are indeed spaces where one
+can't just assume a fixed point theorem and that this can have practical
+implications.
+Hope that's of some interest.
+	Doug
+
+\begin{verbatim}
+
+Doug Merritt                       doug@netcom.com
+Professional Wild-eyed Visionary   Member, Crusaders for a Better Tomorrow
+
+Unicode Novis Cypherpunks Gutenberg Wavelets Conlang Logli Alife Anthro
+Computational linguistics Fundamental physics Cogsci Egyptology GA TLAs
+\end{verbatim}
+    
+\end{quote}
 
 
-% parser failed at source line 506
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

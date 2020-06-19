@@ -34,7 +34,9 @@ you the Lagrangian for 11d supergravity, as taken from the famous string
 theory text by Green, Schwarz and Witten (see "<A HREF =
 "week118.html">week118</A>"):
  
+
 $$
+
 L = - (1/2k^{2}) e R  
     - (1/2) e \psi *_{M} \Gamma ^{MNP} D_{N}[\omega  + \omega ')/2] \psi _{P} 
     - (1/48) e F^{2}
@@ -44,7 +46,9 @@ $$
     
 For comparison, here's the Lagrangian for ordinary gravity: 
  
+
 \begin{verbatim}
+
 L = e R 
 \end{verbatim}
     
@@ -155,7 +159,9 @@ term to the string action that's proportional to the integral of B over
 the string worldsheet.  It works out nice when the B field satisfies the
 obvious analogues of the vacuum Maxwell equations:
  
+
 \begin{verbatim}
+
 dF = 0, d*F = 0 
 \end{verbatim}
     
@@ -166,7 +172,9 @@ Like Maxwell's equations, these equations are
 "gauge-invariant", in the sense that we can change B like this
 without changing the field strength tensor:
  
+
 $$
+
 B \to  B + dw, 
 $$
     
@@ -186,7 +194,9 @@ normalization).
  
 Let's look at that Lagrangian again, and see how much of it we can 
 understand now: 
+
 $$
+
 L = - (1/2k^{2}) e R  
     - (1/2) e \psi *_{M} \Gamma ^{MNP} D_{N}[\omega  + \omega ')/2] \psi _{P} 
     - (1/48) e F^{2}
@@ -221,14 +231,18 @@ A that you can add on to the electromagnetic Lagrangian in 3d spacetime.
 The other two terms involve the gravitino.  This is where I start getting 
 nervous.  We've got this: 
  
+
 $$
+
     - (1/2) e \psi *_{M} \Gamma ^{MNP} D_{N}[(\omega  + \omega ')/2] \psi _{P}
  
 $$
     
 and this: 
  
+
 $$
+
      - (\sqrt 2k/384) e (\psi *_{M} \Gamma ^{MNPQRS} \psi _{S} + 12 \psi *^{N} \Gamma ^{PQ} \psi ^{R}) (F + F')_{NPQR} 
 $$
     
@@ -287,7 +301,6 @@ Well, if you ask a physicist, they'll tell you something like this:
     Now in a spacetime with D dimensions and signature (1,D-1), the 
     maximum value of D admitting a 32 component spinor is D = 11. 
 \end{quote}
-    
 
 In case you're wondering, this is from the first paragraph of this book: 
  
@@ -375,7 +388,9 @@ explained this to some extent in "<A HREF =
 "week151.html">week151</A>", but the basic idea is that there's an
 analogy like this:
  
+
 \begin{verbatim}
+
 1-forms   connections on bundles     parallel transport of point particles 
 2-forms   connections on gerbes      parallel transport of strings 
 3-forms   connections on 2-gerbes    parallel transport of 2-branes 
@@ -396,7 +411,9 @@ for supersymmetric membranes in certain dimensions.  There are
 supposedly 4 basic cases, which correspond to the 4 normed division
 algebras:
 
+
 \begin{verbatim}
+
 the 2-brane in dimension 4  - real numbers
 the 3-brane in dimension 6  - complex numbers
 the 5-brane in dimension 10 - quaternions
@@ -443,6 +460,320 @@ marrow!   Any help would be appreciated.
 Here is an article that Maxime Bagnoud posted to sci.physics.research,
 which answers some of my questions above....
 
+\begin{quote}
+
+John Baez wrote:
+
+\begin{verbatim}
+
+> One thing that <em>does</em> exist is 11-dimensional supergravity.
+\end{verbatim}
+    
+
+Unfortunately, only at the classical level, presumably. The quantum theory
+doesn't seem to exist, neither. It's non-renormalizable, despite the large
+amount of SUSY.  We were not sure about this until quite recently, actually 
+(2 years ago?) You probably know this, but maybe not all the readers of the
+"Finds".
 
 
-% parser failed at source line 518
+$$
+
+> Okay, so we'll use a frame field and spin connection to describe the
+> graviton.  What about the gravitino?  I'm less clear about this, but I
+> guess the idea is that we think of the spin-3/2 representation of the
+> Lorentz group SO(10,1) as sitting inside the tensor product of the
+> spin-1 representation and the spin-1/2 representation.  This allows us
+> to think of the gravitino as a spinor-valued 1-form on spacetime.
+> That's why people write it as \psi _{N}: the subscript indicates that we've
+> got some sort of 1-form on our hands.  One thing I don't understand is
+> what, if any, constraints there are on a spinor-valued 1-form to make
+> it lie in the spin-3/2 representation.
+$$
+    
+
+As you guessed, there is a Clebsch-Gordan relationship like:
+
+1 \otimes  1/2 = 3/2 &oplus 1/2 (where \otimes  is tensor product, \oplus  is direct sum)
+
+in fact, out of a general spinor-vector, you can form a linear combination of
+its components to get a spin 1/2 spinor by multiplying \psi _M with a 
+\Gamma ^M matrix and summing of course on the vector index. The remaining part 
+of the representation is irreducible and it's the gravitino.  (You can look 
+for example at Polchinski vol. II, page 23).
+
+I guess that was your question.
+
+
+$$
+
+> Similarly, people believe that M-theory involves 2-dimensional membranes
+> called "2-branes".  A 2-brane traces out a 3-dimensional "world-volume"
+> in spacetime.  The 3-form field in 11d supergravity is perfectly suited
+> for integrating over this world-volume!  So we're really dealing with a
+> still higher-dimensional analog of electromagnetism.  Since we've already
+> talked about a 1-form A that couples to point particles and a 2-form field
+> B that couples to strings, it makes sense to call this 3-form C.  Lots of
+> people do that.  But I'll stick with Green, Schwarz and Witten, and call
+> it A.  I'll write F for the corresponding field strength (which is 6dA
+> if we use their nutty normalization).
+>
+> Let's look at that Lagrangian again, and see how much of it we can
+> understand now:
+>
+> L = - (1/2k^2) e R
+>     - (1/2) e psibar_M \Gamma ^{MNP} D_N[(\omega  + \omega ')/2] \psi _P
+>     - (1/48) e F^2
+>     - (sqrt(2)k/384) e
+>       (psibar_M \Gamma ^{MNPQRS} \psi _S + 12 psibar^N \Gamma ^{PQ} \psi ^R)
+>       (F + F')_{NPQR}
+>     - (sqrt(2)k/3456) \epsilon ^{M1 ... M11}
+>       F_{M1 ... M4} F_{M5 ... M8} A_{M9 ... M11}
+>
+> The middle term is, up to a constant, just what I'd call "F ^ *F": the
+> Lagrangian for the 3-form analog of Maxwell's equations.
+$$
+    
+
+Now, it's time for me to answer one of your old questions! You seem to be
+ready to hear the answer (you see, I never forget...).
+Why should there be a 5-form in M-theory?
+You nicely have replaced F^2 by F/\*F. Cool! Now, we can go further.
+A is a 3-form, so F is a 4-form, then *F is a 11-4=7-form, then it should be
+the field strength tensor of some 6-form potential, dA_(6)=*F, But a 6-form is
+perfectly suited to be integrated over a 6-dimensional world-volume, i.e. a
+5-brane! Here comes the M5-brane into the play.
+Of course, in 11D SUGRA, the membrane is the fundamental object and the
+M5-brane is a solitonic solution, but in a non-perturbative theory, solitonic
+solutions can become fundamental at strong coupling and vice-versa. That's 
+why we expect that the M5-brane will play an important role in M-theory.
+
+The other question was what this had to do with the theory of Smolin?
+
+In the BFSS matrix model, there is only one kind of objects, matrix-valued
+1-forms (D0-branes).
+
+These have a nice interpretation in terms of M2-branes (that's how modern-day
+physicists write membranes...:->) wrapped on the two light-cone coordinates,
+but what is the role of M5-branes in this game is unclear.
+While in the matrix model proposed by Smolin in hep-th/0002009, there are more
+terms involving also a 4-form, which might be related with a wrapped M5-brane.
+This raises the hope that this matrix model might be a better try for a
+non-perturbative version of M-theory than the usual BFSS one. But this has to
+be investigated in more detail, of course; that's more or less what I'm doing
+now.
+
+
+\begin{verbatim}
+
+> Second, why is it "reasonable" to assume that there aren't massless
+> particles with spin greater than two?  Because it's physics folklore
+> that quantum field theories with such particles are bad, nasty and evil
+> - in fact, so evil that nobody even dares explain why!  Well, actually
+> there's a paper by Witten in the above book that contains references to
+> papers that supposedly explain why particles of spin > 2 are bad.  It's
+> an excellent paper, too:
+>
+> 2) Edward Witten, Search for a realistic Kaluza-Klein theory, Nucl.
+> Phys. B186 (1981), 412-428.
+\end{verbatim}
+    
+
+I'm not a specialist of this, but higher spins involve the representation
+theory of W-algebras, which can hardly be described as easy. Of course, 
+that's not an argument, but I think that this has prevented many physicists 
+from pursuing the matter too far.
+
+
+\begin{verbatim}
+
+> Unfortunately, this book does not cover supergravity theories.
+\end{verbatim}
+    
+
+As a matter of fact, there are some books on supergravity in 4D, but no books
+covering higher-dimensional supergravity theories with a reasonable amount of
+explanations.
+
+Of course, people really able to do this properly are a handful on this
+planet, and even for them, this would require an enormous amount of work to
+get things consistent all the way with a coherent choice of conventions and
+check all the horrible formulas. On the other hand, when you hear their talks,
+you usually don't get the feeling that they really want you to understand it,
+but rather that they try to hide the truth about SUGRA in a well-hidden
+"grimoire", maybe somewhere in Wizard's castle.
+I hope some other people can shed more light on the subject, for example on
+the supercovariantization of the spin connection (which I don't understand
+very deeply, neither), maybe Aaron?
+
+In any case, best regards to everyone,
+and thanks John for the "This Week's Finds".
+
+Maxime
+\end{quote}
+
+And here is one by Robert Helling:
+
+\begin{quote}
+John Baez wrote, concerning 11d supergravity:
+
+
+\begin{verbatim}
+
+ >I knew that people <em>thought</em> it wasn't renormalizable - that's not 
+ >very new - but I didn't know people had become <em>sure</em> about it.
+\end{verbatim}
+    
+
+Well, it depends a bit on your definition of "non-renormalizable". In a strict
+sense, it means that renormalization would require an _infinite_ number
+of different counter terms. In order to fix all their coefficients
+one would have to do an infinite number of experiments before the
+theory becomes predictive. This should be compared to renormalizable
+theories that get along with a finite number although their coefficients
+have to be adopted a each order of pertubation theory. Better are
+superrenormalizable theories that also have a finite number of counter
+terms but there coefficients are not changed after some order in
+pertubation theory. 
+
+The status of supergravity is as follows (in my understanding): Long ago
+(what you refer to as thought) people figured out an additional
+term in the action that might appears as counter term and that is 
+invariant under all symmetries of the action (well, in 11d not
+all symmetries, the full supermultiplet is not known and is expected
+to be infinite but with _fixed_ relative coefficients. So there
+is still just one parameter). E.g. in 4D, the situation is simpler because
+there a superspace formulation is at hand that allows you to write expressions
+that are automatically supersymmetric.
+
+What people didn't know was whether this counter term really arises in
+loop integrals. But now, in 11D Deser at al have calculated that a
+certain combitation of four Riemann tensors appears as a counterterm
+(has a non-zero coefficient) at 2 loop order.
+
+This should be compared to Einstein's theory in 4D: There it was known
+that a certain combination of two Weyl tensors does not vanish
+by Bianchi identities or is topological. Therefore it is a possible
+counterterm. 10 years ago, people did a 3 loop calculation (this is
+really hard work!) to show that it actually arises. 4D sugra does not 
+allow this term and its first possible counter term appears only at the 
+next loop order. I know somebody personally that spend the last 10 years
+doing this calcualtion and hasn't got very far (luckily he still has a 
+job in physics).
+
+But finding one counter term that was not in the classical action
+does not show a theory is non-renormalizable (remember this is a
+statement about infinitely many counter terms, so it is about
+an infinity of orders of pertubation theory). It might just be
+that this one term has been in the classical action just with coefficient
+(coupling constant) 0 that is renormalized at higher orders. This
+behaviour is highly unlikely but a mathematical possibility.
+
+Actually showing a theory to be non-renormalizable is as hard
+as showing a theory is renormalizable (not too long ago a 
+Nobel prize was awarded for such a proof ;-))
+
+Now for your point: "Is renormalizability a must?". I think it
+is very old fashioned to give an affirmative answer to this 
+question. A more modern answer would probably be: It's fine
+for a theory to be non-renormalizable as long as it is only
+an effective theory. Fermi \psi ^4 theory is not renormalizable
+and is a nice theory of weak interactions as long as one
+stays away from the EW breaking scale.
+
+The appearance of the infinity of counter terms just shows
+that there is some understanding of the high energy degrees
+of freedom missing. And there will be a more fundamental
+theory lurking around that reduces to this effective
+theory for small energies.
+
+So for a string theorist, non-renormalizability for sugra
+is just fine: It's just the low energy effective theory
+of string or M theory. It does not contain all degrees
+of freedom, just the light ones. One way of thinking about
+this is that string theory is just a fancy way of regulating
+sugra. It supplies finite coefficients for the infinity
+of possible counter terms. For example, in 10D sugra has
+a one loop counterterm of the form R^4. This is just
+an infinity in sugra. But in string theory, this has to be
+a finite number, and in fact it is. It is
+
+&zeta;(3) = sum_n n^(-3).
+
+The same thing is expected for 11D sugra and M-Theory. But
+as long as nobody really knows what M-Theory really is this
+does not help very much. 
+
+Let me add a personal remark: In hep-th/9905183 we have
+tried to do exactly this thing for M(atrix)-Theory, but
+as it turned out, there are problems remaining.
+
+
+\begin{verbatim}
+
+ >>>Unfortunately, this book does not cover supergravity theories.
+
+ >>As a matter of fact, there are some books on supergravity in 4D, 
+ >>but no books covering higher-dimensional supergravity theories 
+ >>with a reasonable amount of explanations.
+
+ >I've noticed!  It's scandalous! 
+
+ >>Of course, people really able to do this properly are a handful 
+ >>on this planet, and even for them, this would require an enormous 
+ >>amount of work to get things consistent all the way with a coherent 
+ >>choice of conventions and check all the horrible formulas. 
+\end{verbatim}
+    
+
+I know that at least three of the sugra hot shots of the eighties 
+independently started such projects and there are sugra_book.tex files 
+of various stages on their hard disks. They all gave up or made it a really 
+long term project since they figured out that it would cost them years to 
+basically redo all calculations in a coherent formalism.
+
+This is just a horrible mess. Dealing with fermions just increases the pain. 
+Doing a calculation twice you never get the same signs. I have already spend 
+days figuring out what  + h.c.  in the stony brook textbook on 4D sugra meant 
+(actually, it should have read - h.c. since what was computed was a anti-
+hermitian quantity). They never stated what their conventions for hermititan 
+conjugation are. Does it also reverse the order of differential operators? 
+What about index positions (remember, for anticommuting variables 
+\psi ^a \phi _a = - \psi _a \phi ^a) and all these kinds of things?
+
+In addition, the old guys that have done many of the calcualtions use very 
+strange (aka "convenient") conventions, like
+
+\psi ^{2} = 1/2 \psi ^{a} \psi _{a}
+
+
+or they raise and lower SL(2,C) not with the \epsilon  tensor, but with i times 
+the \epsilon  tensor (relate this to h.c.!) This is just a mess and you always 
+get the feeling that you are wasting your time with such things but in the end
+your calculations are not even reliable!
+
+This was all 4D, but the horror starts in higher dimensions. There \gamma  matrix
+algebra becomes interesting. Again there are N+1 conventions if N people 
+work on something and you have to have hunderets of Fierz identities at hand.
+I know a grad student that spend months working them out on a computer and 
+thought it would be a good service to the community to write a paper like
+"Gamma identities and Fierzing in diverse dimensions". This would probably
+be like the PhysRep by Slansky and Lie algebra stuff. But his advisor told
+him not to do that "This is your capital. Put it in your drawer and lock it.
+Be sure, erverybody in the field has such a drawer!"
+
+And this is why there will never be such a text.  But I heard people say that
+working out for yourself that 11d sugra is indeed supersymmetric is a good
+exercise. I have never done it.
+
+Robert
+\end{quote}
+ 
+
+
+
+ \par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

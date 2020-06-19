@@ -28,7 +28,9 @@ all frequencies - the "continuous spectrum".  The German high school
 teacher Balmer noticed that the sharp lines correspond to light with
 frequencies proportional to
 
+
 $$
+
 1/n^{2} - 1/m^{2}
 $$
     
@@ -41,7 +43,9 @@ Planck's constant.  For example, Bohr took Balmer's formula and
 realized that a hydrogen atom must have a discrete set of allowed
 energy levels
 
+
 $$
+
 -1/n^{2}
 $$
     
@@ -74,7 +78,9 @@ multiplication, closed under taking adjoints and also closed in the
 norm topology, it's called a "C*-algebra".   The "spectrum" of a 
 C*-algebra A is the set of all homomorphisms 
 
+
 $$
+
 x: A \to  C, 
 $$
     
@@ -92,7 +98,9 @@ the idea.  There's an easy way to make the spectrum of a commutative
 C*-algebra A into a topological space: we say x_{i} \to  x 
 precisely when
 
+
 $$
+
 x_{i}(a) \to  x(a)
 $$
     
@@ -133,14 +141,18 @@ extract a space from it: its "spectrum".  As we've seen, one option is
 to take the spectrum to consist of all homomorphisms to the complex
 numbers:
 
+
 $$
+
 x: A \to  C
 $$
     
 
 Another would be to use the real numbers:
 
+
 $$
+
 x: A \to  R.
 $$
     
@@ -156,7 +168,9 @@ Actually, since there are zillions of fields out there, a more
 manageable option is to look not at the homomorphism itself but its
 kernel: the set of elements a in A with
 
+
 \begin{verbatim}
+
 x(a) = 0.
 \end{verbatim}
     
@@ -169,7 +183,9 @@ of two elements of A lies in the ideal, at least one of them must be
 in the ideal.  Conversely, given a prime ideal in A, there's always a
 field k and a homomorphism
 
+
 $$
+
 x: A \to  k 
 $$
     
@@ -182,7 +198,9 @@ ring of integers, Z, most prime ideals come from prime numbers.  If we
 take all the multiples of any prime number, we get a prime ideal, which 
 is the kernel of the obvious homomorphism
 
+
 $$
+
 x: Z \to  Z/p
 $$
     
@@ -197,7 +215,9 @@ rest, but the wise know it's usually good to keep it in.
 So, the spectrum of the integers is just the set of ordinary primes
 together with the "prime at infinity":
 
+
 $$
+
 Spec(Z) = {2, 3, 5, 7, 11, ... \infty }
 $$
     
@@ -210,7 +230,9 @@ have time to do justice to this, but the basic idea goes as follows.
 
 Suppose we have a quantum system whose Hamiltonian has this spectrum:
 
+
 \begin{verbatim}
+
 {ln 2, ln 3, ln 5, ln 7, ln 11, ....}
 \end{verbatim}
     
@@ -227,13 +249,17 @@ we'll get a system with energy levels that are arbitrary sums of entries
 from the above list.  If we write them in increasing order, they look 
 like this:
 
+
 \begin{verbatim}
+
 {0, ln 2, ln 3, ln 2 + ln 2, ln 5, ln 2 + ln 3, ln 7, ln 2 + ln 2 + ln 2, ....}
 \end{verbatim}
     
 or in other words, just
 
+
 \begin{verbatim}
+
 {ln 1, ln 2, ln 3, ln 4, ln 5, ln 6, ln 7, ln 8, ....}
 \end{verbatim}
     
@@ -246,7 +272,9 @@ To see this, let's do some statistical mechanics with the free Riemann gas!
 As usual, at any temperature T the probability that this system will be in a 
 state of energy E is proportional to
 
+
 \begin{verbatim}
+
 exp(-&beta;E)
 \end{verbatim}
     
@@ -255,7 +283,9 @@ numbers to add up to one as probabilities should, we have to normalize
 them, dividing by their sum, which goes by the name of the "partition
 function".  The partition function for the free Riemann gas is:
 
+
 \begin{verbatim}
+
                            -&beta;
  &sum; exp(-&beta; ln n)   =   &sum;  n
  n                    n
@@ -275,7 +305,9 @@ primons, this hypothesis has a lot to do with prime numbers!  For
 example, it's equivalent to the assertion that the number of primes
 less than x differs from
 
+
 $$
+
           \infty  
 Li(x) =  &int;  dt/ln t  
          2
@@ -304,12 +336,11 @@ their abstract in front of you:
     canonical one-parameter group of automorphisms measuring the lack 
     of normality of the subgroup.  The inclusion of rings Z provides 
     the desired C*-dynamical system, which admits the zeta function 
-    as partition function and the Galois group Gal(Q<sup>cycl</sup>/ Q) of 
-    the cyclotomic extension Q<sup>cycl</sup> of Q as symmetry group.  Moreover, 
+    as partition function and the Galois group Gal(Q^{cycl}/ Q) of 
+    the cyclotomic extension Q^{cycl} of Q as symmetry group.  Moreover, 
     it exhibits a phase transition with spontaneous symmetry breaking at 
     inverse temperature &beta; = 1.
 \end{quote}
-    
 
 Here's the reference:
 
@@ -395,14 +426,18 @@ There's a cute way to get a space from a category that goes like this.
 First create a simplicial set from your category, with one 0-simplex for
 each object:
 
+
 \begin{verbatim}
+
                        .
                        x
 \end{verbatim}
     
 one 1-simplex for each morphism:
 
+
 $$
+
                        f
                 .------>------.
                 x             y
@@ -410,7 +445,9 @@ $$
     
 one 2-simplex for each composable pair of morphisms:
 
+
 $$
+
                        y
                        .
                       / \
@@ -464,7 +501,9 @@ B_{x,y}: x \otimes  y \to  y \otimes  x
 for any pair of objects; we require this isomorphism satisfy some rules 
 motivated by thinking it as a "braiding", like this:
 
+
 \begin{verbatim}
+
               x            y
                \          /
                 \        /
@@ -494,7 +533,9 @@ For example, if we take the category of finite sets, with disjoint
 union as the "tensor product", and the obvious braiding, 
 the group completion of its classifying space will be
 
+
 $$
+
 \Omega ^{\infty } S^{\infty }  =  lim  \Omega ^{k} S^{k}
          k \to  \infty 
 $$
@@ -509,7 +550,9 @@ If we take the category of finite-dimensional complex vector spaces,
 with direct sum as the "tensor product", and the obvious
 braiding, the group completion of its classifying space will be
 
+
 $$
+
 BU(\infty ) =   lim        BU(k)
               k \to  \infty 
 $$
@@ -559,6 +602,99 @@ categories, available at <A HREF = "http://www.arXiv.org/abs/math.AT/9808082">ma
 by my friend Squark about my use of the term "the prime at infinity".
 
  Rene Meyer wrote:
+\begin{quote}
+
+$$
+
+ John Baez wrote:
+
+ > The "spectrum" of a C*-algebra A is the set of all homomorphisms
+ > x: A \to  C,
+ > where C is the complex numbers.  
+ >
+ > There's an easy way to make the spectrum of a commutative
+ > C*-algebra A into a topological space: we say x_{i} \to  x precisely when
+ > x_{i}(a) \to  x(a)
+ > for all elements a of A.  With this topology any element a of A gives
+ > a continuous complex function on the spectrum, defined by this clever
+ > formula:
+
+ I don't understand what you mean by
+ 
+ x_{i} \to  x
+ x_{i}(a) \to  x(a)
+\end{quote}
+$$
+    
+ That's a way of saying that the sequence x_{i} converges to x,
+ or the sequence x_{i}(a) converges to x(a).
+\begin{quote}
+
+\begin{verbatim}
+
+ What has the index i to do with this?
+\end{verbatim}
+    
+\end{quote}
+ It's the index for some sequence of homomorphisms, x_{i}.
+\begin{quote}
+
+$$
+
+ x_{i} and x are the above mentioned homomorphisms, right?
+\end{quote}
+$$
+    
+ x is a homomorphism, x_{i} is a sequence of homomorphisms,
+ and I'm telling you when the sequence x_{i} converges to x.
+\begin{quote}
+
+\begin{verbatim}
+
+ Could you explain in a little more detail?
+</BLOCKQUOTE>
+\end{verbatim}
+    
+ I was describing how to make the spectrum of a C*-algebra into a 
+ topological space.  One way to do this is to say when a sequence
+ x_{i} of points in the spectrum converges to some point x.  So, I 
+ took a sequence of homomorphisms
 
 
-% parser failed at source line 622
+$$
+
+ x_{i}: A \to  C
+$$
+    
+ and told you when it converges to a homomorphism
+
+$$
+
+ x: A \to  C
+$$
+    
+ And here's what I said: x_{i} converges to x precisely when the sequence
+ of numbers x_{i}(a) converges to the number x(a) for all a in A.
+ [Experts will know that now I'm lying slightly.  In general, to specify
+ the topology of a space, it's not really good enough to just say when 
+ \emph{sequences} converge; you need to say when \emph{nets} converge.  A net is 
+ like a sequence, but the index i can range over an arbitrary "directed 
+ set".  I don't feel like defining a directed set right now; one can
+ find this in any good introduction to point-set topology.  The point is
+ that there are some spaces that are not "first countable", meaning that
+ some points don't have a countable base of neighborhoods.  A countable 
+ sequence just isn't \emph{long} enough to converge to such a point, unless it
+ equals that point for all sufficiently large i.  So in general we need
+ nets, though for metric spaces sequences are sufficient.  Luckily, the 
+ notation and basic theorems concerning nets look almost like those for 
+ sequences!  So, I was actually talking about nets in my post above - but 
+ I was hoping that people who only knew about sequences would think I was 
+ talking about sequences, in which case they'd be \emph{slightly} wrong, but not 
+ too far off.]
+
+Squark wrote:
+\begin{quote}
+
+
+
+% parser failed at source line 762

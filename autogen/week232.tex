@@ -280,7 +280,9 @@ little arrow around our particle.
 
 Second, suppose we let two particles collide and form a new one:
 
+
 $$
+
     p       p'
      \     /
       \   /  
@@ -358,7 +360,9 @@ you just switch their momenta:
 But in 3d gravity, you can think of this process of switching 
 particles as a braid: 
 
+
 \begin{verbatim}
+
           \   /
            \ / 
             \
@@ -539,6 +543,170 @@ expansion, Phys. Lett. B635 (2006) 131-135.  Also available as
 \par\noindent\rule{\textwidth}{0.4pt}
 \textbf{Addenda:} Here's an email from Greg Egan, and my reply:
 
+\begin{quote}
+  John Baez wrote:
 
 
-% parser failed at source line 685
+\begin{verbatim}
+
+  > The really cool part is the relation between the Lie algebra 
+  > element p and the group element exp(p).  Originally we thought 
+  > of p as momentum - but there's a sense in which exp(p) is the 
+  > momentum that really counts!
+\end{verbatim}
+    
+
+  Would it be correct to assume that the ordinary tangent vector p still
+  transforms in the usual way?  In other words, suppose I'm living in a
+  2+1 dimensional universe, and there's a point particle with rest mass m
+  and hence energy-momentum vector in its rest frame of p=me_{0}.  If I
+  cross its world line with a certain relative velocity, there's an
+  element g of SO(2,1) which tells me how to map the particle's tangent
+  space to my own.  Would I measure the particle's energy-momentum to be
+  p'=gp?  (e.g. if I used the particle to do work in my own rest frame)
+  Would there still be no upper bound on the total energy, i.e. by making
+  our relative velocity close enough to c, I could measure the particle's
+  kinetic energy to be as high as I wished?
+
+  I guess I'm trying to clarify whether the usual Lorentz transformation
+  of the tangent space has somehow been completely invalidated for
+  extreme boosts, or whether it's just a matter of there being a second
+  definition of "momentum" (defined in terms of the Hamiltonian) which
+  transforms differently and is the appropriate thing to consider in
+  gravitational contexts.
+
+  In other words, does the cut-off mass apply only to the deficit angle,
+  and do boosts still allow me to measure (by non-gravitational means)
+  arbitrarily large energies (at least in the classical theory)?
+\end{quote}
+
+I replied:
+
+\begin{quote}
+  Greg Egan wrote:
+
+
+\begin{verbatim}
+
+  >John Baez wrote:
+
+  >>The really cool part is the relation between the Lie algebra 
+  >>element p and the group element exp(p).  Originally we thought 
+  >>of p as momentum -  but there's a sense in which exp(p) is the 
+  >>momentum that really counts!
+
+  >Would it be correct to assume that the ordinary tangent vector p 
+  >still transforms in the usual way?  
+\end{verbatim}
+    
+
+  Hi!  Yes, it would.
+
+
+\begin{verbatim}
+
+  >In other words, suppose I'm living in a 2+1 dimensional universe, 
+  >and there's a point particle with rest mass m and hence 
+  >energy-momentum vector in its rest frame of p=m e_0.  If I
+  >cross its world line with a certain relative velocity, there's 
+  >an element g of SO(2,1) which tells me how to map the particle's 
+  >tangent space to my own.  Would I measure the particle's 
+  >energy-momentum to be p'=gp?  (e.g. if I used the particle to 
+  >do work in my own rest frame)  Would there still be no upper 
+  >bound on the total energy, i.e. by making our relative velocity 
+  >close enough to c, I could measure the particle's kinetic energy 
+  >to be as high as I wished?
+\end{verbatim}
+    
+
+  To understand this, it's good to think of the momenta as 
+  elements of the Lie algebra so(2,1) - it's crucial to the
+  game.  
+
+  Then, if you have momentum p, and I zip past you, so you 
+  appear transformed by some element g of the Lorentz group 
+  SO(2,1), I'll see your momentum as
+
+  p' = g p g^{-1}
+
+  This is just another way of writing the usual formula for 
+  Lorentz transforms in 3d Minkowski space.  No new physics 
+  so far, just a clever mathematical formalism.
+
+  But when we turn on gravity, letting Newton's constant k 
+  be nonzero, we should instead think of momentum as group-valued, 
+  via 
+
+  h = exp(kp)
+
+  and similarly 
+
+  h' = exp(kp')
+
+  Different choices of p now map to the same choice of h.
+  In particular, a particle of a certain large mass - the 
+  Planck mass- will turn out to act just like a particle 
+  of zero mass!   
+
+  So, if we agree to work with h instead of p, we are now 
+  doing new physics.  This is even more obvious when we decide
+  to multiply momenta instead of adding them, since multiplication
+  in SO(2,1) is noncommutative!
+
+  But, if we transform our group-valued momentum in the correct
+  way:
+
+  h' = ghg^{-1}
+
+  this will be completely compatible with our previous transformation
+  law for vector-valued momentum!
+
+
+\begin{verbatim}
+
+  >I guess I'm trying to clarify whether the usual Lorentz transformation
+  >of the tangent space has somehow been completely invalidated for
+  >extreme boosts, or whether it's just a matter of there being a second
+  >definition of "momentum" (defined in terms of the Hamiltonian) which
+  >transforms differently and is the appropriate thing to consider in
+  >gravitational contexts.
+\end{verbatim}
+    
+  Good question!  Amazingly, the usual Lorentz transformations still 
+  work EXACTLY - even though the rule for adding momentum is new (now 
+  it's multiplication in the group).  We're just taking exp(kp) instead 
+  of p as the "physical" aspect of momentum.  
+
+  This effectively puts an upper limit on mass, since as
+  we keep increasing the mass of a particle, eventually it "loops 
+  around" SO(2,1) and act exactly like a particle of zero mass.  
+
+  But, it doesn't exactly put an upper bound on energy-momentum, 
+  since SO(2,1) is noncompact.  Of course energy and momentum don't
+  take real values anymore, so one must be a bit careful with this
+  "upper bound" talk.
+
+
+\begin{verbatim}
+
+  >In other words, does the cut-off mass apply only to the deficit 
+  >angle, and do boosts still allow me to measure (by non-gravitational 
+  >means) arbitrarily large energies (at least in the classical theory)?
+\end{verbatim}
+    
+
+  There's some sense in which energy-momenta can be arbitrarily 
+  large.  That's because the space of energy-momenta, namely SO(2,1), 
+  is noncompact.  Maybe you can figure out some more intuitive way 
+  to express this.
+\end{quote}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>I was sitting in a chair in the patent office in Bern when all of a
+sudden a thought occurred to me.  If a person falls freely, he will
+not feel his own weight.</em> - Albert Einstein
+
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>

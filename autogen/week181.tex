@@ -116,7 +116,9 @@ geometry having G as its symmetry group.  Each different type of
 "figure" in this geometry corresponds to a dot in the Dynkin diagram
 for G.  For example, when G = SL(4,C) we have
 
+
 \begin{verbatim}
+
                            o------o------o
                         points  lines  planes       
 \end{verbatim}
@@ -129,7 +131,9 @@ More generally, any subset of dots in the Dynkin diagram corresponds to
 a type of "flag".  A flag is a collection of figures satisfying certain
 incidence relations.   For example, this subset:
 
+
 \begin{verbatim}
+
                            x------o------x
                         points  lines  planes       
 \end{verbatim}
@@ -279,26 +283,28 @@ them as spaces of one less dimension in CP^{n}.  Either way, we are
 talking about \emph{projective} geometry:
 
 
-\begin{verbatim}
-A<sub>1</sub>                              1d subspaces
+
+$$
+
+A_{1}                              1d subspaces
 SL(2,C)                              o
                                      1
 
 
-A<sub>2</sub>                       1d subspaces  2d subspaces
+A_{2}                       1d subspaces  2d subspaces
 SL(3,C)                       o---------------o
                               2               2
 
 
-A<sub>3</sub>                1d subspaces  2d subspaces  3d subspaces
+A_{3}                1d subspaces  2d subspaces  3d subspaces
 SL(4,C)                o------------o---------------o
                        3             4               3
 
 
-A<sub>4</sub>          1d subspaces  2d subspaces  3d subspaces  4d subspaces
+A_{4}          1d subspaces  2d subspaces  3d subspaces  4d subspaces
 SL(5,C)          o------------o---------------o------------o
                  4            6               6            4
-\end{verbatim}
+$$
     
 Recognize the numbers labelling the Dynkin diagram dots?  It's a weird
 modified version of Pascal's triangle - but can you figure out the pattern?
@@ -312,26 +318,28 @@ representation and its dimension.  All these reps are exterior powers
 of the obvious rep of SL(n+1,C) on C^{n+1}.  We call elements of the pth
 exterior power "p-vectors", or "multivectors" in general:
 
-\begin{verbatim}
-A<sub>1</sub>                                vectors 
+
+$$
+
+A_{1}                                vectors 
 SL(2,C)                              o
                                      2
 
 
-A<sub>2</sub>                        vectors        bivectors
+A_{2}                        vectors        bivectors
 SL(3,C)                      o---------------o
                              3               3
 
 
-A<sub>3</sub>                   vectors     bivectors      3-vectors
+A_{3}                   vectors     bivectors      3-vectors
 SL(4,C)                o-------------o--------------o
                        4             6              4
 
 
-A<sub>4</sub>          vectors      bivectors      3-vectors    4-vectors
+A_{4}          vectors      bivectors      3-vectors    4-vectors
 SL(5,C)        o-------------o--------------o------------o
                5            10             10            5
-\end{verbatim}
+$$
     
 Here the numbers labelling the dots form Pascal's triangle!    So we 
 see that Pascal's triangle is a quantized version of the multiplication
@@ -354,7 +362,9 @@ in even dimensions is very different, and we'll get to that later.
 Here are the Grassmannians and their dimensions:
 
 
+
 $$
+
                                  isotropic 
 B_{1}                              1d subspaces
 Spin(3,C)                             o
@@ -386,23 +396,25 @@ eventually justified by a method I'll explain later.
 Here's a bigger chart of these dimensions:
 
 
-\begin{verbatim}
-B<sub>1</sub>                           1
 
-B<sub>2</sub>                         3    3
+$$
+
+B_{1}                           1
+
+B_{2}                         3    3
      
-B<sub>3</sub>                      5    7    6
+B_{3}                      5    7    6
                    
-B<sub>4</sub>                    7   11   12   10
+B_{4}                    7   11   12   10
 
-B<sub>5</sub>                 9   15   18   18   15
+B_{5}                 9   15   18   18   15
                       
-B<sub>6</sub>              11   19   24   26   25   21
+B_{6}              11   19   24   26   25   21
  
-B<sub>7</sub>            13  23   30   34   35   33   28
+B_{7}            13  23   30   34   35   33   28
 
-B<sub>8</sub>          15  27   36   42   45   45   42   36  
-\end{verbatim}
+B_{8}          15  27   36   42   45   45   42   36  
+$$
     
 I leave it as an easy puzzle to figure out the pattern, and a harder
 puzzle to prove it's true.  Don't be overly distracted by the symmetry
@@ -413,7 +425,9 @@ If we quantize these Grassmannians we get these fundamental reps of
 Spin(2n+1,C):
 
                                  
+
 $$
+
 B_{1}                                 spinors
 Spin(3,C)                             o
                                       2
@@ -460,7 +474,9 @@ p-dimensional isotropic subspaces of C^{2n}, where now a subspace is
 Here's a little table of these Grassmannians:
 
 
+
 $$
+
                                  isotropic 
 C_{1}                              1d subspaces
 Sp(2,C)                               o
@@ -505,7 +521,9 @@ they're just the dimension of the p-vectors minus the dimension of the
 (p-2)-vectors.  Here's a table of these guesses:
 
 
+
 $$
+
 C_{1}                                 vectors
 Sp(2,C)                               o
                                       2
@@ -543,11 +561,13 @@ dimensions!
 Here are the Grassmannians and their dimensions:
 
                                 
-\begin{verbatim}
+
+$$
+
                                  1
                                  o self-dual 2d subspaces
                                  
-D<sub>2</sub>                                      
+D_{2}                                      
 Spin(4,C)                 
                  
                                     
@@ -562,7 +582,7 @@ Spin(4,C)
                                     o self-dual 3d subspaces
                                    /
                                   /
-D<sub>3</sub>                               /
+D_{3}                               /
 Spin(6,C)                     4 o isotropic 1d subspaces
                                  \
                                   \
@@ -577,7 +597,7 @@ Spin(6,C)                     4 o isotropic 1d subspaces
                                         o self-dual 4d subspaces
                                        /
                        isotropic      /
-D<sub>4</sub>                   1d subspaces    /
+D_{4}                   1d subspaces    /
 Spin(8,C)                   o-------o isotropic 2d subspaces 
                             6       9\
                                       \
@@ -592,7 +612,7 @@ Spin(8,C)                   o-------o isotropic 2d subspaces
                                                o self-dual 5d subspaces
                                               /            
                                              / 
-D<sub>5</sub>             1d subspaces  2d subspaces   /
+D_{5}             1d subspaces  2d subspaces   /
 Spin(10,C)           o-----------o---------o isotropic 3d subspaces
                      8          13        15\
                                              \
@@ -600,7 +620,7 @@ Spin(10,C)           o-----------o---------o isotropic 3d subspaces
                                                o anti-self-dual 5d subspaces
                                                10
 
-\end{verbatim}
+$$
     
 You'll notice that the numbers on the "fishtails" are triangular
 numbers: 1, 3, 6, 10...  I'll say more later about how to calculate
@@ -611,11 +631,13 @@ p-vectors, except for those at the fishtails, which are left- and
 right-handed spinor reps:
 
                                 
-\begin{verbatim}
+
+$$
+
                                  2
                                  o left-handed spinors
                                  
-D<sub>2</sub>                                      
+D_{2}                                      
 Spin(4,C)                 
                  
                                     
@@ -630,7 +652,7 @@ Spin(4,C)
                                     o left-handed spinors
                                    /
                                   /
-D<sub>3</sub>                               /
+D_{3}                               /
 Spin(6,C)                     6 o vectors
                                  \
                                   \
@@ -645,7 +667,7 @@ Spin(6,C)                     6 o vectors
                                         o left-handed spinors
                                        /
                                       /
-D<sub>4</sub>                       vectors     /
+D_{4}                       vectors     /
 Spin(8,C)                   o-------o bivectors
                             8      28\
                                       \
@@ -660,7 +682,7 @@ Spin(8,C)                   o-------o bivectors
                                                o left-handed spinors
                                               /            
                                              / 
-D<sub>5</sub>                vectors      bivectors    /
+D_{5}                vectors      bivectors    /
 Spin(10,C)           o-----------o---------o 3-vectors
                      10         45       120\
                                              \
@@ -668,7 +690,7 @@ Spin(10,C)           o-----------o---------o 3-vectors
                                                o right-handed spinors
                                                16
 
-\end{verbatim}
+$$
     
 Again the dimension of the space of p-vectors in q-dimensional space
 comes from Pascal's triangle, while the dimensions of the spinor reps 
@@ -682,7 +704,9 @@ to mention.  I was shocked at how unfamiliar these numbers were to me,
 because all these Grassmannians should be definable using the octonions:
 
 
+
 $$
+
                   -------
 G_{2}              5 --->--- 5
                   -------
@@ -734,15 +758,13 @@ maximal torus, so that dim(T) is the number of dots in the Dynkin diagram.
 
 
 
-<p> <hr>
+
+ \par\noindent\rule{\textwidth}{0.4pt}
 <em> Mathematics is the part of physics
 where experiments are cheap. </em> - V. I. Arnold, <A HREF = "http://pauli.uni-muenster.de/~munsteg/arnold.html">On teaching mathematics</A>
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 844

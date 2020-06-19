@@ -116,13 +116,13 @@ ENTITIES = [
 ]
 REWRITES = [
     ("<P>", "\n"),
+    ("<BLOCKQUOTE>", r"\begin{quote}"),
+    ("</BLOCKQUOTE>", r"\end{quote}"),
+    ("<HR>", r"\par\noindent\rule{\textwidth}{0.4pt}")
 ]
 def do_line(line, is_math=False):
     lc = line.lower()
     lc = lc.strip()
-    if lc == "<hr>":
-        line = r"\par\noindent\rule{\textwidth}{0.4pt}"
-        return line # <-------- return
 
     for (k,v) in ENTITIES:
         if "&" not in line:
@@ -130,6 +130,7 @@ def do_line(line, is_math=False):
         line = line.replace(k, v)
     for (k,v) in REWRITES:
         line = line.replace(k, v)
+        line = line.replace(k.lower(), v)
 
     # send <em>foo</em> to \emph{foo}, etc.
     line = do_tag(line, "em", lambda s:r"\emph{%s}"%s)
@@ -165,6 +166,8 @@ def do_pre(lines):
     is_math = False
     block = "\n".join(lines)
     if "<sup>" in block:
+        is_math = True
+    elif "<sub>" in block:
         is_math = True
     for (k,v) in ENTITIES:
         if k in block:
@@ -220,16 +223,16 @@ def do_blocks(state, line):
     elif state.pre:
         state.lines.append(line)
 
-    elif lc == "<blockquote>":
-        assert state.lines is None, state
-        state.blockquote = True
-        state.lines = []
-    elif lc == "</blockquote>":
-        state.blockquote = False
-        result = do_blockquote(state.lines)
-        state.lines = None
-    elif state.blockquote:
-        state.lines.append(line)
+#    elif lc == "<blockquote>":
+#        assert state.lines is None, state
+#        state.blockquote = True
+#        state.lines = []
+#    elif lc == "</blockquote>":
+#        state.blockquote = False
+#        result = do_blockquote(state.lines)
+#        state.lines = None
+#    elif state.blockquote:
+#        state.lines.append(line)
 
     elif lc == "<!-- begin header -->":
         state.header = True
@@ -253,6 +256,35 @@ def do_blocks(state, line):
     return result
 
 
+def split_line(line):
+    tag = "<PRE>"
+    if tag in line:
+        items = line.split(tag)
+        assert len(items) > 1
+        for item in items[:-1]:
+            yield item
+            yield tag
+        yield items[-1]
+    else:
+        yield line
+
+
+def process(state, src):
+
+    state.lno = 0
+
+    while state.lno < len(src):
+
+        line = src[state.lno]
+
+        for subline in split_line(line):
+            result = do_blocks(state, subline)
+            if result is not None:
+                yield result
+        state.prev = line
+        state.lno += 1
+
+
 def do_html(name, output):
 
     state = State()
@@ -263,28 +295,22 @@ def do_html(name, output):
     src = open(name).read()
     src = src.split("\n")
     tgt = []
-    state.lno = 0
 
+    failed = False
     try:
-      while state.lno < len(src):
-
-        line = src[state.lno]
-        result = do_blocks(state, line)
-        if result is not None:
-            tgt.append(result)
-        state.prev = line
-        state.lno += 1
+        for line in process(state, src):
+            tgt.append(line)
     except:
         print("\n\n")
         print("="*79)
         print("parse failed on line %d in %s"%(state.lno+1, name))
-
-
+        failed = True
         raise
 
     finally:
     
-        tgt.append("\n\n%% parser failed at source line %d"%(state.lno+1))
+        if failed:
+            tgt.append("\n\n%% parser failed at source line %d"%(state.lno+1))
         #for line in lines:
         #    print(line)
         tgt = '\n'.join(tgt)

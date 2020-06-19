@@ -603,11 +603,10 @@ Scott Aaronson, Aaron Bergman and an entity named tessel.  I had written:
 
 \begin{quote}
 Chaitin has given a marvelous definition of a 
-particular random sequence of bits called &Omega; using the fact that no 
+particular random sequence of bits called \Omega  using the fact that no 
 algorithm can decide which Turing machines halt... but this random 
 sequence is uncomputable, so you can't really "exhibit" it.
 \end{quote}
-    
 
 However, Wolfgang Brand points out this paper:
 
@@ -648,10 +647,474 @@ Springer, Singapore, 1999, pp. 32-52.  Also available at
 <A HREF = "http://www.cs.auckland.ac.nz/CDMTCS/chaitin/lisp.html">http://www.cs.auckland.ac.nz/CDMTCS/chaitin/lisp.html</A>
 
 \end{quote}
-    
 I replied by pointing Allan to the following old article,
 which is related to the idea of Chaitin's paper:
 
+\begin{quote}
+<b>From: John Baez<br>
+Subject: Re: compression, complexity, and the universe<br>
+Date: 1997/11/20<br>
+Newsgroups: sci.physics.research, comp.compression.research</b><br>
 
 
-% parser failed at source line 821
+Aaron Bergman wrote:
+
+\begin{quote}
+The smallest number not expressible in under ten words
+\end{quote}
+
+Hah!  This, by the way, is the key to that puzzle I laid out: 
+prove that there's a constant K such that no bitstring can be 
+proved to have algorithmic entropy greater than K.   
+
+Let me take this as an excuse to say a bit more about this.
+I won't give away the answer to the puzzle; anyone who gets
+stuck can find the answer in this nice survey:
+
+26) Peter Gacs, Lecture notes on descriptional complexity and randomness, 
+available at <A HREF = "http://www.cs.bu.edu/faculty/gacs/"> http://www.cs.bu.edu/faculty/gacs/</A>
+
+In my more rhapsodic moments, I like to think of K as the 
+"complexity barrier".  The world \emph{seems} to be full of incredibly 
+complicated structures - but the constant K sets a limit on our 
+ability to \emph{prove} this.   Given any string of bits, we can't rule 
+out the possibility that there's some clever way of printing it 
+out using a computer program less than K bits long.  The Encyclopedia 
+Brittanica, the human genome, the detailed atom-by-atom recipe for 
+constructing a blue whale, or for that matter the entire solar system 
+- we are unable to prove that a computer program less than K bits 
+long couldn't print these out.  So we can't firmly rule out the 
+reductionistic dream that the whole universe evolved mechanistically 
+starting from a small "seed", a bitstring less than K bits long.  
+(Maybe it did!)
+
+So this raises the question, how big is K?
+
+It depends on ones axioms for mathematics.  
+
+Recall that the algorithmic entropy of a bitstring is defined
+as the length of the shortest program that prints it out.  For
+any finite consistent first-order axiom system A exending the
+usual axioms of arithmetic, let K(A) be the constant such that
+no bitstring can be proved, using A, to have algorithmic entropy
+greater than K(A).  We can't compute K(A) exactly, but there's a 
+simple upper bound for it.  As Gacs explains, for some constant c 
+we have:
+K(A) < L(A) + 2 log_{2} L(A) + c
+where L(A) denotes the length of the axiom system A, encoded as
+bits as efficiently as possible.  I believe the constant c is 
+computable, though of course it depends on details like what 
+universal Turing machine you're using as your computer.  
+
+What I want to know is, how big in practice is this upper
+bound on K(A)?  I think it's not very big!   The main problem 
+is to work out a bound on c.
+\end{quote}
+
+Next, some email from the man himself: Scott Aaronson!
+
+\begin{quote}
+  Hi John,
+
+  I just read the latest issue of TWF.  I'd been waiting a long time for you 
+  to tackle computational complexity - thanks! :)  Here are some comments 
+  and responses that you might find helpful.
+
+  It's not known whether P&ne;NP implies the existence of one-way functions 
+  (OWF's) - indeed, there's evidence that proving such an implication 
+  will be hard:
+
+
+27) Adi Akavia, Oded Goldreich, Shafi Goldwasser and Dana Moshkovitz,
+  On basing one-way functions on NP-hardness, November 22, 2005, available
+  at
+  <A HREF = "http://theory.csail.mit.edu/~akavia/AGGM.pdf">http://theory.csail.mit.edu/~akavia/AGGM.pdf</A>
+
+  What's known is that one-way functions exist iff pseudorandom generators 
+  (PRG's) do - that's a long, gnarly result of Hastad et al.:
+
+  28) John Hastad, Russell Impagliazzo, Leonid A. Levin and Michael Luby,
+A pseudorandom generator from any one-way function, available
+at <A HREF = "http://citeseer.ifi.unizh.ch/hastad99pseudorandom.html">http://citeseer.ifi.unizh.ch/hastad99pseudorandom.html</A>
+
+  So when I wrote that Razborov-Rudich illustrates the "self-referentiality" 
+  of proving P&ne;NP, really I meant that it illustrates the self-referentiality 
+  of proving that OWF's and PRG's exist!  But most of us believe not only 
+  that P&ne;NP, but also that OWF's exist, and that all of these questions 
+  are "morally similar" anyway... :)
+
+  You write: "It's a fascinating question whether randomness actually helps 
+  you compute stuff. I guess most computer scientists think it does."
+
+  Well, today most of us think that good pseudorandom generators exist, 
+  which (as you pointed out) implies that P=BPP.  That's not to say that 
+  randomness never helps; it just doesn't provide more than a polynomial 
+  advantage.
+
+  Incidentally, it followed already from Andy Yao's work in 1982 that if 
+  REALLY good pseudorandom generators exist, then P=BPP.  What Nisan and 
+  Wigderson showed in 1994 was that even if only kinda sorta good PRG's 
+  exist, then still P=BPP!
+
+  Since you wrote at length about hash functions like MD5, you might be 
+  interested in the following abstraction of the collision-finding problem.  
+  Suppose we have a two-to-one function 
+ 
+  f: {0,1}^{n} \to  {0,1}^{n-1}, 
+
+  which we can only access in a "black-box" fashion - i.e., we can feed 
+  it an input and get an output.  The goal is to find distinct x and y 
+  such that f(x)=f(y).  Classically, it's easy to see that ~2^{n/2} 
+  accesses 
+  to f are necessary and sufficient - that's just the birthday paradox you 
+  described.  But what if we can access f in quantum superposition, to 
+  create states like
+ 
+  &sum;_{x} |x>|f(x)>?
+
+  In that case, it turns out that one can combine the birthday paradox with 
+  Grover's quantum search algorithm, to find a collision using ~2^{n/3}
+  accesses to f instead of ~2^{n/2}.  But could we do it with 
+  n^{O(1)} 
+  accesses, or even a \emph{constant} number independent of n?  You might be 
+  surprised that this was open for years!
+ 
+  Probably my best-known result was to show that ~2^{n/5} accesses are 
+  needed:
+
+29) Scott Aaronson, Quantum lower bound for the collision problem,
+available as
+<A HREF = "http://arxiv.org/abs/quant-ph/0111102">quant-ph/0111102</A>.
+
+Subsequently Yaoyun Shi improved that to 
+  show that ~2^{n/3} is indeed the right answer:
+
+
+30) Yauyon Shi, Quantum lower bounds for the collision and the element
+distinctness problems, available as
+ <A HREF = "http://arxiv.org/abs/quant-ph/0112086">quant-ph/0112086</A>.
+
+  You ask why theoretical computer scientists don't use the arXiv.  The 
+  answer is historical and cultural.  Quantum computer scientists like 
+  me \emph{do} post to quant-ph, as a result of hanging around physicists for 
+  so long.  But in classical complexity, if you want your paper to be read, 
+  then you (1) put in on your homepage, (2) submit it to STOC or FOCS, 
+  which are the top conferences in the field (and are MUCH more important 
+  than journals), and (3) post it here:
+
+31) 
+Electronic Colloquium on Computational Complexity, 
+<A HREF = "
+<A HREF = "http://www.eccc.uni-trier.de/eccc/">http://www.eccc.uni-trier.de/eccc/</A>
+
+ which is our own homegrown arXiv.
+
+  I like your finite G&ouml;del statement!  Let me restate it as follows:
+ 
+  G(n) = "This statement has no ZF proof of at most n symbols."
+ 
+  What can we say?  Obviously, if ZF is consistent, then G(n) has no 
+  proof of at most n symbols.  Hence G(n) is true.  Furthermore, G(n) 
+  has a proof of ~2^{n} symbols.  This proof simply enumerates all 
+  proofs of \le n symbols, and shows that none of them work.
+
+  You might wonder: does G(n) have a proof of n+1 symbols, or for that 
+  matter n^{O(1)} symbols?  
+  This turns out to be related to the main open 
+  questions of complexity theory!  In particular, if NP=coNP, then G(n) 
+  has a proof of n^{O(1)} symbols.  NP=coNP just means that, whenever a 
+  Boolean formula of size n is unsatisfiable, there's a proof of that 
+  fact of length polynomial in n.  Clearly if P=NP then NP=coNP, but the 
+  converse isn't known.  The prevailing belief is not only that P&ne;NP, 
+  but also that NP&ne;coNP.
+
+  Actually I can say more than that: if NE=coNE, then G(n) has a proof 
+  of n^{O(1)} symbols.  Here NE is Nondeterministic Exponential-Time, 
+  or the exponential-time analogue of NP.  (See my Complexity Zoo:
+
+32) Scott Aaronson and Greg Kuperberg, Complexity Zoo,
+ <A HREF = "http://qwiki.caltech.edu/wiki/Complexity_Zoo">http://qwiki.caltech.edu/wiki/Complexity_Zoo</A>
+
+  for lots more about this and other classes.)  coNE is just the 
+  complement of NE.  If NP=coNP then NE=coNE, but again the converse 
+  isn't known.
+
+  What do these weird exponential classes have to do with G(n)?  The 
+  point is that to describe an integer n takes only log(n) symbols, 
+  not n symbols.  So when we ask for a proof of G(n) with at most n 
+  symbols, from "log(n)'s standpoint" we're actually asking for an 
+  exponentially long proof.
+
+  At this point I'll conjecture that I have an "if and only if" 
+  characterization: if G(n) has a proof of n^{O(1)} 
+  symbols, then NE=coNE.
+ 
+  Incidentally, your "finite G&ouml;del statement" is closely related to the 
+  Hartmanis-Stearns time hierarchy theorem, which launched computational 
+  complexity in the mid-1960's.  The time hierarchy theorem is a finite 
+  version of Turing's undecidability theorem, where instead of asking 
+  whether a given Turing machine ever halts, you ask whether it halts 
+  after at most T steps.  Solving this problem turns out to take slightly 
+  more than T steps.  So in particular, you can solve more problems in 
+  n^{2} time than in n time, more in 
+  n^{3} time than in n^{2} time, and so on.
+ 
+  Let me know if you have other questions.
+  Best,<br>
+  Scott<br>
+\end{quote}
+
+
+Next, here is my reply to a post on sci.physics.research
+from a mysterious entity named tessel... again, I'll edit it a bit:
+
+\begin{quote}
+tessel@um.bot wrote:
+
+\begin{quote}
+On Sat, 11 Feb 2006, John Baez mentioned that md5sum was "broken" about a 
+year ago.  I just wanted to add:
+
+1. If I am not mistaken, sha-1 and md5sum are different algorithms (IIRC, 
+both are known to be insecure). 
+
+\end{quote}
+Yeah, I said SHA-1 and MD5 are different, and I said they were both vulnerable
+to collision attacks.  MD5 is very vulnerable in practice, while the
+vulnerability of SHA-1 is still theoretical: you'd have to have big 
+computers or lots of time or another clever idea to exploit it.  
+(Guess who's likely to have all three!)
+
+For more on this subject, try this:
+
+33) Arjen K. Lenstra, Further progress in hashing cryptanalysis,
+February 26, 2005, available at 
+<A HREF = "http://cm.bell-labs.com/who/akl/hash.pdf">
+http://cm.bell-labs.com/who/akl/hash.pdf</A>
+
+\begin{quote}
+2. The latest versions of the open source utility gpg supports a more 
+secure algorithm, SHA-512, which AFAIK has not been broken; see
+
+34) Tony Stieber, GnuPG Hacks, Linux Journal, March 2006.
+
+3. Even insecure checksum utilities are probably better than none at all. 
+Indeed, checking the given example:
+
+
+\begin{verbatim}
+
+gpg --print-md md5 letter_of_rec.ps order.ps
+A2 5F 7F 0B 29 EE 0B 39  68 C8 60 73 85 33 A4 B9
+A2 5F 7F 0B 29 EE 0B 39  68 C8 60 73 85 33 A4 B9
+\end{verbatim}
+    
+
+Oh NOOOOOO!!!  But wait, there's more:
+
+\begin{verbatim}
+
+gpg --print-md sha1 letter_of_rec.ps order.ps
+0783 5FDD 04C9 AFD2 8304  6BD3 0A36 2A65 16B7 E216
+3548 DB4D 0AF8 FD2F 1DBE  0228 8575 E8F9 F539 BFA6
+
+gpg --print-md RIPEMD160 letter_of_rec.ps order.ps
+9069 8ACC 6D67 6608 657B  9C26 F047 59A1 DC0E 6CA1
+C1BB DE12 B312 EAAD DD3D  D3B8 4CA1 CB1B BA47 DD13
+\end{verbatim}
+    
+Ah HAAAAAA!!!  Gotcha, Alice!
+JB wrote:
+\begin{quote}
+These are huge and wonderful philosophico-physico-mathematical questions 
+ with serious practical implications.
+\end{quote}
+You mean the Weyl curvature hypothesis? :-/
+\end{quote}
+Heh, no - I mean stuff like whether there's such a thing as a provably 
+good cryptographic hash code function, or cipher.  
+
+\begin{quote}
+But while we should never neglect incompleteness entirely, I was 
+fascinated to discover from my readings a few years back that even first 
+order logic has its fascinations!
+
+35) Joel Spencer, The Strange Logic of Random Graphs, Springer, Berlin, 2001.
+
+Here's a thought: "Everyone knows" that if on day D, mathematician M is 
+studying an example of size S in class C, he is more likely to be studying 
+a "secretly special" representative R than a generic representative G of 
+size S.  Why? Because the secretly special reps show up in disguise in 
+other areas, and M was probably hacking through the jungle from one of 
+those places when he got lost and ate a poisoned cache.
+\end{quote}
+Interesting.
+\end{quote}
+
+Finally, here's my reply to an article on sci.math.research by
+Aaron Bergman:
+
+\begin{quote}
+Aaron Bergman wrote:
+
+\begin{quote}
+John Baez wrote:
+
+\begin{quote}
+In fact, the existence of a one-way function would imply that 
+"P does not equal NP".  But, proving or disproving this claim is one 
+of the most profound unsolved math problems around.  
+\end{quote}
+
+This brings to mind a question I was wondering about. Given an NP 
+(-complete?) problem, is it ever possible to engineer a (partial) 
+differential equation, the solution of which, if known, would solve the 
+NP problem?
+
+I realize this is vague. The general thought was whether a continuous 
+dynamical system can somehow be more computationally powerful than 
+something discrete.
+\end{quote}
+
+I was very interested in this question back in college, and I
+wrote a paper about it:
+
+36) John Baez, Recursivity in quantum mechanics, Trans. Amer. Math. Soc. 280 
+(1983), 339-350.
+where I showed that the time evolution for bunch of PDE's -
+including the wave equation, the Klein-Gordon equation, and 
+Schroedinger's equation for finitely many electrically 
+charged point particles - is "computable" in a precise sense.
+
+This seemed interesting at the time because Pour-El and Richards
+had claimed that the behavior of the wave equation in 3+1 dimensions
+was uncomputable.  Their result is correct, but it's an artifact
+of using a funny space of solutions!  If you use a sensible Hilbert space 
+of solutions for which time evolution is unitary, then time evolution 
+is also computable.
+
+Hmm, I see that someone has rediscovered this a few years ago:
+
+37) Klaus Weihrauch and Ning Zhong
+Is wave propagation computable or can wave computers beat the Turing machine?
+Proc. Lond. Math. Soc. 85 (2002) 312-332.  Abstract available at
+<A HREF = "http://www.lms.ac.uk/publications/proceedings/abstracts/p1364a.html">http://www.lms.ac.uk/publications/proceedings/abstracts/p1364a.html</A>
+
+I wonder if they cite my paper.
+
+Anyway, I came away feeling that time evolution for any PDE people actually
+care about is computable once you define your concepts correctly.  This is 
+simply a way of saying that you can numerically compute the solutions to any
+desired accuracy: it's sort of obvious, modulo the crucial technical details.
+
+But a more interesting question would be the one you ask, where
+mere "computability" is replaced by something more refined, like
+"computable up to a specified accuracy in polynomial time".  
+\end{quote}
+
+Another addendum: here's a new article on the problems with 
+finding a cryptographic hash function that's hard to crack:
+
+38) Susan Landau, Find me a hash, AMS Notices 53 (March 2006), 330-332.
+Also available at <A HREF = "http://www.ams.org/notices/200603/fea-landau.pdf">http://www.ams.org/notices/200603/fea-landau.pdf</A> and
+<A HREF = "http://www.ams.org/notices/200603/fea-landau.ps">http://www.ams.org/notices/200603/fea-landau.ps</A>
+
+Landau points out that there's no good mathematical theory backing
+up the most popular hash functions.  "There are hash functions 
+based on hard mathematical problems, making them likely to be secure, 
+but these hash function are inefficient and not used in practice."
+
+Next, here's yet another email from Scott Aaronson, dated July 22, 2006:
+
+\begin{quote}
+ Hi John,
+
+ A while ago you asked whether anyone had studied sentences of the form
+
+ P(n) = "This statement has no proof at most n symbols long."
+
+ Clearly P(n) has a proof with ~2^{n} symbols.  I emailed you
+ conjecturing that P(n) has no proof much shorter than that.
+
+ Well, I just came back from a complexity meeting in Prague, where
+ Pavel Pudlak gave a talk about exactly this sort of question.  It
+ turns out that Harvey Friedman made the same conjecture I did in the
+ 1970's, but his conjecture was soon shown to be FALSE!  Indeed, the
+ number of symbols needed to prove P(n) grows only a little bit faster
+ than n itself.
+
+ Let me sketch why, since I'm guessing this will be as surprising to
+ you as it was to me.
+
+ To prove P(n), it clearly suffices to show that, if our proof system
+ is inconsistent, then any proof of 0=1 must contain statements with
+ more than n symbols.  We can do that using a technique invented by
+ Tarski in the 1930's for "defining truth" - i.e., for recursively
+ building up a one-to-one correspondence between syntax and semantics.
+ More concretely, let T_{k}(A) be a function that takes as
+ input a string A with <font face = "symbol">&#163;</font>k symbols.  We want T_{k} to return 1
+ if A encodes a true statement and 0 otherwise.  So for all k<n, we'll
+ stipulate that
+
+ T_{k+1}( "not" + A ) := 1 if T_{k}(A)=0, or 0 otherwise.
+
+ T_{k+1}( A + "and" + B ) := 1 if T_{k}(A)=1 and
+ T_{k}(B)=1, or 0 otherwise.
+
+ T_{k+1}( "There exists an x such that" + A ) := 1 if there exists an
+ x* such that T_{k}(A[x=x*])=1, or 0 otherwise.
+
+ and so on.  Of course I'm skipping lots of technicalities, like what I
+ mean by A[x=x*].
+
+ Anyway, one can prove that, if T_{n}(A)=T_{n}(B)=1,
+ and if C is derivable from A and B via a first-order inference rule,
+ then T_{n}(C)=1 as well.  Also, if A is an axiom of our proof
+ system, then (reasoning \emph{within} the system) A is true, and hence
+ T_{n}(A)=1.
+
+ It follows that, as long as we restrict ourselves to statements of
+ length <font face = "symbol">&#163;</font>n, no contradiction can be proved.  
+  Furthermore, we can
+ formalize the whole argument using only O(n) symbols (or maybe O(n log(n)), 
+ depending on the proof system).
+
+ So what's the catch?  Why can't we generalize this argument to
+ statements of \emph{all} lengths, thereby contradicting the Incompleteness
+ Theorem?  Because, when we examine the proof that the syntax correctly
+ models the semantics, we'll always find that it involves statements
+ with more than n quantifiers.  I.e. to prove consistency for
+ statements with n quantifiers, we need at least n+1 quantifiers.
+
+ So, is there any way to salvage a finitary G&ouml;del's Theorem?  There
+ probably is!  In particular, consider the following statement:
+ 
+ P(n,k) = "This statement has no proof at most n symbols long,
+ involving statements with at most k quantifiers."
+
+ The new conjecture would be that, for every fixed k, P(n,k) has no
+ proof with less than 2^{O(n)} symbols involving statements with at 
+ most k quantifiers.  According to Pavel, this conjecture is still open.
+ Indeed, it's not even known whether P(n) itself has a proof with less
+ than 2^{O(n)} symbols, involving statements with at most k quantifiers
+ for some fixed k.
+
+ Best, <br>
+ Scott
+\end{quote}
+
+
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>Anyone who considers arithmetical methods of producing random digits 
+is, of course, in a state of sin.</em> - John von Neumann 
+
+<em>He is the Napoleon of crime, Watson.  He is the organizer of half 
+that is evil and of nearly all that is undetected in this great city.
+He is a genius, a philosopher, an abstract thinker....</em> - Sherlock Holmes
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

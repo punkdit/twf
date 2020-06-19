@@ -130,10 +130,12 @@ these gives us a copy of the quaternions inside the octonions.   For
 example, say you want to multiply e_{6} and e_{7}.  You notice that the
 the vertical line says "e_{6}, e_{7}, e_{2}" on it as we follow the arrow down.
 Thus, just as for i, j, and k in the quaternions, we have
-\begin{verbatim}
-e<sub>6</sub> e<sub>7</sub> =  e<sub>2</sub>,   e<sub>7</sub> e<sub>2</sub> =  e<sub>6</sub>,   e<sub>2</sub> e<sub>6</sub> =  e<sub>7</sub>
-e<sub>7</sub> e<sub>6</sub> = -e<sub>2</sub>,   e<sub>2</sub> e<sub>7</sub> = -e<sub>6</sub>,   e<sub>6</sub> e<sub>2</sub> = -e<sub>7</sub>
-\end{verbatim}
+
+$$
+
+e_{6} e_{7} =  e_{2},   e_{7} e_{2} =  e_{6},   e_{2} e_{6} =  e_{7}
+e_{7} e_{6} = -e_{2},   e_{2} e_{7} = -e_{6},   e_{6} e_{2} = -e_{7}
+$$
     
 So in particular we have e_{6} e_{7} = e_{2}.
 
@@ -360,7 +362,7 @@ Phys. B298 (1988), 92-108.
 
 and he writes:
 
-$$
+\begin{quote}
 Let me add a technical remark that I extract from Green, Schwarz, 
 and Witten, Vol 1, Appendix 4A.
 
@@ -426,13 +428,35 @@ spinors, right-handed spinors and vectors on an equal basis (see
 Now I write out all three indices of \gamma _{i}. 
 Because of triality I can use i,j,k for spinor, dotted spinor and  
 vector indices.  Then it is known that 
-<PRE>            \gamma _{ijk} = c_{ijk} for i,j,k<8
+
+$$
+            \gamma _{ijk} = c_{ijk} for i,j,k<8
   
                   \delta _{ij} for k=8 (and ijk permuted)
 
                   0 for more than 2 of ijk equal 8.
 $$
     
+is a representation of Cliff(8) if c_{ijk} are the structure
+constants of the octonions (i.e. e_{i} e_{j} = c_{ijk} e_{k} for the 7 roots of -1 
+in the octonions).
+
+When you plug this representation of the \Gamma 's in the above mentioned \gamma 
+expression you will will find that it vanishes due to the antisymmetry
+of the associator
+[a,b,c] = a(bc) - (ab)c
+in the division algebras. This is my understanding of the relation of
+supersymmetry to the divison algebras.
+
+Robert
+
+\end{quote}
 
 
-% parser failed at source line 564
+
+\par\noindent\rule{\textwidth}{0.4pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>

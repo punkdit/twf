@@ -248,7 +248,9 @@ says these two ways are equal.  It also says that end(I) is a
 \emph{commutative} monoid!  It's easiest to understand this argument 
 if we write f o g vertically, like this:
 
+
 \begin{verbatim}
+
      f
 
      g
@@ -257,14 +259,18 @@ if we write f o g vertically, like this:
 
 and f \otimes  g horizontally, like this:
 
+
 \begin{verbatim}
+
     f g
 \end{verbatim}
     
 
 Then the Eckmann-Hilton argument goes as follows:
 
+
 \begin{verbatim}
+
      f       1 f                 g 1       g
          =         =   g f   =         = 
      g       g 1                 1 f       f
@@ -274,7 +280,9 @@ Here 1 means the identity morphism 1: I \to  I.  Each step in the
 argument follows from standard stuff about monoidal categories.  
 In particular, an expression like
 
+
 \begin{verbatim}
+
      f g
 
      h k
@@ -312,7 +320,9 @@ More precisely, END(I) will be an "algebra of the little 2-cubes
 operad".  This implies that for every configuration of n little 
 rectangles in a square:
 
+
 \begin{verbatim}
+
         ---------------------
        |                     |
        |           -----     |
@@ -332,7 +342,9 @@ rectangles in a square:
 we get an n-ary operation on END(I).  For every homotopy between
 such configurations:
 
+
 $$
+
         ---------------------            ---------------------
        |                     |          | -----               |
        |           -----     |          ||     |    ----      |
@@ -374,7 +386,9 @@ for some ring R.
 Next, suppose every object X in our abelian category has an 
 "projective resolution" - that is, a chain complex 
 
+
 $$
+
     d_{0}      d_{1}      d_{2}
 X_{0} <--- X_{1} <--- X_{2} <--- ...
 $$
@@ -382,11 +396,13 @@ $$
 where each object X^{i} is 
 <a href = "http://en.wikipedia.org/wiki/Projective_module">projective</a>, and the homology groups
 
-\begin{verbatim}
-          ker (d<sub>i</sub>)  
-H<sub>i</sub> =    ------------
-          im (d<sub>i-1</sub>)
-\end{verbatim}
+
+$$
+
+          ker (d_{i})  
+H_{i} =    ------------
+          im (d_{i-1})
+$$
     
 are zero except for H^{0}, which equals X.  You should think of
 a projective resolution as a "puffed-up" version of X that's
@@ -401,14 +417,18 @@ HOM(X,Y)
 How does this work?  Simple: replace X by a chosen projective
 resolution 
 
+
 $$
+
 X_{0} <--- X_{1} <--- X_{2} <--- ...
 $$
     
 
 and then map this whole thing to Y, getting a cochain complex
 
+
 $$
+
 hom(X_{0},Y) ---> hom(X_{1},Y) ---> hom(X_{2},Y) --- >
 $$
     
@@ -562,7 +582,9 @@ operad is an operad in the world of topological spaces.  It has one
 abstract n-ary operation for each way of sticking n little
 k-dimensional cubes in a big one, like this:
 
+
 \begin{verbatim}
+
         ---------------------
        |                     |
        |           -----     |
@@ -662,9 +684,9 @@ Modulo some typographical changes, Michael Batanin wrote:
    Unfortunately, technical details are important in this business.
 
    First, we have to be careful about tensor product of operads. A
-   very long standing question is: Let A be a E<sub>1</sub>-operad and
-   B be a cofibrant E<sub>1</sub>-operad.  Is it true that their
-   tensor product A &otimes; B is an E<sub>2</sub>-operad?  The answer
+   very long standing question is: Let A be a E_{1}-operad and
+   B be a cofibrant E_{1}-operad.  Is it true that their
+   tensor product A \otimes  B is an E_{2}-operad?  The answer
    is unknown, even though Dunn's argument is correct and the tensor
    product of two little 1-cube operads is equivalent to the little
    2-cube operad.  Unfortunately, the theorem from Hu, Kriz and
@@ -697,7 +719,7 @@ Modulo some typographical changes, Michael Batanin wrote:
    as a simplicially coherent bimodule to the homotopy coherent left 
    Kan extension of the inclusion functor 
 
-   Projective bounded chain complex &rarr; Bounded chain complex 
+   Projective bounded chain complex \to  Bounded chain complex 
 
    along itself.  Then the Kleisli category of this distributor has a 
    canonical A-infinity structure and this Kleisli category is equivalent 
@@ -711,13 +733,12 @@ Modulo some typographical changes, Michael Batanin wrote:
    and its companion 
 
    17) Michael A. Batanin, Homotopy coherent category theory and 
-   A<sub>&infin;</sub> structures in monoidal categories, Jour. Pure Appl. 
+   A_{\infty } structures in monoidal categories, Jour. Pure Appl. 
    Alg. 123 (1998), 67-103.
 
   Regards,<br/>
   Michael 
 \end{quote}
-    
 
 Batanin's talk has a very nice introduction to his "derived 
 Eckmann-Hilton argument", which is a precise version of what I was 
@@ -736,40 +757,40 @@ Johansson wrote:
 
 \begin{quote}
    I could try to claim that I'm starting to become an expert on
-   things A<sub>&infin;</sub>, but given that Jim Stasheff is an avid
+   things A_{\infty }, but given that Jim Stasheff is an avid
    commenter here, I don't quite dare to. :)
 
    However, I have read the Lu-Palmieri-Wu-Zhang [LPWZh] paper
    mentioned in the exposition backwards and forwards.  On the face, what
    LPWZh try to do is to take the survey articles by Bernhard Keller:
 
-   19) Bernhard Keller, Introduction to A<sub>&infin;</sub>-algebras and modules,
+   19) Bernhard Keller, Introduction to A_{\infty }-algebras and modules,
    available as <a href = "http://arxiv.org/abs/math/9910179">arXiv:math/9910179</a>.
 
-   A brief introduction to A<sub>&infin;</sub>-algebras, notes from a talk at 
+   A brief introduction to A_{\infty }-algebras, notes from a talk at 
    the workshop on Derived Categories, Quivers and Strings, Edinburgh, 
    August 2004.  Available at
    <a href = "http://www.institut.math.jussieu.fr/~keller/publ/index.html">http://www.institut.math.jussieu.fr/~keller/publ/index.html</a>
 
-   A<sub>&infin;</sub>-algebras in representation theory, contribution to the 
+   A_{\infty }-algebras in representation theory, contribution to the 
    Proceedings of ICRA IX, Beijing 2000.  Available at 
    <a href = "http://www.institut.math.jussieu.fr/~keller/publ/index.html">http://www.institut.math.jussieu.fr/~keller/publ/index.html</a>
   
-   A<sub>&infin;</sub>-algebras, modules and functors, available as 
+   A_{\infty }-algebras, modules and functors, available as 
    <a href = "http://arxiv.org/abs/math/0510508">arXiv:math/0510508</a>.
 
-   outlining the use of A<sub>&infin;</sub>-algebras in representation theory,
+   outlining the use of A_{\infty }-algebras in representation theory,
    and widening the scope of their proven usability while actually
    proving the many unproven and interesting statements that Keller
    makes.
 
    At the core of this lies two different theorems. One is the
    Kadeishvili theorem (which in various guises has been proven by
-   everyone involved with A<sub>&infin;</sub>-algebras, and a few more, in my
-   impression ;) that says that you can carry A<sub>&infin;</sub>-algebras
+   everyone involved with A_{\infty }-algebras, and a few more, in my
+   impression ;) that says that you can carry A_{\infty }-algebras
    across taking homology.  Kadeishvili's argument specializes to the 
-   case where you start with an A<sub>&infin;</sub>-algebra with only m<sub>1</sub> and 
-   m<sub>2</sub> are non-trivial - i.e. a plain old dg-algebra.  For higher 
+   case where you start with an A_{\infty }-algebra with only m_{1} and 
+   m_{2} are non-trivial - i.e. a plain old dg-algebra.  For higher 
    generality, you'd probably want to turn to the Homology Perturbation 
    Theory crowd with Stasheff, Gugenheim and Huebschmann among the more 
    famous names...
@@ -782,18 +803,17 @@ Johansson wrote:
    then cycles are chain maps and the homology picks out exactly the
    algebra cohomology over the appropriate module category. Thus, we 
    get Ext as the homology of a dg-algebra, and thus, Ext has an
-   A<sub>&infin;</sub>-algebra structure.
+   A_{\infty }-algebra structure.
 
    The second cornerstone of these papers is the Keller higher
    multiplication theorem: if the ring R is sufficiently nice, then 
-   the A<sub>&infin;</sub>-algebra structure on Ext<sub>R</sub>*(M,M) for some 
+   the A_{\infty }-algebra structure on Ext_{R}*(M,M) for some 
    appropriate module M will allow you to recover a presentation of 
    R explicitly.
 
    I hope this answers your question about the origin of their
-   A<sub>&infin;</sub>-algebra structure.
+   A_{\infty }-algebra structure.
 \end{quote}
-    
 
 Note the great technical simplification of working with what 
 I called hom(PX,PX) instead of hom(PX,X) - composition becomes
@@ -810,11 +830,8 @@ fundamental fact about the Hochschild complex.</em> - Maxim Kontsevich
 <em>Higher category theory provides us with the argument Kontsevich
 was looking for.</em> - Michael Batanin
 
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 1007

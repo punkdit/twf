@@ -10,7 +10,9 @@ Dynkin diagrams and q-mathematics.   The story can be summarized
 in a rather elaborate diagram, of which this is the first part:
 
 
+
 $$
+
                           DYNKIN DIAGRAM
                           /             \
                          /               \
@@ -38,7 +40,9 @@ which for lack of a better name I'll call the "q-polynomial".
 In recent weeks I've hinted that starting with the Dynkin diagrams 
 in the A_{n} series, like this:
 
+
 \begin{verbatim}
+
                   o-------o-------o-------o-------o
 \end{verbatim}
     
@@ -60,34 +64,42 @@ are symmetry groups of Platonic solids and their analogues in other
 dimensions: the regular polytopes.  For example, starting with this
 Dynkin diagram:
 
-\begin{verbatim}
-                           o-------o                  A<sub>2</sub>
-\end{verbatim}
+
+$$
+
+                           o-------o                  A_{2}
+$$
     
 we get the symmetry group of the equilateral triangle, while starting
 with this one:
 
+
 $$
+
                            o===>===o                  B_{2}
 $$
     
 we get the symmetry group of the square, and starting with this one:
 
 
-\begin{verbatim}
-                       o-------o--------o             A<sub>3</sub>
-\end{verbatim}
+
+$$
+
+                       o-------o--------o             A_{3}
+$$
     
 we get the symmetry group of the regular tetrahedron.  Other Coxeter
 groups are symmetry groups of polytopes that aren't regular.   This, 
 for example:
 
-\begin{verbatim}
+
+$$
+
                                      o
                                      | 
-                                     |                E<sub>8</sub>
+                                     |                E_{8}
                  o----o----o----o----o----o-----o
-\end{verbatim}
+$$
     
 is the symmetry group of a non-regular polytope in 8 dimensions with 240 
 vertices!   
@@ -104,9 +116,11 @@ simplices in its Coxeter complex will be n-1, and it will have one of
 these top-dimensional simplices for each element of the Coxeter group. 
 For example, I've already said this Dynkin diagram:  
 
-\begin{verbatim}
-                           o-------o                   A<sub>2</sub>
-\end{verbatim}
+
+$$
+
+                           o-------o                   A_{2}
+$$
     
 gives the Coxeter group consisting of symmetries of the equilateral
 triangle - by which I mean all reflections and rotations.  This group
@@ -123,9 +137,11 @@ face of the polytope and using these to chop its surface into simplices.
 
 For example, this diagram
 
-\begin{verbatim}
-                       o-------o--------o              A<sub>3</sub>
-\end{verbatim}
+
+$$
+
+                       o-------o--------o              A_{3}
+$$
     
 gives the symmetry group of the tetrahedron, so we can get its Coxeter
 complex by barycentrically subdividing the surface of the tetrahedron,
@@ -172,7 +188,9 @@ trouble, but hopefully you'll notice when it happens.
 For example, the Dynkin diagram A_{n} has n dots in a row like this:
 
 
+
 \begin{verbatim}
+
                   o-------o-------o-------o-------o
 \end{verbatim}
     
@@ -217,7 +235,9 @@ worry: I'm only mentioning this because then we get to call it the
 "flag variety" and sound intelligent.  The real point here is
 that there's a wonderful analogy:
 
+
 \begin{verbatim}
+
        SIMPLE ALGEBRAIC GROUPS    |      COXETER GROUPS
      -----------------------------|----------------------
            FLAG VARIETIES         |    COXETER COMPLEXES
@@ -238,13 +258,17 @@ groups and their Coxeter complexes!  I gave the primordial example in
 Dynkin diagram A_{n}.  The number of points in the flag variety
 of the group SL(n+1,F_{q}) is the q-factorial
 
+
 \begin{verbatim}
+
 [n+1]! = [1] [2] ... [n+1]
 \end{verbatim}
     
 where
 
+
 $$
+
 [i] = 1 + q + q^{2} + ... + q^{i-1}
 $$
     
@@ -264,7 +288,9 @@ To get a tiny taste of how this stuff works, consider the Dynkin diagram
 A_{2}.  We've seen that the Coxeter complex is a barycentrically
 subdivided triangle:
 
+
 \begin{verbatim}
+
                                x
                               / \
                              /   \
@@ -281,7 +307,9 @@ subdivided triangle:
 or viewed a bit differently, a hexagon:
 
 
+
 \begin{verbatim}
+
                             x-----o
                            /       \
                           /         \
@@ -366,7 +394,9 @@ wonderful analogy between Coxeter complexes and flag varieties.
 
 Let's calculate the q-polynomial of A_{2} using method b):
                 
+
 \begin{verbatim}
+
                               0
                            x-----o
                         1 /       \ 1
@@ -382,7 +412,9 @@ I've written down the distance of each top-dimensional simplex
 from a given one.  There's one of distance 0, two of distance 1,
 two of distance 2, and 1 of distance 3.  This gives
 
+
 $$
+
 q^{3} + 2q^{2} + 2q + 1 =  [3]!
 $$
     
@@ -415,7 +447,9 @@ of the flag variety defined over the real numbers.
 We can summarize this network of relations in the following diagram:
 
 
+
 $$
+
                           DYNKIN DIAGRAM
                           /             \
                          /               \
@@ -513,6 +547,3 @@ here at UCR!
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 597

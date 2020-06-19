@@ -38,7 +38,9 @@ pyramid of cannon balls contains a square number of cannon balls only
 when it has 24 cannon balls along its base".  In other words, the 
 only integer solution of
 
+
 $$
+
            1^{2} + 2^{2} + ... + n^{2} = m^{2},
 $$
     
@@ -81,21 +83,27 @@ coordinates some extra "fermionic" coordinates.  I don't want to
 get too technical here, but the basic idea is that while the usual
 coordinates commute as usual:
 
-\begin{verbatim}
-x<sub>i</sub> x<sub>j</sub> = x<sub>j</sub> x<sub>i</sub>
-\end{verbatim}
+
+$$
+
+x_{i} x_{j} = x_{j} x_{i}
+$$
     
 the fermionic coordinates "anticommute"
 
-\begin{verbatim}
-y<sub>i</sub> <sub>j</sub> = - y<sub>j</sub> y<sub>i</sub>
-\end{verbatim}
+
+$$
+
+y_{i} _{j} = - y_{j} y_{i}
+$$
     
 while the bosonic coordinates commute with fermionic ones:
 
-\begin{verbatim}
-x<sub>i</sub> y<sub>j</sub> = y<sub>j</sub> x<sub>i </sub>
-\end{verbatim}
+
+$$
+
+x_{i} y_{j} = y_{j} x_{i }
+$$
     
 If you've studied bosons and fermions this will be sort of
 familiar; all the differences between them arise from the difference 
@@ -133,7 +141,9 @@ torus - a 16-dimensional torus.  We can think of any such torus as
 16-dimensional Euclidean space "modulo a lattice".  Remember, a lattice
 in Euclidean space is something that looks sort of like this:
 
+
 \begin{verbatim}
+
                   x
                       x
                x          x
@@ -174,7 +184,9 @@ really mean "integral lattice".  What's more of a big deal is that
 L must be "even", that is, for any x in L the inner product x.x is 
 even.  This implies that L is integral, by the identity
 
+
 \begin{verbatim}
+
 (x + y).(x + y) = x.x + 2x.y + y.y
 \end{verbatim}
     
@@ -298,9 +310,11 @@ First of all, let's think about Lorentzian lattices, that is,
 lattices in Minkowski spacetime instead of Euclidean space.  
 The difference is just that now the dot product is defined by
 
-\begin{verbatim}
-(x<sub>1</sub>,...,x<sub>n</sub>) . (y<sub>1</sub>,...,y<sub>n</sub>) = - x<sub>1</sub> y<sub>1</sub> + x<sub>2</sub> y<sub>2</sub> + ... + x<sub>n</sub> y<sub>n</sub>
-\end{verbatim}
+
+$$
+
+(x_{1},...,x_{n}) . (y_{1},...,y_{n}) = - x_{1} y_{1} + x_{2} y_{2} + ... + x_{n} y_{n}
+$$
     
 with the first coordinate representing time.  It turns out that
 the only even unimodular Lorentzian lattices occur in dimensions
@@ -323,13 +337,17 @@ preprint available as <A HREF = "http://xxx.lanl.gov/abs/hep-th/9411188">hep-th/
 but the 26-dimensional one is even more neat.  In particular,
 thanks to the cannonball trick of Lucas, the vector
 
+
 \begin{verbatim}
+
                v = (70,0,1,2,3,4,...,24)
 \end{verbatim}
     
 is "lightlike".  In other words, 
 
+
 \begin{verbatim}
+
                     v.v = 0 
 \end{verbatim}
     
@@ -393,7 +411,9 @@ appears in the American Mathematical Monthly, February 1990, pp. 120-124,
 and that another elementary proof has subsequently appeared in the Journal 
 of Number Theory.  David Morrison pointed out in email that since
 the sum
+
 $$
+
 1^{2} + 2^{2} + ... + n^{2} = m^{2},
 $$
     
@@ -401,7 +421,9 @@ $$
 is n(n+1)(2n+1)/6, this problem can be solved by finding all the
 rational points (n,m) on the elliptic curve
 
+
 $$
+
 (1/3) n^{3} + (1/2) n^{2} + (1/6) n = m^{2}
 $$
     
@@ -410,7 +432,9 @@ which is the sort of thing folks know how to do.
                                                     
 Also, here's something 
 Michael Thayer wrote on one of the newsgroups, and my reply:
+
 \begin{verbatim}
+
 >John Baez wrote:
 
 >> In particular, thanks to the cannonball trick of Lucas, the vector
@@ -485,11 +509,8 @@ making it inconsistent.
 in 11-dimensional physics, there is even a paper on E11:
 
 12) P. West, E_{11} and M-theory, available as <A HREF = "http://xxx.lanl.gov/abs/hep-th/0104081">hep-th/0104081</A>.
-<HR>
+\par\noindent\rule{\textwidth}{0.4pt}
 
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 592

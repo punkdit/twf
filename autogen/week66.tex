@@ -97,7 +97,9 @@ and the references therein.  Again, there are some infinite families and
 26 exceptions called the "sporadic" groups.  The biggest of these
 is the Monster, with 
 
+
 $$
+
  2^{46} 3^{20} 5^{9} 7^{6} 11^{2} 13^{3} 17 19 23 29 31 41 47 59 71  = 
  808017424794512875886459904961710757005754368000000000
 $$
@@ -116,7 +118,9 @@ of modular functions.  What are those?  Well, consider a lattice in the
 complex plane, like 
 
 
+
 \begin{verbatim}
+
                   x
                       x
                x          x
@@ -137,7 +141,9 @@ These are important in complex analysis, as described in "<A HREF =
 two "periods" \omega _{1} and \omega _{2}, complex numbers
 such that every point in the lattice of the form
 
+
 $$
+
                    n \omega _{1} + m \omega _{2}.
 $$
     
@@ -145,14 +151,18 @@ $$
 But this description is redundant, because if we choose instead to
 use
 
+
 $$
+
                  \omega '_{1} = a \omega _{1} + b \omega _{2}
 
                  \omega '_{2} = c \omega _{1} + d \omega _{2}
 $$
     
 we'll get the same lattice as long as the matrix of integers
+
 \begin{verbatim}
+
                           a   b 
 
                           c   d
@@ -172,7 +182,9 @@ Now, if we are only interested in parametrizing the different \emph{shapes}
 of lattices, where two rotated or dilated versions of the same lattice
 count as having the same shape, it suffices to use one complex number, the
 ratio 
+
 $$
+
                        \tau  = \omega _{1}/\omega _{2}.
 $$
     
@@ -181,14 +193,18 @@ halfplane, H, while we're at it.    But for the reason given above, this
 description is redundant; if we have a lattice described by \tau , and a 
 matrix in SL(2,Z), we get a new guy \tau ' which really describes the 
 same shaped lattice.  If you work it out, 
+
 $$
+
                    \tau ' = (a \tau  + b)/(c \tau  + d).
 $$
     
 So the space of different possible shapes of lattices in the complex
 plane is really the quotient 
 
+
 \begin{verbatim}
+
                          H/SL(2,Z)
 \end{verbatim}
     
@@ -204,7 +220,9 @@ rational functions of this function j.)
 
 It looks like this:
 
+
 $$
+
            j(\tau ) = q^{-1} + 744 + 196884 q + 21493706 q^{2} + ....
 $$
     
@@ -220,7 +238,9 @@ mysterious significance of the numbers 24 and 26 in string theory.
 So what is this j function, anyway?  Well, it turns out we can define it
 as follows.  First form the Dedekind eta function 
 
+
 $$
+
                             &#8734;
               \eta (q) = q^{1/24}   &prod;    (1 - q^{n})
                           n = 1
@@ -236,7 +256,9 @@ fundamental domain in it equals 1.  Now take the direct sum of 3
 copies of E_{8} to get an even unimodular lattice L in 24
 dimensions.  Then form the theta function
 
+
 $$
+
                     \Theta (q)   =   &sum;   q^{<x,x>/2}
                              x in L
 $$
@@ -244,7 +266,9 @@ $$
 In other words, we take all lattice points x and sum q to the power
 of their norm squared over 2.  Now we have
 
+
 $$
+
                       j(\tau ) = \Theta (q)/\eta (q)^{24}
 $$
     
@@ -345,13 +369,9 @@ second one below:
     some new infinite product identities, in the same way that the denominator
     formulas of the affine Kac-Moody algebras give the Macdonald identities.
 \end{quote}
-    
 
 
 \par\noindent\rule{\textwidth}{0.4pt}
 % </A>
 % </A>
 % </A>
-
-
-% parser failed at source line 421

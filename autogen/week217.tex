@@ -145,7 +145,7 @@ mention it to show how scary math can get.  As Stephen Gelbart once wrote:
 \begin{quote}
      The conjectures of Langlands just alluded to amount (roughly)
      to the assertion that the other zeta-functions arising in 
-     number theory are but special realizations of these L(s,&pi;).
+     number theory are but special realizations of these L(s,\pi ).
 
      Herein lies the agony as well as the ecstacy of Langlands'
      program.  To merely state the conjectures correctly requires
@@ -155,7 +155,6 @@ mention it to show how scary math can get.  As Stephen Gelbart once wrote:
      geometry.  In other words, though the promised rewards are 
      great, the initiation process is forbidding.
 \end{quote}
-    
 I hope someday I'll understand this stuff well enough to say something more 
 helpful!  Lately I've been catching little glimpses of what it's about....
 
@@ -273,7 +272,9 @@ t |\to  t + 1
 
 generate the group of all maps
 
+
 $$
+
        at + b
 t |\to   --------
        ct + d
@@ -418,15 +419,13 @@ to translate between the two.
 So, what seems to be going on is that people take a puzzle, like 
 
 \begin{quote}
-&quot;what is the sum of the squares of the divisors of n?&quot;
+"what is the sum of the squares of the divisors of n?"
 \end{quote}
-    
 
 or 
 \begin{quote}
-&quot;how many ideals of order n are there in this number field?&quot;
+"how many ideals of order n are there in this number field?"
 \end{quote}
-    
 
 and they call the answer a_{n}.  
 
@@ -529,18 +528,279 @@ of Imperial College after he read this Week's Finds:
 
 I wrote:
 
-\begin{verbatim}
+
+$$
+
  > What I *REALLY* want to know is: what combinatorial properties of
- > an integer sequence a<sub>n</sub> are we being told when we're told that
+ > an integer sequence a_{n} are we being told when we're told that
  > the Dirichlet series
  >
  > sum_n a^n n^{-s}
  >
  > comes from an automorphic form?
-\end{verbatim}
+$$
     
 He replied:
 
+\begin{quote}
+ Yeah, that's a really key question. I'm not sure that there is an elementary
+ answer.  Here is another question: given a sequence of complex numbers
+ a_{1}, a_{2},...,a_{n},..., with 
+
+a_{n} =
+ O(n^{r&nbsp;}), 
+
+ what is a neat easy-to-understand
+ property of this sequence which implies (or is implied by, or is equivalent 
+ to) the statement that 
+
+&sum; a_{n}/n^{s} 
+has analytic (or meromorphic) continuation
+ beyond Re(s)>r?  Maybe even this is hard---or maybe there is no such
+ elementary criterion.
 
 
-% parser failed at source line 726
+$$
+
+ > I'll be happy to assume for starters that a_{n} is multiplicative.
+$$
+    
+
+ This might not "logically speaking" be necessary, but on the other hand
+ probably the most interesting cases have this property. Here is an
+ example. Take a sequence of complex numbers a_{1}, 
+ a_{2},... which
+ is periodic with prime period p (primality probably isn't necessary but it
+ simplifies the combinatorics). Then the associated L-function
+
+ &sum; a_{n}/n^{s}
+ has
+ meromorphic continuation with at worst a simple pole at s=1 and no
+ other poles, and one could even argue that the a_{i} "came from an
+ automorphic form".
+
+ On the other hand, this is not the kind of automorphic form that
+ people usually think about because it's not an eigenform. What is
+ happening is that "there are enough Dirichlet characters": consider
+ the trivial character &chi;(n)=1 for all n, and then the p-1 Dirichlet
+ characters of level p, those defined by group homomorphisms 
+
+&chi;:(Z/pZ)* \to  C*
+ and extended to functions on Z by &chi;(n)=0 for n a multiple of p.
+ These p functions on Z form a basis of the vector space of periodic functions
+ on Z with period p.
+
+ The Dirichlet characters give automorphic forms, but automorphic
+ forms are a vector space so you can add them together and get
+ an automorphic form for any periodic function. However the Dirichlet
+ characters are the most interesting such forms because these are the ones
+ which are eigenforms. The eigenforms give multiplicative a_{n}, but
+ it's certainly not true in general that a periodic function is 
+ multiplicative.
+ 
+ But I can't really enlighten you much further. I know that the
+ L-function of an automorphic form has meromorphic continuation
+ and that we understand the poles (but we only conjecturally understand
+ the zeroes). However if someone put some a_{n} in front of me I would
+ demand that they told me where the a_{n} had come from before I put
+ my money on whether there was an automorphic form.
+ 
+ The example where I actually proved something was in the case
+ where the a_{n} came from a finite-dimensional complex representation 
+ of Gal(K/Q) with K a number field, Galois over Q.  (In fact my only 
+ contribution was in the 2-dimensional case, the 1-dimensional case 
+ having been understood for some time.)  The a_{n} are then related to
+ traces of the representation.  Artin conjectured in the 1930s that
+ &sum; a_{n}/n^{s} 
+ should have analytic continuation to all of the
+ complex plane if the representation was irreducible and not the trivial
+ 1-dimensional representation.  Langlands conjectured much later that 
+ the a_{n} should come from an automorphic form, and we knew by then 
+ that Langlands' conjecture implied Artin's.  But none of the analytic 
+ guys know how to prove Artin's conjecture without essentially deducing 
+ it from Langlands'!  I did something with some other Brits in the 
+ 2-dimensional case. Ironically, to deduce our analytic continuation 
+ results, we proved some p-adic analytic continuation results first :-) 
+ We constructed a modular form using p-adic techniques (and all of 
+ Wiles' machinery).
+
+
+$$
+
+ > I get the feeling that nobody knows the answer, except perhaps
+ > for specific cases like modular forms, where we know they're all
+ > linear combinations of products of Eisenstein series, so that a_{n}
+ > is built out of sequences like \sigma _{k}(n) - sums of kth powers of divisors.
+$$
+    
+
+ But unfortunately this is only true for "level 1" modular forms: you
+ can build all modular forms of level 1 from the Eisenstein series
+ E_{4} and E_{6}. There is no neat analogous result for modular forms
+ for the group \Gamma _{0}(N) for general N. In particular you will never
+ see the a_{n} for an elliptic curve built up from Eisenstein series in this
+ way :-(
+
+
+\begin{verbatim}
+
+ > What I'd like is a really "conceptual" answer... or else for someone
+ > to admit that nobody knows such an answer yet.
+\end{verbatim}
+    
+
+ I think I will freely admit that, although that's just a personal opinion.
+
+ ***
+
+ Here is why Dirichlet characters are the same as 1-dimensional complex
+ representations of Gal(Q^{-}/Q). It's called the Kronecker-Weber
+ theorem, it pre-dates class field theory (although it is now a special
+ case), and you can \emph{just about} prove it at the end of an introductory
+ undergraduate course on number fields, as the last starred question
+ on the example sheet, and only for people that have done the Galois
+ theory course too.  Let K be a number field and assume K is Galois
+ over Q (equivalently, that there is a polynomial f with rational
+ coefficients such that K is the smallest subfield of the complex
+ numbers containing all the roots of f; K is called the "splitting 
+ field" of f).
+
+ Then K has a Galois group Gal(K/Q), which is the field automorphisms 
+ of K that fix Q.  Say f has degree n and n roots z_{1}, z_{2}, ... , z_{n}. 
+ Then any automorphism of K fixes f, so it permutes the roots of f. 
+ So we get an embedding 
+
+ Gal(K/Q) \to  S_{n}
+
+ where S_{n} is the symmetric group on the set  z_{1}, z_{2}, ... , z_{n}. 
+ Then any automorphism of K fixes f, so it permutes the roots of f. 
+ So we get an embedding 
+ "Generically" this map is an isomorphism. But certainly not 
+ always---if there are subtle relations amongst the z_{i} with 
+ rational coefficients then these subtle relations must also be 
+ preserved by the Galois group.  One of my favourite examples is the 
+ equation x^{4}-2.  This is an irreducible polynomial of degree 4, 
+ the four roots are z, iz, -z and -iz where z is the real 4th root 
+ of 2 and i is \sqrt -1.  But z+(-z) = 0, so if K is the field 
+ generated by these roots and \sigma  is an automorphism of K then 
+ \sigma (z)+\sigma (-z) will also be zero, and the Galois group cannot 
+ possibly be all of S_{4}.  In fact one can check that the Galois group 
+ is D_{8}, the dihedral group with 8 elements (the four roots form a 
+ square in the complex plane and it's the symmetries of this square).
+
+ So there's Galois theory. Now here's a question: can we classify
+ all the number fields K, Galois over Q, with Gal(K/Q) an abelian group?
+
+ Here are some examples: K=Q(\sqrt d), the splitting field of x^{2}-d.
+ If d is the square of a rational then K=Q and if not then it's
+ an extension of degree 2, with Galois group S_{2} which is abelian.
+
+ The splitting field of x^{n}-1, called the nth cyclotomic field,
+ also turns out to have abelian Galois group; if z = exp(2\pi in)
+ then any automorphism of K must send z to another nth root of 
+ unity and furthermore the nth root of unity must have "exact 
+ order n", 
+ i.e. its nth power must be 1 but none of its mth powers can be 1 
+ for 0 < m < n.  So z must get sent to z^{a} with 0 < a < n coprime to n. 
+ This gives us an injection 
+
+ Gal(K/Q) \to  (Z/nZ)*,
+
+ where (Z/nZ)* is the units in the ring Z/nZ (send \sigma  to a),
+ and it's tricky but true that this is in fact an isomorphism 
+ (use the fundamental theorem of Galois theory, and cyclotomic 
+ polynomials, or try and get a "trick" proof that uses as little 
+ of this as possible, but it's still some work). In any case Gal(K/Q) 
+ is certainly abelian.
+
+ Next example: any subfield of any previous example, because this
+ is how Galois theory works: if K contains L contains Q, and
+ both K and L are Galois over Q, then the obvious restriction
+ map Gal(K/Q) \to  Gal(L/Q) is a surjection.
+
+ So we now have quite a general example of a number field K with
+ Gal(K/Q) abelian: any subfield of a cyclotomic field. The hard
+ theorem (not really too hard, but quite messy) is that the
+ converse is true: Gal(K/Q) abelian implies that K is contained
+ within a cyclotomic field. For example Q(\sqrt 5) is in the 5th 
+ cyclotomic field because cos(72&deg;) = (\sqrt 5-1)/4.
+ 
+ Any Dirichlet character gives a group homomorphism
+
+ (Z/nZ)* \to  C*, 
+ so a map 
+Gal(K_{n}/Q) \to  C*,
+ with K_{n} the nth cyclotomic field,
+ so a continuous group homomorphism 
+Gal(Q^{-}/Q) \to  C*.
+ Conversely any
+ continuous group homomorphism
+ Gal(Q^{-}/Q) \to  C*
+ factors through a compact
+ discrete quotient of Gal(Q^{-}/Q), 
+ which is just Gal(K/Q) for some number
+ field K, and we get an injection 
+Gal(K/Q) \to  C*, 
+so Gal(K/Q) is abelian,
+ so K is contained in a K^{n} 
+for some n, so we get a map 
+Gal(K_{n}/Q) \to  C*
+ so it's a Dirichlet character.
+ 
+ Amazingly it might have been Langlands who really sold this "duality"
+ point, 100 years after it was understood: people always used to
+ state Kronecker-Weber as "any abelian number field is contained
+ in a cyclo field" rather than the dual "any 1-dimensional rep
+ of Gal(Q^{-}/Q) comes from a Dirichlet character".  It was perhaps
+ Langlands who realised that the correct generalisation of this
+ statement was "any n-dimensional rep of Gal(Q^{-}/Q) comes from
+ an automorphic form", rather than a statement about non-abelian
+ extensions of Gal(Q^{-}/Q).  Perhaps you will like the reason that
+ people find the representation-theoretic approach appealing: I have
+ been talking about number fields as subfields of the complexes,
+ but really a number field is an abstract object which is a field
+ and happens to have finite dimension over Q, but it does not have
+ a preferred embedding into the complexes.  As a result of this
+ sort of thinking, one realises that Q^{-} is unique, but only up
+ to highly non-unique isomorphism, and hence Gal(Q^{-}/Q) is
+ a "group only defined up to inner automorphism"!  Hence it almost
+ makes no sense to study this group---we cannot make any serious
+ sense of an element of this group, because it's only the
+ conjugacy classes that are well-defined.  Hence we should study
+ the representations of the group on abstract vector spaces (i.e.
+ ones without preferred bases), because these are well-defined up
+ to isomorphism.  The reason there was so much mileage in the abelian
+ case was that this subtlety goes away: an abelian group up to inner
+ automorphism is an abelian group.
+
+ ***
+
+ I know some facts about the sequence a_{n} coming from, say, an elliptic
+ curve over the rationals, but the killer, and one that is really
+ hard to "read off" from the a_{n}, is that the a_{n} are related to the
+ traces of Frobenius elements on a 2-dimensional p-adic Galois representation
+ (the Tate module of the curve).  The moment I see a Galois representation
+ I think that this must be something to do with automorphic forms,
+ so that's why I believe that the L-function of an elliptic
+ curve should come from a modular form.  And it does!  On the other
+ hand, if you give me any finite set of primes p, and any integers
+ a_{p} with p running through the set, such that 
+ |a_{p}|^{2}\le 4p, then
+ I can concoct an elliptic curve with these a_{p}, so at the very
+ least one has to look at infinitely many of the a_{n} before one
+ can begin to guess whether the a_{n} come from an automorphic form.
+
+ Kevin
+\end{quote}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+<em>If I were to awaken after having slept for a thousand years, my 
+first question would be: "Has the Riemann hypothesis 
+been proven?"</em> -
+David Hilbert
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+% </A>
+% </A>
+% </A>
