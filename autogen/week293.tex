@@ -521,7 +521,7 @@ Second, we have current flowing through this circuit.  To describe this,
 we first arbitrarily pick an orientation on each edge:
 
 
-$$
+\begin{verbatim}
 
                o---->----o---->----o
                |         |         | 
@@ -531,13 +531,13 @@ $$
                |         |         | 
                o----<----o---->----o
  
-$$
+\end{verbatim}
     
 Then we label each edge with a number saying how much "current"
 is flowing through that edge, in the direction of the arrow:
 
 
-$$
+\begin{verbatim}
 
                     2        3
                o---->----o---->----o
@@ -548,7 +548,7 @@ $$
                |         |         | 
                o----<----o---->----o
                     2       -3
-$$
+\end{verbatim}
     
 Electrical engineers call the current I.  Mathematically it's good
 to think of I as a "1-chain": a formal linear combination of 
@@ -560,7 +560,7 @@ our graph, saying how much current is flowing out of that vertex,
 minus how much is flowing in:
 
 
-$$
+\begin{verbatim}
 
                          2     
              5 o---->----o---->----o 0 
@@ -571,7 +571,7 @@ $$
                |         |         | 
             -5 o----<----o---->----o 0
                        -2   
-$$
+\end{verbatim}
     
 
 Mathematically we can think of this as a "0-chain": a formal
@@ -595,7 +595,7 @@ If a circuit is not closed, let's call it "open".  These are
 interesting too.  For example, we might have a circuit like this:
 
 
-$$
+\begin{verbatim}
 
                x
                |    
@@ -611,7 +611,7 @@ $$
                |         |
                x         x         
 
-$$
+\end{verbatim}
     
 where we have current flowing in the wire on top and flowing out the
 two wires at bottom.  We allow \delta I to be nonzero at the ends

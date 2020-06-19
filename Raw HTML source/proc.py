@@ -162,6 +162,7 @@ def do_line(line, is_math=False):
 
 
 def do_verbatim(lines):
+    lines = [do_line(line, is_math=True) for line in lines]
     block = '\n'.join(lines)
     block = r"""\begin{verbatim}
 %s
@@ -189,6 +190,8 @@ def do_pre(lines):
         if k in block:
             is_math = True
             break
+    if len(lines) > 3:
+        is_math = False
     if is_math:
         block = do_math(lines)
     else:

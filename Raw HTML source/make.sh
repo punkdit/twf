@@ -1,314 +1,306 @@
 #!/bin/sh
 
-./proc.py week100.html week100.tex
-./proc.py week101.html week101.tex
-./proc.py week102.html week102.tex
-./proc.py week103.html week103.tex
-./proc.py week104.html week104.tex
-./proc.py week105.html week105.tex
-./proc.py week106.html week106.tex
-./proc.py week107.html week107.tex
-./proc.py week108.html week108.tex
-./proc.py week109.html week109.tex
-./proc.py week10.html week10.tex
-
-
-./proc.py week110.html week110.tex
-./proc.py week111.html week111.tex
-./proc.py week112.html week112.tex
-./proc.py week113.html week113.tex
-./proc.py week114.html week114.tex
-./proc.py week115.html week115.tex
-./proc.py week116.html week116.tex
-./proc.py week117.html week117.tex
-./proc.py week118.html week118.tex
-./proc.py week119.html week119.tex
-./proc.py week11.html week11.tex
-./proc.py week120.html week120.tex
-./proc.py week121.html week121.tex
-./proc.py week122.html week122.tex
-./proc.py week123.html week123.tex
-./proc.py week124.html week124.tex
-./proc.py week125.html week125.tex
-./proc.py week126.html week126.tex
-./proc.py week127.html week127.tex
-./proc.py week128.html week128.tex
-./proc.py week129.html week129.tex
-./proc.py week12.html week12.tex
-./proc.py week130.html week130.tex
-./proc.py week131.html week131.tex
-./proc.py week132.html week132.tex
-./proc.py week133.html week133.tex
-./proc.py week134.html week134.tex
-./proc.py week135.html week135.tex
-./proc.py week136.html week136.tex
-./proc.py week137.html week137.tex
-./proc.py week138.html week138.tex
-./proc.py week139.html week139.tex
-./proc.py week13.html week13.tex
-./proc.py week140.html week140.tex
-./proc.py week141.html week141.tex
-./proc.py week142.html week142.tex
-./proc.py week143.html week143.tex
-./proc.py week144.html week144.tex
-./proc.py week145.html week145.tex
-./proc.py week146.html week146.tex
-./proc.py week147.html week147.tex
-./proc.py week148.html week148.tex
-./proc.py week149.html week149.tex
-./proc.py week14.html week14.tex
-./proc.py week150.html week150.tex
-./proc.py week151.html week151.tex
-./proc.py week152.html week152.tex
-./proc.py week153.html week153.tex
-./proc.py week154.html week154.tex
-./proc.py week155.html week155.tex
-./proc.py week156.html week156.tex
-./proc.py week157.html week157.tex
-./proc.py week158.html week158.tex
-./proc.py week159.html week159.tex
-./proc.py week15.html week15.tex
-./proc.py week160.html week160.tex
-./proc.py week161.html week161.tex
-./proc.py week162.html week162.tex
-./proc.py week163.html week163.tex
-./proc.py week164.html week164.tex
-./proc.py week165.html week165.tex
-./proc.py week166.html week166.tex
-./proc.py week167.html week167.tex
-./proc.py week168.html week168.tex
-./proc.py week169.html week169.tex
-./proc.py week16.html week16.tex
-./proc.py week170.html week170.tex
-./proc.py week171.html week171.tex
-./proc.py week172.html week172.tex
-./proc.py week173.html week173.tex
-./proc.py week174.html week174.tex
-./proc.py week175.html week175.tex
-./proc.py week176.html week176.tex
-./proc.py week177.html week177.tex
-./proc.py week178.html week178.tex
-./proc.py week179.html week179.tex
-./proc.py week17.html week17.tex
-./proc.py week180.html week180.tex
-./proc.py week181.html week181.tex
-./proc.py week182.html week182.tex
-./proc.py week183.html week183.tex
-./proc.py week184.html week184.tex
-./proc.py week185.html week185.tex
-./proc.py week186.html week186.tex
-./proc.py week187.html week187.tex
-./proc.py week188.html week188.tex
-./proc.py week189.html week189.tex
-./proc.py week18.html week18.tex
-./proc.py week190.html week190.tex
-./proc.py week191.html week191.tex
-./proc.py week192.html week192.tex
-./proc.py week193.html week193.tex
-./proc.py week194.html week194.tex
-./proc.py week195.html week195.tex
-./proc.py week196.html week196.tex
-./proc.py week197.html week197.tex
-./proc.py week198.html week198.tex
-./proc.py week199.html week199.tex
-./proc.py week19.html week19.tex
-./proc.py week1.html week1.tex
-./proc.py week200.html week200.tex
-./proc.py week201.html week201.tex
-./proc.py week202.html week202.tex
-./proc.py week203.html week203.tex
-./proc.py week204.html week204.tex
-./proc.py week205.html week205.tex
-./proc.py week206.html week206.tex
-./proc.py week207.html week207.tex
-./proc.py week208.html week208.tex
-./proc.py week209.html week209.tex
-./proc.py week20.html week20.tex
-./proc.py week210.html week210.tex
-./proc.py week211.html week211.tex
-./proc.py week212.html week212.tex
-./proc.py week213.html week213.tex
-./proc.py week214.html week214.tex
-./proc.py week215.html week215.tex
-./proc.py week216.html week216.tex
-./proc.py week217.html week217.tex
-./proc.py week218.html week218.tex
-./proc.py week219.html week219.tex
-./proc.py week21.html week21.tex
-./proc.py week220.html week220.tex
-./proc.py week221.html week221.tex
-./proc.py week222.html week222.tex
-./proc.py week223.html week223.tex
-./proc.py week224.html week224.tex
-./proc.py week225.html week225.tex
-./proc.py week226.html week226.tex
-./proc.py week227.html week227.tex
-./proc.py week228.html week228.tex
-./proc.py week229.html week229.tex
-./proc.py week22.html week22.tex
-./proc.py week230.html week230.tex
-./proc.py week231.html week231.tex
-./proc.py week232.html week232.tex
-./proc.py week233.html week233.tex
-./proc.py week234.html week234.tex
-./proc.py week235.html week235.tex
-./proc.py week236.html week236.tex
-./proc.py week237.html week237.tex
-./proc.py week238.html week238.tex
-./proc.py week239.html week239.tex
-./proc.py week23.html week23.tex
-./proc.py week240.html week240.tex
-./proc.py week241.html week241.tex
-./proc.py week242.html week242.tex
-./proc.py week243.html week243.tex
-./proc.py week244.html week244.tex
-./proc.py week245.html week245.tex
-./proc.py week246.html week246.tex
-./proc.py week247.html week247.tex
-./proc.py week248.html week248.tex
-./proc.py week249.html week249.tex
-./proc.py week24.html week24.tex
-./proc.py week250.html week250.tex
-./proc.py week251.html week251.tex
-./proc.py week252.html week252.tex
-./proc.py week253.html week253.tex
-./proc.py week254.html week254.tex
-./proc.py week255.html week255.tex
-./proc.py week256.html week256.tex
-./proc.py week257.html week257.tex
-./proc.py week258.html week258.tex
-./proc.py week259.html week259.tex
-./proc.py week25.html week25.tex
-./proc.py week260.html week260.tex
-./proc.py week261.html week261.tex
-./proc.py week262.html week262.tex
-./proc.py week263.html week263.tex
-./proc.py week264.html week264.tex
-./proc.py week265.html week265.tex
-./proc.py week266.html week266.tex
-./proc.py week267.html week267.tex
-./proc.py week268.html week268.tex
-./proc.py week269.html week269.tex
-./proc.py week26.html week26.tex
-./proc.py week270.html week270.tex
-./proc.py week271.html week271.tex
-./proc.py week272.html week272.tex
-./proc.py week273.html week273.tex
-./proc.py week274.html week274.tex
-./proc.py week275.html week275.tex
-./proc.py week276.html week276.tex
-./proc.py week277.html week277.tex
-./proc.py week278.html week278.tex
-./proc.py week279.html week279.tex
-./proc.py week27.html week27.tex
-./proc.py week280.html week280.tex
-./proc.py week281.html week281.tex
-./proc.py week282.html week282.tex
-./proc.py week283.html week283.tex
-./proc.py week284.html week284.tex
-./proc.py week285.html week285.tex
-./proc.py week286.html week286.tex
-./proc.py week287.html week287.tex
-./proc.py week288.html week288.tex
-./proc.py week289.html week289.tex
-./proc.py week28.html week28.tex
-./proc.py week290.html week290.tex
-./proc.py week291.html week291.tex
-./proc.py week292.html week292.tex
-./proc.py week293.html week293.tex
-./proc.py week294.html week294.tex
-./proc.py week295.html week295.tex
-./proc.py week296.html week296.tex
-./proc.py week297.html week297.tex
-./proc.py week298.html week298.tex
-./proc.py week299.html week299.tex
-./proc.py week29.html week29.tex
-./proc.py week2.html week2.tex
-./proc.py week300.html week300.tex
-./proc.py week30.html week30.tex
-./proc.py week31.html week31.tex
-./proc.py week32.html week32.tex
-./proc.py week33.html week33.tex
-./proc.py week34.html week34.tex
-./proc.py week35.html week35.tex
-./proc.py week36.html week36.tex
-./proc.py week37.html week37.tex
-./proc.py week38.html week38.tex
-./proc.py week39.html week39.tex
-./proc.py week3.html week3.tex
-./proc.py week40.html week40.tex
-./proc.py week41.html week41.tex
-./proc.py week42.html week42.tex
-./proc.py week43.html week43.tex
-./proc.py week44.html week44.tex
-./proc.py week45.html week45.tex
-./proc.py week46.html week46.tex
-./proc.py week47.html week47.tex
-./proc.py week48.html week48.tex
-./proc.py week49.html week49.tex
-./proc.py week4.html week4.tex
-./proc.py week50.html week50.tex
-./proc.py week51.html week51.tex
-./proc.py week52.html week52.tex
-./proc.py week53.html week53.tex
-./proc.py week54.html week54.tex
-./proc.py week55.html week55.tex
-./proc.py week56.html week56.tex
-./proc.py week57.html week57.tex
-./proc.py week58.html week58.tex
-./proc.py week59.html week59.tex
-./proc.py week5.html week5.tex
-./proc.py week60.html week60.tex
-./proc.py week61.html week61.tex
-./proc.py week62.html week62.tex
-./proc.py week63.html week63.tex
-./proc.py week64.html week64.tex
-./proc.py week65.html week65.tex
-./proc.py week66.html week66.tex
-./proc.py week67.html week67.tex
-./proc.py week68.html week68.tex
-./proc.py week69.html week69.tex
-./proc.py week6.html week6.tex
-./proc.py week70.html week70.tex
-./proc.py week71.html week71.tex
-./proc.py week72.html week72.tex
-./proc.py week73.html week73.tex
-./proc.py week74.html week74.tex
-./proc.py week75.html week75.tex
-./proc.py week76.html week76.tex
-./proc.py week77.html week77.tex
-./proc.py week78.html week78.tex
-./proc.py week79.html week79.tex
-./proc.py week7.html week7.tex
-./proc.py week80.html week80.tex
-./proc.py week81.html week81.tex
-./proc.py week82.html week82.tex
-./proc.py week83.html week83.tex
-./proc.py week84.html week84.tex
-./proc.py week85.html week85.tex
-./proc.py week86.html week86.tex
-./proc.py week87.html week87.tex
-./proc.py week88.html week88.tex
-./proc.py week89.html week89.tex
-./proc.py week8.html week8.tex
-./proc.py week90.html week90.tex
-./proc.py week91.html week91.tex
-./proc.py week92.html week92.tex
-./proc.py week93.html week93.tex
-./proc.py week94.html week94.tex
-./proc.py week95.html week95.tex
-./proc.py week96.html week96.tex
-./proc.py week97.html week97.tex
-./proc.py week98.html week98.tex
-./proc.py week99.html week99.tex
-./proc.py week9.html week9.tex
-
-
-
-
+python3 proc.py week100.html week100.tex
+python3 proc.py week101.html week101.tex
+python3 proc.py week102.html week102.tex
+python3 proc.py week103.html week103.tex
+python3 proc.py week104.html week104.tex
+python3 proc.py week105.html week105.tex
+python3 proc.py week106.html week106.tex
+python3 proc.py week107.html week107.tex
+python3 proc.py week108.html week108.tex
+python3 proc.py week109.html week109.tex
+python3 proc.py week10.html week10.tex
+python3 proc.py week110.html week110.tex
+python3 proc.py week111.html week111.tex
+python3 proc.py week112.html week112.tex
+python3 proc.py week113.html week113.tex
+python3 proc.py week114.html week114.tex
+python3 proc.py week115.html week115.tex
+python3 proc.py week116.html week116.tex
+python3 proc.py week117.html week117.tex
+python3 proc.py week118.html week118.tex
+python3 proc.py week119.html week119.tex
+python3 proc.py week11.html week11.tex
+python3 proc.py week120.html week120.tex
+python3 proc.py week121.html week121.tex
+python3 proc.py week122.html week122.tex
+python3 proc.py week123.html week123.tex
+python3 proc.py week124.html week124.tex
+python3 proc.py week125.html week125.tex
+python3 proc.py week126.html week126.tex
+python3 proc.py week127.html week127.tex
+python3 proc.py week128.html week128.tex
+python3 proc.py week129.html week129.tex
+python3 proc.py week12.html week12.tex
+python3 proc.py week130.html week130.tex
+python3 proc.py week131.html week131.tex
+python3 proc.py week132.html week132.tex
+python3 proc.py week133.html week133.tex
+python3 proc.py week134.html week134.tex
+python3 proc.py week135.html week135.tex
+python3 proc.py week136.html week136.tex
+python3 proc.py week137.html week137.tex
+python3 proc.py week138.html week138.tex
+python3 proc.py week139.html week139.tex
+python3 proc.py week13.html week13.tex
+python3 proc.py week140.html week140.tex
+python3 proc.py week141.html week141.tex
+python3 proc.py week142.html week142.tex
+python3 proc.py week143.html week143.tex
+python3 proc.py week144.html week144.tex
+python3 proc.py week145.html week145.tex
+python3 proc.py week146.html week146.tex
+python3 proc.py week147.html week147.tex
+python3 proc.py week148.html week148.tex
+python3 proc.py week149.html week149.tex
+python3 proc.py week14.html week14.tex
+python3 proc.py week150.html week150.tex
+python3 proc.py week151.html week151.tex
+python3 proc.py week152.html week152.tex
+python3 proc.py week153.html week153.tex
+python3 proc.py week154.html week154.tex
+python3 proc.py week155.html week155.tex
+python3 proc.py week156.html week156.tex
+python3 proc.py week157.html week157.tex
+python3 proc.py week158.html week158.tex
+python3 proc.py week159.html week159.tex
+python3 proc.py week15.html week15.tex
+python3 proc.py week160.html week160.tex
+python3 proc.py week161.html week161.tex
+python3 proc.py week162.html week162.tex
+python3 proc.py week163.html week163.tex
+python3 proc.py week164.html week164.tex
+python3 proc.py week165.html week165.tex
+python3 proc.py week166.html week166.tex
+python3 proc.py week167.html week167.tex
+python3 proc.py week168.html week168.tex
+python3 proc.py week169.html week169.tex
+python3 proc.py week16.html week16.tex
+python3 proc.py week170.html week170.tex
+python3 proc.py week171.html week171.tex
+python3 proc.py week172.html week172.tex
+python3 proc.py week173.html week173.tex
+python3 proc.py week174.html week174.tex
+python3 proc.py week175.html week175.tex
+python3 proc.py week176.html week176.tex
+python3 proc.py week177.html week177.tex
+python3 proc.py week178.html week178.tex
+python3 proc.py week179.html week179.tex
+python3 proc.py week17.html week17.tex
+python3 proc.py week180.html week180.tex
+python3 proc.py week181.html week181.tex
+python3 proc.py week182.html week182.tex
+python3 proc.py week183.html week183.tex
+python3 proc.py week184.html week184.tex
+python3 proc.py week185.html week185.tex
+python3 proc.py week186.html week186.tex
+python3 proc.py week187.html week187.tex
+python3 proc.py week188.html week188.tex
+python3 proc.py week189.html week189.tex
+python3 proc.py week18.html week18.tex
+python3 proc.py week190.html week190.tex
+python3 proc.py week191.html week191.tex
+python3 proc.py week192.html week192.tex
+python3 proc.py week193.html week193.tex
+python3 proc.py week194.html week194.tex
+python3 proc.py week195.html week195.tex
+python3 proc.py week196.html week196.tex
+python3 proc.py week197.html week197.tex
+python3 proc.py week198.html week198.tex
+python3 proc.py week199.html week199.tex
+python3 proc.py week19.html week19.tex
+python3 proc.py week1.html week1.tex
+python3 proc.py week200.html week200.tex
+python3 proc.py week201.html week201.tex
+python3 proc.py week202.html week202.tex
+python3 proc.py week203.html week203.tex
+python3 proc.py week204.html week204.tex
+python3 proc.py week205.html week205.tex
+python3 proc.py week206.html week206.tex
+python3 proc.py week207.html week207.tex
+python3 proc.py week208.html week208.tex
+python3 proc.py week209.html week209.tex
+python3 proc.py week20.html week20.tex
+python3 proc.py week210.html week210.tex
+python3 proc.py week211.html week211.tex
+python3 proc.py week212.html week212.tex
+python3 proc.py week213.html week213.tex
+python3 proc.py week214.html week214.tex
+python3 proc.py week215.html week215.tex
+python3 proc.py week216.html week216.tex
+python3 proc.py week217.html week217.tex
+python3 proc.py week218.html week218.tex
+python3 proc.py week219.html week219.tex
+python3 proc.py week21.html week21.tex
+python3 proc.py week220.html week220.tex
+python3 proc.py week221.html week221.tex
+python3 proc.py week222.html week222.tex
+python3 proc.py week223.html week223.tex
+python3 proc.py week224.html week224.tex
+python3 proc.py week225.html week225.tex
+python3 proc.py week226.html week226.tex
+python3 proc.py week227.html week227.tex
+python3 proc.py week228.html week228.tex
+python3 proc.py week229.html week229.tex
+python3 proc.py week22.html week22.tex
+python3 proc.py week230.html week230.tex
+python3 proc.py week231.html week231.tex
+python3 proc.py week232.html week232.tex
+python3 proc.py week233.html week233.tex
+python3 proc.py week234.html week234.tex
+python3 proc.py week235.html week235.tex
+python3 proc.py week236.html week236.tex
+python3 proc.py week237.html week237.tex
+python3 proc.py week238.html week238.tex
+python3 proc.py week239.html week239.tex
+python3 proc.py week23.html week23.tex
+python3 proc.py week240.html week240.tex
+python3 proc.py week241.html week241.tex
+python3 proc.py week242.html week242.tex
+python3 proc.py week243.html week243.tex
+python3 proc.py week244.html week244.tex
+python3 proc.py week245.html week245.tex
+python3 proc.py week246.html week246.tex
+python3 proc.py week247.html week247.tex
+python3 proc.py week248.html week248.tex
+python3 proc.py week249.html week249.tex
+python3 proc.py week24.html week24.tex
+python3 proc.py week250.html week250.tex
+python3 proc.py week251.html week251.tex
+python3 proc.py week252.html week252.tex
+python3 proc.py week253.html week253.tex
+python3 proc.py week254.html week254.tex
+python3 proc.py week255.html week255.tex
+python3 proc.py week256.html week256.tex
+python3 proc.py week257.html week257.tex
+python3 proc.py week258.html week258.tex
+python3 proc.py week259.html week259.tex
+python3 proc.py week25.html week25.tex
+python3 proc.py week260.html week260.tex
+python3 proc.py week261.html week261.tex
+python3 proc.py week262.html week262.tex
+python3 proc.py week263.html week263.tex
+python3 proc.py week264.html week264.tex
+python3 proc.py week265.html week265.tex
+python3 proc.py week266.html week266.tex
+python3 proc.py week267.html week267.tex
+python3 proc.py week268.html week268.tex
+python3 proc.py week269.html week269.tex
+python3 proc.py week26.html week26.tex
+python3 proc.py week270.html week270.tex
+python3 proc.py week271.html week271.tex
+python3 proc.py week272.html week272.tex
+python3 proc.py week273.html week273.tex
+python3 proc.py week274.html week274.tex
+python3 proc.py week275.html week275.tex
+python3 proc.py week276.html week276.tex
+python3 proc.py week277.html week277.tex
+python3 proc.py week278.html week278.tex
+python3 proc.py week279.html week279.tex
+python3 proc.py week27.html week27.tex
+python3 proc.py week280.html week280.tex
+python3 proc.py week281.html week281.tex
+python3 proc.py week282.html week282.tex
+python3 proc.py week283.html week283.tex
+python3 proc.py week284.html week284.tex
+python3 proc.py week285.html week285.tex
+python3 proc.py week286.html week286.tex
+python3 proc.py week287.html week287.tex
+python3 proc.py week288.html week288.tex
+python3 proc.py week289.html week289.tex
+python3 proc.py week28.html week28.tex
+python3 proc.py week290.html week290.tex
+python3 proc.py week291.html week291.tex
+python3 proc.py week292.html week292.tex
+python3 proc.py week293.html week293.tex
+python3 proc.py week294.html week294.tex
+python3 proc.py week295.html week295.tex
+python3 proc.py week296.html week296.tex
+python3 proc.py week297.html week297.tex
+python3 proc.py week298.html week298.tex
+python3 proc.py week299.html week299.tex
+python3 proc.py week29.html week29.tex
+python3 proc.py week2.html week2.tex
+python3 proc.py week300.html week300.tex
+python3 proc.py week30.html week30.tex
+python3 proc.py week31.html week31.tex
+python3 proc.py week32.html week32.tex
+python3 proc.py week33.html week33.tex
+python3 proc.py week34.html week34.tex
+python3 proc.py week35.html week35.tex
+python3 proc.py week36.html week36.tex
+python3 proc.py week37.html week37.tex
+python3 proc.py week38.html week38.tex
+python3 proc.py week39.html week39.tex
+python3 proc.py week3.html week3.tex
+python3 proc.py week40.html week40.tex
+python3 proc.py week41.html week41.tex
+python3 proc.py week42.html week42.tex
+python3 proc.py week43.html week43.tex
+python3 proc.py week44.html week44.tex
+python3 proc.py week45.html week45.tex
+python3 proc.py week46.html week46.tex
+python3 proc.py week47.html week47.tex
+python3 proc.py week48.html week48.tex
+python3 proc.py week49.html week49.tex
+python3 proc.py week4.html week4.tex
+python3 proc.py week50.html week50.tex
+python3 proc.py week51.html week51.tex
+python3 proc.py week52.html week52.tex
+python3 proc.py week53.html week53.tex
+python3 proc.py week54.html week54.tex
+python3 proc.py week55.html week55.tex
+python3 proc.py week56.html week56.tex
+python3 proc.py week57.html week57.tex
+python3 proc.py week58.html week58.tex
+python3 proc.py week59.html week59.tex
+python3 proc.py week5.html week5.tex
+python3 proc.py week60.html week60.tex
+python3 proc.py week61.html week61.tex
+python3 proc.py week62.html week62.tex
+python3 proc.py week63.html week63.tex
+python3 proc.py week64.html week64.tex
+python3 proc.py week65.html week65.tex
+python3 proc.py week66.html week66.tex
+python3 proc.py week67.html week67.tex
+python3 proc.py week68.html week68.tex
+python3 proc.py week69.html week69.tex
+python3 proc.py week6.html week6.tex
+python3 proc.py week70.html week70.tex
+python3 proc.py week71.html week71.tex
+python3 proc.py week72.html week72.tex
+python3 proc.py week73.html week73.tex
+python3 proc.py week74.html week74.tex
+python3 proc.py week75.html week75.tex
+python3 proc.py week76.html week76.tex
+python3 proc.py week77.html week77.tex
+python3 proc.py week78.html week78.tex
+python3 proc.py week79.html week79.tex
+python3 proc.py week7.html week7.tex
+python3 proc.py week80.html week80.tex
+python3 proc.py week81.html week81.tex
+python3 proc.py week82.html week82.tex
+python3 proc.py week83.html week83.tex
+python3 proc.py week84.html week84.tex
+python3 proc.py week85.html week85.tex
+python3 proc.py week86.html week86.tex
+python3 proc.py week87.html week87.tex
+python3 proc.py week88.html week88.tex
+python3 proc.py week89.html week89.tex
+python3 proc.py week8.html week8.tex
+python3 proc.py week90.html week90.tex
+python3 proc.py week91.html week91.tex
+python3 proc.py week92.html week92.tex
+python3 proc.py week93.html week93.tex
+python3 proc.py week94.html week94.tex
+python3 proc.py week95.html week95.tex
+python3 proc.py week96.html week96.tex
+python3 proc.py week97.html week97.tex
+python3 proc.py week98.html week98.tex
+python3 proc.py week99.html week99.tex
+python3 proc.py week9.html week9.tex
 
 
 mv *.tex ../autogen
-
-
 

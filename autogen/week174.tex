@@ -385,7 +385,7 @@ category of "simplices", usually denoted \Delta .   Here the object
 corresponds to the n-simplex, and these morphisms:
 
 
-$$
+\begin{verbatim}
 
                                  -i.LRLR-->
                  --i.LR->        -LR.i.LR->
@@ -393,7 +393,7 @@ $$
                  <-L.e.R-        <-L.e.RLR-
                                  <-LRL.e.R-
 
-$$
+\end{verbatim}
     
 are the basic "face" and "degeneracy" maps between
 simplices, which you'll find in any book on algebraic topology.  The
@@ -409,7 +409,7 @@ Perhaps I should explain the notation here a bit more.  Readers of
 this:
 
 
-$$
+\begin{verbatim}
 
                       f           f'
                   ---->----   ---->----  
@@ -418,13 +418,13 @@ $$
                  \   \/    / \   \/    /
                   ---->----   ---->----
                       g           g'
-$$
+\end{verbatim}
     
 we get a 2-morphism like this:
  
 
 
-$$
+\begin{verbatim}
 
                          ff'
                   -------->-------
@@ -433,14 +433,14 @@ $$
                  \       \/       /
                   -------->-------
                          gg'
-$$
+\end{verbatim}
     
 But sometimes we can also horizontally compose a morphism and a
 2-morphism!  We can do it whenever our morphism f looks like a little
 "whisker" f sticking out of the 2-morphism T:
 
 
-$$
+\begin{verbatim}
 
                                   f'
                               ---->----  
@@ -449,13 +449,13 @@ $$
                              \   \/    /
                               ---->----
                                   g'
-$$
+\end{verbatim}
     
 and what we get is a 2-morphism f.S like this:
  
 
 
-$$
+\begin{verbatim}
 
                          ff'
                   -------->-------
@@ -464,13 +464,13 @@ $$
                  \       \/       /
                   -------->-------
                          fg'
-$$
+\end{verbatim}
     
 This process, called "whiskering", is not really a new operation.
 f.S is really just the horizontal composite of these 2-morphisms:
 
 
-$$
+\begin{verbatim}
 
                       f           f'
                   ---->----   ---->----  
@@ -479,12 +479,12 @@ $$
                  \   \/    / \   \/    /
                   ---->----   ---->----
                       f           g'
-$$
+\end{verbatim}
     
 Similarly we can define T.f in this sort of situation:
 
 
-$$
+\begin{verbatim}
 
                       f'           
                   ---->----   
@@ -493,14 +493,14 @@ $$
                  \   \/    /
                   ---->---- 
                       g'     
-$$
+\end{verbatim}
     
 Anyway, once you're an expert on this 2-categorical yoga, you can
 easily see that these morphisms in hom(a,a), which are really 2-morphisms
 in Ad:
 
 
-$$
+\begin{verbatim}
 
                                  -i.LRLR-->
                  --i.LR->        -LR.i.LR->
@@ -508,7 +508,7 @@ $$
                  <-L.e.R-        <-L.e.RLR-
                                  <-LRL.e.R-
 
-$$
+\end{verbatim}
     
 are obtained by taking our basic tiger stripe operations - the
 "merging of two black stripes", or L.e.R, and the
@@ -581,14 +581,14 @@ as we march down the page.  This means is that hom(b,b) is
 Here is another picture of hom(b,b):
 
 
-$$
+\begin{verbatim}
 
                                   --R.i.LRL->
                  --R.i.L->        --RLR.i.L->
 1_{b}  <--e--  RL  <--e.RL--  RLRL  <--e.RLRL--  RLRLRL ...
                  <--RL.e--        <--RL.e.RL-
                                   <--RLRL.e--
-$$
+\end{verbatim}
     
 If you're a devoted reader of This Week's Finds, you'll know I secretly
 drew this category already in section N of "<A HREF = "week118.html">week118</A>".  There I was
@@ -721,7 +721,7 @@ As in Ad, the objects are
 but now the object LR is equipped not only with multiplication:
 
 
-$$
+\begin{verbatim}
 
                      \  \    a    /  /  
                       \  \       /  /
@@ -735,12 +735,12 @@ $$
                            L   R
                            |   |
                            |   |   
-$$
+\end{verbatim}
     
 and multiplicative identity:
 
 
-$$
+\begin{verbatim}
 
                              i
                             / \
@@ -751,12 +751,12 @@ $$
                            |   |
                            |   |
 
-$$
+\end{verbatim}
     
 but also a "comultiplication":
  
 
-$$
+\begin{verbatim}
 
                            |   |
                            |   |   
@@ -770,14 +770,14 @@ $$
                        L  R     L  R
                       /  /       \  \
                      /  /    b    \  \ 
-$$
+\end{verbatim}
     
 and "comultiplicative coidentity":
 
 
 
 
-$$
+\begin{verbatim}
 
                             |   |    
                      a      | b |     a 
@@ -787,7 +787,7 @@ $$
                             |   |
                              \ /
                               f
-$$
+\end{verbatim}
     
 which make it into a monoid object \emph{and} a comonoid object.  Even
 better, there are some extra relations between the multiplication and

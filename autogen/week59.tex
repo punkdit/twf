@@ -382,7 +382,7 @@ only if 2^(n-1) onions equal their own conjugates.
 So, why don't the complex numbers equal their own conjugates?
 I have a proof that 2^n onions do equal their own conjugates,
 but it works only if the 2^(n-1) onions are of characteristic 2.
-The real numbers are <em>not</em> of characteristic 2,
+The real numbers are \emph{not} of characteristic 2,
 so the complex numbers don't equal their own conjugates,
 so the quaternions aren't commutative,
 so the octonions aren't associative,
@@ -471,7 +471,7 @@ When I first wrote this, I wasn't reading carefully;
 I will return to plug this hole later.)
 
 Thus, the 2^n onions are a division algebra
-iff the 2^(n-1) onions are a division algebra <em>and are associative</em>.
+iff the 2^(n-1) onions are a division algebra \emph{and are associative}.
 So, let's try to prove associativity of 2^n onions by induction.
 ((a, b) (c, d)) (e, f) = (a c - d* b, d a + b c*) (e, f)
 = ((a c - d* b) e - f* (d a + b c*), f (a c - d* b) + (d a + b c*) e*)
@@ -480,28 +480,28 @@ On the other hand, (a, b) ((c, d) (e, f)) = (a, b) (c e - f* d, f c + d e*)
 = (a (c e - f* d) - (f c + d e*)* b, (f c + d e*) a + b (c e - f* d)*)
 = (a(ce) - a(f* d) - (c* f*)b - (e d*)b, (fc)a + (d e*)a + b(e* c*) - b(d* f)).
 Assuming the induction hypothesis that 2^(n-1) onions are associative,
-these are equal in general iff 2^(n-1) onions <em>also</em> are commutative.
+these are equal in general iff 2^(n-1) onions \emph{also} are commutative.
 
 Thus, 2^n onions are associative
-iff 2^(n-1) onions are associative <em>and are commutative</em>.
+iff 2^(n-1) onions are associative \emph{and are commutative}.
 So, let's try to prove commutativity of 2^n onions by induction.
 (a, b) (c, d) = (a c - d* b, d a + b c*).
 On the other hand, (c, d) (a, b) = (c a - b* d, b c + d a*).
 Assuming the induction hypothesis that 2^(n-1) onions are commutative,
-these are equal in general iff 2^(n-1) onions <em>also</em> equal their own conjugates.
+these are equal in general iff 2^(n-1) onions \emph{also} equal their own conjugates.
 
 Thus, 2^n onions are commutative
-iff 2^(n-1) onions are commutative <em>and equal their own conjugates</em>.
+iff 2^(n-1) onions are commutative \emph{and equal their own conjugates}.
 So, let's try to prove conjugate equality of 2^n onions by induction.
 (a, b) = (a, b).  On the other hand, (a, b)* = (a*, -b).
 Assuming the induction hypothesis that 2^(n-1)onions equal their own conjugates,
-these are equal in general iff 2^(n-1) onions <em>also</em> have characteristic 2.
+these are equal in general iff 2^(n-1) onions \emph{also} have characteristic 2.
 (b = -b means 0 = b + b = 1 b + 1 b = (1 + 1) b = 2 b;
 this is true in general iff 0 = 2, which is what characteristic 2 means.)
 
 Thus, 2^n onions equal their own conjugates
-iff 2^(n-1) onions equal their own conjugates <em>and have characteristic 2</em>.
-Since the reals <em>don't</em> have characteristic 2,
+iff 2^(n-1) onions equal their own conjugates \emph{and have characteristic 2}.
+Since the reals \emph{don't} have characteristic 2,
 there's no point in trying to prove anything about that by induction.
 However, it's a general result that any algebra has characteristic 2
 if it has a superalgebra of characteristic 2.
@@ -594,7 +594,7 @@ to prove that division of 2^n onions requires associativity of 2^(n-1) onions
 looks even more convincing, (since alternativity of 2^(n-1) onions
 can be included in the induction hypothesis), but it's still not valid.
 I still haven't shown that, if 2^(n-1) onions aren't alternative,
-there <em>must</em> be non0 2^n onions x and y such that x y = 0.
+there \emph{must} be non0 2^n onions x and y such that x y = 0.
 There doesn't seem to be any reason why there shouldn't be,
 but there just might happen not to be any.
 So, despite the inelegance of it all,

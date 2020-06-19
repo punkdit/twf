@@ -161,12 +161,12 @@ set, and let |F_{k}| be the \emph{number} of ways we can do it.  We define the
 "generating function" |F| to be the formal power series
 
 
-$$
+\begin{verbatim}
 
                |F_{k}|  
 |F|(x) = sum  -----  x^{k}
                 k!
-$$
+\end{verbatim}
     
 Nice operations on generating functions come from nice operations on
 structure types, so we use the same notation for both.  
@@ -246,14 +246,14 @@ $$
 and thus
 
 
-$$
+\begin{verbatim}
 
 |G|(x) = 1 + x + x^{2} + ...
  
            1
        = -----
          1 - x
-$$
+\end{verbatim}
     
 Next, suppose H is the structure "being a totally ordered set with 1 
 or 2 elements".  This has the generating function
@@ -284,7 +284,7 @@ it, it means:
 And we can count the ways of doing this by using this generating function:
 
 
-$$
+\begin{verbatim}
 
 |F|(x)  = |G| o |H| (x)
 
@@ -295,7 +295,7 @@ $$
         = 1 + (x + x^{2}) + (x + x^{2})^{2} + (x + x^{2})^{3} + (x + x^{2})^{4} + ...
 
         = 1 + x + 2x^{2} + 3x^{3} + 5x^{4} + ...
-$$
+\end{verbatim}
     
 Hey!  Fibonacci numbers!  It looks like the kth coefficient of
 this generating function is just the kth Fibonacci number!
@@ -304,12 +304,12 @@ Now, remember that generating functions have a factorial built into
 them:
 
 
-$$
+\begin{verbatim}
 
              |F_{k}|  
 |F|(x) =  \sum -----  x^{k}
               k!
-$$
+\end{verbatim}
     
 So apparently in this example |F_{k}| is k! times the kth Fibonacci
 number.  Of course, k! is the number of ways to order a k-element set.
@@ -322,12 +322,12 @@ to make sure that each coefficient in our generating function is the sum
 of the previous two.  And that follows straight from this equation:
 
 
-$$
+\begin{verbatim}
 
           1              x               x^{2}
      ----------  =  -----------  +  -----------  + 1
      1 - x - x^{2}      1 - x - x^{2}      1 - x - x^{2}
-$$
+\end{verbatim}
     
 Even better, the above equation comes from an isomorphism between
 structure types:
@@ -359,12 +359,12 @@ structure types.
 We also get other spinoffs.  For example, the pole of this function
 
 
-$$
+\begin{verbatim}
 
      1
  ---------- 
  1 - x - x^{2}
-$$
+\end{verbatim}
     
 that's closest to zero occurs at the reciprocal of the golden ratio:
 
@@ -396,12 +396,12 @@ there are to take a million dollars and break it down into 1, 5, and
 10 dollar bills.  The generating function that solves this problem is
 
 
-$$
+\begin{verbatim}
 
            1       1         1
          ------  ------   -------
          1 - x   1 - x^{5}   1 - x^{10}
-$$
+\end{verbatim}
     
 I'll let you do the rest.  
 
@@ -447,12 +447,12 @@ $$
 so 
 
 
-$$
+\begin{verbatim}
 
 |T|(x) = (1 - sqrt(1 - 4x))/2 
 
        =  x + x^{2} + 2x^{3} + 5x^{4} + 14x^{5} + 42x^{6} + ....
-$$
+\end{verbatim}
     
 so, for example, there are 42 binary trees with 6 leaves.  In fact, I did
 this calculation already in "<A HREF = "week144.html">week144</A>", but I didn't explain it in terms
@@ -473,12 +473,12 @@ quite relaxed about everything, we might use the other formula
 for |T|(x) and guess
 
 
-$$
+\begin{verbatim}
 
 |T|(1) = (1 - sqrt(-3))/2
 
        = exp(-i \pi /6)
-$$
+\end{verbatim}
     
 This is pretty odd: it's a complex number!   The problem is, we're
 outside the radius of convergence of the power series.

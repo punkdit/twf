@@ -470,12 +470,12 @@ actually equivalent to what you said.  Denote the 10 digit ISBN number
 as N_{i}, for 1\le i\le 10. Compute
 
 
-$$
+\begin{verbatim}
 
        10
  Mod(  \sum  (11-i)N_{i} , 11)              (*)
       i=1
-$$
+\end{verbatim}
     
 which should give you zero.  That is take the first digit, multiply it by 
 10, the second by 9, etc.  Add them up and compute the sum mod 11.  You 

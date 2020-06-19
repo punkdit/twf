@@ -116,14 +116,14 @@ space over F_{q} have?  Of course, these lines are points in the
 corresponding projective space.  Answer: the q-integer
 
 
-$$
+\begin{verbatim}
 
           q^{n} - 1
 [n]  =   --------   
            q - 1
 
      = 1 + q + q^{2} + ... + q^{n-1}
-$$
+\end{verbatim}
     
 Remember from last week that the basic idea behind "q-arithmetic" was
 to replace integers by these q-integers.  
@@ -135,12 +135,12 @@ nonzero multiple of the other, and there are q - 1 nonzero elements
 of F_{q}.  So, the actual number of lines through the origin is
 
 
-$$
+\begin{verbatim}
 
  q^{n} - 1
 -------- = [n]
  q - 1
-$$
+\end{verbatim}
     
 Here's another example.  How many ways are there to order a set with n
 elements?  Answer:
@@ -205,14 +205,14 @@ through the origin in an n-dimensional vector space over the field
 with q elements is
 
 
-$$
+\begin{verbatim}
 
            q^{n} - 1
   [n]  =   --------   
             q - 1
 
        = 1 + q + q^{2} + ... + q^{n-1}
-$$
+\end{verbatim}
     
 But now let's think about why the \emph{second} equation here is true!  
 
@@ -257,14 +257,14 @@ to the Euler characteristic, while odd-dimensional cells contribute -1,
 so we get
 
 
-$$
+\begin{verbatim}
 
    |RP^{n-1}| = (-1)^{0} + (-1)^{1} + ... + (-1)^{n-1} 
 
             (-1)^{n} - 1
           = ----------- ,
              (-1) - 1              
-$$
+\end{verbatim}
     
 or in other words, 0 if n is even and 1 if n is odd.  Here I'm using |X|
 to stand for the Euler characteristic of X.
@@ -279,14 +279,14 @@ us chop up a space X and calculate |X| by summing the Euler
 characteristics of the pieces, we have |R| = -1, so
 
 
-$$
+\begin{verbatim}
 
        |RP^{n-1}| = |R^{0} + R^{1} + ... + R^{n-1}|
 
               = |R|^{0} + |R|^{1} + ... + |R|^{n-1}
 
               = [n]
-$$
+\end{verbatim}
     
 where [n] is the q-integer where q = |R| = -1.  So if you want to shock
 your friends, you can tell them that the real numbers are the field with
@@ -326,13 +326,13 @@ R^{n} or C^{n} - the "flag manifold", for
 short.  So we can just calculate some q-factorials:
 
 
-$$
+\begin{verbatim}
 
 [1]! = 1 
 [2]! = 1 + q
 [3]! = 1 + 2q + 2q^{2} +  q^{3}
 [4]! = 1 + 3q + 5q^{2} + 6q^{3} + 5q^{4} + 3q^{5} + q^{6}
-$$
+\end{verbatim}
     
 and read off all sorts of fun stuff.  For example, the flag manifold
 of R^{4} has a cell decomposition like
@@ -412,7 +412,7 @@ manifolds.  Let's work out the homology of Gr(4,2), for example.  We
 start by working out the q-binomial coefficient:
 
 
-$$
+\begin{verbatim}
 
     [4]!       1 (1 + q) (1 + q + q^{2}) (1 + q + q^{2} + q^{3})
  ---------- =  -------------------------------------------
@@ -421,20 +421,20 @@ $$
 
             = 1 + q + 2q^{2} + q^{3} + q^{4}
 
-$$
+\end{verbatim}
     
 It's mildly surprising that this ratio works out to be a polynomial,
 but of course we know it must!  Reading off the coefficients, we get:
 
 
-$$
+\begin{verbatim}
 
 the 0th homology group is Z
 the 2nd homology group is Z
 the 4th homology group is Z^{2}
 the 6th homology group is Z
 the 8th homology group is Z
-$$
+\end{verbatim}
     
 and while we're at it, we've learned this Grassmannian is 8-dimensional   
 as a \emph{real} manifold - or 4-dimensional as a complex manifold.   Note
@@ -444,12 +444,12 @@ Poincare duality.
 On a lighter note: the best way to simplify this sort of expression
 
 
-$$
+\begin{verbatim}
 
   1 (1 + q) (1 + q + q^{2}) (1 + q + q^{2} + q^{3})
  -------------------------------------------   
           1 (1 + q)      1 (1 + q)
-$$
+\end{verbatim}
     
 is to use base q.  Then it's just 
 
@@ -488,7 +488,7 @@ I just told you!  I'll explain this stuff in future Weeks.
 from my friend Squark:
 
 
-$$
+\begin{verbatim}
 
 Squark wrote:
 
@@ -588,7 +588,7 @@ Schanuel was trying to categorify the integers: that's
 why he came up with this stuff.
 
 Also see "<A HREF = "week147.html">week147</A>" for more!
-$$
+\end{verbatim}
     
 
 

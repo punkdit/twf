@@ -401,7 +401,7 @@ like \emph{bigons}.  A "bigon" is a disc with its boundary
 divided into two halves.  Here's my feeble ASCCI rendition of a bigon:
 
 
-$$
+\begin{verbatim}
 
                       f 
                    --->---
@@ -413,7 +413,7 @@ $$
                    --->---
                       g
                      
-$$
+\end{verbatim}
     
 The big arrow indicates that we think of the bigon B as "going from" 
 the top semicircle, f, to the bottom semicircle, g.  Similarly, we 
@@ -423,7 +423,7 @@ Similarly, double categories are good for describing how to glue together
 2-dimensional gadgets that are shaped like \emph{squares}:
 
 
-$$
+\begin{verbatim}
 
                       f
                X o---->----o X'
@@ -432,7 +432,7 @@ $$
                  |         |
                Y o---->----o Y' 
                       f'
-$$
+\end{verbatim}
     
 
 Both 2-categories and double categories come in "strict" and
@@ -467,7 +467,7 @@ $$
 and the 2-morphisms as bigons:
 
 
-$$
+\begin{verbatim}
 
                    f 
                 --->---
@@ -478,24 +478,24 @@ $$
                \       /
                 --->---
                    g
-$$
+\end{verbatim}
     
 
 We can compose morphisms like this:
 
 
-$$
+\begin{verbatim}
 
             f         g                                  fg
        o---->----o---->----o             gives       o--->---o
        X         Y         Z                         X       Z
-$$
+\end{verbatim}
     
 
 We can also compose 2-morphisms vertically:
 
 
-$$
+\begin{verbatim}
 
                  f                                          f
              ---->----                                 --->---  
@@ -506,12 +506,12 @@ $$
             \         /                               \       /   
              ---->----                                 --->---
                  h                                        h
-$$
+\end{verbatim}
     
 and horizontally:
 
 
-$$
+\begin{verbatim}
 
              f           f'                              ff'
           --->---     --->---                          --->--- 
@@ -522,7 +522,7 @@ $$
          \       /   \       /                        \       / 
           --->---     --->---                          --->---
              g           g'                              gg'
-$$
+\end{verbatim}
     
 
 There are also a bunch of laws that need to hold.  I don't want to
@@ -581,7 +581,7 @@ a set of vertical arrows:
 and a set of squares:
 
 
-$$
+\begin{verbatim}
 
                 f
          X o---->----o X'
@@ -590,17 +590,17 @@ $$
            |         |
          Y o---->----o Y' 
                 f'
-$$
+\end{verbatim}
     
 We can compose the horizontal arrows like this:
 
 
-$$
+\begin{verbatim}
 
             f         f'                                  f.f'
        o---->----o---->----o             gives         o--->---o
        X         Y         Z                           X       Z
-$$
+\end{verbatim}
     
 We can compose the vertical arrows like this:
 
@@ -621,7 +621,7 @@ We can compose the vertical arrows like this:
 And, we can compose the squares both vertically: 
 
 
-$$
+\begin{verbatim}
 
              f
       X o---->----o X'
@@ -634,12 +634,12 @@ $$
         |         |                                        f'
       Z o---->----o Z'
              f'
-$$
+\end{verbatim}
     
 and horizontally:
 
 
-$$
+\begin{verbatim}
 
                 f    Y    g                                 f.g
          X o---->----o---->----o Z                    X o---->----o Z
@@ -648,7 +648,7 @@ $$
            |         |         |                        |         |
         X' o---->----o---->----o Z'                  X' o---->----o Z' 
                 f'   Y'   g'                               f'.g'
-$$
+\end{verbatim}
     
 In a strict double category, both vertical and horizontal composition 
 of morphisms is associative on the nose:

@@ -280,7 +280,7 @@ limit.  This suggests the presence of a theory in 11 dimensions that
 fills in the question mark below:
 
 
-$$
+\begin{verbatim}
 
                       low-energy limit
            ?  ----------------------------> 11-dimensional 
@@ -293,7 +293,7 @@ dimensional|                                    |dimensional
         type IIA  -------------------------> type IIA supergravity in 
       superstrings                             10 dimensions 
 
-$$
+\end{verbatim}
     
 This conjectured theory is called "M-theory".  The actual details of
 this theory are still rather mysterious, but not surprisingly, it's
@@ -349,14 +349,14 @@ Concretely, a simplicial object in a category amounts to a bunch of
 objects x_{0}, x_{1}, x_{2},... together with morphisms like this:
 
 
-$$
+\begin{verbatim}
 
                          ---i_{1}->
               ---i_{0}->    ---i_{0}->
 x_{0} <--d_{0}-- x_{1} <--d_{0}-- x_{2} <--d_{0}-- x_{3} ...
               <--d_{1}--    <--d_{1}--
                          <--d_{2}--
-$$
+\end{verbatim}
     
 The morphisms d_{j} are called "face maps" and the morphisms i_{j} are
 called "degeneracies".  They are required to satisfy some equations
@@ -366,12 +366,12 @@ yourself if you read section B of "<A HREF = "week114.html">week114</A>".
 Now, suppose we have an adjunction, that is, a pair of adjoint functors:
 
 
-$$
+\begin{verbatim}
 
   ---L-->
 C         D
   <--R---
-$$
+\end{verbatim}
     
 This means we have natural transformations
 
@@ -386,14 +386,14 @@ Then an object d in the category D automatically gives a simplicial
 object as follows:
 
 
-$$
+\begin{verbatim}
 
                                  --LRL.i.R->
                --L.i.R->         --L.i.RLR->
 d <--e-- LR(d) <--e.LR-- LRLR(d) <--e.LRLR-- LRLRLR(d) ...
                <--LR.e--         <--LR.e.LR-
                                  <--LRLR.e--
-$$
+\end{verbatim}
     
 where . denotes horizontal composition of functors and natural
 transformations.
@@ -401,12 +401,12 @@ transformations.
 For example, if Gp is the category of abelian groups, we have an
 adjunction
 
-$$
+\begin{verbatim}
 
     ---L-->
 Set         AbGp
     <--R---
-$$
+\end{verbatim}
     
 where L assigns to each set the free group on that set, and R assigns to
 each group its underlying set.  Thus given a group, the above trick
@@ -460,12 +460,12 @@ in M.  Now let's see how this is related to adjoint functors.  Suppose
 we have an adjunction, so we have some functors
 
 
-$$
+\begin{verbatim}
 
   ---L-->
 C         D
   <--R---
-$$
+\end{verbatim}
     
 and natural transformations
 
