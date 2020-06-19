@@ -169,17 +169,17 @@ we have a self-adjoint operator A with a discrete spectrum consisting of
 positive eigenvalues.  Then the "zeta function" of A is
 defined by:
 
-                      &zeta;(s) = tr(A^{-s})
+                      \zeta (s) = tr(A^{-s})
 
-To compute &zeta;(s) we just take all the eigenvalues of A, raise them to
+To compute \zeta (s) we just take all the eigenvalues of A, raise them to
 the -s power, and add them up.   For example, if A has eigenvalues
-1,2,3,..., then &zeta;(s) is just the usual Riemann zeta function, which
+1,2,3,..., then \zeta (s) is just the usual Riemann zeta function, which
 we already talked about in "<A HREF = "week126.html">week126</A>".
 
 This stuff doesn't quite apply if A is the Laplacian on a compact
 manifold, since one of its eigenvalues is zero.  But we have already
 agreed to throw out the zero eigenvalue, so let's do that when defining
-&zeta;(s) as a sum over eigenvalues.  Then it turns out that the sum
+\zeta (s) as a sum over eigenvalues.  Then it turns out that the sum
 converges when the real part of s is positive and large.  Even better,
 there's a theorem saying that &Zeta;(s) can be analytically continued to 
 s = 0.  Thus we can use the following trick to define the determinant of
@@ -187,19 +187,19 @@ the Laplacian.
 
 Suppose that A is a self-adjoint matrix with positive eigenvalues.  Then
 
-                    &zeta;(s) = tr(exp(-s ln A))
+                    \zeta (s) = tr(exp(-s ln A))
 Differentiating gives
 
-                    &zeta;'(s) = -tr(ln A exp(-s ln A))
+                    \zeta '(s) = -tr(ln A exp(-s ln A))
 and setting s to zero we get
 
-                    &zeta;'(0) = -tr(ln A).
+                    \zeta '(0) = -tr(ln A).
 But there's a nice little formula saying that
 
                     det(A) = exp(tr(ln A))
 so we get
 
-                    det(A) = exp(-&zeta;'(0)).
+                    det(A) = exp(-\zeta '(0)).
 Now we can use this formula to \emph{define} the determinant of the Laplacian
 on a compact manifold!  Sometimes this is called a "regularized 
 determinant".  
@@ -250,8 +250,8 @@ by an integral over this moduli space.
 
 Indeed, we could hope that
 
-      Z = &int; (&int; exp(-<X, \Delta X>) dX) d[g]  &nbsp;
-&nbsp; &nbsp; &nbsp; [hope!]
+      Z = &int; (&int; exp(-<X, \Delta X>) dX) d[g]  \ 
+\  \  \  [hope!]
 where now the outside integral is over moduli space and d[g] is 
 the Weil-Petersson measure.  The hope, of course, is that the 
 stuff on the inside is well-defined as a function on moduli space.
@@ -475,10 +475,10 @@ calculate the determinant of an operator A whose eigenvalues are the
 numbers 1, 2, 3, ....  You can think of this operator as the Hamiltonian
 for the wave equation on the circle, where we only keep the right-moving
 modes.  As I already said, the zeta function of this operator is the
-Riemann zeta function.  This function has &zeta;'(0) = -ln(2 \pi )/2, so
+Riemann zeta function.  This function has \zeta '(0) = -ln(2 \pi )/2, so
 using our cute formula relating determinants and zeta functions, we get
 
-                 det(A) = exp(-&zeta;'(0)) = (2 \pi )^{1/2} . 
+                 det(A) = exp(-\zeta '(0)) = (2 \pi )^{1/2} . 
 Just for laughs, if we pretend that the determinant of A is the product
 of its eigenvalues as in the finite-dimensional case, we get:
 
@@ -529,9 +529,9 @@ $$
         \pi /2 = - x - x - x -- x -- x -- x -- x ...               (1)
                2   6   6   10   14   18   18
 
-Using the Euler product for &zeta;(2) gives
+Using the Euler product for \zeta (2) gives
 
-\pi ^2/6 = &zeta;(2) = 1 + 1/2^2 + 1/3^2 + ...
+\pi ^2/6 = \zeta (2) = 1 + 1/2^2 + 1/3^2 + ...
                  = (4/3) (9/8) (25/24) ... (p^2/(p^2-1)) ...
 
 and dropping the p = 2 term and dividing by (1) we see that (1) is equivalent

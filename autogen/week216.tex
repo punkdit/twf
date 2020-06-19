@@ -9,11 +9,11 @@ There are lots of different things called "zeta functions"
 in mathematics 
 and physics.  The grand-daddy of them all is the Riemann zeta function:
 
-&zeta;(s) = 1/1^{s} + 1/2^{s} + 1/3^{s} + 1/4^{s} + ....
+\zeta (s) = 1/1^{s} + 1/2^{s} + 1/3^{s} + 1/4^{s} + ....
 
 This is deeply related to prime numbers, thanks to Euler's product formula
 
-&zeta;(s) = &prod; 1/(1 - p^{-s})
+\zeta (s) = &prod; 1/(1 - p^{-s})
 
 where we take a product over all primes.  This formula is fun to prove: 
 just use the geometric series to expand each factor, multiply them out 
@@ -50,7 +50,7 @@ and a million-dollar prize offered by the Clay Mathematics Institute,
 nobody has come close to proving them!
 
 It's known that apart from the negative even integers, the only 
-place the Riemann &zeta; function can vanish is in the strip where
+place the Riemann \zeta  function can vanish is in the strip where
 
 0 < Re(s) < 1
 
@@ -119,12 +119,12 @@ number field.
 Technically, we do this by summing over all nonzero ideals I in the
 ring A of algebraic integers in our number field:
 
-&zeta;(s) = &sum; |I|^{-s}
+\zeta (s) = \sum |I|^{-s}
 </P>
 where |I| is a number called the "norm" of I, which is 
 just the cardinality of A/I.  We also have an Euler product formula:
 
-&zeta;(s) = &prod; 1/(1 - |P|^{-s})
+\zeta (s) = &prod; 1/(1 - |P|^{-s})
 
 where we take the product over prime ideals P.
 
@@ -132,7 +132,7 @@ For example, if our number field is the rational numbers, its algebraic
 integers are the ordinary integers.  So, each ideal consists of multiples 
 of some number n = 1,2,3,..., and its norm is just n, so we get:
 
-&zeta;(s) = 1/1^{s} + 1/2^{s} + 1/3^{s} + 1/4^{s} + ....
+\zeta (s) = 1/1^{s} + 1/2^{s} + 1/3^{s} + 1/4^{s} + ....
 
 A more fun example is the number field Q[i], where we take the
 rational numbers and throw in a square root of -1.  Here the
@@ -173,7 +173,7 @@ We get all primes in the Gaussian integers this way."
 \end{quote}
 So, the zeta function of the Gaussian integers goes like this:
 
-&zeta;(s) = 1/(1 - 2^{-s})  1/(1 - 3^{-2s})  1/(1 - 5^{-s})  1/(1 - 5^{-s}) ...
+\zeta (s) = 1/(1 - 2^{-s})  1/(1 - 3^{-2s})  1/(1 - 5^{-s})  1/(1 - 5^{-s}) ...
 
 I went just far enough to show you what happens for each kind of
 prime.  As you might expect, we get two factors for each prime
@@ -200,7 +200,7 @@ there are one or more prime ideals in our number field:
 
 \end{verbatim}
     
-And, the &zeta; function records the details of how this works!
+And, the \zeta  function records the details of how this works!
 
 For more on this covering space philosophy see "<A HREF = "week205.html">week205</A>" and "<A HREF = "week213.html">week213</A>".  
 This geometrical metaphor lies behind a lot of the really cool work 
@@ -215,14 +215,14 @@ f: X \to  X
 Here X is the set of "states" of some physical system, and f describes 
 one step of time evolution.  For each integer n we get a function
 
-f^{&nbsp;n}: X \to  X
+f^{\ n}: X \to  X
 
 Since the integers are called Z, mathematicians would call our
 discrete dynamical system a "Z-set".
 
 Whatever you call it, its zeta function is defined to be:
 
-&zeta;(s) = &prod;  1/(1 - |P|^{-s})
+\zeta (s) = &prod;  1/(1 - |P|^{-s})
 
 where P ranges over all periodic orbits and |P| is the 
 \emph{exponential} of the size of this periodic orbit.  
@@ -242,7 +242,7 @@ at least when the set X is finite.  Decategorification at work!
  
 We can also rewrite this zeta function as a sum:
 
-&zeta;(s) = &sum;  |I|^{-s}
+\zeta (s) = \sum  |I|^{-s}
 
 where I ranges over all formal products of periodic orbits,
 and we define |P_{1} ... P_{n}| = |P_{1}| ... |P_{n}|.  
@@ -263,11 +263,11 @@ we get the zeta function of our number field!
 Now suppose X is some topological space and we have a time
 evolution map
 
-f_{&nbsp;t}: X \to  X
+f_{\ t}: X \to  X
 
 for each real number t.  We can define a zeta function
 
-&zeta;(s) = &prod;   1/(1 - |P|^{-s})
+\zeta (s) = &prod;   1/(1 - |P|^{-s})
 
 where P ranges over all periodic orbits and |P| is the 
 exponential of the "period" of P - meaning the time it takes 
@@ -296,9 +296,9 @@ number theory.   So, we get some direct interactions with example A).
 \textbf{D) The zeta function of a graph.}  We can take the idea of
 "periodic geodesic on a Riemannian manifold" and vastly simplify
 it by looking at closed loops in a graph with finitely many 
-edges and vertices.  We get a &zeta; function
+edges and vertices.  We get a \zeta  function
 
-&zeta;(s) = &prod;   1/(1 - |P|^{-s})
+\zeta (s) = &prod;   1/(1 - |P|^{-s})
 
 where P ranges over all "prime loops" in our graph: loops that don't 
 backtrack or loop around more than once.  Now |P| is the exponential 
@@ -315,7 +315,7 @@ f: X \to  X
 which again deserves to be called the "Frobenius automorphism".
 
 \textbf{E) The zeta function of an affine scheme.}  Given a commutative ring, 
-we can think of it as the ring of functions on some space.  The &zeta; 
+we can think of it as the ring of functions on some space.  The \zeta  
 function of the commutative ring then counts the points of this space.
 
 To make this precise, we cleverly invent a kind of space called an 
@@ -347,7 +347,7 @@ This is called the "Frobenius automorphism"!
 Since f is a discrete dynamical system, we can define its zeta function
 as in example B):
 
-&zeta;(s) = &prod; 1/(1 - |P|^{-s})
+\zeta (s) = &prod; 1/(1 - |P|^{-s})
 
 where P ranges over all periodic orbits, and |P| is the exponential
 of the size of the periodic orbit, defined using the base p.
@@ -366,7 +366,7 @@ this definition works for them too.
 If you know someone else's definition of the zeta function of a scheme, 
 it may not look like what I wrote here!   But don't panic.  The reason is 
 that people like to express the zeta function of a discrete dynamical system 
-f: X \to  X in terms of the number of fixed points of f^{&nbsp;n}.  
+f: X \to  X in terms of the number of fixed points of f^{\ n}.  
 When f is the 
 Frobenius automorphism, these are usually called "points defined over the 
 field with p^{n} elements".  So, you'll see lots of formulas for 
@@ -394,7 +394,7 @@ introductions:
 5) Anton Deitman, Panorama of zeta functions, available as 
 <A HREF = "http://www.arxiv.org/abs/math.NT/0210060">math.NT/0210060</A>.
 
-Audrey Terras has a lot of nice slide presentations about the &zeta; functions 
+Audrey Terras has a lot of nice slide presentations about the \zeta  functions 
 and L-functions of graphs:
 
 6) Audrey Terras, Artin L-functions of graph coverings, 
@@ -412,13 +412,13 @@ to explain things to the nonexpert:
 
 He gives a characterization of graphs whose zeta functions satisfy an 
 analogue of the Riemann Hypothesis.  Strangely, this analogue involves 
-\emph{poles} of the &zeta; function in the critical strip  
+\emph{poles} of the \zeta  function in the critical strip  
 
 0 < Re(s) < 1
 
 Is this a real difference or the result of some difference in conventions?
 
-Finally, I should explain some more technical stuff about &zeta; functions 
+Finally, I should explain some more technical stuff about \zeta  functions 
 and fixed points, just so I don't forget it.  Suppose we have a discrete 
 dynamical system
 
@@ -426,13 +426,13 @@ f: X \to  X
 
 and let 
 
-|fix(f^{&nbsp;n})| 
+|fix(f^{\ n})| 
 
 be the number of fixed points of the nth iterate of f.
 
 We can define a weird function like this:
 
-Z(u) = exp(&sum;_{&nbsp;n>0} |fix(f^{&nbsp;n})| u^{n} / n)
+Z(u) = exp(\sum_{\ n>0} |fix(f^{\ n})| u^{n} / n)
 
 You'll often see formulas like this running around, especially when f is 
 some sort of "Frobenius automorphism".  Sometimes people even call these 
@@ -440,7 +440,7 @@ guys zeta functions.  But what in the world do they have to do with zeta
 functions???
 
 Let's see.  Suppose first that X consists of a single cycle of length k.  
-Then f^{&nbsp;n} has k fixed points when n is a multiple of k, but none otherwise, so: 
+Then f^{\ n} has k fixed points when n is a multiple of k, but none otherwise, so: 
 
 
 $$
@@ -457,11 +457,11 @@ $$
 This is starting to look more like the zeta functions we know and love.
 It looks even better if we pick some prime number p and define
 
-&zeta;(s) = Z(p^{-s})
+\zeta (s) = Z(p^{-s})
 
 Then we get
 
-&zeta;(s) = 1/(1 - p^{-ks})
+\zeta (s) = 1/(1 - p^{-ks})
 
 which is precisely what we'd get using the definition in example B). 
  
@@ -471,11 +471,11 @@ function of a disjoint union of discrete dynamical systems is the
 dynamical system is a disjoint union of cycles, we conclude that the
 definitions \emph{always} agree.  In other words, 
 
-&zeta;(s) = Z(p^{-s})
+\zeta (s) = Z(p^{-s})
 
 with 
 
-Z(u) = exp(&sum;_{n>0} |fix(f^{&nbsp;n})| u^{n} / n)
+Z(u) = exp(\sum_{n>0} |fix(f^{\ n})| u^{n} / n)
 
 is always equal to the zeta function defined in example B).
 

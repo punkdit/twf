@@ -63,7 +63,7 @@ Still open, since the Riemann Hypothesis is a special case.
 
 A "Dirichlet L-function" is a function like this:
 
-L(&chi;,s) = &sum;_{n > 0} &chi;(n)/n^{s}
+L(&chi;,s) = \sum_{n > 0} &chi;(n)/n^{s}
 
 where &chi; 
 is any "Dirichlet character", meaning a periodic complex function 
@@ -164,7 +164,7 @@ to see some of the strange things that are going on.
 
 The Riemann zeta function starts out life as a sum:
 
-&zeta;(s) = 1^{-s} + 2^{-s} + 3^{-s} + 4^{-s} + ....
+\zeta (s) = 1^{-s} + 2^{-s} + 3^{-s} + 4^{-s} + ....
 
 This only converges for Re(s) > 1.  It blows up as we approach s = 1, 
 since then we get the series
@@ -177,12 +177,12 @@ at s = 1.
 
 He also showed that the zeta function has an unexpected symmetry: 
 its value at any complex number s is closely related to its value at 1-s.  
-It's not true that &zeta;(s) = &zeta;(1-s), but something similar is true, 
+It's not true that \zeta (s) = \zeta (1-s), but something similar is true, 
 where we multiply the zeta function by an extra fudge factor.  
 
 To be precise: if we form the function
 
-\pi ^{-s/2} \Gamma (s/2) &zeta;(s)
+\pi ^{-s/2} \Gamma (s/2) \zeta (s)
 
 then this function is unchanged by the transformation
 
@@ -192,7 +192,7 @@ This symmetry maps the line
 
 Re(s) = 1/2
 
-to itself, and the Riemann Hypothesis says all the &zeta; zeros in 
+to itself, and the Riemann Hypothesis says all the \zeta  zeros in 
 the critical strip actually lie on this magic line.  
 
 This symmetry is called the "functional equation".  It's the tiny tip of a 
@@ -211,7 +211,7 @@ I will deliberately be VERY rough, and use some simplified nonstandard
 definitions, since the precise details have a way of distracting your 
 eye just as the magician pulls the rabbit out of the hat.
 
-We start with the function &zeta;(2s):
+We start with the function \zeta (2s):
 
 1^{-s} + 4^{-s} + 9^{-s} + 25^{-s} + ....
 
@@ -223,7 +223,7 @@ z^{1}  + z^{4}  + z^{9}  + z^{25} + ....
 
 Weird, huh?  This is almost the "theta function"
 
-\theta (t) = &sum;_{n} e^{\pi  i n<sup>2} t</sup>
+\theta (t) = \sum_{n} e^{\pi  i n<sup>2} t</sup>
 
 where we sum over all integers n.  Indeed, it's easy to see that
 
@@ -327,7 +327,7 @@ should do is hit this function with the inverse
 Mellin transform and repackage all 
 its information into an automorphic form - the theta function.  
 
-&zeta; is dead, long live \theta !
+\zeta  is dead, long live \theta !
 
 The Riemann zeta function is just like all the fancier zeta functions and 
 L-functions in this respect.  The fact that they satisfy a "functional 
@@ -548,13 +548,13 @@ He replied:
  a_{1}, a_{2},...,a_{n},..., with 
 
 a_{n} =
- O(n^{r&nbsp;}), 
+ O(n^{r\ }), 
 
  what is a neat easy-to-understand
  property of this sequence which implies (or is implied by, or is equivalent 
  to) the statement that 
 
-&sum; a_{n}/n^{s} 
+\sum a_{n}/n^{s} 
 has analytic (or meromorphic) continuation
  beyond Re(s)>r?  Maybe even this is hard---or maybe there is no such
  elementary criterion.
@@ -573,7 +573,7 @@ $$
  is periodic with prime period p (primality probably isn't necessary but it
  simplifies the combinatorics). Then the associated L-function
 
- &sum; a_{n}/n^{s}
+ \sum a_{n}/n^{s}
  has
  meromorphic continuation with at worst a simple pole at s=1 and no
  other poles, and one could even argue that the a_{i} "came from an
@@ -611,7 +611,7 @@ $$
  contribution was in the 2-dimensional case, the 1-dimensional case 
  having been understood for some time.)  The a_{n} are then related to
  traces of the representation.  Artin conjectured in the 1930s that
- &sum; a_{n}/n^{s} 
+ \sum a_{n}/n^{s} 
  should have analytic continuation to all of the
  complex plane if the representation was irreducible and not the trivial
  1-dimensional representation.  Langlands conjectured much later that 

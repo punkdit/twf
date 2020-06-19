@@ -377,10 +377,10 @@ As explained near the end of "<A HREF =
 "week216.html">week216</A>", we can define a kind of zeta
 function for a Z-set as follows:
 
-Z(x) = exp(&sum;_{n>0} |fix(f^{&nbsp;n})| x^{n} / n)
+Z(x) = exp(\sum_{n>0} |fix(f^{\ n})| x^{n} / n)
 
-where |fix(f^{&nbsp;n})| is the number of fixed points of 
-f^{&nbsp;n}.  Of course, this
+where |fix(f^{\ n})| is the number of fixed points of 
+f^{\ n}.  Of course, this
 only makes sense if all these numbers are finite; henceforth I'll assume 
 my Z-sets are "finite" in this special sense.  
 
@@ -417,7 +417,7 @@ coming from the "Frobenius" for that prime.  We thus get a bunch of "local"
 zeta functions Z_{p}(x), one for each prime.  We then multiply these to get 
 one big fat "global" zeta function:
 
-&zeta;(s) = &prod;_{p} Z(p^{-s})
+\zeta (s) = &prod;_{p} Z(p^{-s})
 
 Each local zeta function is a formal power series, while this global
 zeta function is a Dirichlet series.  As I mentioned in "<A HREF
@@ -467,7 +467,7 @@ which is a formal power series |F| given by
 $$
 
               |F_{n}|
-|F|(x) =  &sum;  ------  x^{n}
+|F|(x) =  \sum  ------  x^{n}
                n! 
 $$
     
@@ -481,7 +481,7 @@ be isomorphic.  This is why I said generating functions are
 Despite this defect, generating functions are still very useful in 
 combinatorics.  So, when we see a zeta function like
 
-Z(x) = exp(&sum;_{n>0} |fix(f^{&nbsp;n})| x^{n} / n)
+Z(x) = exp(\sum_{n>0} |fix(f^{\ n})| x^{n} / n)
 
 as a trick for decategorifying Z-sets, we should instantly wonder if it's 
 a generating function in disguise.  And of course, it is!
@@ -489,7 +489,7 @@ a generating function in disguise.  And of course, it is!
 Actually it's easiest to leave out the exponential at first.  This power
 series:
 
-&sum;_{n>0} |fix(f^{&nbsp;n})| x^{n} / n
+\sum_{n>0} |fix(f^{\ n})| x^{n} / n
 
 is the generating function for the structure type "being cyclically 
 ordered and equipped with a morphism to the Z-set X".   
@@ -504,7 +504,7 @@ equipping the resulting Z-set with a morphism to the Z-set X.
 
 And, if you work out the generating function of this structure type, you get 
 
-&sum;_{n>0} |fix(f^{&nbsp;n})| x^{n} / n
+\sum_{n>0} |fix(f^{\ n})| x^{n} / n
 
 Check it and see!  
 
@@ -513,7 +513,7 @@ exponential of a structure type: to put an exp(F)-structure on a finite set
 S, we chop S into disjoint parts and put an F-structure on each part.  So, 
 the zeta function
 
-Z(x) = exp(&sum;_{n>0} |fix(f^{&nbsp;n})| x^{n} / n)
+Z(x) = exp(\sum_{n>0} |fix(f^{\ n})| x^{n} / n)
 
 is the generating function for "being chopped up into cyclically ordered 
 parts, each equipped with a morphism to the Z-set X". 
@@ -590,8 +590,8 @@ K*\Adeles_{K}*/(K_{\infty }*)^{0}
  C[[z]]: let's define the measure of a+p^{n}Z_{p} 
  to be p^{-n}. Then this is
  finitely additive, because Z_{p} 
- is the disjoint union pZ_{p} &cup; 1+pZ_{p} &cup;
- ... &cup; (p-1)+pZ_{p}, and 
+ is the disjoint union pZ_{p} \cup  1+pZ_{p} \cup 
+ ... \cup  (p-1)+pZ_{p}, and 
  1/p+1/p+...+1/p (p times) is 1.
  But you can't do this for C[[z]] because the cardinality of 
  C is infinite.  This naive
@@ -805,7 +805,7 @@ theory</em>.
  write down explicit finite quotients of it. (Why quotients? Because quotients
  of Galois groups are again Galois groups.) For example, I can
  just write down a big subgroup e.g. K_{\infty }* times the product of
- O_{K<sub>&nbsp;v}</sub>*, where v runs through all the finite places of K, and the
+ O_{K<sub>\ v}</sub>*, where v runs through all the finite places of K, and the
  quotient of the big group by the big subgroup can be checked to be compact
  and discrete, so it's finite. We have hence "explicitly" written down a
  finite quotient of Gal(K^{-}/K), corresponding to a finite extension H of K.

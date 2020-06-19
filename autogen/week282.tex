@@ -184,7 +184,7 @@ zero!
 
 There's also a deeper and more important reason why commutators and
 Lie algebras are important in quantum theory: they show up when we
-study <i>symmetries</i> of physical systems.  But that's another story,
+study \emph{symmetries} of physical systems.  But that's another story,
 tangential to today's tale.
 
 Anyway, it's fun - or at least good for your moral development - to
@@ -273,9 +273,9 @@ that {x,y} is linear in each argument.
 There's one more rule, too!  Note that in A we have
 
 [x,yz] = xyz - yzx <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\ \ \ \ \ \ \ \ 
        = xyz - yxz + yxz - yzx<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\ \ \ \ \ \ \ \ 
        = [x,y]z + y[x,z]
 
 and thus
@@ -315,7 +315,7 @@ and
 PoissonAlg \to  LieAlg
 
 But you'll notice that in my above argument I got ahold of the Poisson
-algebra axioms starting from an <i>associative</i> algebra of a
+algebra axioms starting from an \emph{associative} algebra of a
 special sort: roughly, one that's "noncommutative, but only up to
 terms of order h".  This suggests that Poisson algebras are a
 halfway house between associative and commutative algebras.  And I'd
@@ -357,7 +357,7 @@ And this is precisely what linear operads are designed to handle!
 
 More precisely, a linear operad O consists of a vector space O_{n} for
 each natural number n.  We call this the space of "n-ary operations".
-They're not operations <i>on</i> anything yet - they're just
+They're not operations \emph{on} anything yet - they're just
 "abstract" operations, with names like
 "multiplication" or "Poisson bracket".  We can
 draw an n-ary operation as a little black box with n wires coming in
@@ -407,7 +407,7 @@ f, obtaining a new operation which we call
 
 f o (g_{1},...,g_{n})
 
-Since we're doing <i>linear</i> operads todqay, we demand that this
+Since we're doing \emph{linear} operads todqay, we demand that this
 composition operation be linear in each argument.  Moreover we demand
 that there be a unary operation serving as the identity for
 composition, and we impose an "associative law" that makes a
@@ -571,8 +571,8 @@ I can say this faster, as follows:
 (xy)z = x(yz)
 
 But remember: now I'm not talking about the associative law in any
-<i>particular</i> algebra - I'm talking about an equation that holds
-in the operad Assoc, and thus in <i>every</i> algebra of this operad.
+\emph{particular} algebra - I'm talking about an equation that holds
+in the operad Assoc, and thus in \emph{every} algebra of this operad.
 We also also impose these laws:
 
 1x = x</br>
@@ -715,7 +715,7 @@ Assoc \to  Comm
 
 and call its kernel I.  I_{n} is the space of n-ary operations
 for associative algebras that go to zero when we think of them as
-operations for <i>commutative</i> algebras.  Let's see what it's like!
+operations for \emph{commutative} algebras.  Let's see what it's like!
 The first interesting case is I_{2}.  Assoc_{2} is
 2-dimensional, with this basis:
 
@@ -794,7 +794,7 @@ bracket like this:
 (x,y,z) |\to  [x,[y,z]]
 
 And so on.  But the operad Assoc is just "filtered", not
-"graded", because there's no way to say <i>exactly</i> how
+"graded", because there's no way to say \emph{exactly} how
 many appearances of the bracket a given operation contains - at least,
 no way that's compatible with composition and taking linear
 combinations.  For example, you might say these operations contain 0
@@ -806,7 +806,7 @@ and
 
 (x,y) |\to  yx
 
-But their difference <i>is</i> the bracket!
+But their difference \emph{is} the bracket!
 
 The "associated graded" construction is designed precisely
 to cure this sort of problem: operations in
@@ -1002,7 +1002,7 @@ Assoc: Vect \to  AssocAlg
 
 So, we have an canonical isomorphism
 
-Assoc(V) &cong; U(Lie(V))
+Assoc(V) \cong  U(Lie(V))
 
 But the Poincar&eacute;-Birkhoff-Witt theorem gives a canonical
 isomorphism of vector spaces between the universal enveloping algebra
@@ -1011,28 +1011,28 @@ is, the free commutative algebra on its underlying vector space.
 Let's write this symmetric algebra as Comm(L).  So, we get a vector
 space isomorphism
 
-Assoc(V) &cong; Comm(Lie(V))
+Assoc(V) \cong  Comm(Lie(V))
 
 (Admittedly, the standard ugly proof of the PBW theorem does not give
-a <i>canonical</i> isomorphism.  But the good proof does - see
+a \emph{canonical} isomorphism.  But the good proof does - see
 "<a href = "week212.html">week212</A>".)
 
 Next, let's use some well-known black magic to describe the above
 functors using operads.  The free Lie algebra on a vector space V is
 given by
 
-Lie(V) &cong; \oplus _{n} Lie_{n} \otimes 
+Lie(V) \cong  \oplus _{n} Lie_{n} \otimes 
 V^{\otimes n}
 
 where we tensor over the action of the symmetric group.  Similarly,
 the free associative algebra on a vector space V is given by
 
-Assoc(V) &cong; \oplus _{n} Assoc_{n} \otimes 
+Assoc(V) \cong  \oplus _{n} Assoc_{n} \otimes 
 V^{\otimes n}
 
 Likewise, the free commutative algebra on V is given by
 
-Comm(V) &cong; \oplus _{n} Comm_{n} \otimes 
+Comm(V) \cong  \oplus _{n} Comm_{n} \otimes 
 V^{\otimes n}
 
 These are categorified versions of formal power series.  That's
@@ -1046,23 +1046,23 @@ functions.  I explained this in "<a href =
 big deal: where we used cardinalities before, now we use dimensions!
 We get these generating functions:
 
-|Lie|(x) = &sum;_{n} dim(Lie_{n}) x^{n}/n!
+|Lie|(x) = \sum_{n} dim(Lie_{n}) x^{n}/n!
          
-|Assoc|(x)  = &sum;_{n} dim(Assoc_{n}) x^{n}/n! 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-         = &sum;_{n} x^{n} 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+|Assoc|(x)  = \sum_{n} dim(Assoc_{n}) x^{n}/n! 
+\  \  \  \  \  \  \  \  
+         = \sum_{n} x^{n} 
+\  \  \  \  \  \  \  \  
          = 1/(1-x)
 
-|Comm|(x)  = &sum;_{n} dim(Comm_{n}) x^{n}/n!  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-         = &sum;_{n} x^{n}/n! 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+|Comm|(x)  = \sum_{n} dim(Comm_{n}) x^{n}/n!  
+\  \  \  \  \  \  \  \  
+         = \sum_{n} x^{n}/n! 
+\  \  \  \  \  \  \  \  
          = exp(x)
 
 Now, by general abstract nonsense our isomorphism
 
-Assoc(V) &cong; Comm(Lie(V))
+Assoc(V) \cong  Comm(Lie(V))
 
 gives an equation
 
@@ -1075,12 +1075,12 @@ or
 so
 
 |Lie|(x) = ln(1/1-x) 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         = &sum;_{n} x^{n}/n
+\  \  \  \  \  \ 
+         = \sum_{n} x^{n}/n
 
 but we saw
 
-|Lie|(x) = &sum;_{n} dim(Lie_{n}) x^{n}/n!
+|Lie|(x) = \sum_{n} dim(Lie_{n}) x^{n}/n!
 
 so 
 
@@ -1101,7 +1101,7 @@ algebra L.
 This implies that Comm(Lie(V)) is the free Poisson algebra on
 the vector space V:
 
-Comm(Lie(V)) &cong; &oplus_{n} Poisson_{n} \otimes 
+Comm(Lie(V)) \cong  &oplus_{n} Poisson_{n} \otimes 
 V^{\otimes n}
 
 To get a basis of Poisson_{n}, it's therefore enough to consider
@@ -1183,8 +1183,8 @@ When I said "linear operads are a lot like rings", I could have
 been more precise.  Linear operads are a lot like associative algebras -
 and indeed, an associative algebra is the same as a linear operad with
 only unary operations!  But since we were talking about the linear
-operad <i>for</i> associative algebras, I didn't want to blow your mind by
-pointing out that an associative algebra also <i>is</i> a linear operad.
+operad \emph{for} associative algebras, I didn't want to blow your mind by
+pointing out that an associative algebra also \emph{is} a linear operad.
 We could also consider operads whose spaces of operations are abelian
 groups, with composition being a group homomorphism in each
 argument.  An operad like this with only unary operations is the 
