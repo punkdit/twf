@@ -115,23 +115,23 @@ Actually, despite the fact that we are working with a very simple model of quant
 \[H\Psi = 0\]
 Also, unlike the ordinary harmonic oscillator we have the requirement that $r > 0$. In other words, we're working with a problem that's like a harmonic oscillator and a ``wall" that keeps $r > 0$. Think of a particle in a potential like this:
 %FIGURE THIS PLOT OUT
-\begin{center}
-  \begin{tikzpicture}
-  \coordinate (O) at (0,0);
-  \coordinate (A) at (0,2);
-  \def\r{20} % radius
-  \def\c{3} % center
-  \coordinate (C) at (\c, \r);
+%\begin{center}
+%  \begin{tikzpicture}
+%  \coordinate (O) at (0,0);
+%  \coordinate (A) at (0,2);
+%  \def\r{20} % radius
+%  \def\c{3} % center
+%  \coordinate (C) at (\c, \r);
+%
+%
+%  \draw[-latex] (O) -- (A) node[anchor=south] {$V(r)$};
+%  \draw[-latex] (O) -- (2.05*pi,0) node[anchor=west] {$r$};
+%  \draw[black,domain=0:2*pi,samples=80, line width=1] 
+%       plot ({\x^2 r});
+%  \end{tikzpicture}
+%\end{center}
 
-
-  \draw[-latex] (O) -- (A) node[anchor=south] {$V(r)$};
-  \draw[-latex] (O) -- (2.05*pi,0) node[anchor=west] {$r$};
-  \draw[black,domain=0:2*pi,samples=80, line width=1] 
-       plot ({\x^2 r});
-  \end{tikzpicture}
-\end{center}
-
-Here $V(r) = - (8\pi \frac{D}{3})r + r^2$. The minimum of $V$ is at $r = 4\pi \frac{D}{3}$ and the zeroes are at $r = 0$ and $8\pi \frac{D}{3}$. Classically, a particle with zero energy starting at $r = 0$ will roll to the right and make it out to $r = 4\piD\frac{D}{3}$ before rolling back to $r = 0$. This is basically the picture we had in Figure 1, except that we've reparametrized time so we have simple harmonic motion instead of cycloid.
+Here $V(r) = - (8\pi \frac{D}{3})r + r^2$. The minimum of $V$ is at $r = 4\pi \frac{D}{3}$ and the zeroes are at $r = 0$ and $8\pi \frac{D}{3}$. Classically, a particle with zero energy starting at $r = 0$ will roll to the right and make it out to $r = 4\pi D\frac{D}{3}$ before rolling back to $r = 0$. This is basically the picture we had in Figure 1, except that we've reparametrized time so we have simple harmonic motion instead of cycloid.
 Quantum mechanically, however one must pick boundary conditions at $r = 0$ to make the problem well-defined!
 
 This is where the fur begins to fly!! Hawking and Vilenkin have very different ideas about what the right boundary conditions are. And note that this is not a mere technical issue, since they determine the wavefunction of the universe in this approach! I will not discuss this since Vilenkin does so quite clearly, and if you understand what I have written above you'll be in a decent position to understand him. I will just note that Vilenkin, rather than working with a universe full of ``dust," considers a universe in which the dominant contribution to the stress-energy tensor is the cosmological constant, that is, the negative energy density of a ``false vacuum", which believers in inflation (such as Vilenkin) think powered the exponential growth of the universe at an early stage. So his equations are slightly different from those above (and are only meant to apply to the early history of the universe).
