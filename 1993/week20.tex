@@ -7,67 +7,31 @@ I think I'll depart from my usual concerns this week and talk about a book I'd b
 This is a mind-boggling book. I have always regarded research in combinatorics as a pleasure I must deny myself, for the study of the \emph{discrete} presents endless beautiful tapestries in which one could easily lose oneself for life, and I regard this as a kind of self-indulgence when there is, after all, the physical universe out there waiting to be understood. Of course, it's good that \emph{someone} does combinatorics, since even the most obscure corners have a strong tendency to become useful eventually - and if they write books about it, I can have my cake and eat it too, by \emph{reading} about it. Conway and Sloane are two masters of combinatorics, and this book is like a dessert tray piled so high with delicacies that it's hard to know where to begin. Rather than attempt to describe it, let me simply show you a few things I found in it. The book is 679 pages long, so what I'll say is only the most minute sample!
 
 Let's begin with sphere packings. Say one is stacking cannonballs on ones lawn, which is a quaint custom now that cannons have been replaced by far more horrible weapons. A nice way to do it is to lay out a triangle of cannonballs thus:
-\begin{verbatim}
-                   x   x   x   x
-
-                     x   x   x
-
-                       x   x
-
-                         x
-\end{verbatim}
+\begin{center}
+\includegraphics[]{figures/wk20_fig1.pdf}
+\end{center}
 and then set down another triangle of cannonballs on top of the first layer, one in every other hole, thus:
-\begin{verbatim}
-                   x   x   x   x
-                     o   o   o
-                     x   x   x
-                       o   o
-                       x   x
-                         o
-                         x
-\end{verbatim}
+\begin{center}
+\includegraphics[]{figures/wk20_fig2.pdf}
+\end{center}
 
 and another:
-\begin{verbatim}
-                   x   x   x   x
-                     o   o   o
-                     x * x * x
-                       o   o
-                       x * x
-                         o
-                         x
-\end{verbatim}
+\begin{center}
+\includegraphics[]{figures/wk20_fig3.pdf}
+\end{center}
 
 and finally one on top - which I won't attempt to draw. Very nice stack! There are many mathematical reflections it could lead one to, one of which is: is this the \emph{densest} possible way one can pack spheres of equal radius? The density is $\frac{\pi}{\sqrt{18}} = .7405...$; can one do better? Apparently it was Kepler who first conjectured that the answer is ``no.'' This is a famous hard problem. In 1991 W.-Y. Hsiang announced that he had a proof, but I am not sure how many experts have read it and been convinced.
 
 This packing is a very regular sort of packing, what people call a lattice packing. A lattice is a discrete subset of $n$-dimensional Euclidean space closed under addition, and the packing above corresponds to a lattice called the ``face-centered cubic'' or fcc lattice, which is the set of all points $(x,y,z)$ where $x, y,\text{ and }z$ are integers adding up to an \emph{even} number. (One might have a bit of fun drawing some of those points and seeing why they do the job.) Naturally, because of their regularity lattice packings are easier to study than non-lattice ones. In fact, Gauss showed in 1831 that the fcc lattice is the densest of all \emph{lattice} packings of spheres in 3 dimensions. This justifies the practice of stacking grapefruit this way in the supermarket.
 
 Let's take a bit closer look at what's going on here. Imagine an fcc lattice going off infinitely in all directions... each sphere is touching 12 others: 6 in its own layer, as it were, 3 in the layer above and 3 in the layer below. If we only pay attention to a given sphere and those touching it we see something like:
-\begin{verbatim}
-                         x       x   
-
-                         *   o   * 
- 
-                     x       x       x
-
-                         o   *   o
-
-                         x       x
-                         
-\end{verbatim}
+\begin{center}
+\includegraphics[]{figures/wk20_fig4.pdf}
+\end{center}
 If we remove the central sphere to clean up the picture a bit, the centers of the remaining are the vertices of a shape called the cuboctahedron:
-\begin{verbatim}
-                         x       x   
-
-                         *   o   * 
- 
-                     x               x
-
-                         o   *   o
-
-                         x       x
-                         
-\end{verbatim}
+\begin{center}
+\includegraphics[]{figures/wk20_fig5.pdf}
+\end{center}
 It has 12 vertices, 8 triangular faces, and 6 square faces. One can get it either by cutting off the corners of a cube just right, or by cutting off the corners of an octahedron!
 
 Let's return to thinking about the 12 spheres touching the central one. This raises another question: is 12 the largest number of equal-radius spheres able to touch a given one? This is the ``kissing spheres'' problem - not quite the same as the packing problem! In 1694, Newton conjectured that 12 was the largest number one could achieve. His correspondent, David Gregory, thought 13 might be possible. It turns out that Newton was right (some proofs appeared in the late 1800's), but it is important to realize that Gregory's guess was not as dumb as it might sound!
@@ -216,17 +180,20 @@ Now here's an interesting question: say we labelled the 12 spheres touching the 
 In fact, one can achieve all EVEN permutations of the 12 spheres this way!
 \end{quote}
 I got some email from Conway saying that in fact one get ALL permutations of the 12 spheres. The point is this. One can start with the 12 spheres touching the central one arranged so their centers are at the vertics of an icosahedron. Then one can roll them around so their centers lie at the vertices of a cuboctahedron:
-\begin{verbatim}
-                         x       x   
-
-                         *   o   * 
- 
-                     x               x
-
-                         o   *   o
-
-                         x       x
-\end{verbatim}
+\begin{center}
+\includegraphics[]{figures/wk20_fig5.pdf}
+\end{center}
+%\begin{verbatim}
+%                         x       x   
+%
+%                         *   o   * 
+% 
+%                     x               x
+%
+%                         o   *   o
+%
+%                         x       x
+%\end{verbatim}
 At this point they touch each other, but one can indeed get to this position. There is a nice picture of \emph{how} to do this in Conway and Sloane's book, but you might enjoy figuring it out.
 Now if we rotate the cuboctahedron around the axis pointing towards the reader, we get an odd permutation of the 12 spheres, with cycle structure (1 2 3)(4 5 6)(7 8 9 10 11 12). So one can in fact get all of $S_{12}$ if one lets the 12 spheres ``just touch.'' If one thinks about it a bit, the method described in the previous post gets all of $A_{12}$ without the 12 spheres touching at all. Conway says he doesn't know if one can get all of $S_{12}$ without the 12 spheres touching each other at all. So this might be a fun problem to work on. I bet the answer is ``no''.
 
