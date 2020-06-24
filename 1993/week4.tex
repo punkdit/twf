@@ -41,7 +41,7 @@ may be at work in earthquakes.   The above paper cites
 \vskip 2ex
 Bac, Chen and Creutz, Nature 342 (1989) p. 780,
 \vskip 2ex
-which claims that in the final state of the game of Life, the
+\noindent which claims that in the final state of the game of Life, the
 density of clusters $D(s)$ of size $s$ scales as about $s^{-1.4}$, and that the
 probability that a small perturbation will cause a flurry of activity
 lasting a time $t$ scales as about $t^{-1.6}$.   I'm no expert, but I guess
@@ -299,61 +299,51 @@ last frame is the tangle $g$, and each of whose intermediate frames is a
 tangle except at certain times when a catastrophe occurs.   For example,
 here's a 2-tangle shown as a movie... 
 \vskip 3ex \noindent
-Frame 1  
-\begin{verbatim}
-      |    |
-      |    |
-      |    |
-      |    |
-      |    |
-\end{verbatim}
+Frame 1
+\\[1ex]
+\begin{tikzpicture}
+\draw (topleft) -- (botleft)  (botright) -- (topright);
+\end{tikzpicture}
+\\
 Frame 2 
-\begin{verbatim}
-      \    /
-       |  |
-       |  |
-       |  |
-      /    \
-\end{verbatim}
+\\[1ex]
+\begin{tikzpicture}[bend angle=30]
+\path (topleft) edge[bend left, looseness=0.7] (botleft);
+\path (botright) edge[bend left, looseness=0.7] (topright);
+\end{tikzpicture}
+\\
 Frame 3
-\begin{verbatim}
-      \    /
-       \  /
-        ||
-       /  \
-      /    \
-\end{verbatim}
+\\[1ex]
+\begin{tikzpicture}
+\draw (topleft) .. controls (mid) .. (botleft);
+\draw (botright) .. controls (mid) .. (topright);
+\end{tikzpicture}
+\\
 Frame 4 (the exciting scene -- the catastrophe!)
-\begin{verbatim}
-      \    /
-       \  /
-        \/
-        /\
-       /  \
-      /    \
-\end{verbatim}
+\\[1ex]
+\begin{tikzpicture}
+\draw (topleft) -- (botright)  (botleft) -- (topright);
+\end{tikzpicture}
+\\
 Frame 5
-\begin{verbatim}
-      \     /
-       \___/
-        ___
-       /   \
-      /     \
-\end{verbatim}
+\\[1ex]
+\begin{tikzpicture}
+\draw (topleft) .. controls (mid) .. (topright);
+\draw (botright) .. controls (mid) .. (botleft);
+\end{tikzpicture}
+\\
 Frame 6
-\begin{verbatim}
-      \_____/
-      
-      
-       ______     
-      /      \
-\end{verbatim}
+\\[1ex]
+\begin{tikzpicture}[bend angle=60]
+\path (topleft) edge[bend right, looseness=1.2] (topright);
+\path (botright) edge[bend right, looseness=1.2] (botleft);
+\end{tikzpicture}
 
 Well, it'll never win an Academy Award, but this movie is pretty
 important.  It's a picture of the 3-dimensional slices of
 a 2-dimensional surface in (3+1)-dimensional spacetime, and this
 surface is perfectly smooth but has a saddle point which we are seeing
-in frame 4.  It is one of what Carter and Saito (see {\hyperref[find1.1]{week1}})
+in frame 4.  It is one of what Carter and Saito (see {\hyperref[find1.1]{week~1}})
 call the ``elementary string interactions.''  The relevance to string
 theory is pretty obvious: we are seeing a movie of part of a string
 worldsheet, which is a surface in (3+1)-dimensional spacetime.  My
@@ -376,9 +366,9 @@ different role in the (3+1)-dimensional context, though.)  Just as
 braided monoidal categories are a good way to systematically find
 solutions of the Yang--Baxter equation, braided monoidal 2-categories,
 as defined by Kapranov and Voevodsky, seem to be a good way for finding
-solutions for the Zamolodchikov equation.   (I will post in a while
+solutions for the Zamolodchikov equation.  (I will post in a while
 about a new paper by Soibelman and Kazhdan that does this.  Also see the
-paper by Crane and Frenkel in ``{\hyperref[find2.4]{week2}}''.)  
+paper by Crane and Frenkel in {\hyperref[find2.4]{week~2}}.)
 
 There are also lots of tantalizing ties between the loop variables approach
 to quantum gravity and 2-categories; one can see some of these if one
