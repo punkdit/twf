@@ -206,7 +206,8 @@ def do_header(line):
     if "Baez" in line:
         pass
     elif line.startswith("<H4>") and line.endswith("</H4>"):
-        line = line[5:-5]
+        line = line[4:-5]
+        line = line.strip()
         result = r"\week{%s}"%line
     return result
 
