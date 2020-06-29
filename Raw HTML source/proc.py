@@ -125,7 +125,9 @@ ENTITIES = [
     ("&dagger;", r'\dagger '),
     ("&prod;", r'\prod '),
     ("&#295;", r'\hbar '),
-    ("&agrave;", r"\'{a}"), # accent
+    ("&agrave;", r"\`{a}"), # accent
+    ("&eacute;", r"\'{e}"), # accent
+    ("&atilde;", r"\~{a}"), # accent
     ("&lt;", '<'),
     ("&gt;", '>'),
     ("&ge;", r'\ge '),

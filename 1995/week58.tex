@@ -188,7 +188,158 @@ space for describing states of \emph{everything in the world except you}.
 Note that we are using the term "observer" here in a 
 somewhat whimsical sense; in particular, every region of space counts as an 
 observer in this game, so we can flip things around and form the inner product 
-hom(Z(M'),Z(M)), which is the Hilbert space that <em>everything in the 
+hom(Z(M'),Z(M)), which is the Hilbert space that \emph{everything in the world except you} can use to describe states of \emph{you}.  These two 
+Hilbert spaces, with roles reversed, are conjugate to each 
+other (using an obvious but perhaps slightly unfamiliar definition 
+of "conjugate" Hilbert space), so they're pretty much the same.
+
+Now this may at first seem weird, but if you think about it, it 
+becomes a bit less so.   Of course, all of this stuff simply follows from the 
+notion of a unitary extended TQFT, and whether the actual laws of physics 
+are given by such a structure is a separate issue.  But there is 
+clearly a lot of relevance to the "holographic hypothesis" and 
+Lee Smolin's more mathematical version of that hypothesis,
+as sketched in "<A HREF = "week57.html">week57</A>".  The basic idea, there as here, is that we are 
+concentrating our attention on the things about a system that can be 
+measured at its boundary, and what we measure there can be either 
+thought of describing the state of the "inside" or dually the "outside".  
+
+I think if I go out on a limb here, and rhapsodize a bit, the point might be 
+clearer: but don't take this too seriously.  Namely: all of the stuff you 
+see, hear, and otherwise observe about the world - which seems to 
+be "information about the outside" - is also stuff going on in 
+your brain, hence "information about the inside".  What this stuff 
+really is, of course, is \emph{correlations} between the inside and the 
+outside.  This is the reason for the duality between observer and 
+observed mentioned above.  Note: we need not worry here whether or not 
+there's "really" a lot more going on outside than what you observe.  
+The point is simply that everything \emph{you} observe about what's going 
+on in the world outside is correlated to stuff that the world 
+could observe about what is going on in you.  (Maybe.)
+
+I should perhaps also add that the mathematicians are getting a bit 
+behind on the job of developing the "higher linear algebra" 
+needed to support this sort of physics.  So it's a bit hard to point 
+to a good reference for all this 2-Hilbert space stuff.  I'm 
+slowly writing a paper on it, but for now the best sources seem to be 
+Kapranov and Voevodsky's work on 2-vector spaces:
+
+2) M. Kapranov and V. Voevodsky, 2-Categories and
+Zamolodchikov tetrahedra equations, in Proc. Symp. Pure
+Math. 56, Part 2 (1994), AMS, Providence, pp. 177-260.
+
+(see also "<A HREF = "week4.html">week4</A>") Dan Freed's work on higher algebraic structures in 
+gauge theory ("<A HREF = "week12.html">week12</A>," "<A HREF = "week48.html">week48</A>"), and David Yetter's new paper:
+
+3) David Yetter, Categorical linear algebra: a setting for questions
+from physics and low-dimensional topology, Kansas U. preprint, available
+as <A HREF = "http://math.ucr.edu/home/baez/yetter.pdf">http://math.ucr.edu/home/baez/yetter.pdf</A> and <A HREF = "http://math.ucr.edu/home/baez/yetter.ps">http://math.ucr.edu/home/baez/yetter.ps</A>
+
+This treats 2-vector spaces in a very beautiful way, but not 2-Hilbert spaces.
+Definitely worth reading for anyone interested in this sort of thing!
+
+While visiting Porto, I managed somehow to miss talking to Eugenia Cesar
+de Sa, which was really a pity because she was the one who developed the
+way of describing 4-manifolds that Broda (see "<A HREF = "week9.html">week9</A>","<A HREF = "week10.html">week10</A>") used to 
+construct a 4-dimensional TQFT.  This TQFT was later shown by Roberts 
+(see "<A HREF = "week14.html">week14</A>") to be isomorphic to that described by Crane and Yetter 
+using a state sum model -- i.e., by a discrete analog of a path integral in 
+which one chops spacetime up into 4-dimensional "hypertetrahedra" 
+(better known as 4-simplices!), labels their 2d and 3d faces by spins, and 
+sums over labellings.  Her work is cited in the Broda reference
+in "<A HREF = "week17.html">week17</A>", but I managed luckily to get a copy of her thesis:
+
+4) Eugenia Cesar de Sa, Automorphisms of 3-manifolds and representations of 
+4-manifolds, Ph.D. thesis, University of Warwick, 1977.  
+
+This should let me learn more about 4-dimensional topology, a fascinating
+subject on which I'm woefully ignorant.
+
+One reason why Broda's work, and thus de Sa's, is interesting to me, is
+that people have suspected for a while that the Crane-Yetter-Broda theory, 
+which is constructed purely combinatorially, is isomorphic to BF theory with
+cosmological term.  BF theory (see "<A HREF = "week36.html">week36</A>") is a 4-dimensional field theory 
+that can be described starting from a Lagrangian in the traditional 
+manner of physics.  The theory "with cosmological term" can be 
+regarded as a baby version of quantum gravity with nonzero 
+cosmological constant, a baby version having only one state, the
+"Chern-Simons state". As I discussed in "<A HREF = "week56.html">week56</A>", it's this Chern-Simons state
+that plays a key role in Smolin's attempt to "exactly solve" quantum gravity.  
+Thus I suspect that BF theory is a good thing to understand really well.   
+Recently I showed in  
+
+5) John Baez, 4-dimensional BF theory with cosmological term as a topological
+quantum field theory, available as 
+<A HREF = "http://xxx.lanl.gov/abs/q-alg/9507006">q-alg/9507006</A>.
+
+that the Crane-Yetter-Broda theory is indeed isomorphic as a TQFT to a certain 
+BF theory. With a bit more work, this should give us a state sum model for 
+the BF theory that's a baby version of quantum gravity in 4 dimensions.  
+This should come in handy for studying Smolin's hypothesis and its 
+ramifications.
+
+6) Timothy Porter, TQFTs from homotopy n-types, University of Wales, 
+Bangor preprint, available at
+<A HREF = "http://www.bangor.ac.uk/~mas013/preprint.html">http://www.bangor.ac.uk/~mas013/preprint.html</A>
+
+The Dijkgraaf-Witten model is an n-dimensional TQFT one gets from a finite 
+group G.  It's given by a really simple state sum model.  Chop your manifold 
+into simplices; then the allowed "states" are just labellings of  the 
+edges with elements of G subject to the constraint that the product around 
+any triangle is 1.  You can think of a labelling as a kind of "connection" 
+that tells you how to parallel transport along the edges, and the 
+constraint says the connection is flat.  Expectation values of
+physical observables are then computed as sums over these states.
+In fact, this TQFT is a baby version of BF theory \emph{without}
+cosmological constant.  A toy model of a toy model of quantum gravity, 
+in other words: the classical solutions of BF theory without 
+cosmological constant are just flat connections on some G-bundle where 
+G is a Lie group, while the Dijkgraaf-Witten model does something 
+similar for a finite group.  
+
+In a previous paper (see "<A HREF = "week54.html">week54</A>") Porter studied the Dijkgraaf-Witten 
+model and a generalization of it due to Yetter that allows one to label 
+faces with things too... one can think of this generalization as 
+allowing "curvature", because the product of elements of
+G around a triangle need no longer be 1; instead, it's something 
+determined by the labelling of the face.  
+
+7) David Yetter, TQFTs from homotopy 2-types, Journal of Knot Theory and its 
+Ramifications 2 (1993), 113-123.
+
+In his new paper Porter takes this idea to its logical conclusion and 
+constructs analogous theories that allow labellings of simplices in any 
+dimension.  Technically, the input data is no longer just a finite group, 
+but a finite simplicial group G.  
+
+What's a simplicial group?  It's a wonderful thing; 
+using the "internalization" trick I've referred to in some previous Finds, 
+all I need to say is that it's a simplicial object in the category of 
+groups.  A simplicial set is a bunch of sets, one for each natural 
+number, together with a bunch of "face" and "degeneracy" maps satisfying
+the same laws that the face and degeneracy maps do for a simplex.  
+(Students of singular or simplicial homology will know what I'm 
+talking about.)  Similarly, a simplicial group is a bunch of 
+\emph{groups}, 
+together with a bunch of of "face" and "degeneracy" \emph{homomorphisms}
+satisfying the same laws.  
+
+A triangulated manifold gives a simplicial set in an obvious way, and 
+from any simplicial set one can obtain a simplicial groupoid (like a 
+simplicial group, but with groupoids instead!) called its "loop 
+groupoid".  The sort of labellings Porter considers are homomorphisms
+from this simplicial groupoid to the given simplicial group G.
+
+I will refrain from trying to say what all this has to do with 
+homotopy n-types.  Nonetheless, from a pure mathematics point of view, 
+that's the most exciting aspect of the whole business!
+Part of the puzzle about TQFTs is their relation to traditional 
+algebraic topology (and not-so-traditional algebraic topology like 
+nonabelian cohomology, n-stacks, etc.), and this work 
+serves as a big clue about that relationship.  
 
 
-% parser failed at source line 219
+\par\noindent\rule{\textwidth}{0.4pt}
+% </A>
+% </A>
+% </A>
