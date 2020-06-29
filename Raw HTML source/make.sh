@@ -126,41 +126,42 @@
 #python3 proc.py week96.html week96.tex
 #mv *.tex ../1996
 
-# 1997
-python3 proc.py week97.html week97.tex
-python3 proc.py week98.html week98.tex
-python3 proc.py week99.html week99.tex
-python3 proc.py week100.html week100.tex
-python3 proc.py week101.html week101.tex
-python3 proc.py week102.html week102.tex
-python3 proc.py week103.html week103.tex
-python3 proc.py week104.html week104.tex
-python3 proc.py week105.html week105.tex
-python3 proc.py week106.html week106.tex
-python3 proc.py week107.html week107.tex
-python3 proc.py week108.html week108.tex
-python3 proc.py week109.html week109.tex
-python3 proc.py week110.html week110.tex
-python3 proc.py week111.html week111.tex
-python3 proc.py week112.html week112.tex
-python3 proc.py week113.html week113.tex
-mv *.tex ../1997
+## 1997
+#python3 proc.py week97.html week97.tex
+#python3 proc.py week98.html week98.tex
+#python3 proc.py week99.html week99.tex
+#python3 proc.py week100.html week100.tex
+#python3 proc.py week101.html week101.tex
+#python3 proc.py week102.html week102.tex
+#python3 proc.py week103.html week103.tex
+#python3 proc.py week104.html week104.tex
+#python3 proc.py week105.html week105.tex
+#python3 proc.py week106.html week106.tex
+#python3 proc.py week107.html week107.tex
+#python3 proc.py week108.html week108.tex
+#python3 proc.py week109.html week109.tex
+#python3 proc.py week110.html week110.tex
+#python3 proc.py week111.html week111.tex
+#python3 proc.py week112.html week112.tex
+#python3 proc.py week113.html week113.tex
+#mv *.tex ../1997
 
 ## 1998
-#python3 proc.py week114.html week114.tex
-#python3 proc.py week115.html week115.tex
-#python3 proc.py week116.html week116.tex
-#python3 proc.py week117.html week117.tex
-#python3 proc.py week118.html week118.tex
-#python3 proc.py week119.html week119.tex
-#python3 proc.py week120.html week120.tex
-#python3 proc.py week121.html week121.tex
-#python3 proc.py week122.html week122.tex
-#python3 proc.py week123.html week123.tex
-#python3 proc.py week124.html week124.tex
-#python3 proc.py week125.html week125.tex
-#python3 proc.py week126.html week126.tex
-#python3 proc.py week127.html week127.tex
+python3 proc.py week114.html week114.tex
+python3 proc.py week115.html week115.tex
+python3 proc.py week116.html week116.tex
+python3 proc.py week117.html week117.tex
+python3 proc.py week118.html week118.tex
+python3 proc.py week119.html week119.tex
+python3 proc.py week120.html week120.tex
+python3 proc.py week121.html week121.tex
+python3 proc.py week122.html week122.tex
+python3 proc.py week123.html week123.tex
+python3 proc.py week124.html week124.tex
+python3 proc.py week125.html week125.tex
+python3 proc.py week126.html week126.tex
+python3 proc.py week127.html week127.tex
+mv *.tex ../1998
 
 ## 1999
 #python3 proc.py week128.html week128.tex

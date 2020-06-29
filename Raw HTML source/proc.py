@@ -71,6 +71,7 @@ assert do_tag(line, "sub", lambda s:"_{%s}"%s)=="called E_{8}!  E_{8} is known"
 
 ENTITIES = [
     ("&phi;", r'\phi '), # lowercase greek
+    ("&chi;", r'\chi '), # lowercase greek
     ("&alpha;", r'\alpha '),
     ("&beta;", r'\beta '),
     ("&pi;", r'\pi '),
@@ -102,6 +103,7 @@ ENTITIES = [
     ("&Eta;", r'\Eta '),
     ("&Omega;", r'\Omega '),
     ("&Theta;", r'\Theta '),
+    ("&Zeta;", r'\Zeta '),
     ("&Psi;", r'\Psi '),
     ("&Sigma;", r'\Sigma '),
     ("&rarr;", r'\to '), # symbols
@@ -110,14 +112,20 @@ ENTITIES = [
     ("&cap;", r'\cap '), # symbols
     ("&sum;", r'\sum'),
     ("&prime;", r"'"),
+    ("&Prime;", r"''"),
     ("&infin;", r'\infty '),
+    ("&plusmn;", r'\pm '),
+    ("&int;", r'\int '),
+    ("&hellip;", r'\ldots '), # ellipsis
     ("&frac12;", r'\frac{1}{2} '),
     ("&otimes;", r'\otimes '),
     ("&times;", r'\times '),
     ("&oplus;", r'\oplus '),
     ("&#8224;", r'\dagger '),
     ("&dagger;", r'\dagger '),
+    ("&prod;", r'\prod '),
     ("&#295;", r'\hbar '),
+    ("&agrave;", r"\'{a}"), # accent
     ("&lt;", '<'),
     ("&gt;", '>'),
     ("&ge;", r'\ge '),
@@ -159,7 +167,7 @@ def do_line(line, is_math=False):
     if "{&}" in line:
         pass
     elif "&" in line:
-        print("warning: html entity in %r"%line)
+        print("warning: html entity line %d in %s:%r"%(state.lno+1, state.name, line))
 
     return line
 
