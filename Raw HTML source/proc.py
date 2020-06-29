@@ -145,12 +145,15 @@ def do_line(line, is_math=False):
         line = line.replace(k, v)
         line = line.replace(k.lower(), v)
 
-    # send <em>foo</em> to \emph{foo}, etc.
-    line = do_tag(line, "em", lambda s:r"\emph{%s}"%s)
-    line = do_tag(line, "i", lambda s:r"\emph{%s}"%s)
-    line = do_tag(line, "b", lambda s:r"\textbf{%s}"%s)
-    line = do_tag(line, "sub", lambda s:r"_{%s}"%s)
-    line = do_tag(line, "sup", lambda s:r"^{%s}"%s)
+    try:
+        # send <em>foo</em> to \emph{foo}, etc.
+        line = do_tag(line, "em", lambda s:r"\emph{%s}"%s)
+        line = do_tag(line, "i", lambda s:r"\emph{%s}"%s)
+        line = do_tag(line, "b", lambda s:r"\textbf{%s}"%s)
+        line = do_tag(line, "sub", lambda s:r"_{%s}"%s)
+        line = do_tag(line, "sup", lambda s:r"^{%s}"%s)
+    except:
+        print("warning: do_tag failed on line %d in %s" % (state.lno+1, state.name))
 
     #assert "&" not in line, repr(line)
     if "{&}" in line:
@@ -307,7 +310,10 @@ def process(state, src):
 
 def do_html(name, output):
 
+    global state
+
     state = State()
+    state.name = name
     state.header = False
     state.footer = False
     state.body = False
