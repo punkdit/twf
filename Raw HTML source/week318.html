@@ -1,0 +1,290 @@
+<SCRIPT SRC="http://math.ucr.edu/home/baez/jsMath/easy/load.js"></SCRIPT>
+<TITLE> week318 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week317.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week319.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> August 20, 2011 </H4>
+<H2> This Week's Finds (Week 318) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+The Earth's climate is complicated.  How well do we understand how it will react to the drastic increase in atmospheric carbon dioxide we're imposing on it?  One reason it's hard to be 100% sure is that the truly dramatic changes most scientists expect lie mostly in the <i>future</i>.  There's a lot of important evidence we'll get only when it's too late.  </p>
+
+<p>Luckily, the Earth's <i>past</i> also shows signs of dramatic climate change: for example, the glacial cycles I began discussing last time in &quot;<a href="http://johncarlosbaez.wordpress.com/2011/07/22/this-weeks-finds-week-317/">week317</a>&quot;.  These cycles are a interesting test of how well we understand climate change.  Of course, their mechanism is very different from that of human-caused global warming, so we might understand one but not the other.  Indeed, earlier episodes like the <a href="http://en.wikipedia.org/wiki/Paleocene-Eocene_Thermal_Maximum">Paleocene-Eocene Thermal Maximum</a> might shed more light on what we're doing to the Earth now!  But still, the glacial cycles are an impressive instance of dramatic climate change, which we'd do well to understand.  </p>
+
+<p>As I hinted last week, a lot of scientists believe that the Earth's glacial cycles are related to cyclic changes in the Earth's orbit and the tilt of its axis.  Since one of the first scientists to carefully study this issue was Milutin Milankovitch, these are called <b>Milankovitch cycles</b>.  The three major types of Milankovitch cycle are:</p>
+
+<p>&bull; changes in the <b>eccentricity</b> of the Earth's orbit - that is, how much the orbit deviates from being a circle:</p>
+
+<p><div align="center">
+<a href="http://en.wikipedia.org/wiki/Orbital_eccentricity">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Eccentricity_zero.svg/200px-Eccentricity_zero.svg.png" /><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Eccentricity_half.svg/171px-Eccentricity_half.svg.png" />
+</a> <br />
+(changes greatly exaggerated)
+</div></p>
+
+<p>&bull; changes in the <b>obliquity</b>, or tilt of the Earth's axis:</p>
+
+<p><div align="center">
+<a href="http://en.wikipedia.org/wiki/Axial_tilt">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Earth_obliquity_range.svg/250px-Earth_obliquity_range.svg.png" />
+</a>
+</div></p>
+
+<p>&bull; <b>precession</b>, meaning changes in the direction of the Earth's axis relative to the fixed stars:
+ 
+<div align="center">
+<a href="http://en.wikipedia.org/wiki/Axial_precession_%28astronomy%29">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Earth_precession.svg/250px-Earth_precession.svg.png" />
+</a>
+</div></p>
+
+<p>Now, the first important thing to realize is this: it's not obvious that Milankovitch cycles can cause glacial cycles.  During a glacial period, the Earth is about 5&deg;C cooler than it is now.  But the Milankovitch cycles barely affect the overall annual amount of solar radiation hitting the Earth!</p>
+
+<p>This fact is clear for precession or changes in obliquity, since these just involve the tilt of the Earth's axis, and the Earth is nearly a sphere.  The amount of Sun hitting a sphere doesn't depend on how the sphere is 'tilted'.</p>
+
+<p>For changes in the eccentricity of the Earth's orbit, this fact is a bit less obvious.  After all, when the orbit is more eccentric, the Earth gets <i>closer</i> to the Sun sometimes, but <i>farther</i> at other times.   So you need to actually sit down and do some math to figure out the net effect.  Luckily, Greg Egan did this for us&mdash;I'll show you his calculation at the end of this article.  It turns out that when the Earth's orbit is at its most eccentric, it gets <i>very, very slightly</i> more energy from the Sun each year: 0.167% more than when its orbit is at its least eccentric.  </p>
+
+<p>So, there are interesting puzzles involved in the Milankovitch cycles.  They don't affect the total amount of radiation that hits the Earth each year&mdash;not much, anyway&mdash;but they <i>do</i> cause substantial changes in the amount of radiation that hits the Earth at various different <i>latitudes</i> in various different <i>seasons</i>.  We need to understand what such changes might do.</p>
+
+<p>James Croll was one of the first to think about this, back around 1875.  He decided that what really matters is the amount of sunlight hitting the far northern latitudes in <i>winter</i>.  When this was low, he claimed, glaciers would tend to form and an ice age would start.  But later, in the 1920s, Milankovitch made the opposite claim: what really matters is the amount of sunlight hitting the far northern latitudes in <i>summer</i>.  When <i>this</i> was low, an ice age would start.  </p>
+
+<p>If we take a quick look at the data, we see that the truth is not obvious:</p>
+
+<p><div align="center">
+<a href="http://commons.wikimedia.org/wiki/File:Milankovitch_Variations.png">
+<img src="http://math.ucr.edu/home/baez/Milankovitch_Variations.png" /></a>
+</div></p>
+
+<p>I like this graph because it's pretty... but I wish the vertical axes were labelled.  We will see some more precise graphs in future weeks.</p>
+
+<p>Nonetheless, this graph gives some idea of what's going on.  Precession, obliquity and eccentricity vary in complex but still predictable ways.  From this you can compute the amount of solar energy that hits the surface of the Earth's atmosphere on July 1st at a latitude of 65&deg; N.   That's the yellow curve.    People believe this quantity has <i>some</i> relation to the Earth's temperature, as shown by the black curve at bottom.  However, the relation is <i>far from clear!</i>   </p>
+
+<p>Indeed, if you only look at this graph, you might easily decide that Milankovitch cycles are <i>not</i> important in causing glacial cycles.   But people have analyzed temperature proxies over long spans of time, and found evidence for cyclic changes at periods that match those of the Milankovitch cycles.   Here's a classic paper on this subject:</p>
+
+<p>&bull; J. D. Hays, J. Imbrie, and N. J. Shackleton, <a href="http://www.mantleplumes.org/WebDocuments/Hays1976.pdf">Variations in the earth's orbit: pacemaker of the Ice Ages</a>, <i>Science</i> <b>194</b> (1976), 1121-1132.</p>
+
+<p>They selected two sediment cores from the Indian ocean, which contain sediments deposited over the last 450,000 years.  They measured:</p>
+
+<p>1) Ts, an estimate of summer sea-surface temperatures at the core site, derived from a statistical analysis of tiny organisms called <a href="http://en.wikipedia.org/wiki/Radiolarian">radiolarians</a> found in the sediments.</p>
+
+<p>2) &delta;<sup>18</sup>O, the excess of the heavy isotope of oxygen in tiny organisms called <a href="http://en.wikipedia.org/wiki/Foraminifera">foraminifera</a> also found in the sediments.</p>
+
+<p>3) The percentage of radiolarians that are <i>Cycladophora davisiana</i>&mdash;a certain species not used in the estimation of Ts. </p>
+
+<p>Identical samples were analyzed for the three variables at 10-centimeter intervals throughout each core.  Then they took a <a href="http://en.wikipedia.org/wiki/Fourier_transform">Fourier transform</a> of this data to see at which frequencies these variables wiggle the most!  When we take the Fourier transform of a function and then square it, the result is called the <a href="http://en.wikipedia.org/wiki/Spectral_density">power spectrum</a>.  So, they actually graphed the power spectra for these three variables:</p>
+
+<p><div align="center"><a href="http://www.mantleplumes.org/WebDocuments/Hays1976.pdf"><img src="http://math.ucr.edu/home/baez/temperature/hays_imbrie_shackleton_spectra.jpg" alt="" /></a></div></p>
+
+<p>The top graph shows the power spectra for Ts, &delta;<sup>18</sup>O, and the percentage of <i>Cycladophora davisiana</i>.  The second one shows the spectra after a bit of extra messing around.  Either way, there seem to be peaks at frequencies of 19, 23, 42 and <i>roughly</i> 100 thousand years.   However the last number is quite fuzzy: if you look, you'll see the three different power spectra have peaks at 94, 106 and 122 thousand years.</p>
+
+<p>So, some sort of cycles seem to be occurring.  This is far from the only piece of evidence, but it's a famous one.  </p>
+
+<p>Now let's go over the three major forms of Milankovitch cycle, and keep our eye out for cycles that take place every 19, 23, 42 or roughly 100 thousand years!</p>
+
+<p><h4>Eccentricity</h4></p>
+
+<p>The Earth's orbit is an ellipse, and the <b><a href="http://en.wikipedia.org/wiki/Orbital_eccentricity">eccentricity</a></b> of this ellipse says how far it is from being circular.  But the eccentricity of the Earth's orbit slowly changes: it varies from being nearly circular, with an eccentricity of 0.005, to being more strongly elliptical, with an eccentricity of 0.058.  The mean eccentricity is 0.028.  There are several periodic components to these variations.  The strongest occurs with a period of 413,000 years, and changes the eccentricity by 10.012.  Two other components have periods of 95,000 and 123,000 years.   </p>
+
+<p>The eccentricity affects the percentage difference in incoming solar radiation between the <b><a href="http://en.wikipedia.org/wiki/Perihelion">perihelion</a></b>, the point where the Earth is closest to the Sun, and the <b><a href="http://en.wikipedia.org/wiki/Aphelion">aphelion</a></b>, when it is farthest from the Sun.  This works as follows.  The percentage difference between the Earth's distance from the Sun at perihelion and aphelion is twice the eccentricity, and the percentage change in incoming solar radiation is about twice that.  The first fact follows from the definition of eccentricity, while the second follows from differentiating the inverse-square relationship between brightness and distance.</p>
+
+<p>Right now the eccentricity is 0.0167, or 1.67%.  Thus, the distance from the Earth to Sun varies 3.34% over the course of a year.  This in turn gives an annual variation in incoming solar radiation of about 6.68%.  Note that this is <i>not</i> the cause of the seasons: those arise due to the Earth's tilt, and occur at different times in the northern and southern hemispheres.</p>
+
+<p><h4>Obliquity</h4></p>
+
+<p>The angle of the Earth's axial tilt with respect to the plane of its orbit, called the <b><a href="http://en.wikipedia.org/wiki/Axial_tilt">obliquity</a></b>, varies between 22.10&deg; and 24.50&deg; in a roughly periodic way, with a period of 41,000 years.  When the obliquity is high, the strength of seasonal variations is stronger.  </p>
+
+<p>Right now the obliquity is 23.440&deg;, roughly halfway between its extreme values.  It is decreasing, and will reach its minimum value around the year 10,000 CE.</p>
+
+<p><h4> Precession</h4></p>
+
+<p>The slow turning in the direction of the Earth's axis of rotation relative to the fixed stars, called <b><a href="http://en.wikipedia.org/wiki/Axial_precession_%28astronomy%29">precession</a></b>, has a period of roughly 23,000 years.   As precession occurs, the seasons drift in and out of phase with the perihelion and aphelion of the Earth's orbit.   </p>
+
+<p>Right now the perihelion occurs during the southern hemisphere's summer, while the aphelion is reached during the southern winter.  This tends to make the southern hemisphere seasons more extreme than the northern hemisphere seasons.</p>
+
+<p>The gradual precession of the Earth is <i>not</i> due to the same physical mechanism as the wobbling of the top.  That sort of wobbling <i>does</i> occur, but it has a period of only 427 days.  The 23,000-year precession is due to tidal interactions between the Earth, Sun and Moon.  For details, see:</p>
+
+<ul><li> John Baez, <a href="http://math.ucr.edu/home/baez/wobble/">The wobbling of the Earth and other curiosities</a>.</li></ul></p>
+
+<p>In the real world, most things get more complicated the more carefully you look at them.  For example, precession actually has several periodic components.  According to <a href="http://www2.academieroyale.be/academie/documents/BergerCV2008746.pdf">Andr&eacute; Berger</a>, a top expert on changes in the Earth's orbit, the four biggest components have these periods:</p>
+
+<p><ul><li> 23,700 years </li></p>
+
+<p><li> 22,400 years </li></p>
+
+<p><li> 18,980 years</li> </p>
+
+<p><li> 19,160 years</li></ul> </p>
+
+<p>in order of decreasing strength.  But in geology, these tend to show up either as a single peak around the mean value of 21,000 years, or two peaks at frequencies of 23,000 and 19,000 years.</p>
+
+<p>To add to the fun, the three effects I've listed&mdash;changes in eccentricity, changes in obliquity, and precession&mdash;are not independent.  According to Berger, cycles in eccentricity arise from 'beats' between different precession cycles:</p>
+
+<p><ul><li> The 95,000-year eccentricity cycle arises from a beat between the 23,700-year and 19,000-year precession cycles.  </li></p>
+
+<p><li> The 123,000-year eccentricity cycle arises from a beat between the 22,4000-year and 18,000-year precession cycles. </li></ul></p>
+
+<p>We should delve into all this stuff more deeply someday.  For now, let me just refer you to this classic review paper:</p>
+
+<p><ul><li> Andr&eacute; Berger, Pleistocene climatic variability at astronomical frequencies, <i><a href="http://www.sciencedirect.com/science/article/pii/1040618289900165">Quaternary International</a></i> <b>2</b> (1989), 1-14.</li></ul></p>
+
+<p>Later, as I get up to speed, I'll talk about more modern work.</p>
+
+<p><h4> Paleontology versus astronomy </h4></p>
+
+<p>So now we can compare the data from ocean sediments to the Milankovitch cycles as computed in astronomy:</p>
+
+<p><ul><li> The roughly 19,000-year cycle in ocean sediments may come from 18,980-year and 19,160-year <i>precession</i> cycles.</li><p>
+
+<p><li> The roughly 23,000-year cycle in ocean sediments may come from 23,700-year <i>precession</i> cycle.</li></p>
+
+<p><li> The roughly 42,000-year cycle in ocean sediments may come from the 41,000-year <i>obliquity</i> cycle.</li></p>
+
+<p><li> The roughly 100,000-year cycle in ocean sediments may come from the 95,000-year and 123,000-year <i>eccentricity</i> cycles. </li></ul></p>
+
+<p>Again, the last one looks the most fuzzy.  As we saw, different kinds of sediments seem to show cycles of 94, 106 and 122 thousand years.  At least two of these periods match eccentricity cycles fairly well.  But a detailed analysis would be required to distinguish between real effects and coincidences in this subject!</p>
+
+<p><h4> The effect of eccentricity </h4></p>
+
+<p>I bet some of you are hungry for some actual math.  As I mentioned, it takes some work to see how changes in the eccentricity of the Earth's orbit affect the annual average of sunlight hitting the top of the Earth's atmosphere.    Luckily <a href="http://johncarlosbaez.wordpress.com/2011/07/02/a-quantum-of-warmth/#comment-6569">Greg Egan</a> has done this work for us.  While the result is surely not new, his approach makes nice use of the fact that both gravity and solar radiation obey an inverse-square law.  That's pretty cool.</p>
+
+<p>Here is his calculation:</p>
+
+<p>The angular velocity of a planet is</p>
+
+\[ \displaystyle{\frac{d \theta}{d t} = \frac{J}{m r^2} } \]
+
+<p>where $J$is the constant orbital angular momentum of the planet and $m$is its mass.  Thus the radiant energy delivered per unit time to the planet is </p>
+
+\[  \displaystyle{ \frac{d U}{d t} = \frac{C}{r^2}}\]
+
+<p>for some constant $C$.  It follows that the energy delivered per unit of angular progress around the orbit is </p>
+
+\[  \displaystyle{ \frac{d U}{d \theta} = \frac{C}{r^2} \frac{d t}{d \theta} = \frac{C m}{J} } \]
+
+<p>So, the total energy delivered in one period will be 
+
+\[ \displaystyle{ U=\frac{2\pi C m}{J} }  \]
+
+<p>How can we relate the orbital angular momentum $J$ to the shape of the orbit?  If you equate the total energy of the planet, kinetic $\frac{1}{2}m v^2$ plus potential $-\frac{G M m}{r}$, at its aphelion $r_1$ and perihelion $r_2$, and use $J$ to get the velocity in the kinetic energy term from its distance, $v=\frac{J}{m r}$, when we solve for $J$ we get:</p>
+
+\[  \displaystyle{J = m \sqrt{\frac{2 G M r_1 r_2}{r_1+r_2}} = m b \sqrt{\frac{G M}{a}}} \]
+
+<p>where </p>
+
+\[  \displaystyle{ a=\frac{1}{2} (r_1+r_2)} \]
+
+<p>is the semi-major axis of the orbit and </p>
+
+\[  \displaystyle{ b=\sqrt{r_1 r_2} } \]
+
+<p>is the semi-minor axis.  But we can also relate $J$ to the period of the orbit, $T$, by integrating the rate at which orbital area is swept out by the planet:</p>
+
+\[  \displaystyle{\frac{1}{2}  r^2 \frac{d \theta}{d t} = \frac{J}{2 m} } \]
+
+<p>over one orbit.  Since the area of an ellipse is $\pi a b$, this gives us:</p>
+
+\[  \displaystyle{ J = \frac{2 \pi a b m}{T} } \]
+
+<p>Equating these two expressions for $J$ shows that the period is:</p>
+
+\[  \displaystyle{ T = 2 \pi \sqrt{\frac{a^3}{G M}}} \]
+
+<p>So the period depends only on the semi-major axis; for a fixed value of $a$, it's independent of the eccentricity.</p>
+
+<p>As the eccentricity of the Earth's orbit changes, the orbital period $T$, and hence the semi-major axis $a$, remains almost constant.  So, we have:</p>
+
+\[  \displaystyle{ U=\frac{2\pi C m}{J} = \frac{2\pi C}{b} \sqrt{\frac{a}{G M}} } \]
+
+<p>Expressing the semi-minor axis in terms of the semi-major axis and the eccentricity, $b^2 = a^2 (1-e^2)$, we get:</p>
+
+\[  \displaystyle{U=\frac{2\pi C}{\sqrt{G M a (1-e^2)}}} \]
+
+<p>So to second order in $e$, we have:</p>
+
+\[  \displaystyle{U = \frac{\pi C}{\sqrt{G M a}} (2+e^2) }\]
+
+<p>The expressions simplify if we consider average rate of energy delivery over an orbit, which makes all the grungy constants related to gravitational dynamics go away:</p>
+
+\[  \displaystyle{\frac{U}{T} = \frac{C}{a^2 \sqrt{1-e^2}} } \]
+
+<p>or to second order in $e$:</p>
+
+\[  \displaystyle{ \frac{U}{T} = \frac{C}{a^2} (1+\frac{1}{2} e^2) } \]
+
+<p>We can now work out how much the actual changes in the Earth's orbit affect the amount of solar radiation it gets!  The eccentricity of the Earth's orbit varies between 0.005 and 0.058.  The total energy the Earth gets each year from solar radiation is proportional to </p>
+
+\[  \displaystyle{ \frac{1}{\sqrt{1-e^2}} } \]
+
+<p>where $e$ is the eccentricity.  When the eccentricity is at its lowest value, $e = 0.005$, we get</p>
+
+\[  \displaystyle{ \frac{1}{\sqrt{1-e^2}} = 1.0000125 } \]
+
+<p>When the eccentricity is at its highest value, $e = 0.058$, we get</p>
+
+\[  \displaystyle{\frac{1}{\sqrt{1-e^2}} = 1.00168626 } \]
+
+<p>So, the change is about </p>
+
+\[  \displaystyle{1.00168626/1.0000125 = 1.00167373 }  \]
+
+<p>In other words, a change of merely 0.167%.</p>
+
+<p>That's very small  And the effect on the Earth's temperature would <i>naively</i> be even less!</p>
+
+<p>Naively, we can treat the Earth as a <b><a href = "http://www.taftan.com/thermodynamics/GREYBODY.HTM">greybody</a></b>: an ideal object whose tendency to absorb or emit radiation is the same at all wavelengths and temperatures.   Since the temperature of a greybody is proportional to the fourth root of the power it receives, a 0.167% change in solar energy received per year corresponds to a percentage change in temperature roughly one fourth as big.  That's a 0.042% change in temperature.   If we imagine starting with an Earth like ours, with an average temperature of roughly 290 kelvin, that's a change of just 0.12 kelvin!  </p>
+
+<p>The upshot seems to be this: <i>in a naive model without any amplifying effects, changes in the eccentricity of the Earth's orbit would cause temperature changes of just 0.12 &deg;C!</i></p>
+
+<p>This is much less than the roughly 5 &deg;C change we see between glacial and interglacial periods.  So, if changes in eccentricity are important in glacial cycles, we have some explaining to do.  Possible explanations include season-dependent phenomena and climate feedback effects.  Probably <i>both</i> are very important!  </p>
+
+<p>Next time I'll start talking about some theories of how Milankovitch cycles might cause the glacial cycles. I thank Frederik De Roo, Martin Gisser and Cameron Smith for suggesting improvements to this issue before its release, over  <a href = "http://www.math.ntnu.no/~stacey/Mathforge/Azimuth/comments.php?DiscussionID=793&Focus=5206#Comment_5206">on the Azimuth Forum</a>.  Please <a href = "http://www.azimuthproject.org/azimuth/show/Forum+help">join us</a> over there.
+
+<hr/>
+<p>
+For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2011/08/21/this-weeks-finds-week-318/">Azimuth</a>.
+
+<p><i>Little did I suspect, at the time I made this resolution, that it would become a path so entangled that fully twenty years would elapse before I could get out of it.</i> - James Croll, on his decision to study the cause of the glacial cycles</p>
+
+
+<p>
+<HR><P>
+<!-- BEGIN FOOTER -->
+&#169; 2011  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<P>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week317.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week319.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->

@@ -1,0 +1,401 @@
+<SCRIPT SRC="http://math.ucr.edu/home/baez/jsMath/easy/load.js"></SCRIPT>
+<TITLE> week308 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week307.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week309.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> December 24, 2010 </H4>
+<H2> This Week's Finds (Week 308) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+
+<p>
+Last week we met the El Ni&ntilde;o-Southern Oscillation, or ENSO.  I like to explain things as I learn about them.  So, often I look back and find my explanations naive.  But this time it took less than a week!
+</p>
+
+<p>
+What did it was reading this:
+
+<p>
+<ul>
+<li>
+J. D. Neelin, D. S. Battisti, A. C. Hirst <i>et al.</i>, <a href = "http://www.soest.hawaii.edu/MET/Faculty/jff/1998_03%20ENSO%20theory.pdf">ENSO theory</a>, <i><a href = "http://www.agu.org/journals/ABS/1998/97JC03424.shtml">J. Geophys. Res.</a></i> <b>103</b> (1998), 14261-14290.
+</li>
+</ul>
+</p>
+
+<p>
+I wouldn't recommend this to the faint of heart.  It's a bit terrifying.  It's well-written, but it tells the long and tangled tale of how theories of the ENSO phenomenon evolved from 1969 to 1998 &mdash; a period that saw much progress, but did <i>not</i> end with a neat, clean understanding of this phenomenon.   It's packed with hundreds of references, and sprinkled with somewhat intimidating remarks like:
+</p>
+
+<p>
+<blockquote>
+The Fourier-decomposed longitude and time dependence of these eigensolutions obey dispersion relations familiar to every physical oceanographer...
+</blockquote>
+</p>
+
+<p>Nonetheless I found it fascinating &mdash; so, I'll pick off one small idea and explain it now.</p>
+
+<p>
+As I'm sure you've heard, climate science involves some extremely complicated models: some of the most complex known to science.   But it also involves models of lesser complexity, like the &quot;box model&quot; explained by Nathan Urban in &quot;<a href = "http://math.ucr.edu/home/baez/week304.html">week304</a>&quot;.  And it also involves some extremely simple models that are designed to isolate some interesting phenomena and display them in their Platonic ideal form, stripped of all distractions.</p>
+
+<p>
+Because of their simplicity, these models are great for mathematicians to think about: we can even prove theorems about them!  And simplicity goes along with generality, so the simplest models of all tend to be applicable &mdash; in a rough way &mdash; not just to the Earth's climate, but to a vast number of systems.  They are, one might say, <i>general possibilities of behavior</i>.   
+</p>
+
+<p>
+Of course, we can't expect simple models to describe complicated real-world situations very accurately.  That's not what they're good for.  So, even calling them &quot;models&quot; could be a bit misleading.  It might be better to call them &quot;patterns&quot;: patterns that can help organize our thinking about complex systems.  
+
+<p>
+There's a nice mathematical theory of these patterns... indeed, several such theories.  But instead of taking a top-down approach, which gets a bit abstract, I'd rather tell you about some examples, which I can illustrate using pictures.  But I didn't make these pictures.  They were created by <a href = "http://www.azimuthproject.org/azimuth/show/Tim+van+Beek">Tim van Beek</a> as part of the Azimuth Code Project.  The <a href = "http://www.azimuthproject.org/azimuth/show/Azimuth+code+project">Azimuth Code Project</a> is a way for programmers to help save the planet.  More about that later, at the end of this article...
+</p>
+
+<p>
+As we saw last time, the ENSO cycle relies crucially on interactions between the ocean and atmosphere.  In some models, we can artificially adjust the strength of these interactions, and we find something interesting.  If we set the interaction strength to less than a certain amount, the Pacific Ocean will settle down to a stable equilibrium state.  But when we turn it up past that point, we instead see periodic oscillations!  Instead of a stable equilibrium state wherenothing happens, we have a stable <i>cycle</i>.
+</p>
+
+<p>
+This pattern, or at least one pattern of this sort, is called the &quot;<a href = "http://en.wikipedia.org/wiki/Hopf_bifurcation">Hopf bifurcation</a>&quot;.  There are various differential equations that exhibit a Hopf bifurcation, but here's my favorite:
+
+\[   \frac{d x}{d t} =  -y + \beta  x - x (x^2 + y^2) \]
+\[   \frac{d y}{d t} =  \; x + \beta  y - y (x^2 + y^2) \]
+
+<p>
+Here $x$ and $y$ are functions of time, $t$, so these equations describe a point moving around on the plane.  It's easier to see what's going on in polar coordinates:
+</p>
+
+\[   \frac{d r}{d t} = \beta r - r^3 \]
+\[   \frac{d \theta}{d t} = 1 \]
+
+<p>
+The angle $\theta$ goes around at a constant rate while the radius $r$ does something more interesting.  When $\beta \le 0$, you can see that any solution spirals in towards the origin!  Or, if it starts at the origin, it stays there.  So, we call the origin a &quot;stable equilibrium&quot;.  
+</p>
+
+<p>
+Here's a typical solution for $\beta = -1/4$, drawn as a curve in the $x y$ plane.  As time passes, the solution spirals in towards the origin:
+</p>  
+
+<p>
+<div align = "center">
+<img width = "500" src = "No_Limit_Circle_No_Noise.jpg">
+</div>
+</p>
+
+<p>
+The equations are more interesting for $\beta \gt 0$.  Then $dr/dt = 0$ whenever
+</p>
+
+\[   \beta r - r^3 = 0 \]
+
+<p>
+This has two solutions, $r = 0$ and $r = \sqrt{\beta}$.   Since $r = 0$ is a solution, the origin is still an equilibrium.  But now it's not stable: if $r$ is between $0$ and $\sqrt{\beta}$, we'll have $\beta r - r^3 \gt 0$, so our solution will spiral <i>out</i>, away from the origin and towards the circle $r = \sqrt{\beta}$.  So, we say the origin is an &quot;unstable equilibrium&quot;.  On the other hand, if $r$ starts out bigger than $\sqrt{\beta}$, our solution will spiral in towards that circle.  
+</p>
+
+<p>
+Here's a picture of two solutions for $\beta = 1$:
+</p>
+
+<p>
+<div align = "center">
+<img width = "500" src = "Limit_Circle_No_Noise.jpg">
+</div>
+</p>
+
+<p>
+The red solution starts near the origin and spirals out towards the circle $r = \sqrt{\beta}$.  The green solution starts outside this circle and spirals in towards it, soon becoming indistinguishable from the circle itself.  So, this equation describes a system where $x$ and $y$ quickly settle down to a periodic oscillating behavior.
+
+<p>
+Since solutions that start anywhere near the circle $r = \sqrt{\beta}$ will keep going round and round getting closer to this circle, it's called a &quot;<a href = "http://en.wikipedia.org/wiki/Limit-cycle">stable limit cycle</a>&quot;.
+</p>
+
+<p>
+This is what the Hopf bifurcation is all about!  We've got a dynamical system that depends on a parameter, and as we change this parameter, a stable fixed point become unstable, and a stable limit cycle forms around it.
+</p>
+
+<p>
+This isn't quite a mathematical definition yet, but it's close enough for now.  If you want something a bit more precise, try:
+</p>
+
+<p>
+<ul>
+<li>Yuri A. Kuznetsov, <a href = "http://www.scholarpedia.org/article/Andronov-Hopf_bifurcation">Andronov-Hopf bifurcation</a>, <i>Scholarpedia</i>, 2006.
+</li>
+</ul>
+
+Now, clearly the Hopf bifurcation idea is too simple for describing real-world weather cycles like the ENSO.  In the Hopf bifurcation, our system settles down into an orbit very close to the limit cycle, which is perfectly periodic.  The ENSO cycle is only <i>roughly</i> periodic:
+</p>
+
+<p>
+<div align="center">
+<a href="http://faculty.washington.edu/kessler/figures.html">
+<img border="none" width="450" src="http://math.ucr.edu/home/baez/soi-1876-1998.gif" />
+</a>
+</div></p>
+
+<p>
+The time between El Ni&ntilde;os varies between 3 and 7 years, averaging around 4 years.  There can also be two El Ni&ntilde;os without an intervening La Ni&ntilde;a, or vice versa.  One can try to explain this in various ways. 
+</p>
+
+<p>
+One very simple, general idea to add random noise to whatever differential equation we were using to model the ENSO cycle, obtaining a so-called <a href = "http://www.azimuthproject.org/azimuth/show/Stochastic+differential+equation">stochastic differential equation</a>: a differential equation describing a <i>random</i> process.  Richard Kleeman discusses this idea in Tim Palmer's book:
+
+<ul>
+<li>
+Richard Kleeman, <a href = "http://www.pims.math.ca/files/kleeman_6.pdf">
+Stochastic theories for the irregularity of ENSO</a>, in <i>Stochastic Physics and Climate Modelling</i>, eds. Tim Palmer and Paul Williams, Cambridge U. Press, Cambridge, 2010, pp. 248-265.
+</li>
+</ul>
+
+<p>
+Kleeman mentions three general theories for the irregularity of the ENSO.  They all involve the idea of separating the weather into &quot;modes&quot; &mdash; roughly speaking, different ways that things can oscillate.  Some modes are slow and some are fast.  The ENSO cycle is defined by the behavior of certain slow modes, but of course these interact with the fast modes.  So, there are various options:
+</p>
+
+<ol>
+<p>
+<li>
+Perhaps the relevant slow modes interact with each other in a chaotic way.
+</li>
+</p>
+<p>
+<li>
+Perhaps the relevant slow modes interact with each other in a non-chaotic way, but also interact with chaotic fast modes, which inject noise into what would otherwise be simple periodic behavior.
+</li>
+</p>
+<p>
+<li>
+Perhaps the relevant slow modes interact with each other in a chaotic way, and also interact in a significant way with chaotic fast modes.  
+</li>
+</p>
+</ol>
+
+<p>
+Kleeman reviews work on the first option but focuses on the second.  The third option is the most complicated, so the pessimist in me suspects that's what's really going on.  Still, it's good to start by studying simple models!
+</p>
+
+<p>
+How can we get a simple model that illustrates the second option?  Simple: take the model we just saw, and add some noise!  This idea is discussed in detail here:
+
+<p>
+<ul>
+<li>
+H. A. Dijkstra, L. M. Frankcombe and A.S von der Heydt, <a href = "http://rsta.royalsocietypublishing.org/content/366/1875/2543.full.pdf">The Atlantic Multidecadal Oscillation: a stochastic dynamical systems view</a>, in <i>Stochastic Physics and Climate Modelling</i>, eds. Tim Palmer and Paul Williams, Cambridge U. Press, Cambridge, 2010, pp. 287-306. 
+</li>
+</ul>
+</p>
+
+<p>
+This paper is not about the ENSO cycle, but another one, which is often nicknamed the <a href = "http://www.azimuthproject.org/azimuth/show/Atlantic+multidecadal+oscillation">AMO</a>.  I would love to talk about it &mdash; but not now.  Let me just show you the equations for a Hopf bifurcation with noise:
+</p>
+
+\[   \frac{d x}{d t} =  -y + \beta  x - x (x^2 + y^2) + \lambda \frac{d W_1}{d t}\]
+\[   \frac{d y}{d t} =  \; x + \beta  y - y (x^2 + y^2) + \lambda \frac{d W_2}{d t}\]
+
+<p>
+They're the same as before, but with some new extra terms at the end: that's the noise.  
+</p>
+
+<p>
+This could easily get a bit technical, but I don't want it to.  So, I'll just say some buzzwords and let you click on the links if you want more detail.  $W_1$ and $W_2$ are two independent <a href = "http://en.wikipedia.org/wiki/Wiener_process">Wiener processes</a>, so they describe <a href = "http://en.wikipedia.org/wiki/Brownian_motion">Brownian motion</a> in the $x$ and $y$ coordinates.  When we differentiate a Wiener process we get <a href = "http://en.wikipedia.org/wiki/White_noise">white noise</a>.  So, we're adding some amount of white noise to the equations we had before, and the number $\lambda$ says precisely how much.  That means that $x$ and $y$ are no longer specific functions of time: they're <i>random</i> functions, also known as <a href = "http://en.wikipedia.org/wiki/Stochastic_process">stochastic processes</a>.  
+</p>
+
+<p>
+If this were a math course, I'd feel obliged to precisely define all the terms I just dropped on you.  But it's not, so I'll just show you some pictures!  
+</p>
+
+<p>
+If $\beta = 1$ and $\lambda = 0.1$, here are some typical solutions:
+
+<p>
+<div align = "center">
+<img width = "500" src = "Limit_Circle_Noise_01.jpg">
+</div>
+</p>
+
+<p>
+They look similar to the solutions we saw before for $\beta = 1$, but now they have some random wiggles added on.
+</p>
+
+<p>
+(You may be wondering what this picture really shows.  After all, I said the solutions were random functions of time, not specific functions.  But it's tough to draw a &quot;random function&quot;.   So, to get one of the curves shown above, what Tim did is randomly choose a function according to some rule for computing probabilities, and draw that.)
+</p>
+
+<p>
+If we turn up the noise, our solutions get more wiggly.  If $\beta = 1$ and $\lambda = 0.3$, they look like this:
+
+<p>
+<div align = "center">
+<img width = "500" src = "Limit_Circle_Noise_03.jpg">
+</div>
+</p>
+
+<p>
+In these examples, $\beta \gt 0$, so we would have a limit cycle if there weren't any noise &mdash; and you can see that even with noise, the solutions <i>approximately</i> tend towards the limit cycle.  So, we can use an equation of this sort to describe systems that oscillate, but in a somewhat random way.
+</p>
+
+<p>
+But now comes the really interesting part!  Suppose $\beta \le 0$.  Then we've seen that without noise, there's no limit cycle: any solution quickly spirals in towards the origin.  But with noise, something a bit different happens.  If $\beta = -1/4$ and $\lambda = 0.1$ we get a picture like this:
+</p>
+
+<p>
+<div align = "center">
+<img width = "500" src = "No_Limit_Circle_Noise_01.jpg">
+</div>
+</p>
+
+<p>
+We get irregular oscillations even though there's no limit cycle!  Roughly speaking, the noise keeps knocking the solution away from the stable fixed point at $x = y = 0$, so it keeps going round and round, but in an irregular way.  It may seem to be spiralling in, but if we waited a bit longer it would get kicked out again.  
+</p>
+
+<p>
+This is a lot easier to see if we plot just $x$ as a function of $t$.  Then we can run our solution for a longer time without the picture becoming a horrible mess:
+</p>
+
+<p>
+<div align = "center">
+<img width = "500" src = "No_Limit_Circle_Noise_01_Graph.jpg">
+</div>
+</p>
+
+<p>
+If you compare this with the ENSO cycle, you'll see they look roughly similar:
+
+<p>
+<div align="center">
+<a href="http://faculty.washington.edu/kessler/figures.html">
+<img border="none" width="450" src="http://math.ucr.edu/home/baez/soi-1876-1998.gif" />
+</a>
+</div>
+</p>
+
+<p>
+That's nice.  Of course it doesn't prove that a model based on a Hopf bifurcation plus noise is &quot;right&quot; &mdash; indeed, we don't really <i>have</i> a model until we've chosen variables for both $x$ and $y$.  But it suggests that a model of this sort could be worth studying.   
+</p>
+
+<p>
+If you want to see how the Hopf bifurcation plus noise is applied to climate cycles, I suggest starting with <a href = "http://rsta.royalsocietypublishing.org/content/366/1875/2543.full.pdf">the paper by Dijkstra, Frankcombe and von der Heydt</a>.  If you want to see it applied to the El Ni&ntilde;o-Southern Oscillation, start with Section 6.3 of <a href = "http://www.soest.hawaii.edu/MET/Faculty/jff/1998_03%20ENSO%20theory.pdf">the ENSO theory paper</a>, and then dig into the many references.  Here it seems a model with $\beta > 0$ may work best.  If so, noise is not required to keep the ENSO cycle going, but it makes the cycle irregular.  
+</p>
+
+<p>
+To a mathematician like me, what's really interesting is how the addition of noise &quot;smooths out&quot; the Hopf bifurcation.  When there's no noise, the qualitative behavior of solutions jumps drastically at $\beta = 0$.  For $\beta \gt 0$ we have a stable limit cycle, while for $\beta \le 0$ we have a stable equilibrium.  But in the presence of noise, we get irregular cycles not only for $\beta \gt 0$ but also $\beta \le 0$.  This is not really surprising, but it suggests a bunch of questions.  Such as: what are some quantities we can use to describe the behavior of &quot;irregular cycles&quot;, and how do these quantities change as a function of $\lambda$ and $\beta$?  
+</p>
+
+<p>
+You'll see some answers to this question in Dijkstra, Frankcombe and von der Heydt's paper.  However, if you're a mathematician, you'll instantly think of dozens more questions &mdash; like, how can I <i>prove</i> what these guys are saying?
+</p>
+
+<p>
+If you make any progress, let me know.  If you don't know where to start, you might try the Dijkstra <i>et al.</i> paper, and then learn a bit about the Hopf bifurcation, stochastic processes, and stochastic differential equations:
+</p>
+
+<p>
+<ul>
+<li>
+John Guckenheimer and Philip Holmes, <i>Nonlinear Oscillations, Dynamical Systems and Bifurcations of Vector Fields</i>, Springer, Berlin, 1983.
+</li>
+</p>
+<p>
+<li>
+Zdzis&#322;aw Brze&#378;niak and Tomasz Zastawniak, <i>Basic Stochastic Processes: A Course Through Exercises</i>, Springer, Berlin, 1999.
+</li>
+</p>
+<p>
+<li>
+Bernt &Oslash;ksendal, <i>Stochastic Differential Equations: An Introduction with Applications</i>, 6th edition, Springer, Berlin, 2003.
+</li>
+</ul>
+</p>
+
+<p>
+Now, about the <a href = "http://www.azimuthproject.org/azimuth/show/Azimuth+code+project">Azimuth Code Project</a>.  Tim van Beek started it just recently, but the <a href = "http://www.azimuthproject.org/azimuth/show/HomePage">Azimuth Project</a> seems to be attracting people who can program, so I have high hopes for it.  Tim wrote:
+
+<blockquote>
+My main objectives to start the Azimuth Code Project were:
+
+<ul>
+<p>
+<li>
+to have a central repository for the code used for simulations or data analysis on the Azimuth Project,
+</li>
+</p>
+<p>
+<li>
+to have an online free access repository and make all software open source, to enable anyone to use the software, for example to reproduce the results on the Azimuth Project.  Also to show by example that this can and should be done for every scientific publication.
+</li>
+</p>
+</ul>
+
+<p>
+Of less importance is:
+</p>
+
+<p>
+<ul>
+<li>
+to implement the software with an eye to software engineering principles.
+</li>
+</ul>
+</p>
+
+<p>
+This less important because the world of numerical high performance computing differs significantly from the rest of the software industry: it has special requirements and it is not clear at all which paradigms that are useful for the rest will turn out to be useful here. Nevertheless I'm confident that parts of the scientific community will profit from a closer interaction with software engineering.
+</blockquote>
+</p>
+
+<p>
+So, if you like programming, I hope you'll <a href = "http://www.math.ntnu.no/~stacey/Mathforge/Azimuth/comments.php?DiscussionID=262&page=1#Item_5">chat with us</a> and consider joining in!  Our next projects involve limit cycles in predator-prey models, stochastic resonance in some theories of the ice ages, and delay differential equations in ENSO models.  
+</p>
+
+<p>
+And in case you're wondering, the code used for the pictures above is a <a href = "http://azimuthproject.googlecode.com/svn/trunk/azimuth-sde-models/src/main/java/com/azimuth/hopfbifurcation/euler/cartesian/">simple implementation in Java of the Euler scheme</a>, using <a href = "http://azimuthproject.googlecode.com/svn/trunk/azimuth-common/src/main/java/com/azimuth/random/">random number generating algorithms</a> from <i>Numerical Recipes</i>.  Pictures were generated with <a href = "http://www.gnuplot.info/">gnuplot</a>.
+</p>
+
+<p>
+<HR><P>
+For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2010/12/24/this-weeks-finds-week-308/">Azimuth</a>.
+
+<p>
+<i>There are two ways of constructing a software design.  One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies.</i> - C.A.R. Hoare
+
+<p>
+<HR><P>
+<!-- BEGIN FOOTER -->
+&#169; 2010  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<P>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week307.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week309.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->
+
+

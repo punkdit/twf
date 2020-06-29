@@ -1,0 +1,525 @@
+<TITLE> week305 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week304.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week306.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> November 5, 2010 </H4>
+<H2> This Week's Finds (Week 305) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+<a href = "http://www.princeton.edu/~nurban/">Nathan Urban</a> has been telling us about a paper where he estimated the probability that global warming will shut down a major current in the Atlantic Ocean: 
+
+<P>
+&bull; Nathan M. Urban and Klaus Keller, <a href = "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.140.9169">Probabilistic hindcasts and projections of the coupled climate, carbon cycle and Atlantic meridional overturning circulation system: a Bayesian fusion of century-scale observations with a simple model</a>, <i><a href = "http://onlinelibrary.wiley.com/doi/10.1111/j.1600-0870.2010.00471.x/abstract">Tellus A</a></i>, July 16, 2010.
+
+<P>
+We left off last time with a cliff-hanger: I didn't let him tell us what the probability is!  Since you must have been clutching your chair ever since, you'll be relieved to hear that the answer is coming now, in the final episode of this interview.
+
+<P>
+But it's also very interesting how he and Klaus Keller <i>got</i> their answer.  As you'll see, there's some beautiful math involved.  So let's get started...
+
+<P>
+<b>JB</b>: Last time you told us roughly how your climate model works.  This time I'd like to ask you about the rest of your paper, leading up to your estimate of the probability that the <a href = "http://www.azimuthproject.org/azimuth/show/AMOC">Atlantic Meridional Overturning Current</a> (or &quot;AMOC&quot;) will collapse.  But before we get into that, I'd like to ask some very general questions.
+
+<P>
+For starters, why are scientists worried that the AMOC might collapse?
+
+<P>
+Last time I mentioned the <a href = "http://www.azimuthproject.org/azimuth/show/Younger+Dryas">Younger Dryas</a> event, a time when Europe became drastically colder for about 1300 years, starting around 10,800 BC.  Lots of scientists think this event was caused by a collapse of the AMOC.  And lots of them believe it was caused by huge amounts of fresh water pouring into the north Atlantic from an enormous glacial lake.  But nothing quite like that is happening now!  So if the AMOC collapses in the next few centuries, the cause would have to be a bit different.
+
+<P>
+<b>NU</b>: In order for the AMOC to collapse, the overturning circulation has to weaken.  The overturning is driven by the sinking of cold and salty, and therefore dense, water in the north Atlantic.  Anything that affects the density structure of the ocean can alter the overturning.
+
+<P>
+As you say, during the Younger Dryas, it is thought that a lot of fresh water suddenly poured into the Atlantic from the draining of a glacial lake.  This lessened the density of the surface waters and reduced the rate at which they sank, shutting down the overturning.
+
+<P>
+Since there aren't any large glacial lakes left that could abruptly drain into the ocean, the AMOC won't shut down in the same way it previously did.  But it's still possible that climate change could cause it to shut down.  The surface waters from the north Atlantic can still freshen (and become less dense), either due to the addition of fresh water from melting polar ice and snow, or due to increased precipitation to the northern latitudes.  In addition, they can simply become warmer, which also makes them less dense, reducing their sinking rate and weakening the overturning.
+
+<P>
+In combination, these three factors (warming, increased precipitation, meltwater) can theoretically shut down the AMOC if they are strong enough.  This will probably not be as abrupt or extreme an event as the Younger Dryas, but it can still persistently alter the regional climate.
+
+<P>
+<b>JB</b>: I'm trying to keep our readers in suspense for a bit longer, but I don't think it's giving away too much to say that when you run your model, sometimes the AMOC shuts down, or at least slows down.  Can you say anything about how this tends to happen, when it does?  In your model, that is.   Can you tell if it's mainly warming, or increased precipitation, or meltwater?
+
+<P>
+<b>NU</b>:  The short answer is &quot;mainly warming, probably&quot;.  The long answer:
+
+<P>
+I haven't done experiments with the box model myself to determine this, but I can quote from the <a href = "http://www.pik-potsdam.de/~stefan/Lectures/modellierung/zickfeld03.pdf">Zickfeld <i>et al.</i> paper</a> where this model was published.  It says, for their baseline collapse experiment, 
+
+<P>
+<blockquote>
+In the box model the initial weakening of the overturning circulation is mainly due to thermal forcing [...] This effect is amplified by a negative feedback on salinity, since a weaker circulation implies reduced salt advection towards the northern latitudes.
+</blockquote>
+
+<P>
+Even if they turn off all the freshwater input, they find substantial weakening of the AMOC from warming alone.
+
+<P>
+Freshwater could potentially become the dominant effect on the AMOC if more freshwater is added than in the paper's baseline experiment.  The paper did report computer experiments with different freshwater inputs, but upon skimming it, I can't immediately tell whether the thermal effect loses its dominance.
+
+<P>
+These experiments have also been performed using more complex climate models.  This paper reports that in all the models they studied, the AMOC weakening is caused more by changes in surface heat flux than by changes in surface water flux:
+
+<P>
+&bull; J. M. Gregory <i>et al.</i>, <a href = "http://www-pcmdi.llnl.gov/projects/cmip/thcmip2.pdf">A model intercomparison of changes in the Atlantic thermohaline circulation in response to increasing atmospheric CO<sub>2</sub> concentration</a>, <a href = "http://www.agu.org/pubs/crossref/2005/2005GL023209.shtml"><i>Geophysical Research Letters</i></a> <b>32</b> (2005), L12703.
+
+<P>
+However, that paper studied &quot;best-estimate&quot; freshwater fluxes, not the fluxes on the high end of what's possible, so I don't know whether thermal effects would still dominate if the freshwater input ends up being large.  There are papers that suggest freshwater input from Greenland, at least, won't be a dominant factor any time soon:
+
+<P>
+&bull; J. H. Jungclaus <i>et al.</i>, Will Greenland melting halt the thermohaline circulation?, <a href = "http://www.agu.org/journals/ABS/2006/2006GL026815.shtml"><i>Geophysical Research Letters</i></a> <b>33</b> (2006), L17708.
+
+<P>
+&bull; E. Driesschaert <i>et al.</i>, <a href = "http://www.astr.ucl.ac.be/users/thierry/articles/2007_Driesschaert_et_al_GRL.pdf">Modeling the influence of Greenland ice sheet melting on the Atlantic meridional overturning circulation during the next millennia</a>, <a href = "http://www.agu.org/journals/ABS/2007/2007GL029516.shtml"><i>Geophysical Research Letters</i></a> <b>34</b> (2007), L10707.
+
+<P>
+I'm not sure what the situation is for precipitation, but I don't think that would be much larger than the meltwater flux.  In summary, it's probably the thermal effects that dominate, both in complex and simpler models.
+
+<P>
+Note that in our version of the box model, the precipitation and meltwater fluxes are combined into one number, the &quot;North Atlantic hydrological sensitivity&quot;, so we can't distinguish between those sources of water.  This number is treated as uncertain in our analysis, lying within a range of possible values determined from the hydrologic changes predicted by complex models.  The <a href = "http://www.pik-potsdam.de/~stefan/Lectures/modellierung/zickfeld03.pdf">Zickfeld <i>et al.</i> paper</a> experimented with separating them into the two individual contributions, but my version of the model doesn't do that.
+
+<P>
+<b>JB</b>: Okay.  Now back to what you and Klaus Keller actually did in <a href = "http://www.princeton.edu/~nurban/pubs/moc-projections.pdf">your paper</a>.  You have a climate model with a bunch of adjustable knobs, or parameters.  Some of these parameters you take as &quot;known&quot; from previous research.  Others are more uncertain, and that's where the Bayesian reasoning comes in.  Very roughly, you use some data to guess the probability that the right settings of these knobs lie within any given range.  
+
+<P>
+How many parameters do you treat as uncertain?
+
+<P>
+<b>NU</b>:  18 parameters in total.  7 model parameters that control dynamics, 4 initial conditions, and 7 parameters describing error statistics.
+
+<P>
+<b>JB</b>: What are a few of these parameters?  Maybe you can tell us about some of the most important ones &mdash; or ones that are easy to understand.
+
+<P>
+<b>NU</b>:  I've mentioned these briefly in &quot;<a href = "http://math.ucr.edu/home/baez/week304.html">week304</a>&quot; in the model description.  The AMOC-related parameter is the hydrologic sensitivity I described above, controlling the flux of fresh water into the North Atlantic.
+
+<P>
+There are three climate related parameters: 
+
+<P>
+<blockquote>
+&bull; the climate sensitivity (the equilibrium warming expected in response to doubled CO<sub>2</sub>), 
+
+<P>
+&bull; the ocean heat vertical diffusivity (controlling the rate at which oceans absorb heat from the atmosphere), and 
+
+<P>
+&bull; &quot;aerosol scaling&quot;, a factor that multiplies the strength of the aerosol-induced cooling effect, mostly due to uncertainties in aerosol-cloud interactions. 
+</blockquote>
+
+<P>
+I discussed these in &quot;<a href = "http://math.ucr.edu/home/baez/week302.html">week302</a>&quot; in the part about total feedback estimates.
+
+<P>
+There are also three carbon cycle related parameters:
+
+<P>
+<blockquote>
+&bull; the heterotrophic respiration sensitivity (describing how quickly dead plants decay when it gets warmer), 
+
+<P>
+&bull; CO<sub>2</sub> fertilization (how much faster plants grow in CO<sub>2</sub>-elevated conditions), and
+
+<P>
+&bull; the ocean carbon vertical diffusivity (the rate at which the oceans absorb CO<sub>2</sub> from the atmosphere).
+</blockquote>
+
+<P>
+The initial conditions describe what the global temperature, CO<sub>2</sub> level, etc. were at the start of my model simulations, in 1850.  The statistical parameters describe the variance and autocorrelation of the residual error between the observations and the model, due to measurement error, natural variability, and model error.
+
+<P>
+<b>JB</b>: Could you say a bit about the data you use to estimate these uncertain parameters?  I see you use a number of data sets.
+
+<P>
+<b>NU</b>:  We use global mean surface temperature and ocean heat content to constrain the three climate parameters.  We use atmospheric CO<sub>2</sub> concentration and some ocean flux measurements to constrain the carbon parameters.  We use measurements of the AMOC strength to constrain the AMOC parameter.  These are all time series data, mostly global averages &mdash; except the AMOC strength, which is an Atlantic-specific quantity defined at a particular latitude.
+
+<P>
+The temperature data are taken by surface weather stations and are for the years 1850-2009.  The ocean heat data are taken by shipboard sampling, 1953-1996.  The atmospheric CO<sub>2</sub> concentrations are measured from the Mauna Loa volcano in Hawaii, 1959-2009.  There are also some ice core measurements of trapped CO<sub>2</sub> at Law Dome, Antarctica, dated to 1854-1953.  The air-sea CO<sub>2</sub> fluxes, for the 1980s and 1990s, are derived from measurements of dissolved inorganic carbon in the ocean, combined with measurements of manmade chlorofluorocarbon to date the water masses in which the carbon resides.  (The dates tell you when the carbon entered the ocean.)
+
+<P>
+The AMOC strength is reconstructed from station measurements of poleward water circulation over an east-west section of the Atlantic Ocean, near 25 °N latitude.  Pairs of stations measure the northward velocity of water, inferred from the ocean bottom pressure differences between northward and southward station pairs.  The velocities across the Atlantic are combined with vertical density profiles to determine an overall rate of poleward water mass transport.   We use seven AMOC strength estimates measured sparsely between the years 1957 and 2004.
+
+<P>
+<b>JB</b>: So then you start the Bayesian procedure.  You take your model, start it off with your 18 parameters chosen somehow or other, run it from 1850 to now, and see how well it matches all this data you just described.  Then you tweak the parameters a bit &mdash; last time we called that &quot;turning the knobs&quot; &mdash; and run the model again.  And then you do this again and again, lots of times.  The goal is to calculate the probability that the right settings of these knobs lie within any given range. 
+
+<P>
+Is that about right?   
+
+<P>
+<b>NU</b>:  Yes, that's right.
+
+<P>
+<b>JB</b>: About how many times did you actually run the model?  Is the sort of thing you can do on your laptop overnight, or is it a mammoth task?
+
+<P>
+<b>NU</b>:  I ran the model a million times.  This took about two days on a single CPU.  Some of my colleagues later ported the model from Matlab to Fortran, and now I can do a million runs in half an hour on my laptop.
+
+<P>
+<b>JB</b>: Cool!  So if I understand correctly, you generated a million lists of 18 numbers: those uncertain parameters you just mentioned.  
+
+<P>
+Or in other words: you created a cloud of points: a million points in an 18-dimensional space.  Each point is a choice of those 18 parameters.  And the density of this cloud near any point should be proportional to the probability that the parameters have those values.  
+
+<P>
+That's the goal, anyway: getting this cloud to approximate the right probability density on your 18-dimensional space.  To get this to happen, you used the Markov chain Monte Carlo procedure we discussed last time.   
+
+<P>
+Could you say in a bit more detail how you did this, exactly?
+
+<P>
+<b>NU</b>:  There are two steps.  One is to write down a formula for the probability of the parameters (the &quot;<a href = "http://en.wikipedia.org/wiki/Posterior_probability">Bayesian posterior distribution</a>&quot;).  The second is to draw random samples from that probability distribution using <a href = "http://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo">Markov chain Monte Carlo</a> (MCMC).
+
+<P>
+Call the parameter vector &theta; and the data vector y.  The Bayesian posterior distribution p(&theta;|y) is a function of &theta; which says how probable &theta; is, given the data y that you've observed.  The little bar (|) indicates conditional probability:  p(&theta;|y) is the probability of &theta;, assuming that you know y happened.
+
+<P>
+The posterior factorizes into two parts, the likelihood and the prior.  The <a href = "http://en.wikipedia.org/wiki/Prior_probability">prior</a>, p(&theta;) says how probable you think a particular 18-dimensional vector of parameters is, before you've seen the data you're using.  It encodes your &quot;prior knowledge&quot; about the problem, unconditional on the data you're using.
+
+<P>
+The <a href = "http://en.wikipedia.org/wiki/Likelihood_function">likelihood</a>, p(y|&theta;), says how likely it is for the observed data to arise from a model run using some particular vector of parameters.  It describes your data generating process:  assuming you know what the parameters are, how likely are you to see data that looks like what you actually measured?  (The posterior is the reverse of this:  how probable are the parameters, assuming the data you've observed?)
+
+<P>
+<a href = "http://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes's theorem</a> simply says that the posterior is proportional to the product of these two pieces:
+
+<P>
+<div align = "center">
+p(&theta;|y) &prop; p(y|&theta;) &times; p(&theta;)
+</div>
+
+<P>
+If I know the two pieces, I multiply them together and use MCMC to sample from that probability distribution.
+
+<P>
+Where do the pieces come from?  For the prior, we assumed bounded uniform distributions on all but one parameter.  Such priors express the belief that each parameter lies within some range we deemed reasonable, but we are agnostic about whether one value within that range is more probable than any other.  The exception is the climate sensitivity parameter.  We have prior evidence from computer models and paleoclimate data that the climate sensitivity is most likely around 2 or 3 °C, albeit with significant uncertainties.  We encoded this belief using a &quot;diffuse&quot; <a href = "http://en.wikipedia.org/wiki/Cauchy_distribution">Cauchy distribution</a> peaked in this range, but allowing substantial probability to be outside it, so as to not prematurely exclude too much of the parameter range based on possibly overconfident prior beliefs.  We assume the priors on all the parameters are independent of each other, so the prior for all of them is the product of the prior for each of them.
+
+<P>
+For the likelihood, we assumed a <a href = "http://en.wikipedia.org/wiki/Normal_distribution">normal (Gaussian) distribution</a> for the residual error (the scatter of the data about the model prediction).  The simplest such distribution is the <a href = "http://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">independent and identically distributed</a> (&quot;iid&quot;) normal distribution, which says that all the data points have the same error and the errors at each data point are independent of each other.  Neither of these assumptions is true.  The errors are not identical, since they get bigger farther in the past, when we measured data with less precision than we do today.  And they're not independent, because if one year is warmer than the model predicts, the next year likely to be also warmer than the model predicts.  There are various possible reasons for this: chaotic variability, time lags in the system due to finite heat capacity, and so on.
+
+<P>
+In this analysis, we kept the identical-error assumption for simplicity, even though it's not correct.  I think this is justifiable, because the strongest constraints on the parameters come from the most recent data, when the largest climate and carbon cycle changes have occurred.  That is, the early data are already relatively uninformative, so if their errors get bigger, it doesn't affect the answer much.  
+
+<P>
+We rejected the independent-error assumption, since there is very strong <a href = "http://en.wikipedia.org/wiki/Autocorrelation">autocorrelation</a> (serial dependence) in the data, and ignoring autocorrelation is known to lead to overconfidence.  When the errors are correlated, it's harder to distinguish between a short-term random fluctuation and a true trend, so you should be more uncertain about your conclusions.  To deal with this, we assumed that the errors obey a correlated autoregressive &quot;red noise&quot; process instead of an uncorrelated &quot;white noise&quot; process.  In the likelihood, we converted the red-noise errors to white noise via a &quot;whitening&quot; process, assuming we know how much correlation is present.  (We're allowed to do that in the likelihood, because it gives the probability of the data assuming we know what all the parameters are, and the autocorrelation is one of the parameters.)  The equations are given in the paper.
+
+<P>
+Finally, this gives us the formula for our posterior distribution.
+
+<P>
+<b>JB</b>: Great!  There's a lot of technical material here, so I have many questions, but let's go through the whole story first, and come back to those.
+
+<P>
+<b>NU</b>: Okay.  Next comes step two, which is to draw random samples from the posterior probability distribution via MCMC.
+
+<P>
+To do this, we use the famous <a href = "http://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm">Metropolis algorithm</a>, which was invented by a physicist of that name, along with others, to do computations in statistical physics.  It's a very simple algorithm which takes a &quot;random walk&quot; through parameter space.
+
+<P>
+You start out with some guess for the parameters.  You randomly perturb your guess to a nearby point in parameter space, which you are going to propose to move to.  If the new point is more probable than the point you were at (according to the Bayesian posterior distribution), then accept it as a new random sample.  If the proposed point is less probable than the point you're at, then you randomly accept the new point with a certain probability.  Otherwise you reject the move, staying where you are, treating the old point as a duplicate random sample.
+
+<P>
+The acceptance probability is equal to the ratio of the posterior distribution at the new point to the posterior distribution at the old point.  If the point you're proposing to move to is, say, 5 times less probable than the point you are at now, then there's a 20% chance you should move there, and a 80% chance that you should stay where you are.
+
+<P>
+If you iterate this method of proposing new &quot;jumps&quot; through parameter space, followed by the Metropolis accept/reject procedure, you can prove that you will eventually end up with a long list of (correlated) random samples from the Bayesian posterior distribution.
+
+<P>
+<b>JB</b>: Okay.  Now let me ask a few questions, just to help all our readers get up to speed on some jargon. 
+
+<P>
+Lots of people have heard of a &quot;<a href = "http://en.wikipedia.org/wiki/Normal_distribution">normal distribution</a>&quot; or &quot;Gaussian&quot;, because it's become sort of the default choice for probability distributions.  It looks like a bell curve:
+
+<div align = "center">
+<img src = "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Gaussian_Filter.svg/400px-Gaussian_Filter.svg.png">
+</div>
+
+<P>
+When people don't know the probability distribution of something &mdash; like the tail lengths of newts or the IQ's of politicians &mdash; they often assume it's a Gaussian.  
+
+<P>
+But I bet fewer of our readers have heard of a &quot;<a href = "http://en.wikipedia.org/wiki/Cauchy_distribution">Cauchy distribution</a>&quot;.   What's the point of that?  Why did you choose that for your prior probability distribution of the climate sensitivity?  
+
+<P>
+<b>NU</b>:  There is a long-running debate about the &quot;upper tail&quot; of the climate sensitivity distribution.  High climate sensitivities correspond to large amounts of warming.  As you can imagine, policy decisions depend a lot on how likely we think these extreme outcomes could be, i.e., how quickly the &quot;upper tail&quot; of the probability distribution drops to zero.
+
+<P>
+A Gaussian distribution has tails that drop off exponentially quickly, so very high sensitivities will never get any significant weight.  If we used it for our prior, then we'd almost automatically get a &quot;thin tailed&quot; posterior, no matter what the data say.  We didn't want to put that in by assumption and automatically conclude that high sensitivities should get no weight, regardless of what the data say.  So we used a weaker assumption, which is a &quot;heavy tailed&quot; prior distribution.  With this prior, the probability of large amounts of warming drops off more slowly, as a power law, instead of exponentially fast.  If the data strongly rule out high warming, we can get a thin tailed posterior, but if they don't, it will be heavy tailed.  The Cauchy distribution, a limiting case of the &quot;<a href = "http://en.wikipedia.org/wiki/Student%27s_t-distribution">Student t</a>&quot; distribution that students of statistics may have heard of, is one of the most conservative choices for a heavy-tailed prior.  Probability drops off so slowly at its tails that its variance is infinite.
+
+<P>
+<b>JB</b>: The issue of &quot;<a href = "http://en.wikipedia.org/wiki/Fat_tail">fat tails</a>&quot; is also important in the stock market, where big crashes happen more frequently than you might guess with a Gaussian distribution.  After the recent economic crisis I saw a lot of financiers walking around with their tails between their legs, wishing their tails had been fatter.
+
+<P>
+I'd also like to ask about &quot;white noise&quot; versus &quot;red noise&quot;.   &quot;<a href = "http://en.wikipedia.org/wiki/White_noise">White noise</a>&quot; is a mathematical description of a situation where some quantity fluctuates randomly with time in a way so that it's value at any time is completely uncorrelated with its value at any other time.   If you graph an example of white noise, it looks really spiky:
+
+<P>
+<div align = "center">
+<a href = "http://en.wikipedia.org/wiki/White_noise">
+<img border = "none" src = "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/White-noise.png/400px-White-noise.png">
+</a>
+</div>
+
+<P>
+If you play it as a sound, it sounds like <a href =
+"http://upload.wikimedia.org/wikipedia/commons/6/66/Whitenoisesound.ogg">hissy static</a> &mdash; quite unpleasant.  If you could play it in the form of
+light, it would look white, hence the name.
+
+<P>
+&quot;<a href = "http://en.wikipedia.org/wiki/Brownian_noise">Red noise</a>&quot; is less wild.   Its value at any time is still random, but it's correlated to the values at earlier or later times, in a specific way.  So it looks less spiky:
+
+<P>
+<div align = "center">
+<a href = "http://upload.wikimedia.org/wikipedia/commons/b/b3/500_frames_of_brownian_motion.ogv">
+<img src = "http://math.ucr.edu/home/baez/brownian_motion.jpg">
+</a>
+</div>
+
+<P>
+and it <a href =
+"http://upload.wikimedia.org/wikipedia/commons/4/48/Brown_noise.ogg">sounds less high-pitched</a>, more like a steady rainfall.  Since it's stronger at low frequencies, it would look more red if you could play it in the form of light &mdash; hence the name &quot;red noise&quot;.
+
+<P>
+If understand correctly, you're assuming that some aspects of the climate are noisy, but in a red noise kind of way, when you're computing  p(y|&theta;): the likelihood that your data takes on the value y, given your climate model with some specific choice of parameters &theta;.  
+
+<P>
+Is that right?  You're assuming this about all your data: the temperature data from weather stations, the ocean heat data are from shipboard samples, the atmospheric CO<sub>2</sub> concentrations at Mauna Loa volcano in Hawaii, the ice core measurements of trapped CO<sub>2</sub>, the air-sea CO<sub>2</sub> fluxes, and also the AMOC strength?  Red, red, red &mdash; all red noise?
+
+<P>
+<b>NU</b>:  I think the red noise you're talking about refers to a specific type of autocorrelated noise (&quot;<a href = "http://en.wikipedia.org/wiki/Brownian_motion">Brownian motion</a>&quot;), with a power spectrum that is inversely proportional to the square of frequency.  I'm using &quot;red noise&quot; more generically to speak of any autocorrelated process that is stronger at low frequencies.  Specifically, the process we use is a first-order autoregressive, or &quot;<a href = "http://en.wikipedia.org/wiki/Autoregressive_model#Example:_An_AR.281.29-process">AR(1)</a>&quot;, process.  It has a more complicated spectrum than Brownian motion.
+
+<P>
+<b>JB</b>: Right, I was talking about &quot;red noise&quot; of a specific mathematically nice sort, but that's probably less convenient for you. AR(1) sounds easier for computers to generate.
+
+<P>
+<b>NU</b>:  It's not only easier for computers, but closer to the spectrum we see in our analysis.
+
+<P>
+Note that when I talk about error I mean &quot;residual error&quot;, which is the difference between the observations and the model prediction.  If the residual error is correlated in time, that doesn't necessarily reflect true red noise in the climate system.  It could also represent correlated errors in measurement over time, or systematic errors in the model.  I am not attempting to distinguish between all these sources of error.  I'm just lumping them all together into one total error process, and assuming it has a simple statistical form.
+
+<P>
+We assume the residual errors in the annual surface temperature, ocean heat, and instrumental CO<sub>2</sub> time series are AR(1).  The ice core CO<sub>2</sub>, air-sea CO<sub>2</sub> flux, and AMOC strength data are sparse, and we can't really hope to estimate the correlation between them, so we assume their residual errors are uncorrelated.
+
+<P>
+Speaking of correlation, I've been talking about &quot;autocorrelation&quot;, which is correlation within one data set between one time and another.  It's also possible for the errors in different data sets to be correlated with each other (&quot;cross correlation&quot;).  We assumed there is no cross correlation (and residual analysis suggests only weak correlation between data sets).
+
+<P>
+<b>JB</b>: I have a few more technical questions, but I bet most of our readers are eager to know: <i>so, what next?</i>
+
+<P>
+You use all these nifty mathematical methods to work out p(&theta;|y), the probability that your 18 parameters have any specific value given your data.  And now I guess you want to figure out the probability that the Atlantic Meridional Overturning Current, or AMOC, will collapse by some date or other.  
+
+<P>
+How do you do this?  I guess most people want to know the answer more than the method, but they'll just have to wait a few more minutes.
+
+<P>
+<b>NU</b>:  That's easy.  After MCMC, we have a million runs of the model, sampled in proportion how well the model fits historic data.  There will be lots of runs that agree well with the data, and a few that agree less well.  All we do now is extend each of those runs into the future, using an assumed scenario for what CO<sub>2</sub> emissions and other radiative forcings will do in the future.  To find out the probability that the AMOC will collapse by some date, conditional on the assumptions we've made, we just count what fraction of the runs have an AMOC strength of zero in whatever year we care about.
+
+<P>
+<b>JB</b>: Okay, that's simple enough.  What scenario, or scenarios, did you consider?
+
+<P>
+<b>NU</b>:  We considered a worst-case &quot;business as usual&quot; scenario in which we continue to burn fossil fuels at an accelerating rate until we start to run out of them, and eventually burn the maximum amount of fossil fuels we think there might be remaining (about 5000 gigatons worth of of carbon, compared to the roughly 500 gigatons we've emitted so far).  This assumes we get desperate for cheap energy and extract all the hard-to-get fossil resources in oil shales and tar sands, all the remaining coal, etc.  It doesn't necessarily preclude the use of non-fossil energy; it just assumes that our appetite for energy grows so rapidly that there's no incentive to slow down fossil fuel extraction.  We used a simple economic model to estimate how fast we might do this, if the world economy continues to grow at a similar rate to the last few decades.
+
+<P>
+<b>JB</b>: And now for the big question: <i>what did you find?</i>  How likely is it that the AMOC will collapse, according to your model?  Of course it depends how far into the future you look.
+
+<P>
+<b>NU</b>:  We find a negligible probability that the AMOC will collapse this century.  The odds start to increase around 2150, rising to about a 10% chance by 2200, and a 35% chance by 2300, the last year considered in our scenario.
+
+<P>
+<b>JB</b>: I guess one can take this as good news or really scary news, depending on how much you care about folks who are alive in 2300.  But I have some more questions.  First, what's a &quot;negligible probability&quot;?  
+
+<P>
+<b>NU</b>:  In this case, it's less than 1 in 3000.  For computational reasons, we only ran 3000 of the million samples forward into the future.  There were no samples in this smaller selection that had the AMOC collapsed in 2100.  The probability rises to 1 in 3000 in the year 2130 (the first time I see a collapse in this smaller selection), and 1% in 2152.  You should take these numbers with a grain of salt.  It's these rare &quot;tail-area events&quot; that are most sensitive to modeling assumptions.
+
+<P>
+<b>JB</b>: Okay.  And second, don't the extrapolations become more unreliable as you keep marching further into the future?  You need to model not only climate physics but also the world economy.  In this calculation, how many gigatons of carbon dioxide per year are you assuming will be emitted in 2300?  I'm just curious.   In 1998 it was about 27.6 gigatons.   By 2008, it was about 30.4.  
+
+<P>
+<b>NU</b>:  Yes, the uncertainty grows with time (and this is reflected in our projections).  And in considering a fixed emissions scenario, we've ignored the economic uncertainty, which, so far out into the future, is even larger than the climate uncertainty.  Here we're concentrating on just the climate uncertainty, and are hoping to get an idea of bounds, so we used something close to a worst-case economic scenario.  In this scenario carbon emissions peak around 2150 at about 23 gigatons carbon per year (84 gigatons CO<sub>2</sub>). By 2300 they've tapered off to about 4 GtC (15 GtCO<sub>2</sub>).
+
+<P>
+Actual future emissions may be less than this, if we act to reduce them, or there are fewer economically extractable fossil resources than we assume, or the economy takes a prolonged downturn, etc.  Actually, it's not completely an economic worst case; it's possible that the world economy could grow even faster than we assume.  And it's not the worst case scenario from a climate perspective, either.  For example, we don't model potential carbon emissions from permafrost or methane clathrates.  It's also possible that climate sensitivity could be higher than what we find in our analysis.
+
+<P>
+<b>JB</b>: Why even bother projecting so far out into the future, if it's so uncertain?
+
+<P>
+<b>NU</b>:  The main reason is because it takes a while for the AMOC to weaken, so if we're interested in what it would take to make it collapse, we have to run the projections out a few centuries.  But another motivation for writing this paper is policy related, having to do with the concept of &quot;climate commitment&quot; or &quot;triggering&quot;.  Even if it takes a few centuries for the AMOC to collapse, it may take less time than that to reach a &quot;point of no return&quot;, where a future collapse has already been unavoidably &quot;triggered&quot;.  Again, to investigate this question, we have to run the projections out far enough to get the AMOC to collapse.
+
+<P>
+We define &quot;the point of no return&quot; to be a point in time which, if CO<sub>2</sub> emissions were immediately reduced to zero and kept there forever, the AMOC would still collapse by the year 2300 (an arbitrary date chosen for illustrative purposes).  This is possible because even if we stop emitting new CO<sub>2</sub>, existing CO<sub>2</sub> concentrations, and therefore temperatures, will remain high for a long time (see &quot;<a href = "http://math.ucr.edu/home/baez/week303.html">week303</a>&quot;).
+
+<P>
+In reality, humans wouldn't be able to reduce emissions instantly to zero, so the actual &quot;point of no return&quot; would likely be earlier than what we find in our study.  We couldn't economically reduce emissions fast enough to avoid triggering an AMOC collapse.  (In this study we ignore the possibility of negative carbon emissions, that is, capturing CO<sub>2</sub> directly from the atmosphere and sequestering it for a long period of time.  We're also ignoring the possibility of climate geoengineering, which is global cooling designed to cancel out greenhouse warming.)
+
+<P>
+So what do we find?  Although we calculate a negligible probability that the AMOC will collapse by the end of this century, the probability that, in this century, we will commit later generations to a collapse (by 2300) is almost 5%.  The probabilities of &quot;triggering&quot; rise rapidly, to almost 20% by 2150 and about 33% by 2200, even though the probability of experiencing a collapse by those dates is about 1% and 10%, respectively.  You can see it in this figure from our paper:
+
+<P>
+<div align = "center">
+<a href = "http://www.princeton.edu/~nurban/pubs/moc-projections.pdf#page=9">
+<img border = "none" src = "http://math.ucr.edu/home/baez/nathan_urban_climate_change_commitment.jpg">
+</a>
+</div>
+
+<P>
+The take-home message is that while most climate projections are currently run out to 2100, we shouldn't fixate only on what might happen to people this century.  We should consider what climate changes our choices in this century, and beyond, are committing future generations to experiencing.
+
+<P>
+<b>JB</b>: That's a good point!  
+
+<P>
+I'd like to thank you right now for a wonderful interview, that really taught me &mdash; and I hope our readers &mdash; a huge amount about climate change and climate modelling.  I think we've basically reached the end here, but as the lights dim and the audience files out, I'd like to ask just a few more technical questions.
+
+<P>
+One of them was raised by David Tweed.  He pointed out that while you're &quot;training&quot; your model on climate data from the last 150 years or so, you're using it to predict the future in a world that will be different in various ways: a lot more CO<sub>2</sub> in the atmosphere, hotter, and so on.  So, you're extrapolating rather than interpolating, and that's a lot harder.  It seems especially hard if the collapse of the AMOC is a kind of &quot;tipping point&quot; &mdash; if it suddenly snaps off at some point, instead of linearly decreasing as some parameter changes.
+
+<P>
+This raises the question: why should we trust your model, or any model of this sort, to make such extrapolations correctly?  In the discussion after that comment, I think you said that ultimately it boils down to
+
+<P>
+1) whether you think you have the physics right, 
+
+<P>
+and 
+
+<P>
+2) whether you think the parameters change over time.
+
+<P>
+That makes sense.  So my question is: what are some of the best ways people could build on the work you've done, and make more reliable predictions about the AMOC?  There's a lot at stake here!
+
+<P>
+<b>NU</b>:  Our paper is certainly an early step in making probabilistic AMOC projections, with room for improvement.  I view the main points as (1) estimating how large the climate-related uncertainties may be within a given model, and (2) illustrating the difference between experiencing, and committing to, a climate change.  It's certainly not an end-all &quot;prediction&quot; of what will happen 300 years from now, taking into account all possible model limitations, economic uncertainties, etc.
+
+<P>
+To answer your question, the general ways to improve predictions are to improve the models, and/or improve the data constraints.  I'll discuss both.
+
+<P>
+Although I've argued that our simple box model reasonably reproduces the dynamics of the more complex model it was designed to approximate, that complex model itself isn't the best model available for the AMOC.  The problem with using complex climate models is that it's computationally impossible to run them millions of times.  My solution is to work with &quot;statistical emulators&quot;, which are  tools for building fast approximations to slow models.  The idea is to run the complex model a few times at different points in its parameter space, and then statistically interpolate the resulting outputs to predict what the model would have output at nearby points.  This works if the model output is a smooth enough function of the parameters, and there are enough carefully-chosen &quot;training&quot; points.
+
+<P>
+From an oceanographic standpoint, even current complex models are probably not wholly adequate (see the discussion at the end of &quot;<a href = "http://math.ucr.edu/home/baez/week304.html">week304</a>&quot;).  There is some debate about whether the AMOC becomes more stable as the resolution of the model increases.  On the other hand, people still have trouble getting the AMOC in models, and the related climate changes, to behave as abruptly as they apparently did during the Younger Dryas.  I think the range of current models is probably in the right ballpark, but there is plenty of room for improvement.  Model developers continue to refine their models, and ultimately, the reliability of any projection is constrained by the quality of models available.
+
+<P>
+Another way to improve predictions is to improve the data constraints.  It's impossible to go back in time and take better historic data, although with things like ice cores, it is possible to dig up new cores to analyze.  It's also possible to improve some historic &quot;data products&quot;.  For example, the ocean heat data is subject to a lot of interpolation of sparse measurements in the deep ocean, and one could potentially improve the interpolation procedure without going back in time and taking more data.  There are also various corrections being applied for known biases in the data-gathering instruments and procedures, and it's possible those could be improved too.
+
+<P>
+Alternatively, we can simply <i>wait</i>.  Wait for new and more precise data to become available.
+
+<P>
+But when I say &quot;improve the data constraints&quot;, I'm mostly talking about adding more of them, that I simply didn't include in the analysis, or looking at existing data in more detail (like spatial patterns instead of global averages).  For example, the ocean heat data mostly serves to constrain the vertical mixing parameter, controlling how quickly heat penetrates into the deep ocean.  But we can also look at the penetration of chemicals in the ocean (such carbon from fossil fuels, or chlorofluorocarbons).  This is also informative about how quickly water masses mix down to the ocean depths, and indirectly informative about how fast heat mixes.  I can't do that with my simple model (which doesn't have the ocean circulation of any of these chemicals in it), but I can with more complex models.
+
+<P>
+As another example, I could constrain the climate sensitivity parameter better with paleoclimate data, or more resolved spatial data (to try to, e.g., pick up the spatial fingerprint of industrial aerosols in the temperature data), or by looking at data sets informative about particular feedbacks (such as water vapor), or at satellite radiation budget data.
+
+<P>
+There is a lot of room for reducing uncertainties by looking at more and more data sets.  However, this presents its own problems.  Not only is this simply harder to do, but it runs more directly into limitations in the models and data.  For example, if I look at what ocean temperature data implies about a model's vertical mixing parameter, and what ocean chemical data imply, I might find that they imply two inconsistent values for the parameter!  Or that those data imply a different mixing than is implied by AMOC strength measurements.  This can happen if there are flaws in the model (or in the data).  We have some evidence from other work that there are circumstances in which this can happen:
+
+<P>
+&bull; A. Schmittner, N. M. Urban, K. Keller and D. Matthews, <a href="http://www.princeton.edu/~nurban/pubs/ocean-mixing-tracers.pdf">Using tracer observations to reduce the uncertainty of ocean diapycnal mixing and climate-carbon cycle projections</a>, <a href="http://dx.doi.org/10.1029/2008GB003421"><i>Global Biogeochemical Cycles</i></a> <b>23</b> (2009), GB4009.
+
+<P>
+&bull; M. Goes, N. M. Urban, R. Tonkonojenkov, M. Haran, and K. Keller, <a href = "http://www.princeton.edu/~nurban/pubs/ocean-mixing-cross-tracers.pdf">The skill of different ocean tracers in reducing uncertainties about projections of the Atlantic meridional overturning circulation</a>, <a href="http://dx.doi.org/10.1029/2010JC006407"><i>Journal of Geophysical Research &mdash; Oceans</i></a>, in press (2010).
+
+<P>
+How to deal with this, if and when it happens, is an open research challenge.  To an extent it depends on expert judgment about which model features and data sets are &quot;trustworthy&quot;.  Some say that expert judgment renders conclusions subjective and unscientific, but as a scientist, I say that such judgments are always applied!  You always weigh how much you trust your theories and your data when deciding what to conclude about them.
+
+<P>
+In my response I've so far ignored the part about parameters changing in time.  I think the hydrological sensitivity (North Atlantic freshwater input as a function of temperature) can change with time, and this could be improved by using a better climate model that includes ice and precipitation dynamics.  Feedbacks can fluctuate in time, but I think it's okay to treat them as a constant for long term projections.  Some of these parameters can also be spatially dependent (e.g., the respiration sensitivity in the carbon cycle).  I think treating them all as constant is a decent first approximation for the sorts of generic questions we're asking in the paper.  Also, all the parameter estimation methods I've described only work with static parameters.  For time varying parameters, you need to get into state estimation methods like <a href = "http://en.wikipedia.org/wiki/Kalman_filter">Kalman</a> or <a href = "http://en.wikipedia.org/wiki/Particle_filter">particle filters</a>.
+
+<P>
+<b>JB</b>: I also have another technical question, which is about the Markov chain Monte Carlo procedure.  You generate your cloud of points in 18-dimensional space by a procedure where you keep either jumping randomly to a nearby point, or staying put, according to that decision procedure you described.  Eventually this cloud fills out to a good approximation of the probability distribution you want.  But, how long is &quot;eventually&quot;?  You said you generated a million points.  But how do you know that's enough?
+
+<P>
+<b>NU</b>:  This is something of an art.  Although there is an asymptotic convergence theorem, there is no general way of knowing whether you've reached convergence.  First you check to see whether your chains &quot;look right&quot;.  Are they sweeping across the full range of parameter space where you expect significant probability? Are they able to complete many sweeps (thoroughly exploring parameter space)?  Is the Metropolis test accepting a reasonable fraction of proposed moves?  Do you have enough effective samples in your Markov chain?  (MCMC generates correlated random samples, so there are fewer &quot;effectively independent&quot; samples in the chain than there are total samples.)  Then you can do consistency checks:  start the chains at several different locations in parameter space, and see if they all converge to similar distributions.
+
+<P>
+If the posterior distribution shows, or is expected to show, a lot of correlation between parameters, you have to be more careful to ensure convergence.  You want to propose moves that carry you along the &quot;principal components&quot; of the distribution, so you don't waste time trying to jump away from the high probability directions.  (Roughly, if your posterior density is concentrated on some low dimensional manifold, you want to construct your way of moving around parameter space to stay near that manifold.)  You also have to be careful if you see, or expect, multimodality (multiple peaks in the probability distribution).  It can be hard for MCMC to move from one mode to another through a low-probability &quot;wasteland&quot;; it won't be inclined to jump across it.  There are more advanced algorithms you can use in such situations, if you suspect you have multimodality.  Otherwise, you might discover later that you only sampled one peak, and never noticed that there were others.
+
+<P>
+<b>JB</b>: Did you do some of these things when testing out the model in your paper?  Do you have any intuition for the &quot;shape&quot; of the probability distribution in 18-dimensional space that lies at the heart of your model?  For example: do you know if it has one peak, or several?
+
+<P>
+<b>NU</b>: I'm pretty confident that the MCMC in our analysis is correctly sampling the shape of the probability distribution.  I ran lots and lots of analyses, starting the chain in different ways, tweaking the proposal distribution (jumping rule), looking at different priors, different model structures, different data, and so on.
+
+<P>
+It's hard to &quot;see&quot; what an 18-dimensional function looks like, but we have 1-dimensional and 2-dimensional projections of it in our paper:
+
+<P>
+<div align = "center">
+<a href = "http://www.princeton.edu/~nurban/pubs/moc-projections.pdf#page=7">
+<img border = "none" src = "http://math.ucr.edu/home/baez/nathan_urban_parameter_probabilities.jpg">
+</a>
+</div>
+
+<P>
+<div align = "center">
+<a href = "http://www.princeton.edu/~nurban/pubs/moc-projections.pdf#page=8">
+<img border = "none" src = "http://math.ucr.edu/home/baez/nathan_urban_parameter_probabilities_2.jpg">
+</a>
+</div>
+
+<P>
+  I don't believe that it has multiple peaks, and I don't expect it to.  Multiple peaks usually show up when the model behavior is non-monotonic as a function of the parameters.  This can happen in really nonlinear systems (an with threshold systems like the AMOC), but during the historic period I'm calibrating the model to, I see no evidence of this in the model.
+
+<P>
+There are correlations between parameters, so there are certain &quot;directions&quot; in parameter space that the posterior distribution is oriented along.  And the distribution is not Gaussian.  There is evidence of skew, and nonlinear correlations between parameters.  Such correlations appear when the data are insufficient to completely identify the parameters (i.e., different combinations of parameters can produce similar model output).  This is discussed in more detail in another of our papers:
+
+<P>
+&bull; Nathan M. Urban and Klaus Keller, <a href = "http://www.princeton.edu/~nurban/pubs/cs-note.pdf">Complementary observational constraints on climate sensitivity</a>, <a href = "http://www.agu.org/pubs/crossref/2009/2008GL036457.shtml"><i>Geophysical Research Letters</i></a> <b>36</b> (2009), L04708.
+
+<P>
+In a Gaussian distribution, the distribution of any pair of parameters will look ellipsoidal, but our distribution has some &quot;banana&quot; or &quot;boomerang&quot; shaped pairwise correlations.  This is common, for example, when the model output is a function of the product of two parameters.
+
+<P>
+<b>JB</b>: Okay.  It's great that we got a chance to explore some of the probability theory and statistics underlying your work.  It's exciting for me to see these ideas being used to tackle a big real-life problem.   Thanks again for a great interview.
+
+<p>
+<HR><P>
+For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2010/11/05/this-weeks-finds-week-305/">Azimuth</a>.
+
+<p>
+<i>Maturity is the capacity to endure uncertainty.</i> - John Finley 
+<p>
+<HR><P>
+<!-- BEGIN FOOTER -->
+&#169; 2010  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<P>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week304.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week306.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->

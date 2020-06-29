@@ -1,0 +1,327 @@
+<TITLE> week303 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week302.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week304.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> September 30, 2010 </H4>
+<H2> This Week's Finds (Week 303) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+<P>
+Now for the second installment of my interview with <a href = "http://www.princeton.edu/~nurban/">Nathan Urban</a>, a colleague who started out in quantum gravity and now works on &quot;global climate change from an Earth system perspective, with an emphasis on Bayesian data-model calibration, probabilistic prediction, risk assessment, and decision analysis&quot;.
+
+<P>
+But first, a word about Bali.  One of the great things about living in Singapore is that it's close to a lot of interesting places.  My wife and I just spent <a href="http://math.ucr.edu/home/baez/diary/september_2010.html#september20_10">a week in Ubud</a>.  This town is the cultural capital of Bali &mdash; full of dance, music, and crafts.  It's also surrounded by astounding terraced rice paddies:
+
+<P>
+<div align = "center">
+<img border = "2" width="450" src="http://math.ucr.edu/home/baez/diary/bali/rice_fields_2.jpg">
+</div>
+
+<P>
+<div align = "center">
+<img border = "2" width="600" src="http://math.ucr.edu/home/baez/diary/bali/rice_fields_4.jpg">
+</div>
+
+<P>
+It's an astounding place.  In his book <i>Whole Earth Discipline</i>, Stewart Brand says &quot;one of the finest examples of beautifully nuanced ecosystem engineering is the thousand-year-old terraced rice irrigation complex in Bali&quot;.   
+
+<P>
+Indeed, when we took a long hike with a local guide, Made Dadug, we learned that that all the apparent &quot;weeds&quot; growing in luxuriant disarray near the rice paddies were in fact carefully chosen plants: cacao, coffee, taro, ornamental flowers, and so on.  &quot;See this bush?  It's citronella &mdash; people working on the fields grab a pinch and use it for mosquito repellent.&quot;  When a paddy loses its nutrients they plant sweet potatos there instead of rice, to restore the soil.
+
+<div align = "center">
+<img border = "2" width="450" src="http://math.ucr.edu/home/baez/diary/bali/rice_fields_1.jpg">
+</div>
+
+<p>
+Irrigation is managed by a system of local water temples, or &quot;subaks&quot;.   It's not a top-down hierarchy: instead, each subak makes decisions in a more or less democratic way, while paying attention to what neighboring subaks do.   Brand cites the work of <a href = "http://www.u.arizona.edu/~jlansing/J._Stephen_Lansing/Welcome.html">Steve Lansing</a> on this subject:
+
+<P>
+&bull; J. Stephen Lansing, <i>Perfect Order: Recognizing Complexity in Bali</i>, Princeton U. Press, Princeton, New Jersey, 2006.
+
+<P>
+Physicists interested in the spontaneous emergence of order will enjoy <a href = "http://press.princeton.edu/chapters/s8186.html">this passage</a>:
+
+<P>
+<blockquote>
+ This book began with a question posed by a colleague. In 1992 I gave a lecture at the <a href = "http://www.santafe.edu/">Santa Fe Institute</a>, a recently created research center devoted to the study of &quot;complex systems.&quot; My talk focused on a simulation model that my colleague <a href = "http://www.marinesciences.uconn.edu/faculty/faculty.php?users=jnk02003">James Kremer</a> and I had created to investigate the ecological role of water temples. I need to explain a little about how this model came to be built; if the reader will bear with me, the relevance will soon become clear.
+
+<P>
+Kremer is a marine scientist, a systems ecologist, and a fellow surfer. One day on a California beach I told him the story of the water temples, and of my struggles to convince the consultants that the temples played a vital role in the ecology of the rice terraces. I asked Jim if a simulation model, like the ones he uses to study coastal ecology, might help to clarify the issue. It was not hard to persuade him to come to Bali to take a look. Jim quickly saw that a model of a single water temple would not be very useful. The whole point about water temples is that they interact. Bali is a steep volcanic island, and the rivers and streams are short and fast. Irrigation systems begin high up on the volcanoes, and follow one after another at short intervals all the way to the seacoast. The amount of water each subak gets depends less on rainfall than on how much water is used by its upstream neighbors. Water temples provide a venue for the farmers to plan their irrigation schedules so as to avoid shortages when the paddies need to be flooded. If pests are a problem, they can synchronize harvests and flood a block of terraces so that there is nothing for the pests to eat. Decisions about water taken by each subak thus inevitably affect its neighbors, altering both the availability of water and potential levels of pest infestations.
+
+<P>
+Jim proposed that we build a simulation model to capture all of these processes for an entire watershed. Having recently spent the best part of a year studying just one subak, the idea of trying to model nearly two hundred of them at once struck me as rather ambitious. But as Jim pointed out, the question is not whether flooding can control pests, but rather whether the entire collection of temples in a watershed can strike an optimal balance between water sharing and pest control.
+
+<P>
+We set to work plotting the location of all 172 subaks lying between the Oos and Petanu rivers in central Bali. We mapped the rivers and irrigation systems, and gathered data on rainfall, river flows, irrigation schedules, water uptake by crops such as rice and vegetables, and the population dynamics of the major rice pests. With these data Jim constructed a simulation model. At the beginning of each year the artificial subaks in the model are given a schedule of crops to plant for the next twelve months, which defines their irrigation needs. Then, based on historic rainfall data, we simulate rainfall, river flow, crop growth, and pest damage. The model keeps track of harvest data and also shows where water shortages or pest damage occur. It is possible to simulate differences in rainfall patterns or the growth of different kinds of crops, including both native Balinese rice and the new rice promoted by the Green Revolution planners. We tested the model by simulating conditions for two cropping seasons, and compared its predictions with real data on harvest yields for about half the subaks. The model did surprisingly well, accurately predicting most of the variation in yields between subaks. Once we knew that the model's predictions were meaningful, we used it to compare different scenarios of water management. In the Green Revolution scenario, every subak tries to plant rice as often as possible and ignores the water temples. This produces large crop losses from pest outbreaks and water shortages, much like those that were happening in the real world. In contrast, the "water temple" scenario generates the best harvests by minimizing pests and water shortages.
+
+<P>
+Back at the Santa Fe Institute, I concluded this story on a triumphant note: consultants to the Asian Development Bank charged with evaluating their irrigation development project in Bali had written a new report acknowledging our conclusions. There would be no further opposition to management by water temples. When I finished my lecture, a researcher named Walter Fontana asked a question, the one that prompted this book: could the water temple networks self-organize? At first I did not understand what he meant by this. Walter explained that if he understood me correctly, Kremer and I had programmed the water temple system into our model, and shown that it had a functional role. This was not terribly surprising. After all, the farmers had had centuries to experiment with their irrigation systems and find the right scale of coordination. But what kind of solution had they found? Was there a need for a Great Designer or an Occasional Tinkerer to get the whole watershed organized? Or could the temple network emerge spontaneously, as one subak after another came into existence and plugged in to the irrigation systems? As a problem solver, how well could the temple networks do? Should we expect 10 percent of the subaks to be victims of water shortages at any given time because of the way the temple network interacts with the physical hydrology? Thirty percent? Two percent? Would it matter if the physical layout of the rivers were different? Or the locations of the temples?
+
+<P>
+Answers to most of these questions could only be sought if we could answer Walter's first large question: could the water temple networks self-organize? In other words, if we let the artificial subaks in our model learn a little about their worlds and make their own decisions about cooperation, would something resembling a water temple network emerge? It turned out that this idea was relatively easy to implement in our computer model. We created the simplest rule we could think of to allow the subaks to learn from experience. At the end of a year of planting and harvesting, each artificial subak compares its aggregate harvests with those of its four closest neighbors. If any of them did better, copy their behavior. Otherwise, make no changes. After every subak has made its decision, simulate another year and compare the next round of harvests. The first time we ran the program with this simple learning algorithm, we expected chaos. It seemed likely that the subaks would keep flipping back and forth, copying first one neighbor and then another as local conditions changed. But instead, within a decade the subaks organized themselves into cooperative networks that closely resembled the real ones.
+</blockquote>
+
+<P>
+Lansing describes how attempts to modernize farming in Bali in the 1970's proved problematic:
+
+<blockquote>
+To a planner trained in the social sciences, management by water temples looks like an arcane relic from the premodern era. But to an ecologist, the bottom-up system of control has some obvious advantages. Rice paddies are artificial aquatic ecosystems, and by adjusting the flow of water farmers can exert control over many ecological processes in their fields. For example, it is possible to reduce rice pests (rodents, insects, and diseases) by synchronizing fallow periods in large contiguous blocks of rice terraces. After harvest, the fields are flooded, depriving pests of their habitat and thus causing their numbers to dwindle. This method depends on a smoothly functioning, cooperative system of water management, physically embodied in proportional irrigation dividers, which make it possible to tell at a glance how much water is flowing into each canal and so verify that the division is in accordance with the agreed-on schedule. 
+
+<P>
+Modernization plans called for the replacement of these proportional dividers with devices called &quot;Romijn gates,&quot; which use gears and screws to adjust the height of sliding metal gates inserted across the entrances to canals. The use of such devices makes it impossible to determine how much water is being diverted: a gate that is submerged to half the depth of a canal does not divert half the flow, because the velocity of the water is affected by the obstruction caused by the gate itself. The only way to accurately estimate the proportion of the flow diverted by a Romijn gate is with a calibrated gauge and a table. These were not supplied to the farmers, although $55 million was spent to install Romijn gates in Balinese irrigation canals, and to rebuild some weirs and primary canals.
+
+<P>
+The farmers coped with the Romijn gates by simply removing them or raising them out of the water and leaving them to rust. 
+</blockquote>
+
+<P>
+On the other hand, Made said that the people village really appreciated this modern dam:
+
+<P>
+<div align = "center">
+<img border = "2" src="http://math.ucr.edu/home/baez/diary/bali/dam_1.jpg">
+</div>
+
+<P>
+Using gears, it takes a lot less effort to open and close than the old-fashioned kind:
+
+<P>
+<div align = "center">
+<img border = "2" src="http://math.ucr.edu/home/baez/diary/bali/dam_2.jpg">
+</div>
+
+<P>
+Later in this series of interviews we'll hear more about sustainable agriculture from Thomas Fischbacher.  
+
+<P>
+But now let's get back to Nathan!
+
+<P>
+<b>JB</b>:   Okay.   Last time we were talking about the things that altered your attitude about climate change when you started working on it.  And one of them was how carbon dioxide stays in the atmosphere a long time.  Why is that so important?  And is it even true?  After all, any given molecule of CO<sub>2</sub> that's in the air now will soon get absorbed by the ocean, or taken up by plants.
+
+<P>
+<b>NU</b>:  The longevity of atmospheric carbon dioxide is important because it determines the amount of time over which our actions now (fossil fuel emissions) will continue to have an influence on the climate, through the greenhouse effect.
+
+<P> 
+You have heard correctly that a given molecule of CO<sub>2</sub> doesn't stay in the atmosphere for very long.  I think it's about 5 years.  This is known as the residence time or turnover time of atmospheric CO<sub>2</sub>.  Maybe that molecule will go into the surface ocean and come back out into the air; maybe photosynthesis will bind it in a tree, in wood, until the tree dies and decays and the molecule escapes back to the atmosphere.  This is a carbon cycle, so it's important to remember that molecules can come back into the air even after they've been removed from it.
+
+<P>
+But the fate of an individual CO<sub>2</sub> molecule is not the same as how long it takes for the CO<sub>2</sub> content of the atmosphere to decrease back to its original level after new carbon has been added.  The latter is the answer that really matters for climate change.  Roughly, the former depends on the magnitude of the gross carbon sink, while the latter depends on the magnitude of the net carbon sink (the gross sink minus the gross source).
+
+<P>
+As an example, suppose that every year 100 units of CO<sub>2</sub> are emitted to the atmosphere from natural sources (organic decay, the ocean, etc.), and each year (say with a 5 year lag), 100 units are taken away by natural sinks (plants, the ocean, etc).   The 5 years actually doesn't matter here; the system is in steady-state equilibrium, and the amount of CO<sub>2</sub> in the air is constant.  Now suppose that humans add an extra 1 unit of CO<sub>2</sub> each year.  If nothing else changes, then the amount of carbon in the air will increase every year by 1 unit, indefinitely.  Far from the carbon being purged in 5 years, we end up with an arbitrarily large amount of carbon in the air.
+
+
+<P>
+Even if you only add carbon to the atmosphere for a finite time (e.g., by running out of fossil fuels), the CO<sub>2</sub> concentration will ultimately reach, and then perpetually remain at, a level equivalent to the amount of new carbon added.  Individual CO<sub>2</sub> molecules may still get absorbed within 5 years of entering the atmosphere, and perhaps fewer of the carbon atoms that were once in fossil fuels will ultimately remain in the atmosphere.  But if natural sinks are only removing an amount of carbon equal in magnitude to natural sources, and both are fixed in time, you can see that if you add extra fossil carbon the overall atmospheric CO<sub>2</sub> concentration can never decrease, regardless of what individual molecules are doing.
+
+<P>
+In reality, natural carbon sinks tend to grow in proportion to how much carbon is in the air, so atmospheric CO<sub>2</sub> doesn't remain elevated indefinitely in response to a pulse of carbon into the air.  This is kind of the biogeochemical analog to the &quot;Planck feedback&quot; in climate dynamics:  it acts to restore the system to equilibrium.  To first order, atmospheric CO<sub>2</sub> decays or &quot;relaxes&quot; exponentially back to the original concentration over time.  But this relaxation time (variously known as a &quot;response time&quot;, &quot;adjustment time&quot;, &quot;recovery time&quot;, or, confusingly, &quot;residence time&quot;) isn't a function of the residence time of a CO<sub>2</sub> molecule in the atmosphere.  Instead, it depends on how quickly the Earth's carbon removal processes react to the addition of new carbon.  For example, how fast plants grow, die, and decay, or how fast surface water in the ocean mixes to greater depths, where the carbon can no longer exchange freely with the atmosphere.  These are slower processes.
+
+
+<P>
+There are actually a variety of response times, ranging from years to hundreds of thousands of years.  The surface mixed layer of the ocean responds within a year or so; plants within decades to grow and take up carbon or return it to the atmosphere through rotting or burning.  Deep ocean mixing and carbonate chemistry operate on longer time scales, centuries to millennia.  And geologic processes like silicate weathering are even slower, tens of thousands of years.  The removal dynamics are a superposition of all these processes, with a fair chunk taken out quickly by the fast processes, and slower processes removing the remainder more gradually.
+
+<P>
+To summarize, as David Archer put it, &quot;The lifetime of fossil fuel CO<sub>2</sub> in the atmosphere is a few centuries, plus 25 percent that lasts essentially forever.&quot;  By &quot;forever&quot; he means &quot;tens of thousands of years&quot; &mdash; longer than the present age of human civilization.  This inspired him to write this pop-sci book, taking a geologic view of anthropogenic climate change:
+
+<P>
+&bull; David Archer, <i><a href = "http://press.princeton.edu/chapters/s8719.html">The Long Thaw: How Humans Are Changing the Next 100,000 Years of Earth's Climate</a></i>, Princeton University Press, Princeton, New Jersey, 2009.
+
+<P>
+A clear perspective piece on the lifetime of carbon is:
+
+<P>
+&bull; Mason Inman, <a href
+= "http://www.nature.com/climate/2008/0812/full/climate.2008.122.html"
+>Carbon is forever</a>, <i>Nature Reports Climate Change</i>, 20 November2008.
+
+<P>
+which is based largely on this review article:
+
+<P>
+&bull; David Archer, Michael Eby, Victor Brovkin, Andy Ridgwell, Long Cao, Uwe Mikolajewicz, Ken Caldeira, Katsumi Matsumoto, Guy Munhoven, Alvaro Montenegro, and Kathy Tokos, Atmospheric lifetime of fossil fuel carbon dioxide, <i><a href = "http://arjournals.annualreviews.org/doi/abs/10.1146/annurev.earth.031208.100206">Annual Review of Earth and Planetary Sciences</a></i> <b>37</b> (2009), 117-134.
+
+<P>
+For climate implications, see:
+
+<P>
+&bull; Susan Solomon, Gian-Kasper Plattner, Reto Knutti and Pierre Friedlingstein, <a href = "http://www.pnas.org/content/106/6/1704.full">Irreversible climate change due to carbon dioxide emissions</a>, <i>PNAS</i>
+<b>106</b> (2009), 1704-1709.
+
+<P>M. Eby, K. Zickfeld, A. Montenegro, D. Archer, K. J. Meissner and A. J. Weaver, Lifetime of anthropogenic climate change: millennial time scales of potential CO<sub>2</sub> and surface temperature perturbations, <a href = "http://journals.ametsoc.org/doi/abs/10.1175/2008JCLI2554.1"><i>Journal of Climate</i></a> <b>22</b> (2009), 2501-2511.
+
+<P>
+&bull; Long Cao and Ken Caldeira, <a href = "http://iopscience.iop.org/1748-9326/5/2/024011/fulltext">Atmospheric carbon dioxide removal: long-term consequences and commitment</a>, <i>Environmental Research Letters</i> <b>5</b
+> (2010), 024011.
+
+<P>
+For the very long term perspective (how CO<sub>2</sub> may affect the glacial-interglacial cycle over geologic time), see:
+
+<P>
+&bull; David Archer and Andrey Ganopolski, <a href = "http://geosci.uchicago.edu/~archer/reprints/archer.2005.trigger.pdf">A movable trigger: Fossil fuel CO<sub>2</sub> and the onset of the next glaciation</a>, <a href = "http://www.agu.org/journals/ABS/2005/2004GC000891.shtml"><i>Geochemistry Geophysics Geosystems</i></a> <b>6</b> (2005), Q05003.
+
+
+<P>
+<b>JB</b>: So, you're telling me that even if we do something really dramatic like cut fossil fuel consumption by half in the next decade, we're still screwed.  Global warming will keep right on, though at a slower pace.  Right?  Doesn't that make you feel sort of hopeless?
+
+<P> 
+<b>NU</b>: Yes, global warming will continue even as we reduce emissions, although more slowly.  That's sobering, but not grounds for total despair.  Societies can adapt, and ecosystems can adapt &mdash; up to a point.  If we slow the rate of change, then there is more hope that adaptation can help.  We will have to adapt to climate change, regardless, but the less we have to adapt, and the more gradual the adaptation necessary, the less costly it will be.
+
+<P>
+What's even better than slowing the rate of change is to reduce the overall amount of it.  To do that, we'd need to not only reduce carbon emissions, but to reduce them to zero before we consume all fossil fuels (or all of them that would otherwise be economically extractable).  If we emit the same total amount of carbon, but more slowly, then we will get the same amount of warming, just more slowly.  But if we ultimately leave some of that carbon in the ground and never burn it, then we can reduce the amount of final warming.  We won't be able to stop it dead, but even knocking a degree off the extreme scenarios would be helpful, especially if there are &quot;tipping points&quot; that might otherwise be crossed (like a threshold temperature above which a major ice sheet will disintegrate).
+
+<P>
+So no, I don't feel hopeless that we can, in principle, do something useful to mitigate the worst effects of climate change, even though we can't plausibly stop or reverse it on normal societal timescales.  But sometimes I do feel hopeless that we lack the public and political will to actually do so.  Or at least, that we will procrastinate until we start seeing extreme consequences, by which time it's too late to prevent them.  Well, it may not be too late to prevent future, even more extreme consequences, but the longer we wait, the harder it is to make a dent in the problem.
+
+<P>
+I suppose here I should mention the possibility of climate geoengineering, which is a proposed attempt to artificially counteract global warming through other means, such as reducing incoming sunlight with reflective particles in the atmosphere, or space mirrors.  That doesn't actually cancel all climate change, but it can negate a lot of the global warming.  There are many risks involved, and I regard it as a truly last-ditch effort if we discover that we really are &quot;screwed&quot; and can't bear the consequences.
+
+
+<P>
+There is also an extreme form of carbon cycle geoengineering, known as air capture and sequestration, which extracts CO<sub>2</sub> from the atmosphere and sequesters it for long periods of time.  There are various proposed technologies for this, but it's highly uncertain whether this can feasibly be done on the necessary scales.
+
+<P>
+<b>JB</b>: Personally, I think society will procrastinate until we see extreme climate changes.   Recently millions of Pakistanis were displaced by floods: a quarter of their country was covered by water.  We can't say for sure this was caused by global warming &mdash; but it's exactly the sort of thing we should expect.
+
+<P>
+But you'll notice, this disaster is nowhere near enough to make politicians talk about cutting fossil fuel usage!   It'll take a <i>lot</i> of disasters like this to really catch people's attention.  And by then we'll be playing a desperate catch-up game, while people in many countries are struggling to survive.  That won't be easy.  Just think how little attention the Pakistanis can spare for global warming right now.
+
+<P>
+Anyway, this is just my own cheery view.  But I'm not hopeless, because I think there's still a lot we can do to prevent a terrible situation from becoming even worse.  Since I don't think the human race will go extinct anytime soon, it would be silly to &quot;give up&quot;.
+
+<P>Now, you're just started a position at the Woodrow Wilson School at Princeton.  When I was an undergrad there, this school was the place for would-be diplomats.  What's a nice scientist like you doing in a place like this?  I see you're in the Program in Science, Technology and Environmental Policy, or &quot;<a href = "http://www.princeton.edu/step/">STEP program</a>&quot;.  Maybe it's too early for you to give a really good answer, but could you say a bit about what they do?
+
+<P>
+<b>NU</b>:  Let me pause to say that I don't know whether the Pakistan floods are &quot;exactly the sort of thing we should expect&quot; to happen to Pakistan, specifically, as a result of climate change.  Uncertainty in the attribution of individual events is one reason why people don't pay attention to them.  But it is true that major floods are examples of extreme events which could become more (or less) common in various regions of the world in response to climate change.
+
+<P>Returning to your question, the STEP program includes a number of scientists, but we are all focused on policy issues because the Woodrow Wilson School is for public and international affairs.  There are physicists who work on nuclear policy, ecologists who study environmental policy and conservation biology, atmospheric chemists who look at ozone and air pollution, and so on.  Obviously, climate change is intimately related to public and international policy.  I am mostly doing policy-relevant science but may get involved in actual policy to some extent.  The STEP program has ties to other departments such as Geosciences, interdisciplinary umbrella programs like the <a href = "http://www.princeton.edu/aos/">Atmospheric and Ocean Sciences</a> program and the <a href = "http://www.princeton.edu/pei/">Princeton Environmental Institute</a>, and NOAA's nearby <a href = "http://www.gfdl.noaa.gov/">Geophysical Fluid Dynamics Laboratory</a>, one of the world's leading climate modeling centers.
+
+<P>
+<b>JB</b>: How much do you want to get into public policy issues?  Your new boss, <a href = "http://www.princeton.edu/step/people/faculty/michael-oppenheimer/">Michael Oppenheimer</a>, used to work as chief scientist for the <a href = "http://www.edf.org/home.cfm">Environmental Defense Fund</a>.  I hadn't known much about them, but I've just been reading a book called <i>The Climate War</i
+>.  This book says a lot about the Environmental Defense Fund's role in getting the US to pass cap-and-trade legislation to reduce sulfur dioxide emissions.  That's quite an inspiring story!  Many of the same people then went on to push for legislation to reduce greenhouse gases, and of course that story is less inspiring, so far: no success yet.  Can you imagine yourself getting into the thick of these political endeavors?
+
+
+<P>
+<b>NU</b>:  No, I don't see myself getting deep into politics.  But I am interested in what we should be doing about climate change, specifically, the economic assessment of climate policy in the presence of uncertainties and learning.  That is, how hard should we be trying to reduce CO<sub>2</sub> emissions, accounting for the fact that we're unsure what climate the future will bring, but expect to learn more over time.  Michael is very interested in this question too, and the harder problem of &quot;negative learning&quot;:
+
+<P>
+&bull; Michael Oppenheimer, Brian C. O'Neill and Mort Webster, <a href = "http://www.princeton.edu/step/people/faculty/michael-oppenheimer/recent-publications/climatechange2008.pdf">Negative learning</a>, <a href = "http://www.springerlink.com/content/7uw8150573197707/"><i>Climatic Change</i></a> <b>89</b> (2008), 155-172.
+
+<P>
+&quot;Negative learning&quot; occurs if what we think we're learning is actually converging on the wrong answer.  How fast could we detect and correct such an error?  It's hard enough to give a solid answer to what we might expect to learn, let alone what we don't expect to learn, so I think I'll start with the former.
+
+<P> I am also interested in the value of learning.  How will our policy change if we learn more?  Can there be any change in near-term policy recommendations, or will we learn slowly enough that new knowledge will only affect later policies?  Is it more valuable &mdash; in terms of its impact on policy &mdash; to learn more about the most likely outcomes, or should we concentrate on understanding better the risks of the worst-case scenarios?  What will cause us to learn the fastest?  Better surface temperature observations?  Better satellites?  Better ocean monitoring systems?  What observables should they we looking at?
+
+<P>
+The question &quot;How much should we reduce emissions&quot; is, partially, an economic one.  The safest course of action from the perspective of climate impacts is to immediately reduce emissions to a much lower level.  But that would be ridiculously expensive.  So some kind of cost-benefit approach may be helpful:  what should we do, balancing the costs of emissions reductions against their climate benefits, knowing that we're uncertain about both.  I am looking at so-called &quot;economic integrated assessment&quot; models, which combine a simple model of the climate with an even simpler model of the world economy to understand how they influence each other.  Some argue these models are too simple.  I view them more as a way of getting order-of-magnitude estimates of the relative values of different uncertainty scenarios or policy options under specified assumptions, rather than something that can give us &quot;The Answer&quot;
+ to what our emissions targets should be.
+
+
+<P>
+In a certain sense it may be moot to look at such cost-benefit analyses, since there is a huge difference between &quot;what may be economically optimal for us to do&quot; and &quot;what we will actually do&quot;.  We have not yet approached current policy recommendations, so what's the point of generating new recommendations?  That's certainly a valid argument, but I still think it's useful to have a sense of the gap between what we are doing and what we &quot;should&quot; be doing.
+
+<P>
+Economics can only get us so far, however (and maybe not far at all).  Traditional approaches to economics have a very narrow way of viewing the world, and tend to ignore questions of ethics.  How do you put an economic value on biodiversity loss?  If we might wipe out polar bears, or some other species, or a whole lot of species, how much is it &quot;worth&quot; to prevent that?  What is the Great Barrier Reef worth?  Its value in tourism dollars?  Its value in &quot;ecosystem services&quot; (the more nebulous economic activity which indirectly depends on its presence, such as fishing)?  Does it have intrinsic value, and is worth something (what?) to preserve, even if it has no quantifiable impact on the economy whatsoever?
+
+
+<P>
+You can continue on with questions like this.  Does it make sense to apply standard economic discounting factors, which effectively value the welfare of future generations less than that of the current generation?  See for example:
+
+<P>
+&bull; John Quiggin, <a href = "http://johnquiggin.com/wp-content/uploads/2006/12/sternreviewed06121.pdf">Stern and his critics on discounting and climate change: an editorial essay</a>, <a href = "http://www.springerlink.com/content/c54750522l92k533/"><i>Climatic Change</i></a> <b>89</b
+> (2008), 195-205.
+
+<P>
+Economic models also tend to preserve present economic disparities.  Otherwise, their &quot;optimal&quot; policy is to immediately transfer a lot of the wealth of developed countries to developing countries &mdash; and this is <em>without</em> any climate change &mdash; to maximize the average &quot;well-being&quot; of the global population, on the grounds that a dollar is worth more to a poor person than a rich person.  This is not a realistic policy and arguably shouldn't happen anyway, but you do have to be careful about hard-coding potential inequities into your models:
+
+
+<P>
+&bull; Seth D. Baum and William E. Easterling, Space-time discounting in climate change adaptation, <a href = "http://www.springerlink.com/content/y76573t7n2386576/"><i>Mitigation and Adaptation Strategies for Global Change</i></a> <b>15</b> (2010), 591-609.
+
+<P>
+More broadly, it's possible for economics models to allow sea level rise to wipe out Bangladesh, or other extreme scenarios, simply because some countries have so little economic output that it doesn't &quot;matter&quot; if they disappear, as long as other countries become even more wealthy.  As I said, economics is a narrow lens.
+
+<P>
+After all that, it may seem silly to be thinking about economics at all.  The main alternative is the &quot;precautionary principle&quot;, which says that we shouldn't take suspected risks unless we can prove them safe.  After all, we have few geologic examples of CO<sub>2</sub> levels rising as far and as fast as we are likely to increase them &mdash; to paraphrase Wally Broecker, we are conducting an uncontrolled and possibly unprecedented experiment on the Earth.  This principle has some merits.  The common argument, &quot;We should do nothing unless we can prove the outcome is disastrous&quot;, is a strange burden of proof from a decision analytic point of view &mdash; it has little to do with the realities of risk management under uncertainty.  Nobody's going to say &quot;You can't prove the bridge will collapse, so let's build it&quot;.  They're going to say &quot;Prove it's safe (to within a certain guarantee) before we build it&quot;.  Actually, a better analogy to the common argument might be:  you're driving in the dark with broken headlights, and insist "You'll have to prove there are no cliffs in front of me before I'll consider slowing down."  In reality, people should slow down, even if it makes them late, unless they know there are no cliffs.
+
+<P>
+But the precautionary principle has its own problems.  It can imply arbitrarily expensive actions in order to guard against arbitrarily unlikely hazards, simply because we can't prove they're safe, or precisely quantify their exact degree of unlikelihood.  That's why I prefer to look at quantitative cost-benefit analysis in a probabilistic framework.  But it can be supplemented with other considerations.  For example, you can look at stabilization scenarios:  where you &quot;draw a line in the sand&quot; and say we can't risk crossing that, and apply economics to find the cheapest way to avoid crossing the line.  Then you can elaborate that to allow for some small but nonzero probability of crossing it, or to allow for temporary &quot;overshoot&quot;, on the grounds that it might be okay to briefly cross the line, as long as we don't stay on the other side indefinitely.  You can tinker with discounting assumptions and the decision framework of expected utility maximization.  And so on.
+
+<P>
+<b>JB</b>: This is fascinating stuff.  You're asking a lot of really important questions &mdash; I think I see about 17 question marks up there.  Playing the devil's advocate a bit, I could respond: do you known any answers?   Of course I don't expect &quot;ultimate&quot; answers, especially to profound questions like how much we should allow economics to guide our decision, versus tempering it with other ethical considerations.  But it would be nice to see an example where thinking about these issues turned up new insights that actually changed people's behavior.  Cases where someone said &quot;Oh, I hadn't thought of that...&quot;, and then did something different that had a real effect.
+
+
+<P>
+You see, right now the world as it is seems so far removed from the world as it should be that one can even start to doubt the usefulness of pondering the questions you're raising.  As you said yourself, &quot;We're not yet even coming close to current policy recommendations, so what's the point of generating new recommendations?&quot;
+
+<P>
+I think the cap-and-trade idea is a good example, at least as far as sulfur dioxide emissions go: the Clean Air Act Amendments of 1990 managed to reduce SO2 emissions in the US from about 19 million tons in 1980 to about 7.6 million tons in 2007.  Of course this idea is actually a bunch of different ideas that need to work together in a certain way... but anyway, some example related to global warming would be a bit more reassuring, given our current problems with that.
+
+<P>
+<b>NU</b>:  Climate change economics has been very influential in generating momentum for putting a price on carbon (through cap-and-trade or otherwise), in Europe and the U.S., in showing that such policy had the potential to be a net benefit considering the risks of climate change.  SO2 emissions markets are one relevant piece of this body of research, although the CO2 problem is much bigger in scope and presents more problems for such approaches.  Climate economics has been an important synthesis of decision analysis and scientific uncertainty quantification, which I think we need more of.  But to be honest, I'm not sure what immediate impact additional economic work may have on mitigation policy, unless we begin approaching current emissions targets.  So from the perspective of immediate applications, I also ponder the usefulness of answering these questions.
+
+<P>
+That, however, is not the only perspective I think about.  I'm also interested in how what we should do is related to what we might learn &mdash; if not today, then in the future.  There are still important open questions about how well we can see something potentially bad coming, the answers to which could influence policies.  For example, if a major ice sheet begins to substantially disintegrate within the next few centuries, would we be able to see that coming soon enough to step up our mitigation efforts in time to prevent it?  In reality that's a probabilistic question, but let's pretend it's a binary outcome.  If the answer is &quot;yes&quot;, that could call for increased investment in &quot;early warning&quot; observation systems, and a closer coupling of policy to the data produced by such systems.  (Well, we should be investing more in those anyway, but people might get the point more strongly, especially if research shows that we'd only see it coming if we get those systems in place and tested soon.)  If the answer is &quot;no&quot;, that could go at least three ways.  One way it could go is that the precautionary principle wins:  if we think that we could put coastal cities under water, and we wouldn't see it coming in time to prevent it, that might finally prompt more preemptive mitigation action.  Another is that we start looking more seriously at last-ditch geoengineering approaches, or carbon air capture and sequestration.  Or, if people give up on modifying the climate altogether, then it could prompt more research and development into adaptation.  All of those outcomes raise new policy questions, concerning how much of what policy response we should aim for.
+
+
+<P>
+Which brings me to the next policy option.  The U.S. presidential science advisor, <a href = "http://en.wikipedia.org/wiki/John_Holdren">John Holdren</a>, has said that we have three choices for climate change:  mitigate, adapt, or suffer.  Regardless of what we do about the first, people will likely be doing some of the other two; the question is how much.  If you're interested in research that has a higher likelihood of influencing policy in the near term, adaptation is probably what you should work on.  (That, or technological approaches like climate/carbon geoengineering, energy systems, etc.)  People are already looking very seriously at adaptation (and in some cases are already putting plans into place).  For example, the Port Authority of Los Angeles needs to know whether, or when, to fortify their docks against sea level rise, and whether a big chunk of their business could disappear if the Northwest Passage through the Arctic Ocean opens permanently.  They have to make these investment decisions regardless of what may happen with respect to geopolitical emissions reduction negotiations.  The same kinds of learning questions I'm interested in come into play here:  what will we know, and when, and how should current decisions be structured knowing that we will be able to periodically adjust those decisions?
+
+<P>
+So, why am I not working on adaptation?  Well, I expect that I will be, in the future.  But right now, I'm still interested in a bigger question, which is how well can we bound the large risks and our ability to prevent disasters, rather than just finding the best way to survive them.  What is the best and the worst that can happen, in principle?  Also, I'm concerned that right now there is too much pressure to develop adaptation policies to a level of detail which we don't yet have the scientific capability to develop.  While global temperature projections are probably reasonable within their stated uncertainty ranges, we have a very limited ability to predict, for example, how precipitation may change over a particular city.  But that's what people want to know.  So scientists are trying to give them an answer.  But it's very hard to say whether some of those answers right now are actionably credible.  You have to choose your problems carefully when you work in adaptation.  Right now I'm opting to look at sea level rise, partly because it is less affected by the some of the details of local meteorology.
+
+<P>
+<b>JB:</b> Interesting.  I think I'm going to cut our conversation here, because at this point it took a turn that will really force me to do some reading!  And it's going to take a while.  But it should be fun!
+
+<P>
+<HR>
+<P>
+For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2010/09/09/this-weeks-finds-week-302/">Azimuth</a>.
+
+<p>
+<em>The climatic impacts of releasing fossil fuel CO<sub>2</sub> to the atmosphere will last longer than Stonehenge, longer than time capsules, longer than nuclear waste, far longer than the age of human civilization so far.</em> - David Archer
+
+<P>
+<HR>
+<P>
+<!-- BEGIN FOOTER -->
+&#169; 2010  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<P>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week302.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week304.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->

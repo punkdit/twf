@@ -1,0 +1,291 @@
+<TITLE> week312 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week311.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week313.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> March 14, 2011 </H4>
+<H2> This Week's Finds (Week 312) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+This is the second part of my interview with <a href = "http://yudkowsky.net/">Eliezer Yudkowsky</a>.  If you click on some technical terms here, you'll go down to a section where I explain them. 
+
+<p>
+<b>JB</b>: You've made a great case for working on artificial intelligence&mdash;and more generally, understanding how intelligence works, to figure out how we can improve it.  It's especially hard to argue against studying rationality.  Even most people who doubt computers will ever get smarter will admit the possibility that people can improve.  And it seems clear that the almost every problem we face could benefit from better thinking.
+
+<p>
+I'm intrigued by the title <i>The Art of Rationality</i> because it suggests that there's a kind of art to it.  We don't know how to teach someone to be a great artist, but maybe we can teach them to be a better artist.  So, what are some of the key principles when it comes to thinking better?
+
+<p>
+<b>EY</b>: Stars above, what an open-ended question.  The idea behind the book is to explain all the drop-dead basic fundamentals that almost no one seems to know about, like what is evidence, what is simplicity, what is truth, the importance of actually changing your mind now and then, the major known <a href = "#Cognitive Bias">cognitive biases</a> that stop people from changing their minds, what it means to live in a universe where things are made of parts, and so on.  This is going to be a book primarily aimed at people who are not completely frightened away by complex mathematical concepts such as addition, multiplication, and division (i.e., all you need to understand <a href = "#Bayes' Theorem">Bayes' Theorem</a> if it's explained properly), albeit with the whole middle of the book being just practical advice based on cognitive biases for the benefit of people who don't want to deal with multiplication and division.   Each chapter is going to address a different aspect of rationality, not in full textbook detail, just enough to convey the sense of a concept, with each chapter being around 5-10,000 words broken into 4-10 bite-size sections of 500-2000 words each.  Which of the 27 currently planned book chapters did you want me to summarize?
+
+<p>
+But if I had to pick just one thing, just one concept that's most important, I think it would be the difference between rationality and rationalization.
+
+<p>
+Suppose there's two boxes, only one of which contains a diamond.  And on the two boxes there are various signs and portents which distinguish, imperfectly and probabilistically, between boxes which contain diamonds, and boxes which don't.  I could take a sheet of paper, and I could write down all the signs and portents that I understand, and do my best to add up the evidence, and then on the bottom line I could write, &quot;And therefore, there is a 37% probability that Box A contains the diamond.&quot;  That's rationality.  Alternatively, I could be the owner of Box A, and I could hire a clever salesman to sell Box A for the highest price he can get; and the clever salesman starts by writing on the bottom line of his sheet of paper, &quot;And therefore, Box A contains the diamond&quot;, and then he writes down all the arguments he can think of on the lines above.
+
+<p>
+But consider:  At the moment the salesman wrote down the bottom line on that sheet of paper, the truth or falsity of the statement was fixed.  It's already right or already wrong, and writing down arguments on the lines above isn't going to change that.  Or if you imagine a spread of probable worlds, some of which have different boxes containing the diamond, the <i>correlation</i> between the ink on paper and the diamond's location became fixed at the moment the ink was written down, and nothing which doesn't change the ink or the box is going to change that correlation.
+
+<p>
+That's &quot;rationalization&quot;, which should really be given a name that better distinguishes it from rationality, like &quot;anti-rationality&quot; or something.  It's like calling lying &quot;truthization&quot;.  You can't make rational what isn't rational to start with.
+
+<p>
+Whatever process your brain uses, in reality, to decide what you're going to argue for, that's what determines your real-world effectiveness.  Rationality isn't something you can use to argue for a side you already picked.  Your only chance to be rational is while you're still choosing sides, before you write anything down on the bottom line.  If I had to pick one concept to convey, it would be that one.
+
+<p>
+<b>JB</b>: Okay.  I wasn't really trying to get you to summarize a whole book.  I've seen you explain a whole lot of heuristics designed to help us be more rational.  So I was secretly wondering if the &quot;art of rationality&quot; is mainly a long list of heuristics, or whether you've been able to find a few key principles that somehow spawn all those heuristics.
+
+<p>
+Either way, it could be a tremendously useful book.  And even if you could distill the basic ideas down to something quite terse, in practice people are going to need all those heuristics&mdash;especially since many of them take the form &quot;here's something you tend to do without noticing you're doing it&mdash;so watch out!&quot;  If we're saddled with dozens of <a href = "#Cognitive Bias">cognitive biases</a> that we can only overcome through strenuous effort, then your book has to be long.  You can't just say &quot;apply Bayes' rule and all will be well.&quot;
+
+<p>
+I can see why you'd single out the principle that &quot;rationality only comes into play before you've made up your mind&quot;, because so much seemingly rational argument is really just a way of bolstering support for pre-existing positions.  But what is rationality? Is it something with a simple essential core, like &quot;updating probability estimates according to Bayes' rule&quot;, or is its very definition inherently long and complicated?
+
+<p>
+<b>EY</b>:  I'd say that there are parts of rationality that we do understand very well in principle.  <a href = "#Bayes' Theorem">Bayes' Theorem</a>, the <a href = "#Expected Utility">expected utility formula</a>, and <a href = "#Solomonoff Induction">Solomonoff induction</a> between them will get you quite a long way.  Bayes' Theorem says how to update based on the evidence, Solomonoff induction tells you how to assign your priors (in principle, it should go as the <a href = "#Kolmogorov Complexity">Kolmogorov complexity</a> aka algorithmic complexity of the hypothesis), and then once you have a function which predicts what will probably happen as the result of different actions, the expected utility formula says how to choose between them.
+
+<p>
+Marcus Hutter</a> has a formalism called <a href = "#AIXI">AIXI</a> which combines all three to write out an AI as a <href = "http://www.hutter1.net/ai/uaibook.htm#oneline">single equation</a> which requires infinite computing power plus a <a href = "#Halting Oracle">halting oracle</a> to run.  And Hutter and I have been debating back and forth for quite a while on which AI problems are or aren't solved by AIXI.  For example, I look at the equation as written and I see that AIXI will try the experiment of dropping an anvil on itself to resolve its uncertainty about what happens next, because the formalism as written invokes a sort of Cartesian dualism with AIXI on one side of an impermeable screen and the universe on the other; the equation for AIXI says how to predict sequences of percepts using Solomonoff induction, but it's too simple to encompass anything as reflective as &quot;dropping an anvil on myself will destroy that which is processing these sequences of percepts&quot;.  At least that's what I claim; I can't actually remember whether Hutter was agreeing with me about that as of our last conversation.  Hutter sees AIXI as important because he thinks it's a theoretical solution to almost all of the important problems; I see AIXI as important because it demarcates the line between things that we understand in a fundamental sense and a whole lot of other things we don't.
+
+<p>
+So there are parts of rationality&mdash;big, important parts too&mdash;which we know how to derive from simple, compact principles in the sense that we could write very simple pieces of code which would behave rationally along that dimension given unlimited computing power.
+
+<p>
+But as soon as you start asking &quot;How can <i>human beings</i> be more rational?&quot; then things become hugely more complicated because human beings make much more complicated errors that need to be patched on an individual basis, and asking &quot;How can I be rational?&quot; is only one or two orders of magnitude simpler than asking &quot;How does the brain work?&quot;, i.e., you <i>can</i> hope to write a single book that will cover many of the major topics, but not quite answer it in an interview question...
+
+<p>
+On the other hand, the question &quot;What is it that I am <i>trying to do</i>, when I try to be rational?&quot; is a question for which big, important chunks can be answered by saying &quot;Bayes' Theorem&quot;, &quot;expected utility formula&quot; and &quot;simplicity prior&quot; (where Solomonoff induction is the canonical if uncomputable simplicity prior).
+
+<p>
+At least from a mathematical perspective.  From a human perspective, if you asked &quot;What am I trying to do, when I try to be rational?&quot; then the fundamental answers would run more along the lines of &quot;Find the truth without flinching from it and without flushing all the arguments you disagree with out the window&quot;, &quot;When you don't know, try to avoid just making stuff up&quot;, &quot;Figure out whether the strength of evidence is great enough to support the weight of every individual detail&quot;, &quot;Do what should lead to the best consequences, but not just what looks on the immediate surface like it should lead to the best consequences, you may need to follow extra rules that compensate for known failure modes like shortsightedness and moral rationalizing&quot;...
+
+<p>
+<b>JB</b>:  Fascinating stuff!
+
+<p>
+Yes, I can see that trying to improve humans is vastly more complicated than designing a system from scratch... but also very exciting, because you can tell a human a high-level principle like &quot; &quot;When you don't know, try to avoid just making stuff up&quot; and have some slight hope that they'll understand it without it being explained in a mathematically precise way.
+
+<p>
+I guess AIXI dropping an anvil on itself is a bit like some of the self-destructive experiments that parents fear their children will try, like sticking a pin into an electrical outlet.  And it seems impossible to avoid doing such experiments without having a base of knowledge that was either &quot;built in&quot; or acquired by means of previous experiments.
+
+<p>
+In the latter case, it seems just a matter of luck that none of these previous experiments were fatal.  Luckily, people also have &quot;built in&quot; knowledge.  More precisely, we have access to our ancestor's knowledge and habits, which get transmitted to us genetically and culturally.  But still, a fair amount of random blundering, suffering, and even death was required to build up that knowledge base.
+
+<p>
+So when you imagine &quot;seed AIs&quot; that keep on improving themselves and eventually become smarter than us, how can you reasonably hope that they'll avoid making truly spectacular mistakes?   How can they learn really new stuff without a lot of risk?
+
+<p>
+<b>EY</b>:  The best answer I can offer is that they can be conservative
+externally and deterministic internally.
+
+<p>
+Human minds are constantly operating on the ragged edge of error, because we have evolved to compete with other humans.  If you're a bit more conservative, if you double-check your calculations, someone else will grab the banana and that conservative gene will not be passed on to descendants.  Now this does not mean we couldn't end up in a bad situation with AI companies competing with each other, but there's at least the <i>opportunity</i> to do better.  
+
+<p>
+If I recall correctly, the Titanic sank from managerial hubris and cutthroat cost competition, not engineering hubris.  The original liners were designed far more conservatively, with triple-redundant compartmentalized modules and soon.  But that was before cost competition took off, when the engineers could just add on safety features whenever they wanted.  The part about the Titanic being extremely safe was pure marketing literature. 
+
+<p>
+There is also no good reason why any machine mind should be overconfident the way that humans are.  There are studies showing that, yes, managers prefer subordinates who make overconfident promises to subordinates who make accurate promises&mdash;sometimes I still wonder that people are this silly, but given that people are this silly, the social pressures and evolutionary pressures follow.  And we have <i>lots</i> of studies showing that, for whatever reason, humans are hugely overconfident; less than half of students finish their papers by the time they think it 99% probable they'll get done, etcetera.
+
+<p>
+And this is a form of stupidity an AI can simply do without.  Rationality is not omnipotent; a <a href = "#Bounded rationality">bounded rationalist</a> cannot do all things.  But there is no reason why a bounded rationalist should ever have to <i>overpromise</i>, be systematically overconfident, systematically tend to claim it can do what it can't.  It does not have to systematically underestimate the value of getting more information, or overlook the possibility of unspecified <a href = "#Black Swan">Black Swans</a> and what sort of general behavior helps to compensate.  (A bounded rationalist <i>does</i> end up overlooking specific Black Swans because it doesn't have enough computing power to think of all <i>specific</i> possible catastrophes.)
+
+<p>
+And contrary to how it works in say Hollywood, even if an AI does manage to accidentally kill a human being, that doesn't mean it's going to go "I HAVE KILLED" and dress up in black and start shooting nuns from rooftops.  What it ought to do&mdash;what you'd want to see happen&mdash;would be for the utility function to go on undisturbed, and for the probability distribution to update based on whatever unexpected thing just happened and contradicted its old hypotheses about what does and does not kill humans.  In other words, keep the same goals and say "oops" on the world-model; keep the same terminal values and revise its instrumental policies.  These sorts of external-world errors are not catastrophic unless they can actually wipe out the planet in one shot, somehow.
+
+<p>
+The catastrophic sort of error, the sort you can't recover from, is an error in modifying your own source code.  If you accidentally change your utility function you will no longer <i>want</i> to change it back.  And in this case you might indeed ask, &quot;How will an AI make millions or billions of code changes to itself without making a mistake like that?&quot;  But there are in fact methods powerful enough to do a billion error-free operations.  A friend of mine once said something along the lines of &quot;a CPU does a mole of transistor operations, error-free, in a day&quot; though I haven't checked the numbers.  When chip manufacturers are building a machine with hundreds of millions of interlocking pieces and they don't want to have to change it after it leaves the factory, they may go so far as to prove the machine correct, using human engineers to navigate the proof space and suggest lemmas to prove (which AIs can't do, they're defeated by the exponential explosion) and complex theorem-provers to prove the lemmas (which humans would find boring) and simple verifiers to check the generated proof.  It takes a combination of human and machine abilities and it's extremely expensive.  But I strongly suspect that an Artificial General Intelligence with a good design would be able to treat <i>all</i> its code that way&mdash;that it would combine all those abilities in a single mind, and find it easy and natural to prove theorems about its code changes.  It could not, of course, prove theorems about the external world (at least not without highly questionable assumptions).  It could not prove external actions correct.  The only thing it could write proofs about would be events inside the highly deterministic
+environment of a CPU&mdash;that is, its own thought processes.  But it could prove that it was processing probabilities about those actions in a Bayesian way, and prove that it was assessing the probable consequences using a particular utility function.  It could prove that it was sanely trying to achieve the same goals.
+
+<p>
+A self-improving AI that's unsure about whether to do something ought to just wait and do it later after self-improving some more.  It doesn't have to be overconfident.  It doesn't have to operate on the ragged edge of failure.  It doesn't have to stop gathering information too early, if more information can be productively gathered before acting.  It doesn't have to fail to understand the concept of a Black Swan.  It doesn't have to do all this using a broken error-prone brain like a human one.  It doesn't have to be stupid in the ways like overconfidence that humans seem to have specifically evolved to be stupid.  It doesn't have to be poorly calibrated (assign 99% probabilities that come true less that 99 out of 100 times), because bounded rationalists can't do everything but they don't have to claim what they can't do.  It can <i>prove</i> that its self-modifications aren't making itself crazy or changing its goals, at least if the transistors work as specified, or make no more than any possible combination of 2 errors, etc.  And if the worst does happen, so long as there's still a world left afterward, it will say &quot;Oops&quot; and not do it again.  This sounds to me like essentially the optimal scenario given any sort of bounded rationalist whatsoever.
+
+<p>
+And finally, if I was building a self-improving AI, I wouldn't ask it to operate heavy machinery until after it had grown up.  Why should it?
+
+<p>
+<b>JB</b>: Indeed!  
+
+<p>Okay&mdash;I'd like to take a break here, explain some terms you used, and pick up next week with some less technical questions, like <i>what's a better use of time: tackling environmental problems, or trying to prepare for a technological singularity?</i>
+
+
+<h4>Some explanations</h4>
+
+<p>
+Here are some quick explanations.  If you click on the links here you'll get more details:
+
+<ul>
+<li>
+<a name = "Cognitive Bias"><b>Cognitive Bias</b></a>.  A <a href = "http://en.wikipedia.org/wiki/Cognitive_bias">cognitive bias</a> is a way in which people's judgements systematically deviate from some norm&mdash;for example, from ideal rational behavior.  You can see a <a href = "http://en.wikipedia.org/wiki/List_of_cognitive_biases">long list of cognitive biases</a> on Wikipedia.  It's good to know a lot of these and learn how to spot them in yourself and your friends.  
+
+<p>
+For example, <a href = "http://en.wikipedia.org/wiki/Confirmation_bias">confirmation bias</a> is the tendency to pay more attention to information that confirms our existing beliefs.  Another great example is the <a href = "http://en.wikipedia.org/wiki/Bias_blind_spot">bias blind spot</a>: the tendency for people to think of themselves as less cognitively biased than average!  I'm sure glad I don't suffer from <i>that</i>.
+<p>
+</li>
+<li>
+<a name = "Bayes' Theorem"><b>Bayes' Theorem</b></a>.  <a href = "http://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' Theorem</a> is a rule for updating our opinions about probabilities when we get new information.  Suppose you start out thinking the probability of some event A is P(A), and the probability of some event B is P(B).  Suppose P(A|B) is the probability of event A <i>given</i> that B happens.  Likewise, suppose P(B|A) is the probability of B given that A happens.  Then the probability that both A and B happen is
+<p>
+P(A|B) P(B)
+<p>
+but by the same token it's also
+<p>
+P(B|A) P(A)
+<p>
+so these are equal.  A little algebra gives Bayes' Theorem:
+<p>
+P(A|B) = P(B|A) P(A)/P(B)
+<p>
+If for some reason we know everything on the right-hand side, we can this equation to work out P(A|B), and thus update our probability for event A when we see event B happen.
+<p>
+For a longer explanation with examples, see:
+<p>
+<ul>
+<li>
+Eliezer Yudkowsky, <a href = "http://yudkowsky.net/rational/bayes">An intuitive explanation of Bayes' Theorem</a>.  
+</li>
+</ul>
+<p>
+Some handy jargon: we call P(A) the <b>prior</b> probability of A, and P(A|B) the <b>posterior</b> probability.   
+<p>
+</li>
+<li>
+<a name = "Solomonoff Induction"><b>Solomonoff Induction</b></a>.  Bayes' Theorem helps us compute posterior probabilities, but where do we get the prior probabilities from?  How can we guess probabilities before we've observed anything? 
+<p>
+This famous puzzle led Ray Solomonoff to invent <a href = "http://en.wikipedia.org/wiki/Inductive_inference">Solomonoff induction</a>.  The key new idea is <a href = "http://www.scholarpedia.org/article/Algorithmic_probability">algorithmic probability theory</a>.  This is a way to define a probability for any string of letters in some alphabet, where a string counts as more probable if it's less complicated.  If we think of a string as a &quot;hypothesis&quot;&mdash;it could be a sentence in English, or an equation&mdash;this becomes a way to formalize <a href = "http://en.wikipedia.org/wiki/Occam%27s_razor">Occam's razor</a>: the idea that given two competing hypotheses, the simpler one is more likely to be true. 
+<p>
+So, algorithmic probability lets us define a prior probability distribution on hypotheses, the so-called &quot;simplicity prior&quot;, that implements Occam's razor.
+<p>
+More precisely, suppose we have a special programming language where:
+<ol>
+<li> Computer programs are written as strings of bits.
+<p>
+</li>
+<li>They contain a special bit string meaning "END" at the end, 
+and nowhere else.
+<p>
+</li>
+<li>
+They don't take an input: they just run and either halt and print out a string of letters, or never halt.
+<p>
+</li>
+
+</li>
+</ol>
+Then to get the algorithmic probability of a string of letters, we take all programs that print out that string and add up
+<p>
+<div align = "center">
+2<sup>-length of program</sup>
+<p>
+</div>
+So, you can see that a string counts as more probable if it has more short programs that print it out.  
+<p>
+</li>
+<li>
+<a name = "Kolmogorov Complexity"><b>Kolmogorov complexity</b></a>.  The <a href = "http://en.wikipedia.org/wiki/Kolmogorov_complexity">Kolmologorov complexity</a> of a string of letters is the length of the shortest program that prints it out, where programs are written in a special language as described above.   This is a way of measuring how complicated a string is.  It's closely related to the algorithmic entropy: the difference between the Kolmogorov complexity of a string and minus the logarithm of its algorithmic probability is bounded by a constant, if we take logarithms using base 2.  For more on all this stuff, see:
+<p>
+<ul>
+<li>
+M. Li and P. Vit&aacute;nyi, <i>An Introduction to Kolmogorov Complexity Theory
+and its Applications</i>, Springer, Berlin, 2008.
+</li>
+</ul>
+<p>
+</li>
+<li>
+<a name = "Halting Oracle"><b>Halting Oracle</b></a>.  Alas, the algorithmic probability of a string is not <a href = "http://en.wikipedia.org/wiki/Computability_theory">computable</a>.   Why?  Because to compute it, you'd need to go through all the programs in your special language that print out that string and add up a contribution from each one.   But to do that, you'd need to know which programs halt&mdash;and there's no systematic way to answer that question, which is called the <a href = "http://en.wikipedia.org/wiki/Halting_problem">halting problem</a>.  
+<p>
+But, we can pretend!  We can pretend we have a magic box that will tell us whether any program in our special language halts.  Computer scientists call any sort of magic box that answers questions an <a href = "http://en.wikipedia.org/wiki/Oracle_machine">oracle</a>.  So, our particular magic box called a <a href = "http://www.xamuel.com/the-halting-problem/">halting oracle</a>.
+<p>
+</li>
+<li>
+<a name = "AIXI"><b>AIXI</b></a>.  AIXI is <a href = "http://www.hutter1.net/">Marcus Hutter</a>'s attempt to define an agent that &quot;behaves optimally in any computable environment&quot;.  Since AIXI relies on the idea of algorithmic probability, you can't run AIXI on a computer unless it has infinite computer power and&mdash;the really hard part&mdash;access to a halting oracle.  However, Hutter has also defined computable approximations to AIXI.  For a quick intro, see this:
+
+<p>
+<ul>
+<li>
+Marcus Hutter, <a href = "http://www.hutter1.net/ai/aixigentle.pdf">Universal intelligence: a mathematical top-down approach</a>.
+</li>
+</ul>
+
+<p>
+For more, try this:
+
+<p>
+<ul>
+<li>
+Marcus Hutter, <i>Universal Artificial Intelligence: Sequential Decisions Based on Algorithmic Probability</i>, Springer, Berlin, 2005.
+</li>
+</ul>
+<p>
+</li>
+<li>
+<a name = "Expected Utility"><b>Utility</b></a>.  <a href = "http://en.wikipedia.org/wiki/Utility">Utility</a> is a hypothetical numerical measure of satisfaction.  If you know the probabilities of various outcomes, and you know what your utility will be in each case, you can compute your &quot;expected utility&quot;  by taking the probabilities of the different outcomes, multiplying them by the corresponding utilities, and adding them up.  In simple terms, this is how happy you'll be <i>on average</i>.  The <a href = "http://en.wikipedia.org/wiki/Expected_utility_hypothesis">expected utility hypothesis</a> says that a rational decision-maker has a utility function and will try to maximize its expected utility.  
+ <p>
+</li>
+<li>
+<a name = "#Bounded Rationality"><b>Bounded Rationality</b></a>.  In the real world, any decision-maker has limits on its computational power and the time it has to make a decision.  The idea that rational decision-makers &quot;maximize expected utility&quot; is oversimplified unless it takes this into account somehow.  Theories of <a href = "http://en.wikipedia.org/wiki/Bounded_rationality">bounded rationality</a> try to take these limitations into account.  One approach is to think of decision-making as yet another activity whose costs and benefits must be taken into account when making decisions.  Roughly: you must decide how much time you want to spend deciding.  Of course, there's an interesting circularity here.
+<p>
+</li>
+<li>
+<a name = "#Black Swan"><b>Black Swan Theory</b></a>.  According to <a href = "http://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb">Nassim Taleb</a>, human history is dominated by <a href = "http://en.wikipedia.org/wiki/Black_swan_theory">black swans</a>: important events that were unpredicted and indeed unpredictable, but rationalized by hindsight and thus made to seem as if they <i>could</i> have been predicted.  He believes that rather than trying to predict such events (which he considers largely futile), we should try to get good at adapting to them.  For more see:
+<p>
+<ul>
+<li>
+Nassim Taleb, <i><a href = "http://en.wikipedia.org/wiki/The_Black_Swan_%28Taleb_book%29">The Black Swan: The Impact of the Highly Improbable</a></i>, Random House, New York, 2007.
+<p>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>
+<hr>
+<p>
+For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2011/03/14/this-weeks-finds-week-312/">Azimuth</a>.
+
+<p>
+<em>The first principle is that you must not fool yourself&mdash;and you are the easiest person to fool.</em> - Richard Feynman
+
+<p>
+<HR><p>
+<!-- BEGIN FOOTER -->
+&#169; 2011  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<p>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week311.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week313.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->

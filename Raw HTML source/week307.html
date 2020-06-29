@@ -1,0 +1,356 @@
+<TITLE> week307 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week305.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week308.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> December 14, 2010 </H4>
+<H2> This Week's Finds (Week 307) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+<p>
+I'd like to take a break from interviews and explain some stuff I'm learning.  I'm eager to tell you about some papers in the book Tim Palmer helped edit, <i>Stochastic Physics and Climate Modelling</i>.   But those papers are highly theoretical, and theories aren't very interesting until you know what they're theories <i>of</i>.  So today I'll talk about the &quot;El Ni&ntilde;o&quot;, which is part of a very interesting climate cycle.  Next time I'll get into more of the math.  
+</p>
+
+<p>
+I hadn't originally planned to get into so much detail on the El Ni&ntilde;o, but this cycle is a big deal in southern California.  In the city of Riverside, where I live, it's very dry.  There is a small river, but it's just a trickle of water most of the time: there's a lot less &quot;river&quot; than &quot;side&quot;.  It almost never rains between March and December.  Sometimes, during a &quot;La Ni&ntilde;a&quot;, it doesn't even rain in the winter!  But then sometimes we have an &quot;El Ni&ntilde;o&quot; and get huge floods in the winter.  At this point, the tiny stream that gives Riverside its name swells to a huge raging torrent.  The difference is very dramatic.
+</p>
+
+<p>
+So, I've always wanted to understand how the El Ni&ntilde;o cycle works &mdash; but whenever I tried to read an explanation, I couldn't follow it! 
+</p>
+
+<p>
+I finally broke that mental block when I read some stuff on <a href = "http://faculty.washington.edu/kessler/">William Kessler</a>'s website.  He's an expert on the El Ni&ntilde;o phenomenon who works at the <a href = "http://www.pmel.noaa.gov/">Pacific Marine Environmental Laboratory</a>.  One thing I like about his explanations is that he says what we <i>do</i> know about the El Ni&ntilde;o, and also what we <i>don't</i> know.  We don't know what triggers it!   
+</p>
+
+<p>
+In fact, Kessler says the El Ni&ntilde;o would make a great research topic for a smart young scientist.  In an email to me, which he has allowed me to quote, he said:
+
+<blockquote>
+We understand lots of details but the big picture remains mysterious. And I enjoyed your interview with Tim Palmer because it brought out a lot of the sources of uncertainty in present-generation climate modeling. However, with El Ni&ntilde;o, the mystery is beyond Tim's discussion of the difficulties of climate modeling. We do not know whether the tropical climate system on El Ni&ntilde;o timescales is stable (in which case El Ni&ntilde;o needs an external trigger, of which there are many candidates) or unstable. In the 80s and 90s we developed simple &quot;toy&quot; models that convinced the community that the system was unstable and ;El Ni&ntilde;o could be expected to arise naturally within the tropical climate system. Now that is in doubt, and we are faced with a fundamental uncertainty about the very nature of the beast. Since none of us old farts has any new ideas (I just came back from a conference that reviewed this stuff), this is a fruitful field for a smart young person.
+</blockquote>
+
+<p>
+So, I hope some smart young person reads this and dives into working on the El Ni&ntilde;o!  
+</p>
+
+But let's start at the beginning.  Why did I have so much trouble understanding explanations of the El Ni&ntilde;o?  Well, first of all, I'm an old fart.  Second, most people are bad at explaining stuff: they skip steps, use jargon they haven't defined, and so on.  But third, climate cycles are hard to explain.  There's a lot about them we don't understand &mdash; as Kessler's email points out.  And they also involve a kind of &quot;cyclic causality&quot; that's a bit tough to mentally process.
+</p>
+
+<p>
+At least where I come from, people find it easy to understand linear chains of causality, like &quot;A causes B, which causes C&quot;.   For example: why is the king's throne made of gold?  Because the king told his minister &quot;I want a throne of gold!&quot;  And the minister told the servant, &quot;Make a throne of gold!&quot;  And the servant made the king a throne of gold.  
+</p>
+
+<p>
+Now that's what I call an explanation!  It's incredibly satisfying, at least if you don't wonder why the king wanted a throne of gold in the first place.  It's easy to remember, because it sounds like a story.   We hear a lot of stories like this when we're children, so we're used to them.  My example sounds like the beginning of a fairy tale, where the action is initiated by a &quot;prime mover&quot;: the decree of a king. 
+</p>
+
+<p>
+There's something a bit trickier about cyclic causality, like &quot;A causes B, which causes C, which causes A.&quot;  It may sound like a sneaky trick: we consider &quot;circular reasoning&quot; a bad thing.  Sometimes it <i>is</i> a sneaky trick.  But sometimes this is how things really work!  
+</p>
+
+<p>
+Why does big business have such influence in American politics?  Because big business hires lots of lobbyists, who talk to the politicians, and even give them money.  Why are they allowed to do this?  Because big business has such influence in American politics.  That's an example of a &quot;vicious circle&quot;.  You might like to cut it off &mdash; but like a snake holding its tail in its mouth, it's hard to know where to start.
+</p>
+
+<p>
+Of course, not all circles are &quot;vicious&quot;.  Many are &quot;virtuous&quot;.
+</p>  
+
+<p>
+But the really tricky thing is how a circle can sometimes reverse direction.  In academia we worry about this a lot: we say a university can either &quot;ratchet up&quot; or &quot;ratchet down&quot;.  A good university attracts good students and good professors, who bring in more grant money, and all this makes it even better... while a bad university tends to get even worse, for all the same reasons.  But sometimes a good university goes bad, or vice versa.  Explaining that transition can be hard.
+</p>
+
+<p>
+It's also hard to explain why a La Ni&ntilde;a switches to an El Ni&ntilde;o, or vice versa.  Indeed, it seems scientists still don't understand this. They have some models that simulate this process, but there are still lots of mysteries.  And even if they get models that work <i>perfectly</i>, they still may not be able to tell a good <i>story</i> about it.  Wind and water are ultimately described by partial differential equations, not fairy tales. 
+</p>
+
+<p>
+But anyway, let me tell you a story about how it works.  I'm just learning this stuff, so take it with a grain of salt...
+</p>
+
+<p>
+The &quot;<a href = "http://en.wikipedia.org/wiki/El_Ni%C3%B1o-Southern_Oscillation">El Ni&ntilde;o/Southern Oscillation</a>&quot; or &quot;ENSO&quot; is the largest form of variability in the Earth's climate on times scales greater than a year and less than a decade. It occurs across the tropical Pacific Ocean every 3 to 7 years, and on average every 4 years.  It can cause extreme weather such as floods and droughts in many regions of the world.  Countries dependent on agriculture and fishing, especially those bordering the Pacific Ocean, are the most affected.
+</p>
+
+<p>
+And here's a cute little animation of it:
+</p>
+
+<p>
+<br/>
+<div align = "center">
+<a href = "http://www.bom.gov.au/watl/about-weather-and-climate/australian-climate-influences.shtml?bookmark=enso">
+<img border = "none" src = "http://math.ucr.edu/home/baez/ENSO_animation_australian_bureau_of_meteorology.gif">
+</a>
+<br/>
+<font size = "-1">
+ENSO animation produced by the <a href = "http://www.bom.gov.au/watl/about-weather-and-climate/australian-climate-influences.shtml?bookmark=enso">Australian Bureau of Meteorology</a>. 
+<br/><br/>
+</font>
+</div>
+
+<p>
+Let me tell you first about La Ni&ntilde;a, and then El Ni&ntilde;o.  If you keep glancing back at this little animation, I promise you can understand everything I'll say.
+</p>
+
+<p>
+Winds called <a href = "http://en.wikipedia.org/wiki/Trade_wind">trade winds</a> blow west across the tropical Pacific.  During La Ni&ntilde;a years, water at the ocean's surface moves west with these winds, warming up in the sunlight as it goes.  So, warm water collects at the ocean's surface in the western Pacific.  This creates more clouds and rainstorms in Asia.  Meanwhile, since surface water is being dragged west by the wind, cold water from below gets pulled up to take its place in the eastern Pacific, off the coast of South America.  
+</p>
+
+<p>
+I hope this makes sense so far.  But there's another aspect to the story.   Because the ocean's surface is warmer in the western Pacific, it heats the air and makes it rise.  So, wind blows west to fill the &quot;gap&quot; left by rising air.  This <i>strengthens</i> the westward-blowing trade winds.
+</p>
+
+<p>
+So, it's a kind of feedback loop: the oceans being warmer in the western Pacific helps the trade winds blow west, and that makes the western oceans even warmer.
+</p>
+
+<p>
+Get it?  This should all make sense so far, except for one thing.  There's one big question, and I hope you're asking it.  Namely:
+</p>
+
+<p>
+Why do the trade winds blow <i>west</i>?  
+</p>
+
+<p>
+If I don't answer this, my story so far would work just as well if I switched the words &quot;west&quot; and &quot;east&quot;.   That wouldn't necessarily mean my story was <i>wrong</i>.  It might just mean that there were two equally good options: a La Ni&ntilde;a phase where the trade winds blow west, and another phase &mdash; say, El Ni&ntilde;o &mdash; where they blow east!  From everything I've said so far, the world could be permanently stuck in one of these phases.  Or, maybe it could randomly flip between these two phases for some reason.
+</p>
+
+<p>
+Something roughly like this last choice is actually true.  But it's not so simple: there's not a complete symmetry between west and east.  
+</p>
+
+<p>
+Why not?  Mainly because the Earth is turning to the <i>east</i>.  
+</p>
+
+<p>
+Air near the equator warms up and rises, so new air from more northern or southern regions moves in to take its place.  But because the Earth is fatter at the equator, the equator is moving faster to the east.  So, the new air from other places is moving less quickly by comparison... so as seen by someone standing on the equator, it blows <i>west</i>.   This is an example of the <a href = "http://en.wikipedia.org/wiki/Coriolis_effect">Coriolis effect</a>:
+</p>
+
+<p>
+<div align = "center">
+<a href = "http://upload.wikimedia.org/wikipedia/commons/6/6d/Earth_Global_Circulation.jpg">
+<img border = "none" src = "http://upload.wikimedia.org/wikipedia/commons/6/6d/Earth_Global_Circulation.jpg">
+</a>
+</div>
+</p>
+
+<p>
+By the way: in case this stuff wasn't tricky enough already, a wind that blows to the west is called an <i>easterly</i>, because it blows <i>from</i> the east!  That's what happens when you put sailors in charge of scientific terminology.  So the westward-blowing trade winds are called &quot;northeasterly trades&quot; and &quot;southeasterly trades&quot; in the picture above.  But don't let that confuse you.
+</p>
+
+<p>
+(I also tend to think of Asia as the &quot;Far East&quot; and California as the &quot;West Coast&quot;, so I always need to keep reminding myself that Asia is in the west Pacific, while California is in the east Pacific.  But don't let that confuse you either!  Just repeat after me until it makes perfect sense: &quot;The easterlies blow west from West Coast to Far East&quot;.)
+
+<p>
+Okay: silly terminology aside, I hope everything makes perfect sense so far.  The trade winds have a good intrinsic reason to blow west, but in the La Ni&ntilde;a phase they're also part of a feedback loop where they make the western Pacific warmer... which in turn <i>helps</i> the trade winds blow west.
+</p>
+
+<p>
+But then comes an El Ni&ntilde;o!  Now for some reason the westward winds weaken.  This lets the built-up warm water in the western Pacific slosh back east.  And with weaker westward winds, less cold water is pulled up to the surface in the east.  So, the eastern Pacific warms up.  This makes for more clouds and rain in the eastern Pacific &mdash; that's when we get floods in Southern California.  And with the ocean warmer in the eastern Pacific, hot air rises there, which tends to counteract the westward winds even more!
+</p>
+
+<p>
+In other words, all the feedbacks reverse themselves. 
+</p>
+
+<p>
+But note: the trade winds never <i>mainly</i> blow east.  During an El Ni&ntilde;o they still blow west, just a bit <i>less</i>.  So, the climate is not flip-flopping between two symmetrical alternatives.  It's flip-flopping between two <i>asymmetrical</i> alternatives.
+</p>
+
+<p>
+I hope all this makes sense... except for one thing.  There's another big question, and I hope you're asking it.  Namely:
+</p>
+
+<p>
+<i>Why</i> do the westward trade winds weaken?  
+</p>
+
+<p>
+We could also ask the same question about the start of the La Ni&ntilde;a phase: why do the westward trade winds get stronger?
+</p>
+
+<p>
+The short answer is that nobody knows.  Or at least there's no <i>one story</i> that everyone agrees on.  There are actually several stories... and perhaps more than one of them is true.  But now let me just show you the data:
+
+<p>
+<br/>
+<div align = "center">
+<a href = "http://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensocycle/soi.shtml">
+<img border = "none" src = "http://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensocycle/soi_nino34.gif">
+</a>
+</div>
+</br>
+</p>
+
+<p>
+The top graph shows variations in the water temperature of the tropical Eastern Pacific ocean.  When it's hot we have El Ni&ntilde;os: those are the red hills in the top graph.  The blue valleys are La Ni&ntilde;as.  
+</p>
+
+<p>
+The bottom graph shows the &quot;<a href = "http://en.wikipedia.org/wiki/El_Ni%C3%B1o-Southern_Oscillation#Southern_Oscillation">Southern Oscillation Index</a>&quot; or &quot;SOI&quot;.  This is the air pressure in Tahiti minus the air pressure in Darwin, Australia.  You can see those locations here:
+
+<p>
+<br/>
+<div align = "center">
+<a href = "http://www.bom.gov.au/watl/about-weather-and-climate/australian-climate-influences.shtml?bookmark=enso">
+<img border = "none" src = "http://math.ucr.edu/home/baez/ENSO_animation_australian_bureau_of_meteorology.gif">
+</a>
+<br/>
+<font size = "-1">
+ENSO animation produced by the <a href = "http://www.bom.gov.au/watl/about-weather-and-climate/australian-climate-influences.shtml?bookmark=enso">Australian Bureau of Meteorology</a>. 
+<br/><br/>
+</font>
+</div>
+
+<p>
+So, when the SOI is high, the air pressure is higher in the east Pacific than in the west Pacific.  This is what we expect in an La Ni&ntilde;a: that's why the westward trade winds are strong then!  Conversely, the SOI is low in the El Ni&ntilde;o phase.  This variation in the SOI is called the Southern Oscillation.
+
+<p>
+If you look at the graphs above, you'll see how one looks almost like
+an upside-down version of the other.  So, El Ni&ntilde;o/La
+Ni&ntilde;a cycle is tightly linked to the Southern Oscillation.
+</p>
+
+<p>
+Another thing you'll see from is that ENSO cycle is far from perfectly
+periodic!  Here's a graph of the Southern Oscillation Index going back
+a lot further:
+</p>
+<p>
+<div align = "center">
+<a href = "http://faculty.washington.edu/kessler/figures.html">
+<img border = "none" src = "http://math.ucr.edu/home/baez/soi-1876-1998.gif">
+</a>
+<br/>
+<font size = "-1">
+</font>
+</div>
+</p>
+
+<p>
+This graph was made by William Kessler.  His explanations of the ENSO cycle are the first ones I really understood:
+</p>
+
+<p>
+<ul>
+<li>
+William Kessler, <a href = "http://faculty.washington.edu/kessler/occasionally-asked-questions.html#q1">What is El Ni&ntilde;o and how does it relate to the usual situation in the tropical Pacific?</a>
+</li>
+<p/>
+<p>
+<li>
+William Kessler, <a href = "http://faculty.washington.edu/kessler/TALKS/ENSO-AMSteachers2.pdf">El Ni&ntilde;o: How it works, how we observe it</a>.
+</li>
+</ul>
+</p>
+
+<p>
+My own explanation here is a slow-motion, watered-down version of his.  Any mistakes are, of course, mine.  To conclude, I want to quote his discussion of theories about why an El Ni&ntilde;o starts, and why it ends.  As you'll see, this part is a bit more technical.  It involves three concepts I haven't explained yet:
+
+<ul>
+<li>
+The &quot;<a href = "http://en.wikipedia.org/wiki/Thermocline">thermocline</a>&quot; is the border between the warmer surface water in the ocean and the cold deep water, 100 to 200 meters below the surface.  During the La Ni&ntilde;a phase, warm water is blown to the western Pacific, and cold water is pulled up to the surface of the eastern Pacific.  So, the thermocline is deeper in the west than the east:
+<p>
+<div align = "center">
+<a href = "http://earthobservatory.nasa.gov/Features/ElNino/">
+<img width = "350" src = "http://earthobservatory.nasa.gov/Features/ElNino/Images/sst_depth_1-97.jpg">
+</a>
+</div>
+</p>
+When an El Ni&ntilde;o occurs, the thermocline flattens out:
+<p>
+<div align = "center">
+<a href = "http://earthobservatory.nasa.gov/Features/ElNino/">
+<img width = "350" src = "http://earthobservatory.nasa.gov/Features/ElNino/Images/sst_depth_4-97.jpg">
+</a>
+</div>
+<br/>
+<p>
+<div align = "center">
+<a href = "http://earthobservatory.nasa.gov/Features/ElNino/">
+<img width = "350" src = "http://earthobservatory.nasa.gov/Features/ElNino/Images/sst_depth_7-97.jpg">
+</a>
+</div>
+</p>
+<p>
+<li>
+&quot;<a href = "http://www.coas.oregonstate.edu/research/po/research/rossby_waves/chelton.html">Oceanic Rossby waves</a>&quot; are very low-frequency waves in the ocean's surface and thermocline.   At the ocean's surface they are only 5 centimeters high, but hundreds of kilometers across.  They move at about 10 centimeters/second, requiring months to years to cross the ocean!  The surface waves are mirrored by waves in the thermocline, which are much larger, 10-50 meters in height. When the surface goes up, the thermocline goes down.  
+</li>
+</p>
+<p>
+<li>
+The &quot;<a href = "http://en.wikipedia.org/wiki/Madden-Julian_oscillation">Madden-Julian Oscillation</a>&quot; or &quot;MJO&quot; is the largest form of variability in the tropical atmosphere on time scales of 30-90 days.  It's a pulse that moves east across the Indian Ocean and Pacific ocean at 4-8 meters/second.  It manifests itself as patches of anomalously <i>high</i> rainfall and also anomalously <i>low</i> rainfall.  Strong Madden-Julian Oscillations are often seen 6-12 months before an El Ni&ntilde;o starts.
+</li>
+</ul>
+
+With this bit of background, let's read what Kessler wrote:
+
+<blockquote>
+There are two main theories at present. The first is that the event is initiated by the reflection from the western boundary of the Pacific of an oceanic Rossby wave (type of low-frequency planetary wave that moves only west). The reflected wave is supposed to lower the thermocline in the west-central Pacific and thereby warm the SST [sea surface temperature] by reducing the efficiency of upwelling to cool the surface. Then that makes winds blow towards the (slightly) warmer water and really start the event. The nice part about this theory is that the Rossby waves can be observed for months before the reflection, which implies that El Ni&ntilde;o is predictable.
+</p>
+
+<p>
+The other idea is that the trigger is essentially random. The tropical convection (organized largescale thunderstorm activity) in the rising air tends to occur in bursts that last for about a month, and these bursts propagate out of the Indian Ocean (known as the Madden-Julian Oscillation). Since the storms are geostrophic (rotating according to the turning of the earth, which means they rotate clockwise in the southern hemisphere and counter-clockwise in the north), storm winds on the equator always blow towards the east. If the storms are strong enough, or last long enough, then those eastward winds may be enought to start the sloshing. But specific Madden-Julian Oscillation events are not predictable much in advance (just as specific weather events are not predictable in advance), and so to the extent that this is the main element, then El Ni&ntilde;o will not be predictable.
+</p>
+
+<p>
+In my opinion both these two processes can be important in different El Ni&ntilde;os. Some models that did not have the MJO storms were successful in predicting the events of 1986-87 and 1991-92. That suggests that the Rossby wave part was a main influence at that time. But those same models have failed to predict the events since then, and the westerlies have appeared to come from nowhere. It is also quite possible that these two general sets of ideas are incomplete, and that there are other causes entirely. The fact that we have very intermittent skill at predicting the major turns of the ENSO cycle (as opposed to the very good forecasts that can be made once an event has begun) suggests that there remain important elements that are await explanation.
+</blockquote>
+
+<p>
+Next time I'll talk a bit about mathematical models of the ENSO and another climate cycle &mdash; but please keep in mind that these cycles are still far from fully understood!
+
+<p>
+<HR><P>
+For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2010/12/14/this-weeks-finds-week-307/">Azimuth</a>.
+
+<p>
+<i>To hate is to study, to study is to understand, to understand is to appreciate, to appreciate is to love.  So maybe I'll end up loving your theory.</i> - John Archibald Wheeler
+
+<p>
+<HR><P>
+<!-- BEGIN FOOTER -->
+&#169; 2010  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<P>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week306.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week308.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->
+
+

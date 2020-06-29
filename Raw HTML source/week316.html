@@ -1,0 +1,203 @@
+<TITLE> week316 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week315.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week317.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> July 17, 2011 </H4>
+<H2> This Week's Finds (Week 316) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+<p>Here on this This Week's Finds I've been talking about the future and what it might hold.  But any vision of the future that ignores biotechnology is radically incomplete.  Just look at this week's news!  They've 'hacked the genome':</p>
+
+<p><ul><li>Ed Yong, <a href="http://blogs.discovermagazine.com/notrocketscience/2011/07/14/hacking-the-genome-with-a-mage-and-a-cage/">Hacking the genome with a MAGE and a CAGE</a>, <i>Discover</i>, 14 July 2011.</ul></li></p>
+
+<p>Or maybe they've 'hijacked the genetic code':</p>
+
+<p><ul><li>Nicholas Wade, <a href="http://www.nytimes.com/2011/07/15/health/15genome.html?_r=1&amp;hpw">Genetic code of <i>E. coli</i> is hijacked by biologists</a>, <i>New York Times</i>, 14 July 2011.</ul></li></p>
+
+<p>What exactly have they done?  These articles explain it quite well... but it's so cool I can't resist talking about it.</p>
+
+<p>Basically, some scientists from Harvard and MIT have figured out how to go through the whole genome of a bacterium and change every occurrence of one codon to some other codon.  It's a bit like the 'global search and replace' feature of a word processor.  You know: that trick where you can take a document and replace one word with another every place it appears.</p>
+
+<p>To understand this better, it helps to know a tiny bit about the genetic code.  You may know this stuff, but let's quickly review.</p>
+
+<p>DNA is a double-stranded helix bridged by pairs of bases, which come in 4 kinds:</p>
+
+<p><ul><li><a href="http://en.wikipedia.org/wiki/Adenine">adenine</a> (A)</li>
+<li><a href="http://en.wikipedia.org/wiki/Thymine">thymine</a> (T)</li>
+<li><a href="http://en.wikipedia.org/wiki/Cytosine">cytosine</a> (C)</li>
+<li><a href="http://en.wikipedia.org/wiki/Guanine">guanine</a> (G)</ul></li></p>
+
+<p><div align="center">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/DNA_chemical_structure.svg/350px-DNA_chemical_structure.svg.png" />
+</div></p>
+
+<p>Because of how they're shaped, A can only connect to T:</p>
+
+<p><div align="center">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/AT_DNA_base_pair.svg/300px-AT_DNA_base_pair.svg.png" />
+</div></p>
+
+<p>while C can only connect to G:</p>
+
+<p><div align="center">
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/GC_DNA_base_pair.svg/300px-GC_DNA_base_pair.svg.png" />
+</div></p>
+
+<p>So, all the information in the DNA is contained in the list of  bases down either side of the helix.  You can think of it as a long string of 'letters', like this:</p>
+
+<p>ATCATTCAGCTTATGC...</p>
+
+<p>This long string consists of many sections, which are the instructions to make different proteins.  In the first step of the protein manufacture process, a section of this string copied to a molecule called <a href="http://en.wikipedia.org/wiki/Messenger_RNA">'messenger RNA'</a>.  In this stage, the T gets copied to <a href="http://en.wikipedia.org/wiki/Uracil">uracil</a>, or U.  The other three base pairs stay the same.  </p>
+
+<p>Here's some messenger RNA:</p>
+
+<p><div align="center">
+<a href="http://en.wikipedia.org/wiki/Messenger_RNA">
+<img src="http://upload.wikimedia.org/wikipedia/commons/d/d4/RNA-codons.png" /></a></div></p>
+
+<p>You'll note that the bases come in groups of three.  Each group is called a <a href="http://en.wikipedia.org/wiki/Genetic_code#Transfer_of_information_via_the_genetic_code">'codon'</a>, because it serves as the code for a specific amino acid.  A protein is built as a string of amino acids, which then curls up into a complicated shape.</p>
+
+<p>Here's how the genetic code works:</p>
+
+<p><div align="center">
+<a href="http://www2.hawaii.edu/~johnb/micro/micr230/micr230_lectures/lecture9.htm"><img src="http://math.ucr.edu/home/baez/genetic_code.gif" /></a>
+</div></p>
+
+<p>The three-letter names like Phe and Leu are abbreviations for amino acids: <a href="http://en.wikipedia.org/wiki/Phenylalanine">phenylalanine</a>,  <a href="http://en.wikipedia.org/wiki/Leucine">leucine</a> and so on.  </p>
+
+<p>While there are 4<sup></sup><sup>3</sup> = 64 codons, they code for only 20 amino acids.   So, typically more than one codon codes for the same amino acid.  If you look at the chart, you'll see one exception is <a href="http://en.wikipedia.org/wiki/Methionine">methionine</a>, which is encoded only by AUG.  AUG is also the 'start codon', which tells the cell where a protein starts.  So, methionine shows up at the start of every protein, at least at first.  It's usually removed later in the protein manufacture process.  </p>
+
+<p>There are also three <a href="http://en.wikipedia.org/wiki/Stop_codon">'stop codons'</a>, which mark the end of a protein.  They have cute names:</p>
+
+<p><ul><li><b>amber</b>: UAG </li>
+<li><b>ochre</b>: UAA</li>
+<li><b>opal</b>: UGA</ul></li></p>
+
+<p>UAG was named after <a href="http://www.sci.sdsu.edu/~smaloy/MicrobialGenetics/topics/rev-sup/amber-name.html">Harris Bernstein</a>, whose last name means 'amber' in German.  The other two names were just a way of continuing the joke.</p>
+
+<p>And now we're ready to understand how a team of scientists led by <a href="http://arep.med.harvard.edu/CVs/Isaacs_CV06.pdf">Farren J. Isaacs</a> and <a href="http://arep.med.harvard.edu/gmc/">George M. Church</a> are 'hacking the genome'.  They're going through the DNA of the common <i>E. coli</i> bacterium and replacing every instance of amber with opal! </p>
+
+<p>This is a lot more work than the word processor analogy suggests.  They need to break the DNA into lots of fragments, change amber to opal in these fragments, and put them back together again.  Read <a href="http://blogs.discovermagazine.com/notrocketscience/2011/07/14/hacking-the-genome-with-a-mage-and-a-cage/">Ed Young's article</a> for more.</p>
+
+<p>So, they're not actually done yet. </p>
+
+<p>But when they're done, they'll have an <i>E. coli</i> bacterium with no amber codons, just opal.  But it'll act just the same as ever, since amber and opal are both stop codons.  </p>
+
+<p>That's a lot of work for no visible effect.  What's the point?</p>
+
+<p>The point is that they'll have freed up the codon amber for other purposes!  This will let them do various further tricks.</p>
+
+<p>First, with some work, they could make amber code for a new, unnatural amino acid that's not one of the usual 20.  This sounds like a lot of work, since it requires tinkering with the cell's mechanisms for translating codons into amino acids: specifically, its set of <a href="http://en.wikipedia.org/wiki/TRNA">transfer RNA</a> and <a href="http://en.wikipedia.org/wiki/Aminoacyl_tRNA_synthetase">synthetase</a> molecules.  But this has already been done!  Back in 1990, <a href="http://www.sciencedirect.com/science/article/pii/S002228360580258X">Jennifer Normanly</a> found a viable mutant strain of <i>E. coli</i> that 'reads through' the amber codon, not stopping the protein there as it should.   People have taken advantage of this to create <i>E. coli</i> where amber codes for a new amino acid:</p>
+
+<p><ul><li>Nina Mejlhede, Peter E. Nielsen, and Michael Ibba, <a href="http://cmbi.bjmu.edu.cn/news/0106/4.pdf">Adding new meanings to the genetic code</a>, <i><a href="http://www.nature.com/nbt/journal/v19/n6/abs/nbt0601_532.html">Nature Biotechnology</a></i> <b>19</b> (2001), 532-533.</ul></li></p>
+
+<p>But I guess getting an <i>E. coli</i> that's completely free of amber codons would let us put amber codons only where we want them, getting better control of the situation.</p>
+
+<p>Second, tweaking the genetic code this way could yield a strain of <i>E. coli</i> that's unable to 'breed' with the normal kind.  This could increase the safety of genetic engineering.  Of course bacteria are asexual, so they don't precisely 'breed'.  But they do something similar: they exchange genes with each other!  Three of the most popular ways are:</p>
+
+<p><ul><li><a href="http://en.wikipedia.org/wiki/Bacterial_conugation"><b>conjugation</b></a>: two bacteria come into contact and pass DNA from one to the other.</li></p>
+
+<p><li><a href="http://en.wikipedia.org/wiki/Transformation_%28genetics%29"><b>tranformation</b></a>: a bacterium produces a loop of DNA called a <a href="http://en.wikipedia.org/wiki/Plasmid">plasmid</a>, which floats around and then enters another bacterium.</li> </p>
+
+<p><li><a href="http://en.wikipedia.org/wiki/Transduction_%28genetics%29"><b>transduction</b></a>: a virus carries DNA from one bacterium to another.</ul></li></p>
+
+<p>Thanks to these tricks, drug resistance and other traits can hop from one species of bug to another.   So, for the sake of safe experiments, it would be nice to have a strain of bacteria whose genetic code was so different from others that it couldn't share DNA.  </p>
+
+<p>And third, a bacterium with a modified genetic code could be resistant to viruses! I hadn't known it, but the biotech firm Genzyme was <a href="http://en.wikipedia.org/wiki/Genzyme#Contamination_incidents">shut down for three months</a> and lost millions of dollars when its bacteria were hit by a virus.</p>
+
+<p>This third application reminds me of a really spooky story by <a href="http://www.gregegan.net">Greg Egan</a>, called "The Moat".  In it, a detective discovers evidence that some people have managed to alter their genetic code.  The big worry is that they could then set loose a virus that would kill everyone in the world <i>except them</i>.  </p>
+
+<p>That's a scary idea, and one that just became a bit more practical... though so far only for <i>E. coli</i>, not <i>H. sapiens</i>.</p>
+
+<p>So, I've got some questions for the biologists out there.  </p>
+
+<p>A virus that attacks bacteria is called a <a href="http://en.wikipedia.org/wiki/Bacteriophage">bacteriophage</a>---or affectionately, a 'phage'.   Here's a picture of one:</p>
+
+<p><div align="center"><a href="http://en.wikipedia.org/wiki/Bacteriophage"><img src="http://math.ucr.edu/home/baez/bacteriophage.png" /></a></div></p>
+
+<p>Isn't it cute?</p>
+
+<p>Whoops&mdash;that wasn't one of the questions.  Here are my questions for biologists: </p>
+
+<p><ul><li>To what extent are <i>E. coli</i> populations kept under control by phages, or perhaps somehow by other viruses?</li></p>
+
+<p><li>If we released a strain of virus-resistant <i>E. coli</i> into the wild, could it take over, thanks to this advantage?</li></p>
+
+<p><li>What could the effects be?  For example, if the <i>E. coli</i> in my gut became virus-resistant, would their populations grow enough to make me notice?</li></ul></p>
+
+<p>and more generally:</p>
+
+<p><ul><li>What are some of the coolest possible applications of this new MAGE/CAGE technology?</ul></li></p>
+
+<p>Also, on a more technical note:</p>
+
+<p><ul><li>What did people actually do with that strain of <i>E. coli</i> that 'reads through' amber? </li></p>
+
+<p><li>How could such a strain be viable, anyway?  Does it mostly avoid using the amber codon, or does it somehow survive having a lot of big proteins where a normal <i>E. coli</i> would have smaller ones?</ul></li></p>
+
+<p>Finally, I can't resist mentioning something amazing I just read.  I said that our body uses 20 amino acids, and that 'opal' serves a stop codon.  But neither of these are the whole truth! Sometimes opal codes for a 21st amino acid, called <a href="http://en.wikipedia.org/wiki/Selenocysteine">selenocysteine</a>.  And this one is different from the rest.  Most amino acids contain carbon, hydrogen, oxygen and nitrogen, and <a href="http://en.wikipedia.org/wiki/Cysteine">cysteine</a> contains sulfur, but selenocysteine contains... you guessed it... <i><a href="http://en.wikipedia.org/wiki/Selenium">selenium</a>!</i>  </p>
+
+<p><div align="center"><a href="http://en.wikipedia.org/wiki/Selenocysteine"><img src="http://math.ucr.edu/home/baez/selenocysteine.png" /></a></div></p>
+
+<p>Selenium is right below sulfur on the periodic table, so it's sort of similar.  If you eat too much selenium, your breath starts smelling like garlic and your hair falls out.   Horses have died from the stuff.  But it's also an <a href="http://en.wikipedia.org/wiki/Dietary_mineral#Essential_chemical_elements">essential trace element</a>: you have about 15 milligrams in your body.  We use it in various proteins, which are called.... you guessed it... <a href="http://en.wikipedia.org/wiki/Selenoprotein"><i>selenoproteins</i></a>!</p>
+
+<p>So, a few more questions:</p>
+
+<p><ul><li>Do humans use selenoproteins containing selenocysteine?</li></p>
+
+<p><li>How does our body tell when opal is getting used to code for selenocysteine, and when it's getting used as a stop codon?</li></p>
+
+<p><li>Are there any cool theories about how life evolved to use selenium, and how the opal codon got hijacked for this secondary purpose?</ul></li></p>
+
+<p>Finally, here's the new paper that all the fuss is about.  It's not free, but you can read the abstract for free:</p>
+
+<p><ul><li>Farren J. Isaacs, Peter A. Carr, Harris H. Wang, Marc J. Lajoie, Bram Sterling, Laurens Kraal, Andrew C. Tolonen, Tara A. Gianoulis, Daniel B. Goodman, Nikos B. Reppas, Christopher J. Emig, Duhee Bang, Samuel J. Hwang, Michael C. Jewett, Joseph M. Jacobson, and George M. Church, Precise manipulation of chromosomes in vivo enables genome-wide codon replacement, <i><a href="http://www.sciencemag.org/content/333/6040/348.abstract">Science</a></i> <b>333</b> (15 July 2011), 348-353.</ul></li></p>
+
+<p><hr/></p>
+
+<p>For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2011/07/17/this-weeks-finds-week-316/">Azimuth</a>.</p>
+
+<p><i>Pessimists should be reminded that part of their pessimism is an inability to imagine the creative ideas of the future</i> - <a href="http://www.theage.com.au/entertainment/music/no-time-like-the-present-20110707-1h312.html#ixzz1SJnwPRK3">Brian Eno</a></p>
+
+<p>
+<HR><P>
+<!-- BEGIN FOOTER -->
+&#169; 2011  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<P>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week315.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week317.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->

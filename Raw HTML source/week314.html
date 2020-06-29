@@ -1,0 +1,350 @@
+<TITLE> week314 </TITLE>
+
+<!-- BEGIN HEADER -->
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week313.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week315.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE>
+<H4> June 6, 2011 </H4>
+<H2> This Week's Finds (Week 314) </H2>
+<H4> John Baez </H4>
+<!-- END HEADER -->
+
+This week I'd like to start an interview with <a href = "http://www.soton.ac.uk/ses/people/staff/thomas_fischbacher.html">Thomas Fischbacher</a>, who teaches at the School of Engineering Sciences at the University of Southampton.  He's a man with <a href = "http://www.soton.ac.uk/~doctom/research-interests/index.html">many interests</a>, but we'll mainly talk about sustainable agriculture, leading up to an idea called &quot;permaculture&quot;.
+
+<p>
+<a href = "http://www.soton.ac.uk/ses/people/staff/thomas_fischbacher.html">
+<div align = "center"><img border = "2" src = "thomas_fischbacher.jpg"></div>
+</a>
+<p>
+
+<b>JB</b>: Your published work is mainly in theoretical physics, and some of it is quite mathematical.  You have a bunch of papers on <a href = "http://arxiv.org/find/hep-th/1/au:+Fischbacher_T/0/1/0/all/0/1">theories of gravity related to string theory</a>, and another bunch on <a href = "http://www.soton.ac.uk/~doctom/research-articles/index.html">magnetic materials</a>, maybe with some applications to technology. But you're also interested in sustainable agricultural and building practices!  That seems like quite a leap... but I may be trying to make a similar leap myself, so I find it fascinating.  How did you get interested in these other topics, which seem so very different in flavor?
+</p>
+
+<p>
+<b>TF</b>: I think it's quite natural that one's interests are wider than what one actually publishes about&mdash;quite likely, the popularity of your blog which is about all sorts of interesting things witnesses this. 
+</p>
+
+<p>
+However, if something that seems interesting catches my attention, I often experience a strong drive to come to an advanced level of understanding&mdash;at least mastering the key mechanisms. As far as I can think back, my studies have been predominantly self-directed, often following very unusual and sometimes obscure paths, so I sometimes happen to know a few quite odd things. And actually, considering research, I get a lot of fun out of combining advanced ideas from very different fields. Most of my articles are of that type, e.g. &quot;<a href="http://arxiv.org/abs/hep-th/0208218">sparse tensor numerics meets database algorithms and metalinguistics</a>&quot;, or &quot;<a href="http://arxiv.org/abs/hep-th/0412331">Feynman diagrams meet lazy evaluation and continuation coding</a>&quot;, or &quot;<a href="http://arxiv.org/abs/0912.1636">exceptional groups meet sensitivity back-propagation</a>&quot;. Basically, I like to see myself in the role of a bridge-builder. Very often, powerful ideas that have been developed in one field are completely unknown in another where they actually can be used to great advantage.
+</p>
+
+<p>
+Concerning sustainability, it actually was mostly soil physics that initially got me going. When dealing with a highly complex phenomenon such as human civilization, it is sometimes very useful to take a close look at matter and energy flows in order to get an overview over important processes that determine the structure and long term behaviour of a system. Just doing a few order-of-magnitude guesstimates and looking at typical soil erosion and soil formation rates, I found that, from that perspective, quite a number of fundamental things did not add up and told a story very different from the oh-so-glorious picture of human progress. That's one of the great things about physical reasoning: it allows one to independently make up one's mind about things where one otherwise would have little other choice than to believe what one is told. And so, I started to look deeper.</p>
+
+<p>
+<b>JB</b>: So what did you discover?  I can't resist mentioning something I learned from a book Kevin Kelly gave me: 
+</p>
+
+<p>
+<ul>
+<li>
+Neil Roberts, <i>The Holocene: an Environmental History</i>, Blackwell,
+London, 1998.
+</li>
+</ul>
+</p>
+
+<p>
+It describes how the landscape of Europe has been cycling through glacial and interglacial periods every 100,000 years or so for the last 1.3 million years.  It's a regular sort of pattern!
+</p>
+
+<p>
+As a glacial period ends, first comes a phase when birches and pines immigrate from southern refuges into what had been tundra.  Then comes a phase when mixed deciduous forest takes over, with oak and elm becoming dominant. During this period, rocky soils turn into brown forest soils.  Next, leaching from rocks in glacial deposits leads to a shift from neutral to acid soils, which favor trees like spruce.  Then, as spruce take over, fallen needles make the soil even more acid. Together with cooling temperatures as the next glacial approaches, this leads to the replacement of deciduous forest by heathland and pine forests.  Finally, glaciers move in and scrape away the soil.  And then the cycle repeats!</p>
+
+<p>I thought this was really cool: it's like seasons, but on a grand scale.  And I thought this quote was even cooler:</p>
+
+<p>
+<blockquote>
+It was believed by classical authors such as Varro and Seneca that there had once been a &quot;Golden Age&quot;, &quot;when man lived on those things which the virgin earth produced spontaneously&quot; and when &quot;the very soil was more fertile and productive.&quot; If ever there was such a &quot;Golden Age&quot; then surely it was in the early Holocene, when soils were still unweathered and uneroded, and when Mesolithic people lived off the fruits of the land without the physical toil of grinding labour.
+</blockquote></p>
+
+<p>Still unweathered and uneroded! So it takes an ice age to reset the clock and bring soils back to an optimum state?</p>
+
+<p>
+But your discovery was probably about the effects of humans...
+</p>
+
+<p>
+<b>TF</b>: There are a number of different processes, all of them important, that are associated with very different time scales. A general issue here is that, as a society, we have difficulties to get an idea how our life experience is shaped by our cultural heritage, by our species' history, and by events that happened tens of thousands of years ago.
+</p>
+
+<p>
+Coming to the cycles of glaciation, you are right that these shaped the soils in places such as Europe, by grinding down rock and exposing freshly weathered material. But it is also interesting to look at places where this has not happened&mdash;to give us sort of an outside perspective; glaciation was fairly minimal in Australia, for example. Also, the main other player, volcanism did not have much of an effect in exposing fresh minerals there either. And so, <a href = "http://www.anra.gov.au/topics/soils/overview/index.html">Australian soils</a> are extremely old&mdash;millions of years, tens of millions of years even, and very poor in mineral nutrients, as so much has been leached out. This has profound influences on the vegetation, but also on fauna, and of course on the people who inhabited this land for tens of thousands of years, and their culture: the Aborigines. Now, I don't want to claim that the Aborigines actually managed to evolve a fully &quot;sustainable&quot; system of land management&mdash;but it should be pretty self-evident that they must have developed some fairly interesting biological knowledge over such a long time.
+</p>
+
+<p>
+Talking about long time scales and the long distant past, it sometimes takes a genius to spot something that in hindsight is obvious but no one noticed because the unusual situation is that the really important thing that matters is missing. Have you ever wondered, for example, what animal might eat an avocado and disperse its fairly large seed?  Like other fruit (botanically speaking, the avocado is a berry, as is the banana), the avocado plant co-evolved with animals that would eat its fruits&mdash;but there is no animal around that would do so. Basically, the reason is that we are looking at a broken ecosystem: the co-evolutionary partners of the avocado, such as <a href = "http://en.wikipedia.org/wiki/Gomphothere">gomphotheres</a>, became extinct some thousands of years ago. 
+
+<p>
+<div align = "center">
+<a href = "http://www.adias-uae.com/stegotetrabelodon.html#gomphotherium">
+<img src = "http://www.adias-uae.com/images/gomphotherium4.jpg"></a>
+<br/><br/>
+</div>
+
+<p>A blink with respect to the time scales of evolution, but an awfully long time for human civilizations. There is an interesting book on this subject:</p>
+
+<p>
+<ul>
+<li>
+Connie Barlow, <i>The Ghosts of Evolution: Nonsensical Fruit, Missing Partners, and Other Ecological Anachronisms</i>, Basic Books, New York, 2002.  (Also listen to this <a href = "http://www.youtube.com/watch?v=A-kYjjphxJY">song.</a>)
+</li>
+</ul>
+</p>
+
+<p>
+Considering soils, the cycle of glaciations already should hold an important lesson for us. It is important to note that the plow is basically an invention that (somewhat) suits European agriculture and its geologically young soils. What happens if we take this way of farming to the tropics? While lush and abundant rainforests may seem to suggest otherwise, we have old and nutrient-poor soils here, and most mineral nutrients get stored and cycled by the vegetation. If we clear this, we release a flush of nutrients, but as the annual crops which we normally grow are not that good at holding on to these nutrients, we rapidly destroy the fertility of the land.
+</p>
+
+<p>
+There are alternative options for how to produce food in such a situation, but before we look into this, it might be useful to know a few important ballpark figures related to agriculture&mdash;plow agriculture in particular.
+</p>
+
+<p>
+The most widely used agricultural unit for &quot;mass per area&quot; is &quot;metric tons per hectare&quot;, but I will instead use kilograms per square meter (as some people may find that easier to relate to), 1 kilogram per square meter being 10 tons/ha. Depending on the climate (windspeeds, severity of summer rains, etc.), plow agriculture will typically lead to soil loss rates due to erosion of something in the ballpark of 0.5 to 5 kilograms per square meter per year.  In the US, erosion rates in the past have been as high as 4 kilograms per square meter per year and beyond, but have come down markedly. Still, soil loss rates of around 1 kilogram per square meter per year are not uncommon for the US. The problem is that, under good conditions, soil creation rates are in the ballpark of 0.02 to 0.2 kilograms per square meter per year.  So, our present agriculture is destroying soil much faster than new soil gets formed. And, quite insidiously, erosion will always carry away the most fertile top layer of soil first.
+</p>
+
+<p>
+It is worthwhile to compare this with agricultural yields: in Europe, good wheat yields are in the range of 0.6 kilograms per square meter per year, but yields depend a lot on water availability, and the world average is just 0.3 kilograms per square meter per year.  In any case, the plow actually produces much more eroded land than food.  You can see more information here:
+</p>
+
+<ul>
+<li>
+Food and Agriculture Organization of the UN, <a href = "http://faostat.fao.org/site/567/DesktopDefault.aspx?PageID=567">FAOSTAT</a>.
+</li>
+</ul>
+
+<p>
+Concerning ancient reports of a &quot;Golden Age&quot;&mdash;I am not so sure about this anymore. By and large, civilizations mostly seem to have had quite a negative long term impact on the soil fertility that sustained them&mdash;and a number of them failed due to that. But all things considered, we often find that some particular groups of species have a very positive long term effect on fertility and counteract nutrient leaching&mdash;tropical forests bear witness to that.
+</p>
+
+<p>
+Now... what single species we can think of would be best equipped to make a positive contribution towards long-term fertility building?
+</p>
+
+<p>
+<b>JB</b>: Hey, no fair&mdash;I thought I was the one asking the questions!
+</p>
+
+<p>
+Hmm, I don't know.  Maybe some sort of <a href = "http://en.wikipedia.org/wiki/Rhizobia">rhizobium</a>?  You know, those bacteria that associate themselves to the roots of plants like clover, alfalfa and beans, and take nitrogen from the air and convert it to a form that's usable by the plants?
+</p>
+
+<p>But you said &quot;one single species&quot;, so this answer is probably not right: there are lots of species of rhizobia.
+</p>
+
+<p>
+<b>TF</b>: The answer is quite astounding&mdash;and it lies at the heart of understanding sustainability. The species that <i>could</i> have the largest positive impact on soil fertility is <i>Homo sapiens</i>&mdash;us!  Now, considering the enormous ecological damage that has been done by that single species, such a proposition may seem quite outrageous. But note that I asked about the <i>potential</i> to make a positive contribution, not actual behaviour as observed so far.
+</p>
+
+<p>
+<b>JB</b>: Oh!  I should have guessed that.  Darn!
+</p>
+
+<p>
+<b>TF</b>: When I bring up this point, many people think that I might have some specific technique in mind, a &quot;miracle cure&quot;, or &quot;silver bullet&quot; idea such as, say, <a href = "http://www.azimuthproject.org/azimuth/show/Biochar">biochar</a>&mdash;which seems to be pretty <i>en vogue</i> now&mdash;or genetically engineered miracle plants, or some such thing.
+</p>
+
+<p>
+But no&mdash;this is about a much more fundamental issue.   Nature eventually will heal ecological wounds&mdash;but quite often, she is not in a particular hurry. Left to her own devices, she may take thousands of years to rebuild soils and turn devastated land back into fertile ecosystems. Now, this is where <i>we</i> enter the scene. With our outstanding intellectual power we can read landscapes, think about key flows&mdash;flows of energy, water, minerals, and living things through a site&mdash;and if necessary, provide a little bit of guidance to help nature take the next step. This way, we can often speed up the regeneration clock a hundredfold or more!</p>
+
+<p>
+Let me give some specific examples. Technologically, these are often embarrassingly simple&mdash;yet at the same time highly sophisticated, in the sense that they address issues that are obvious only once one has developed an eye for them.
+</p>
+
+<p>
+The first one is imprinting&mdash;in arid regions, this can be a mind-blowingly simple yet quite effective technology to kick-start a biological succession pathway.
+</p>
+
+<p>
+<b>JB</b>: What's &quot;imprinting&quot;?
+</p>
+
+<p>
+<b>TF</b>: One could say, earthworks for rainwater harvesting, but on the centimeter scale. Basically, it is a simple way to implement a passive resource-concentration system for water and organic matter that &quot;nucleates&quot; the transition back from desert to prairie&mdash;kind of like providing ice microcrystals in supercooled water. <a href = "http://imprinting.org/">The Imprinting Foundation</a> has a good website.  In particular, take a look at this:
+</p>
+
+<p>
+<ul>
+<li>
+The Imprinting Foundation, <a href = "http://www.imprinting.org/success_stories.htm">Success Stories</a>.
+</li>
+</ul>
+</p>
+
+This video is also well worth watching&mdash;part of the &quot;Global Gardener&quot; series:
+</p>
+
+<p>
+<ul>
+<li>
+Bill Mollison, <a href = "http://www.youtube.com/watch?v=JGotaEnwqic#t=4m00s">Dryland permaculture strategies&mdash;part 3</a>, YouTube.
+</li>
+</ul>
+</p>
+
+<p>
+Here is another example&mdash;getting the restoration of rainforest going in the tropical grasslands of Colombia. 
+</p>
+
+<p>
+<ul>
+<li>
+Zero Emissions Research and Initiatives (ZERI), <a href = "http://www.zeri.org/ZERI/Reforestation.html">Reforestation</a>.
+</li>
+</ul>
+</p>
+
+<p>
+Here, the challenge is that the soil originally was so acidic (around pH 4) that aluminium went into the soil solution as toxic Al<sup>3+</sup>. What eventually managed to do the trick was to plant a nurse crop of Caribbean pines, <i>Pinus caribbea</i> (on 80 square kilometers&mdash;no mean feat) that have been provided with the right mycorrhizal symbiont (<i>Pisolithus tinctorius</i>, I think) that enabled the trees to grow in very acidic soil. An amazing subject in themselves, fungi, by the way. 
+</p>
+
+<p>
+These were big projects&mdash;but similar ideas work on pretty much any scale.  Friends of mine have shown me great pictures of the progress of a degraded site in Nepal where they did something very simple a number of years ago&mdash;puting up four poles with strings between them on which birds like to gather. And personally, since I started to seriously ponder the issue of soil compaction and started to give double-digging a try in my own garden a few years ago, the results have been so amazing that I wonder why anyone bothers to garden with annuals any other way.
+</p>
+
+<p>
+<b>JB</b>: What's &quot;double-digging&quot;?
+</p>
+
+<p>
+<b>TF</b>: A method to relieve soil compaction. As we humans live our lives above the soil, processes below can be rather alien to us&mdash;yet, this is where many very important things go on. By and large, most people do not realize how deep plant roots go&mdash;and how badly they are affected by compaction.
+</p>
+
+<p>
+The term &quot;<a href = "http://en.wikipedia.org/wiki/Double_digging">double-digging</a>&quot; refers to digging out the top foot of topsoil from the bed, and then using a gardening fork to also loosen the next foot of soil (often subsoil) before putting back the topsoil. Now, this method does have its drawbacks, and also, it is not the &quot;silver bullet&quot; single miracle recipe for high gardening yields some armchair gardeners who have read Jeavons's book believe it to be. But if your garden soil is badly compacted, as it often is the case when starting a new garden, double-digging may be a very good idea.
+</p>
+
+<p>
+<b>JB</b>: Interesting!
+</p>
+
+<p>
+<b>TF</b>: So, there is no doubt that our species can vastly accelerate natural healing processes. Indeed, we can link our lives with natural processes in a way that satisfies our needs while we benefit the whole species assembly around us&mdash;but there are some very non-obvious aspects to this. Hacking a hole into the forest to live &quot;in harmony with nature&quot; most certainly won't do the trick.
+</p>
+
+<p>
+The importance of the key insight&mdash;<b>we have the capacity to act as the most powerful repair species around</b>&mdash;cannot be overstated. There is at present a very powerful mental block that shows up in many discussions of sustainability: looking at our past conduct, it is easy to get the idea that <i>Homo sapiens</i>' modus operandi is to seek out the most valuable/powerful/convenient resource first, use this up, and then, driven by need, find ways to make do with the next most valuable resource, calling this &quot;progress&quot;&mdash;actually a downward spiral. I've indeed seen adverts for the emerging Liquefied Natural Gas industry that glorified this as &quot;a motor of progress and growth&quot;.  Now, the only reason why we consider this is that the more easily-accessible, easy-to-handle fuels have been pretty much used up. Same with deep-sea oil drilling. What kind of &quot;progress&quot; is it that the major difference between the recent oil spill in the Gulf of Mexico and the <a href = "http://en.wikipedia.org/wiki/Ixtoc_I_oil_spill">Ixtoc oil spill</a> in 1979 is that this time, there's a mile of water sitting on top of the well&mdash;because we used up the more easily accessible oil?</p>
+
+<p>
+<ul>
+<li>
+Rachel Maddow, <a href = "http://www.youtube.com/watch?v=HA0wPc9TicA">Ixtoc Deepwater Horizon parallels</a>, YouTube.
+</li>
+</ul>
+<p>
+
+<p>
+Now, there are two dominant attitudes toward this observation that we despoil one resource after another.
+</p>
+
+<p>
+One is some form of &quot;denial&quot;. This is quite widespread amongst professional economists.  Ultimately, the absurdity of their argument becomes clear when it is condensed to &quot;sustainability is just one problem among many, and we are the better at solving problems the stronger our economy&mdash;so we need to use up resources fast to get rich fast so that we can afford to address the problems caused by us using up resources fast.&quot; Reminds me of a painter who lived in the village I grew up in. He was known to work very swiftly, and when asked why he always was in such a hurry, wittily replied: &quot;but I have to get the job done before I run out of paint!&quot;
+</p>
+
+<p>
+The other attitude is some sort of self-hate that regards the key problem not as an issue of very poor management, but inherently linked to human existence. According to that line of thinking, collapse is inevitable and we should just make sure we do not gobble up resources so fast that we leave nothing for our children to despoil so that they can have a chance to live.
+</p>
+
+<p>
+It is clear that as long as there is a deadlock between these two attitudes, we will not make much progress towards a noticeably more sustainable society. And waiting just exacerbates the problem. So, the key question is: does it really have to be like this&mdash;are we doomed to live by destroying the resources which we depend on? Well&mdash;every cow can do better than that. Cow-dung is more valuable in terms of fertility than what the cow has eaten. So, if we are such an amazing species&mdash;as we like to claim by calling ourselves &quot;<i>Homo sapiens</i>&quot;&mdash;why should we fail so miserably here?
+</p>
+
+<p>
+<b>JB</b>: I can see all sorts of economic, political and cultural reasons why we do so badly.  But it might be a bit less depressing to talk about how we can do better.  For example, you mentioned paying attention to flows through systems.
+</p>
+
+<p>
+<b>TF</b>: The important thing about flows is that they are a great concept tool to get some first useful ideas about those processes that really matter for the behaviour of complex systems&mdash;both for the purpose of analysis as well as design.
+</p>
+
+<p>
+That's quite an exciting subject, but as you mentioned it, I'd first like to briefly address the issue of depressing topics that frequently arise when taking a deeper look into sustainability&mdash;in particular, the present situation. Why? Because I think that our capacity as a society to deal with such emotions will be decisive for how well we will do or how badly we will fail when addressing a set of convergent challenges. On the one hand, it is very important to understand that such emotions are an essential part of human experience. On the other hand, they can have a serious negative impact on our judgment capacity. So, <b>an important part of the sustainability challenge is to build the capacity to act and make sound decisions under emotional stress</b>. That sounds quite obvious, but my impression is that, still, most people either are not yet fully aware of this point, or do not see what this idea might mean in practice.
+</p>
+
+<p>
+<b>JB</b>: I've been trying to build that capacity myself.  I don't think mathematics or theoretical physics were very good at preparing me.  Indeed, I suspect that many people in these fields enjoy not only the feeling of &quot;certainty&quot; they can provide, but also the calming sense that the universe is beautiful and perfect.  When it comes to environmental issues there's a lot more uncertainty, and also frequently the sense that the world is messed up&mdash;thanks to us!  On top of that there's a sense of urgency, and frustration.  All this can be rather stressful.  However, there are ways to deal with that, and I'm busy learning them.  
+</p>
+
+<b>TF</b>: I think there is one particularly important lesson I have learned about the role of emotions, especially fear. Important because it probably is quite a fundamental part of the human condition. Emotions do have the power to veto some conclusions from ever surfacing in one's conscious mind if they would be painful to bear. They can temporarily suspend sound reasoning and also access to otherwise sound memory.
+</p>
+
+<p>
+This is extremely sinister, for you are not acting rationally at all, you are in fact driven by one of the most non-rational aspects of your existence, your fear, yet you yourself have next to no chance of ever discovering this, as your emotions abuse your cognitive abilities to systematically shield you from getting conscious access to any insight which would stand a chance of making you question your analysis.
+</p>
+
+<p>
+<b>JB</b>: I think we can all name <i>other</i> people who suffer from this problem.  But of course the challenge is to see it in ourselves, while it's happening.
+</p>
+
+<p>
+<b>TF</b>: Insidiously, having exceptional reasoning abilities will not help the very least bit here&mdash;a person with a powerful mind may be misguided as easily as anybody else by deep inner fears, it's just that the mind of a person with strong reasoning skills will work harder and spin more sophisticated tales than that of an intellectually average person. So, this essentially is a question of &quot;how fast a runner do you have to be to outrun your own shadow?&quot; How intelligent do you have to be to recognize it when your emotions cause your mind to abuse your powerful reasoning abilities to deceive itself? Well, the answer probably is that the capacity to appreciate in oneself the problem of self-deception is not related to intelligence, but wisdom. I really admire the insight that &quot;it's hard to fight an enemy who has outposts in your head.&quot;
+
+<p>
+<b>JB</b>: Richard Feynman put it another way: &quot;The first principle is that you must not fool yourself&mdash;and you are the easiest person to fool.&quot;  And if you're <i>sure</i> you're not fooling yourself, then you definitely are.</p>
+
+<p>
+<b>TF</b>: Of course, everything that has an impact on our ability to conduct a sound self-assessment of our own behaviour matters a lot for sustainability related issues.
+</p>
+
+<p>
+But enough about the role of the human mind in all this. This certainly is a fascinating and important subject, but at the end of the day, there is a lot of ecosystem rehabilitation to be done, and mapping flows is a powerful approach to getting an idea about what is broken and how to repair it.
+</p>
+
+<p>
+<b>JB</b>:  Very well.  But I think our readers need a break.  Next time we'll pick up where we left off, and talk about <i>flows</i>.
+</p>
+
+<p>
+<hr>
+</p>
+<p>
+For more discussion go to my blog, <a href = "http://johncarlosbaez.wordpress.com/2011/06/06/this-weeks-finds-week-314/">Azimuth</a>.
+</p>
+
+<p>
+<i>Permaculture is a philosophy of working with, rather than 
+against nature; of protracted and thoughtful observation rather than 
+protracted and thoughtless labour; and of looking at plants and animals in all 
+their functions, rather than treating any area as a single-product system.</i> -
+Bill Mollison
+<p>
+<HR><P>
+<!-- BEGIN FOOTER -->
+&#169; 2011  John Baez<br>
+baez@math.removethis.ucr.andthis.edu <br>
+<P>
+<TABLE WIDTH = 100%> <TR>
+<TD WIDTH=10%>
+<A HREF = "week313.html">
+   <img border = none; src="lastweek.png"></A>
+<TD WIDTH=80%>
+<CENTER>
+<A HREF="README.html">
+  <img border = none; src="home.png"><br>
+</A>
+<A HREF="http://math.ucr.edu/home/baez/TWF.html">
+    <img border = none; src="contents.png">
+</A>
+</CENTER>
+<TD WIDTH=10%>
+<A HREF = "week314.html">
+  <img border = none; src="nextweek.png">
+</A>
+</TABLE><!-- END FOOTER -->
+
